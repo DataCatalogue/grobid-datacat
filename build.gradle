@@ -141,7 +141,7 @@ task copyModels(type: Copy) {
 /** Training configuration **/
 def trainerTasks = [
     //Training models
-    "train_monograph"             : "org.grobid.trainer.MonographTrainer"
+    "train_datacat-segmenter"             : "org.grobid.trainer.DatacatSegmenterTrainer"
 ]
 
 trainerTasks.each { taskName, mainClassName ->

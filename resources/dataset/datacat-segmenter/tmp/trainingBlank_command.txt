@@ -1,0 +1,5 @@
+java -Xmx4G -jar grobid-core/build/libs/grobid-core-0.7.1-SNAPSHOT-onejar.jar -gH grobid-home -dIn ../../DataCatalogue/grobidModels_training_sets/monograph/pre-processed_pdf/ -dOut ../../DataCatalogue/grobidModels_training_sets/monograph/training_data/todo/ -exe createTrainingBlank
+
+
+java -Xmx4G -jar grobid-trainer/build/libs/grobid-trainer-0.7.1-SNAPSHOT-onejar.jar 2 monograph -gH grobid-home -s 0.8
+
