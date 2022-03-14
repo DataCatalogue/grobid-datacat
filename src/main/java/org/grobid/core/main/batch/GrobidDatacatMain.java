@@ -3,12 +3,11 @@ package org.grobid.core.main.batch;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import org.grobid.core.engines.EngineDatacatParsers;
+import org.grobid.core.engines.ProcessEngine;
+import org.grobid.core.engines.ProcessEngineDatacat;
 import org.grobid.core.main.GrobidHomeFinder;
 import org.grobid.core.main.LibraryLoader;
-import org.grobid.core.utilities.GrobidConfig;
-import org.grobid.core.utilities.GrobidProperties;
-import org.grobid.core.utilities.DatacatConfiguration;
-import org.grobid.core.utilities.DatacatProperties;
+import org.grobid.core.utilities.*;
 import org.grobid.core.utilities.GrobidConfig.ModelParameters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -210,8 +209,9 @@ public class GrobidDatacatMain {
 
     public static void main(final String[] args) throws Exception {
         gbdArgs = new GrobidDatacatMainArgs();
+        availableCommands = ProcessEngineDatacat.getUsableMethods();
 
-        if (processArgs(args) && (gbdArgs.getProcessMethodName() != null)) {
+        if (processArgs(args)) {
             inferParamsNotSet();
             if (isNotEmpty(gbdArgs.getPath2grobidHome())) {
                 initProcess(gbdArgs.getPath2grobidHome());
@@ -219,19 +219,9 @@ public class GrobidDatacatMain {
                 LOGGER.warn("Grobid home not provided, using default. ");
                 initProcess(null);
             }
-
-            int nb = 0;
-            long time = System.currentTimeMillis();
-
-            EngineDatacatParsers parsers = new EngineDatacatParsers();
-
-            if (gbdArgs.getProcessMethodName().equals(COMMAND_CREATE_TRAINING_SEGMENTATION)) {
-                nb = parsers.getDatacatSegmenterParser().createTrainingDatacatSegmenterBatch(gbdArgs.getPath2Input(), gbdArgs.getPath2Output(), -1);
-            } else {
-                throw new RuntimeException("Command not yet implemented.");
-            }
-            LOGGER.info(nb + " files processed in " + (System.currentTimeMillis() - time) + " milliseconds");
-            parsers.close();
+            ProcessEngineDatacat processEngine = new ProcessEngineDatacat();
+            Utilities.launchMethod(processEngine, new Object[] { gbdArgs }, gbdArgs.getProcessMethodName());
+            processEngine.close();
         }
     }
 }

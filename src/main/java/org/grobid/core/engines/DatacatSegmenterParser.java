@@ -1162,59 +1162,6 @@ public class DatacatSegmenterParser extends AbstractParser {
         }
     }
 
-    public int createTrainingDatacatSegmenterBatch(String inputDirectory,
-                                                   String outputDirectory,
-                                                   int ind) throws IOException {
-        try {
-            File path = new File(inputDirectory);
-            if (!path.exists()) {
-                throw new GrobidException("Cannot create training data because input directory can not be accessed: " + inputDirectory);
-            }
-
-            File pathOut = new File(outputDirectory);
-            if (!pathOut.exists()) {
-                throw new GrobidException("Cannot create training data because output directory can not be accessed: " + outputDirectory);
-            }
-
-            // we process all pdf files in the directory
-            File[] refFiles = path.listFiles(new FilenameFilter() {
-                public boolean accept(File dir, String name) {
-                    System.out.println(name);
-                    return name.endsWith(".pdf") || name.endsWith(".PDF");
-                }
-            });
-
-            if (refFiles == null)
-                return 0;
-
-            System.out.println(refFiles.length + " files to be processed.");
-
-            int n = 0;
-            if (ind == -1) {
-                // for undefined identifier (value at -1), we initialize it to 0
-                n = 1;
-            }
-            for (final File file : refFiles) {
-                try {
-                    createTrainingDatacatSegmenter(file.getAbsolutePath(), outputDirectory, n);
-
-                    // uncomment this command to create files containing features and blank training without any label
-                    // createBlankTrainingFromPDF(file.getAbsolutePath(), outputDirectory, n);
-                } catch (final Exception exp) {
-                    LOGGER.error("An error occured while processing the following pdf: "
-                        + file.getPath() + ": " + exp);
-                }
-                if (ind != -1)
-                    n++;
-            }
-
-            return refFiles.length;
-        } catch (final Exception exp) {
-            throw new GrobidException("An exception occured while running Grobid batch.", exp);
-        }
-    }
-
-
     /**
      * Process the content of the specified pdf and format the result as training data.
      *
@@ -1222,20 +1169,19 @@ public class DatacatSegmenterParser extends AbstractParser {
      * @param outputFile path to fulltext
      * @param id         id
      */
-    public void createTrainingDatacatSegmenter(String inputFile,
+    public void createTrainingDatacatSegmenter(File inputFile,
                                                   String outputFile,
                                                   int id) {
         DocumentSource documentSource = null;
         try {
-            File file = new File(inputFile);
             /*GrobidAnalysisConfig config =
                 new GrobidAnalysisConfig.GrobidAnalysisConfigBuilder().build();*/
             /*documentSource = DocumentSource.fromPdf(file, config.getStartPage(), config.getEndPage());*/
 
-            documentSource = DocumentSource.fromPdf(file, -1, -1, true, true, true);
+            documentSource = DocumentSource.fromPdf(inputFile, -1, -1, true, true, true);
             Document doc = new Document(documentSource);
 
-            String PDFFileName = file.getName();
+            String PDFFileName = inputFile.getName();
             doc.addTokenizedDocument(GrobidAnalysisConfig.defaultInstance());
 
             if (doc.getBlocks() == null) {
@@ -1266,7 +1212,7 @@ public class DatacatSegmenterParser extends AbstractParser {
                 String rese = label(fulltext);
                 StringBuffer bufferFulltext = trainingExtraction(rese, tokenizations, doc);
 
-                // write the TEI file to reflect the extact layout of the text as extracted from the pdf
+                // write the TEI file to reflect the extract layout of the text as extracted from the pdf
                 writer = new OutputStreamWriter(new FileOutputStream(new File(outputFile +
                     File.separator +
                     PDFFileName.replace(".pdf", ".training.segmenter.tei.xml")), false), "UTF-8");
