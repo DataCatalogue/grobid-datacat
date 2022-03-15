@@ -1,0 +1,5903 @@
+<?xml version="1.0" ?>
+<tei xml:space="preserve">
+	<teiHeader>
+		<fileDesc xml:id="0"/>
+	</teiHeader>
+	<text xml:lang="fr">
+
+
+
+
+
+
+
+
+<cover>1 (i 9 
+
+[texte_manquant] 
+
+(ifmot ù-
+
+MONNAIES 
+
+MÉDAILLES 
+
+HOTEL DROUOT -SALLE N°7 
+
+4-5 MAI 1972 à 14 heures 15 </cover>
+
+
+
+<annex>Émile BOURGEY 
+
+Expert National 
+
+7, rue Drouot, Paris-9* 
+
+VENTE PUBLIOUE 
+
+des 
+
+JEUDI 4 et VENDREDI 5 MAI 1972 
+
+BASES DÉVALUATIONS 
+
+EN FRANCS FRANÇAIS 
+
+SCHATZUNGSPREISE 
+APPROXIMATIVE VALUATIONS 
+
+No 
+
+ESTIMATION 
+
+No 
+
+ESTIMATION 
+
+No 
+
+ESTIMATION 
+
+
+No 
+
+ESTIMATION 
+
+No 
+
+ESTIMATION 
+
+No 
+
+ESTIMATION 
+
+79 
+
+600/800 
+
+132 
+
+1.800/2.200 
+
+184 
+
+500/600 
+
+80 
+
+300/500 
+
+133 
+
+1.200/1.800 
+
+185 
+
+400/600 
+
+81 
+
+4.000/5.000 
+
+134 
+
+1.800/2.500 
+
+186 
+
+300/500 
+
+82 
+
+1.500/2.000 
+
+135 
+
+6.000/8.000 
+
+187 
+
+400/600 
+
+83 
+
+1.500/2.000 
+
+136 
+
+1.800/2.500 
+
+190 
+
+600/900 
+
+84 
+
+800/1.200 
+
+137 
+
+1.800/2.500 
+
+191 
+
+2.000/2.500 
+
+85 
+
+1.800/2.300 
+
+138 
+
+2.000/2.500 
+
+192 
+
+900/1.100 
+
+86 
+
+2.000/3.000 
+
+139 
+
+150/250 
+
+193 
+
+1.200/1.800 
+
+87 
+
+1.500/2.000 
+
+140 
+
+150/250 
+
+194 
+
+1.000/1.500 
+
+88 
+
+1.200/1.800 
+
+141 
+
+100/150 
+
+195 
+
+1.200/1.800 
+
+89 
+
+700/1.200 
+
+142 
+
+1.000/1.900 
+
+196 
+
+500/800 
+
+90 
+
+2.500/3.000 
+
+143 
+
+1.500/2.000 
+
+197 
+
+200/300 
+
+91 
+
+200/300 
+
+144 
+
+300/500 
+
+198 
+
+700/1.000 
+
+92 
+
+2.500/3.000 
+
+145 
+
+200/350 
+
+199 
+
+500/700 
+
+93 
+
+2.000/2.500 
+
+146 
+
+400/600 
+
+200 
+
+800/1.200 
+
+94 
+
+2.000/2.500 
+
+147 
+
+500/800 
+
+201 
+
+300/400 
+
+95 
+
+3.000/3.500 
+
+148 
+
+400/500 
+
+202 
+
+1.200/1.800 
+
+96 
+
+2.500/3.000 
+
+149 
+
+400/500 
+
+203 
+
+350/450 
+
+97 
+
+1.200/1.500 
+
+150 
+
+500/700 
+
+204 
+
+300/400 
+
+98 
+
+1.200/1.500 
+
+151 
+
+700/1.000 
+
+205 
+
+400/500 
+
+99 
+
+3.000/4.000 
+
+152 
+
+450/700 
+
+206 
+
+180/250 
+
+101 
+
+2.500/3.500 
+
+153 
+
+350/600 
+
+207 
+
+1.500/2.000 
+
+102 
+
+2.400/3.000 
+
+154 
+
+1.000/1.200 
+
+208 
+
+400/600 
+
+103 
+
+1.800/2.500 
+
+155 
+
+400/600 
+
+209 
+
+400/600 
+
+104 
+
+1.000/1.500 
+
+156 
+
+300/400 
+
+210 
+
+400/600 
+
+105 
+
+1.500/2.000 
+
+157 
+
+500/800 
+
+211 
+
+300/400 
+
+106 
+
+1.500/2.000 
+
+158 
+
+400/600 
+
+212 
+
+900/1.200 
+
+107 
+
+2.000/2.500 
+
+159 
+
+600/800 
+
+213 
+
+150/200 
+
+108 
+
+3.000/4.000 
+
+160 
+
+300/500 
+
+214 
+
+150/200 
+
+109 
+
+1.500/2.000 
+
+161 
+
+400/600 
+
+215 
+
+300/500 
+
+110 
+
+1.500/1.800 
+
+162 
+
+200/300 
+
+216 
+
+200/300 
+
+111 
+
+1.800/2.000 
+
+163 
+
+450/650 
+
+217 
+
+300/400 
+
+112 
+
+2.700/3.200 
+
+164 
+
+450/650 
+
+218 
+
+200/300 
+
+113 
+
+1.200/1.800 
+
+165 
+
+400/600 
+
+219 
+
+150/200 
+
+114 
+
+1.500/2.000 
+
+166 
+
+600/800 
+
+220 
+
+300/500 
+
+115 
+
+2.000/2.500 
+
+167 
+
+800/1.200 
+
+221 
+
+250/350 
+
+116 
+
+5.000/7.000 
+
+168 
+
+700/1.000 
+
+222 
+
+500/700 
+
+117 
+
+3.000/3.500 
+
+169 
+
+400/600 
+
+223 
+
+400/600 
+
+118 
+
+4.000/5.000 
+
+170 
+
+1.800/2.500 
+
+224 
+
+600/900 
+
+119 
+
+1.500/2.000 
+
+171 
+
+300/500 
+
+225 
+
+400/600 
+
+120 
+
+1.200/1.500 
+
+172 
+
+300/500 
+
+226 
+
+200/300 
+
+121 
+
+3.000/4.000 
+
+173 
+
+350/500 
+
+227 
+
+200/300 
+
+122 
+
+1.200/1.600 
+
+174 
+
+300/500 
+
+228 
+
+250/350 
+
+123 
+
+2.500/3.000 
+
+175 
+
+800/1.200 
+
+229 
+
+100/150 
+
+124 
+
+1.800/2.200 
+
+176 
+
+1.000/1.500 
+
+230 
+
+60/70 
+
+125 
+
+1.500/2.000 
+
+177 
+
+900/1.300 
+
+231 
+
+800/1.100 
+
+126 
+
+2.000/2.500 
+
+178 
+
+900/1.300 
+
+232 
+
+1.800/2.500 
+
+127 
+
+2.000/2.500 
+
+179 
+
+300/500 
+
+233 
+
+500/700 
+
+128 
+
+1.500/2.000 
+
+180 
+
+300/500 
+
+234 
+
+2.000/3.000 
+
+129 
+
+2.000/2.500 
+
+181 
+
+250/350 
+
+235 
+
+700/1.000 
+
+130 
+
+2.500/3.000 
+
+182 
+
+900/1.400 
+
+l~2 36 
+
+2.800/3.500 
+
+131 
+
+3.000/3.500 
+
+183 
+
+300/500 
+
+237 
+
+60/70 
+
+
+No 
+
+ESTIMATION 
+
+No 
+
+ESTIMATION 
+
+No 
+
+ESTIMATION 
+
+238 
+
+3.500/4.500 
+
+287 
+
+300/400 
+
+340 
+
+200/300 
+
+239 
+
+150/200 
+
+288 
+
+250/400 
+
+341 
+
+200/300 
+
+240A 
+
+20.000/30.000 
+
+289 
+
+300/500 
+
+342 
+
+222^522 
+240B 
+20.000/30.000 
+
+290 
+
+300/500 
+
+343 
+
+522^222 
+240C 
+120.000/150.000 
+
+291 
+
+300/400 
+
+344 
+
+400/600 
+
+241 
+
+180/250 
+292 
+100/150 
+
+345 
+
+300/400 
+
+242 
+
+500/700 
+
+293 
+
+300/400 
+
+346 
+
+500/800 
+
+243 
+
+200/300 
+
+294 
+
+200/300 
+
+347 
+
+400/600 
+
+244 
+
+400/700 
+
+295 
+
+200/300 
+
+348a 
+
+300/400 
+
+245 
+
+700/1.000 
+
+296 
+
+250/400 
+
+348b 
+
+400/600 
+
+246 
+
+300/450 
+
+297 
+
+400/600 
+
+348c 
+
+500/800 
+
+247 
+
+1.000/1.200 
+
+298 
+
+400/600 
+348d 
+400/600 
+
+248 
+
+1.500/2.000 
+
+299 
+
+300/500 
+
+348e 
+
+300/500 
+
+249 
+
+700/1.000 
+
+300 
+
+400/600 
+
+348f 
+
+300/500 
+
+250 
+
+800/1.200 
+
+301 
+
+300/500 
+
+348g 
+
+400/600 
+
+251 
+
+250/350 
+
+303 
+
+400/600 
+348h 
+200/300 
+
+251a 
+
+400/600 
+
+304 
+
+700/1.000 
+
+3481 
+
+300/450 
+
+252 
+
+300/500 
+
+305 
+
+400/600 
+
+348j 
+
+300/500 
+
+253 
+
+1.200/1.600 
+
+306 
+
+600/900 
+348k 
+400/600 
+
+254 
+
+600/900 
+
+307 
+
+300/500 
+
+3481 
+
+300/500 
+
+255 
+
+350/500 
+
+308 
+
+400/600 
+
+349 
+
+3.000/3.500 
+
+256 
+
+350/500 
+
+309 
+
+600/900 
+
+350 
+
+3.200/3.700 
+
+257 
+
+1.500/2.000 
+
+310 
+
+2.000/2.500 
+
+351 
+
+100/150 
+
+258 
+
+700/1.000 
+
+311 
+
+400/650 
+
+352 
+
+100/150 
+
+259 
+
+500/800 
+
+312 
+
+80/100 
+
+353 
+
+300/500 
+
+260 
+
+400/600 
+
+313 
+
+250/400 
+
+354 
+
+250/350 
+
+261 
+
+500/700 
+
+314 
+
+200/250 
+
+355 
+
+3.500/4.500 
+
+262 
+
+600/800 
+
+315 
+
+300/500 
+
+263 
+
+400/600 
+
+316 
+
+250/400 
+
+A 
+
+700/1.000 
+
+264 
+
+300/500 
+
+317 
+
+700/900 
+B 
+600/800 
+
+265 
+
+300/500 
+
+318 
+
+150/200 
+
+C 
+
+900/1.200 
+
+266 
+
+700/1.000 
+
+319 
+
+1.000/1.500 
+D 
+
+400/700 
+
+267 
+
+1.000/1.400 
+
+320 
+
+150/200 
+
+E 
+
+300/500 
+
+268 
+
+500/700 
+
+321 
+
+500/700 
+
+F 
+
+400/600 
+
+269 
+
+600/900 
+
+322 
+
+700/1.000 
+
+G 
+
+150/200 
+
+270 
+
+500/700 
+
+323 
+
+600/800 
+
+H 
+
+1.200/1.800 
+
+271 
+
+800/1.100 
+
+324 
+
+250/350 
+
+1 
+
+4.000/4.800 
+
+272 
+
+1.100/1.700 
+
+325 
+
+700/1.000 
+
+J 
+
+1.800/2.000 
+
+273 
+
+700/1.000 
+
+326 
+
+200/300 
+
+K 
+
+1.800/2.000 
+
+274 
+
+400/600 
+
+327 
+
+400/600 
+L 
+500/800 
+
+275 
+
+400/600 
+
+328 
+
+200/300 
+M 
+
+1.000/1.500 
+
+276 
+
+1.000/1.500 
+
+329 
+
+1.000/1.500 
+
+N 
+
+1.000/1.500 
+
+277 
+
+1.200/1.800 
+
+330 
+
+500/800 
+
+0 
+
+800/1.200 
+
+278 
+
+300/500 
+
+331 
+
+300/500 
+
+P 
+
+300/500 
+
+279 
+
+250/350 
+
+332 
+
+1.200/2.000 
+
+Q 
+
+400/600 
+
+280 
+
+500/700 
+
+333 
+
+200/300 
+R 
+
+150/250 
+
+281 
+
+300/400 
+
+334 
+
+700/1.000 
+
+282 
+
+500/700 
+
+335 
+
+100/150 
+
+283 
+
+4.000/5.000 
+
+336 
+
+300/500 
+
+284 
+
+1.000/1.200 
+
+337 
+
+200/300 
+
+285 
+
+150/250 
+
+338 
+
+200/300 
+
+286 
+
+600/900 
+
+339 
+
+700/900 
+
+
+
+Emile BOURGEY 
+
+Expert en Monnaies et Médailles 
+
+7, rue Drouot 
+
+75 -PARIS 9ème 
+
+N°F 
+
+J 
+J 
+
+187 
+
+580 
+
+N°F 
+
+I 
+
+N°F No F 190 2.200 
+
+191 
+3% 200 
+
+1 
+
+1. 200 
+
+
+
+420 
+75 
+
+58 
+1.600 
+
+2 
+
+450 
+
+
+420 
+
+76 
+6,5 
+
+2.200 
+
+3 
+
+600 
+
+210 
+
+77 
+
+60 
+
+T&quot;™ 
+
+4 
+500 
+
+550 
+78 
+
+2. 90 
+
+!&quot; ? 
+
+5 
+
+180 
+
+
+420 
+
+79 
+
+70 
+
+n 
+
+6 
+
+720 
+
+
+460 
+
+80 
+38 
+
+; 
+
+7 
+
+2. 000 
+
+580 
+81 
+
+4.80 
+
+1. 600 
+
+; 
+
+8 
+
+5. 200 
+
+
+480 
+
+82 
+
+2.00 
+
+850 
+
+9 
+
+4. 500 
+
+
+680 
+83 
+1.40* 
+10 
+
+4.300 
+
+
+
+250 
+84 
+
+901 
+
+500 
+
+Î 
+
+11 
+
+1. 500 
+
+48 
+300 
+85 
+
+2.00t 
+
+2. 600 
+
+12 
+
+2.000 
+
+
+350 
+86 
+2. 00( 
+700 
+
+13 
+
+45. 200 
+
+50 
+350 
+
+87 
+
+1. 30 
+
+^750 
+
+14 
+650 
+
+51 
+
+350 
+88 
+
+1.20 
+
+800 
+
+; 
+
+15 
+420 
+
+52 
+
+210 
+89 
+80 
+500 
+
+;: 
+
+16 
+900 
+53 
+
+200 
+
+90 
+
+3.10 
+
+1. 900 
+
+; 
+
+17 
+
+350 
+
+54 
+
+400 
+
+91 
+22 
+208 
+1. 000 
+
+; 
+
+18 
+
+37. 500 
+
+55 
+390 
+
+92 
+
+2.4C 
+650 
+
+; 
+
+19 
+
+850 
+56 
+260 
+
+93 
+
+2. OC 
+800 
+
+J 
+
+20 
+
+4.800 
+
+57 
+
+280 
+
+94 
+
+3.00 
+
+650 
+
+: 
+
+21 
+450 
+
+58 
+
+300 
+
+95 
+5. 00 
+
+2?-2 
+
+1. 300 
+
+: 
+
+22 
+650 
+59 
+260 
+96 
+
+3.10 
+
+I*3 
+
+280 
+
+J 
+
+23 
+880 
+60 
+220 
+
+97 
+
+1.10 
+
+TZ* 
+
+160 
+
+; 
+
+24 
+300 
+
+61 
+
+620 
+98 
+
+1. 2C 
+
+^750 : 
+
+25 
+320 
+
+62 
+
+140 
+99 
+
+481 
+
+300 
+
+; 
+
+26 
+
+250 
+
+63 
+
+280 
+101 
+
+2.5 
+
+320 
+
+; 
+
+?7 
+
+14.0 
+
+ht1. 
+
+RRN 
+
+IN? 
+
+^IJ 
+
+8 
+
+210 
+
+&lt; 
+
+0SI 
+
+TSE 
+
+0z: 
+8IC 
+0S9 
+
+vU 
+091 
+
+Du 
+
+QS6&quot;£ 
+05C 
+
+OSe:81 
+
+L1£ 
+
+OSe:81 
+
+£L&lt; 
+
+09e: 
+
+0S6&apos;Z 
+6v£ 
+089 
+
+9ie 
+
+OSS81 
+
+ZL\ 
+OZZ 
+
+M 
+
+00£ 
+
+OZ8 
+
+SIC 
+
+00L81 
+
+T L\ 
+
+oe:l 
+
+OH 
+
+00L 
+
+x0 Lt7 
+
+Î/TZ 
+
+XOO£ 81 
+
+0 L; 
+
+Ovl 
+
+OH 
+
+09Z 
+
+ÇSVZ 
+Oe:£ 
+
+eie 
+
+00£.1 69 ï 
+
+
+
+Emile BOURGEY 
+
+Expert en Monnaies et Médailles 
+
+7, rue Drouot 
+
+75 -PARIS 9ème 
+
+N°F 
+
+j 
+
+j 
+
+187 
+580 
+
+N°F 
+
+j 
+
+N°F 
+N°F 
+
+190 
+
+2.200 
+
+-
+
+191 
+3% 200 
+
+1 
+
+1.200 
+
+38 
+
+420 
+75 
+
+58 
+
+2 
+
+450 
+39 
+
+420 
+76 
+
+65 
+
+194 
+2*100 
+
+3 
+
+600 
+40 
+210 
+
+77 
+
+60 
+
+, 
+
+4 
+500 
+41 
+550 
+78 
+
+2. 90 
+
+5 
+
+180 
+42 
+420 
+
+79 
+
+70 
+196 
+
+6 
+
+720 
+
+43 
+
+460 
+
+80 
+38 
+
+400 
+
+; 
+
+7 
+
+2.000 
+
+44 
+580 
+81 
+
+4.80 
+
+1. buo 
+
+. 
+
+8 
+
+5. 200 
+45 
+480 
+
+82 
+
+2.00 
+
+onn 
+
+®50 
+
+9 
+
+4. 500 
+
+46 
+680 
+83 
+
+1.40 
+
+500 
+10 
+
+4.300 
+
+47 
+
+250 
+84 
+
+90 
+
+: 
+
+11 
+
+1.500 
+
+48 
+300 
+85 
+
+2.00 
+2.600 
+
+12 
+
+2.000 
+
+49 
+350 
+86 
+
+2.00 
+
+700 
+
+13 
+
+45.200 
+
+50 
+
+350 
+
+87 
+
+1.30 
+
+750 
+
+; 
+
+14 
+650 
+
+51 
+
+350 
+88 
+
+1.20 
+
+800 
+
+; 
+
+15 
+
+420 
+
+52 
+
+210 
+89 
+80 
+
+J? 
+
+500 
+16 
+
+900 
+
+53 
+
+200 
+
+90 
+
+3.10 
+
+1. 900 
+
+; 
+
+17 
+
+350 
+
+54 
+
+400 
+
+91 
+22 
+208 
+1. 000 
+
+; 
+
+18 
+
+37. 500 
+
+55 
+390 
+
+92 
+
+2.40 
+
+^650 
+
+; 
+
+19 
+
+850 
+56 
+
+260 
+
+93 
+
+2. oo&apos; 
+
+^800 
+
+; 
+
+20 
+
+4.800 
+
+57 
+
+280 
+
+94 
+
+3. 00 
+
+ZZ^Z 
+
+650 
+
+: 
+
+21 
+
+450 
+
+58 
+
+300 
+
+95 
+
+5.00 
+
+ZZ 
+
+300 
+
+j 
+
+22 
+
+650 
+
+59 
+
+260 
+
+96 
+
+3.10 
+
+280 
+
+23 
+
+880 
+
+60 
+
+220 
+
+97 
+
+1. ld 
+
+ZZ 
+
+160 
+
+; 
+
+24 
+
+300 
+
+61 
+
+620 
+
+98 
+
+1.2C 
+
+750 
+
+25 
+
+320 
+
+62 
+
+140 
+99 
+4.1C 
+216 
+300 
+
+J 
+
+26 
+
+250 
+
+63 
+
+280 
+101 | 2.5C 
+
+217218 
+
+320 
+
+; 
+
+27 
+
+140 
+
+ht1. 
+
+1 n? i * irl 
+
+218 
+
+210 
+
+OSI 
+
+TSE 
+OPZ 
+
+8TE: 
+
+0S9 
+
+vU 
+091 
+
+OH 
+
+QS6.Z 
+
+05C 
+
+OSZ.1 
+
+LIE 
+
+OSZ.T 
+
+£ LI 
+
+09Z 
+
+m 
+
+056*2 
+6v£ 
+089 
+
+9TC 
+
+OSS.1 
+
+ZL\ 
+
+ozz 
+an 
+ooe 
+
+1817£ 
+
+aZ8 
+
+sic 
+
+00L.1 
+
+i Li 
+
+oZI 
+
+an 
+
+00 L 
+)(6v£ xo Lf7 
+
+171£ 
+
+xooe&apos;i 0 Lé 
+
+OVI 
+
+DU 
+
+09Z 
+
+çs^e 
+ozz 
+
+eTC 
+
+OOC&apos;I 
+69; 
+
+
+Emile BOURGEY 
+
+Expert en Monnaies et Médailles 
+
+7, rue Drouot 
+
+75 -PARIS 9ème 
+
+VENTE des 
+
+4 et 5 Mai 1972 
+
+PRIX D&apos;ADJUDICATION 
+
+N°F 
+N°F 
+N°F 
+
+\ N°F 
+
+N°F 
+
+1 
+
+1.200 
+
+38 
+
+420 
+75 
+580 
+113 
+
+1.150 
+
+150 
+650 
+
+2 
+
+450 
+39 
+420 
+76 
+650 
+114 
+
+1.300 
+
+151 
+
+1.250 
+
+3 
+
+600 
+
+210 
+
+77 
+
+600 
+115 
+
+1.700 
+
+152 
+550 
+4 
+500 
+
+550 
+78 
+2. 900 
+116 
+
+7.000 
+
+153 
+520 
+
+5 
+
+180 
+
+420 
+
+79 
+7 00 
+117 
+
+3.300 
+
+154 
+
+1.000 
+
+6 
+
+720 
+
+460 
+80 
+380 
+
+118. 
+
+3.500 
+
+155 
+600 
+
+7 
+
+2.000 
+
+
+580 
+81 
+
+4.800 119 
+1.300 
+
+156 
+
+1.400 
+
+8 
+
+5.200 
+
+
+480 
+
+82 
+
+2.000 120 
+2.050 
+
+157 
+
+1.300 
+4.500 
+
+
+680 
+83 
+
+1.400 121 
+3.100 
+
+158 
+
+750 
+
+10 
+
+4.300 
+
+
+
+250 
+84 | 
+900 
+122 
+
+1.000 
+
+159 
+
+1.000 
+
+1 
+
+1.500 
+
+
+300 
+85 
+2. 000 
+123 
+
+2. 000 
+
+160 
+
+420 
+
+12 
+
+2.000 
+
+49 
+350 
+86 
+
+2.000 124 
+2.250 
+
+161 
+750 
+
+13 
+
+45.200 
+
+50 
+
+350 
+
+87 
+
+1.300 125 
+1.300 
+
+162 
+800 
+
+J-4 
+
+650 
+
+
+
+350 
+
+88 
+
+1.200 126 
+2.100 
+
+163 
+950 
+420 
+
+
+
+210 
+89 
+800 
+
+127 
+
+2.600 
+
+164 
+750 
+
+1617 
+
+900 
+
+
+200 
+
+90 
+
+3.100 128 
+2.100 
+
+165 
+550 
+
+10 
+
+&quot; 
+
+î™ 
+
+
+
+400 
+
+91 
+
+220 
+129 
+
+2.250 
+
+166 
+
+1.100 
+
+18 
+
+37.500 
+
+55 
+390 
+
+92 
+
+2.400 130 
+2.200 
+
+167 
+
+1.200 
+
+
+260 
+
+93 
+
+2. 000 
+131 
+3&quot; 600 
+168 
+880 
+
+20 
+
+4.800 
+
+
+
+280 
+
+94 
+
+3.000 132 
+2. 650 
+169 
+900 
+11 
+450 
+
+58 
+300 
+
+95 
+
+5. 000 
+133 
+
+1.100 
+
+17 0 
+
+4.000 
+
+22 
+650 
+
+260 
+96 
+
+3.100 134 
+1.700 
+
+171 
+500 
+
+H 
+
+
+220 
+
+97 
+
+1.100 135 
+
+5. 600 
+
+172 
+
+420 
+
+24 
+300 
+
+61 
+
+620 
+
+98 
+
+1.200 136 
+1.600 
+
+173 
+880 
+320 
+
+
+
+140 
+99 
+
+4.100 137 
+1.500 
+
+174 
+550 
+ZI 
+
+® 
+
+63 
+
+280 
+
+101 
+
+2.500 138 
+2.100 
+
+175 
+1. 600 
+
+^4^-
+
+64 
+
+850 
+
+102 
+
+3.100 139 
+
+250 
+176 
+
+1.700 
+
+• 
+
+200 
+65 
+
+5.400 
+
+103 
+
+2.300 140 
+
+350 
+177 
+
+1.450 
+
+66 
+550 
+104 
+600 
+141 
+220 
+178 
+
+1.500 
+
+67 
+
+420 
+105 
+
+1.500 142 
+1.150 
+
+179 
+300 
+4 
+
+68 
+
+1.600 
+
+106 
+
+1.100 143 
+1.900 
+
+180 
+300 
+32 
+3*?°6 9 
+500 
+107 
+
+2.000 l44 
+
+620 
+181 
+
+420 
+
+60 
+
+70 
+620 
+108 
+3. 650 
+145 
+200 
+
+182 
+950 
+50 
+71 
+380&apos; 
+109 
+
+1.100 146 
+450 
+
+183 
+550 
+
+72 
+220 
+110 
+
+1.650 147 
+
+450 
+
+184 
+500 
+36 
+250 
+73 
+350 
+111 
+
+1.700 148 
+
+450 
+185 
+400 
+
+31 
+
+160 
+74 
+420 
+
+l12 
+3.050 149 
+400 
+
+186 
+500 
+
+
+N°F 
+
+No 
+
+F 
+N°F 
+N°F 
+
+N°F 
+
+187 
+580 
+233 
+
+700 
+
+275 
+250 
+319 
+1. 650 
+
+352 
+280 
+190 
+
+2.200 234 2.100 
+
+276 
+1. 100 
+320 
+270 
+353 
+1. 100 
+191 
+3. 200 
+235 
+900 
+277 
+
+1. 250 
+321 
+
+850 
+
+354 
+250 
+192 
+
+1.600 236 3.300 
+
+278 
+680 
+322 
+
+1.050 
+
+355 
+
+4.600 
+
+193 
+
+2.200 237 
+
+90 
+
+279 
+230 
+323 
+850 
+
+A 
+
+680 
+194 
+
+2.100 238 4.200 
+
+280 
+400 
+324 
+380 
+
+B 
+
+800 
+195 
+1. 900 
+239 
+150 
+281 
+400 
+
+325 
+
+1.380 
+
+C 
+
+950 
+196 
+
+1.100 24 0A 19. 500 
+
+282 
+
+1.100 326 
+
+480 
+
+D 
+
+420 
+
+197 
+
+400 
+
+240B 17.100 
+
+283 
+
+3.700 327 
+
+600 
+
+E 
+
+650 
+198 
+1. 600 
+24 0C 128000 
+
+284 
+
+1.200 328 
+
+190 
+
+F 
+
+550 
+199 
+850 
+241 
+250 
+285 
+
+&apos; 
+
+550 
+329 
+2. 000 
+
+G 
+
+300 
+200 
+
+1.800 242 
+1.200 
+
+286 
+1. 000 
+330 
+800 
+
+H 
+
+2.500 
+
+201 
+500 
+243 
+200 
+
+287 
+640 
+331 
+
+450 
+
+1 
+
+6.200 
+
+202 
+
+2.600 244 
+
+800 
+
+288 
+
+220 
+332 
+1. 500 
+
+J 
+
+2.800 
+
+203 
+700 
+
+245 
+
+1.400 
+
+289 
+620 
+333 
+380 
+
+K 
+
+2.800 
+
+204 
+
+750 
+
+246 
+950 
+290 
+380 
+334 
+950 
+
+L 
+
+1.lJO 
+
+205 
+800 
+
+247 
+
+1. 500 
+291 
+520 
+335 
+300 
+
+M 
+
+2.500 
+
+206 
+500 
+248 
+
+1.400 
+
+292 
+130x 336 
+500 
+
+N 
+
+2.800 
+
+207 
+1. 900 
+249 
+1. 000 
+293 
+400 
+
+337 
+
+350 
+
+0 
+
+1.050 
+
+208 
+1. 000 
+250 
+700 
+
+294 
+350 
+338 
+
+1.100 
+
+P 
+
+720 
+209 
+650 
+251 
+
+420x 
+
+295 
+300 
+339 
+800 
+
+Q 
+
+900 
+210 
+800 
+
+252 
+
+750 
+296 
+380 
+340 
+430 
+
+R 
+
+580 
+211 
+650 
+253 
+1. 600 
+297 
+680 
+341 
+
+420 
+
+S 
+
+1.100 
+
+212 
+1. 300 
+254 
+550 
+298 
+230 
+
+342 
+
+720 
+
+T 
+
+1.100 
+
+213 
+280 
+255 
+520 
+299 
+400 
+
+343 
+
+700 
+
+U 
+
+220 
+214 
+160 
+256 
+280 
+300 
+310x 344 
+520 
+
+V 
+
+130 
+215 
+750 
+
+257 
+3. 100 
+301 
+140 
+345 
+510 
+
+CA 
+
+220 
+216 
+300 
+258 
+
+750 
+302 
+700 
+346 
+400 
+
+CB 
+
+160 
+217 
+320 
+259 
+900x 
+303 
+650 
+
+347 
+
+450 
+
+CC 
+
+160 
+218 
+210 
+260 
+300 
+304 
+550 
+348a 
+480 
+
+CD 
+
+280 
+219 
+250 
+
+261 
+550 
+305 
+400 
+348b 
+750 
+
+CE 
+
+220 
+220 
+480 
+
+262 
+
+500 
+306 
+720 
+348c 
+
+1.300 
+
+CF 
+
+450 
+221 
+480 
+263 
+400 
+
+307 
+
+500 
+348d 
+
+1.000 
+
+CG 
+
+200 
+222 
+7 20 
+264 
+
+420x 
+
+308 
+7 00 
+
+348e 
+450 
+
+CH 
+
+350 
+223 
+650 
+265 
+600 
+309 
+720 
+
+348f 
+
+550 
+CI 
+230 
+224 
+1. 000 
+266 
+600 
+310 
+2. 100 
+348g 
+420 
+CJ 
+
+230 
+225 
+600 
+
+267 
+
+1.250 
+
+311 
+880 
+348h 
+230 
+
+RA 
+
+130 
+226 
+
+400 
+
+268 
+
+850 
+
+312 
+120 
+
+348i 
+
+300 
+
+RB 
+
+180 
+227 
+
+750 
+269 
+
+1.300 
+
+313 
+320 
+
+348j 
+
+260 
+
+RC 
+
+140 
+228 
+420 
+270 
+1. 300x 
+314 
+47 Ox 349k 
+700 
+
+RD 
+
+120 
+229 
+250 
+
+271 
+
+1.700 
+
+315 
+820 
+3481 
+300 
+
+RE 
+
+220 
+230 
+80 
+272 
+1. 550 
+316 
+580 
+349 
+2. 950 
+
+RF 
+
+260 
+231 
+
+1.300 273 1. 250 
+
+317 
+
+1.250 350 
+
+2. 950 
+
+RG 
+
+160 
+J 232 1 2. 650 
+274 
+650 
+318 
+240 
+351 
+150 
+
+
+N°F 
+
+N°F 
+N°F 
+N°F 
+
+233 
+
+700 
+
+275 
+250 
+319 
+1. 650 
+
+352 
+280 
+234 
+
+2.100 
+
+276 
+1. 100 
+320 
+270 
+353 
+1. 100 
+235 
+900 
+277 
+1. 250 
+321 
+
+850 
+
+354 
+250 
+236 
+
+3.300 
+
+278 
+680 
+322 
+
+1.050 
+
+355 
+
+4.600 
+
+237 
+90 
+
+279 
+230 
+323 
+850 
+
+A 
+
+680 
+238 
+
+4.200 
+
+280 
+400 
+324 
+380 
+
+B 
+
+800 
+239 
+150 
+281 
+400 
+
+325 
+
+1.380 
+
+C 
+
+950 
+24 0A 19. 500 
+
+282 
+
+1.100 326 
+
+480 
+
+D 
+
+420 
+
+240B 17.100 
+
+283 
+
+3.700 327 
+
+600 
+
+E 
+
+650 
+240C 128000 
+
+284 
+
+1.200 328 
+
+190 
+
+F 
+
+550 
+
+241 
+
+250 
+285 
+
+&apos; 
+
+550 
+329 
+2. 000 
+
+G 
+
+300 
+
+242 
+
+1. 200 
+286 
+1. 000 
+330 
+800 
+
+H 
+
+2.500 
+
+243 
+
+200 
+
+287 
+640 
+331 
+
+450 
+
+1 
+
+6.200 
+
+244 
+
+800 
+
+288 
+
+220 
+332 
+1. 500 
+
+J 
+
+2.800 
+
+245 
+
+1.400 
+
+289 
+620 
+333 
+380 
+
+K 
+
+2.800 
+
+246 
+950 
+290 
+380 
+334 
+950 
+
+L 
+
+1.100 
+
+247 
+
+1. 500 
+291 
+520 
+335 
+300 
+
+M 
+
+2.500 
+
+248 
+
+1.400 
+
+292 
+
+130x 
+
+1 
+
+336 
+500 
+
+N 
+
+2.800 
+
+249 
+
+1. 000 
+293 
+400 
+
+337 
+350 
+
+0 
+
+1. 050 
+250 
+
+700 
+
+294 
+350 
+338 
+
+1.100 
+
+P 
+
+720 
+
+251 
+
+420x 
+
+295 
+300 
+339 
+800 
+
+Q 
+
+900 
+
+252 
+
+750 
+296 
+380 
+340 
+430 
+
+R 
+
+580 
+
+-53 
+
+1. 600 
+297 
+680 
+341 
+
+420 
+
+S 
+
+1.100 
+
+254 
+
+550 
+298 
+230 
+342 
+
+720 
+
+T 
+
+1.100 
+
+255 
+
+520 
+299 
+400 
+
+343 
+
+700 
+u 
+
+220 
+256 
+
+280 
+300 
+310x 344 
+520 
+
+V 
+
+130 
+
+257 
+
+3.100 
+
+301 
+140 
+345 
+510 
+
+CA 
+
+220 
+
+258 
+
+750 
+302 
+700 
+346 
+400 
+
+CB 
+
+160 
+
+~59 
+
+90 Ox 
+303 
+650 
+
+347 
+
+450 
+
+CC 
+
+160 
+
+260 
+
+300 
+304 
+550 
+348a 
+480 
+
+CD 
+
+280 
+
+261 
+
+550 
+305 
+400 
+348b 
+750 
+
+CE 
+
+220 
+
+262 
+
+500 
+306 
+720 
+348c 
+1. 300 
+
+CF 
+
+450 
+
+~63 
+
+400 
+
+307 
+
+500 
+348d 
+
+1.000 
+
+CG 
+
+200 
+
+~64 
+
+42 0x 
+308 
+7 00 
+348e 
+450 
+
+CH 
+
+350 
+
+165 
+
+600 
+309 
+720 
+348f 
+
+550 
+CI 
+230 
+
+266 
+
+600 
+310 
+2. 100 
+348g 
+420 
+CJ 
+230 
+
+&apos;67 1 1.250 
+
+311 
+880 
+348h 
+230 
+
+RR 
+
+130 
+
+! 68 
+
+850 
+
+312 
+120 
+
+348i 
+
+300 
+
+RB 
+
+180 </annex>
+
+
+<title>MONNAIES 
+
+GRECQUES, ROMAINES, BARBARES 
+
+GAULOISES 
+
+FRANÇAISES, ÉTRANGÈRES 
+
+MÉDAILLES 
+
+dont la vente aux enchères publiques aura lieu 
+
+à PARIS HOTEL DROUOT, salle n°7 
+
+Le jeudi 4 et le vendredi 5 mai à 14 h 15 
+
+COMMISSAIRES-PRISEURS 
+
+Me Étienne ADER 
+Mc Antoine ADER 
+
+Me Jean-Louis PICARD 
+1re Jacques TAJAN 
+
+12 rue Favart (742-68-23) 
+
+EXPERT 
+
+M. Emile BOURGEY 
+
+Le mercredi 3 mai 1972 de 11 à 18 heures -Salle N°7 
+
+EXPOSITION PRIVÉE 
+
+chez M. Emile Bourgey, 7 rue Drouot du 18 au 29 avril 1972 </title>
+
+
+<preface>CONDITIONS DE LA VENTE 
+
+La vente aura lieu au comptant. Les acquéreurs paieront 16 % en sus des 
+enchères. Pour les enchères supérieures à 6.000 Francs, les frais seront réduits à 
+
+11,50 % de 6.001 à 20.000 Francs, 10 % au-dessus de 20.000 Francs. 
+
+L&apos;ordre du catalogue sera suivi, le Commissaire Priseur et l&apos;Expert se réservent 
+le droit de réunir ou diviser les lots. 
+
+M. Emile BOURGEY se charge d&apos;exécuter les ordres d&apos;achats qui lui 
+
+seront confiés (formulaire ci-inclus). Tél. : 770-88-67 et 35-18. 
+
+(DHF ADER PICARD TAJAN 
+
+PARIS 
+
+12 RUE FAVART 2e 
+
+Téléphone 742 68 23, 742 95 73 (7 lignes) 
+Télégraphe Aderpicar-Paris 
+
+Telex 29365 Drouot (dans le texte de 
+votre message, mentionner « Aderpicar ») 
+
+NEW YORK, N.Y. 10 020 -Tél. (212) 586 6559 
+
+610 Fifth Avenue, Rockefeller Center Suite 403 
+
+Correspondant en Suisse : Art Promotion S.A. 
+8 rue de Bourg -1003 Lausanne 
+
+Téléphone 021/20 75 43 </preface>
+
+<toc>ORDRE DE VACATION 
+
+Le Jeudi 4 Mai à 14 h 15, Salle 7 
+
+N°1 à 198 
+
+Le Vendredi 5 Mai à 14 h 15, Salle 7 
+
+Nu 190 à 239 
+
+Le Vendredi 5 Mai à 15 h, Salle 7 
+
+N°240 A-B-C 
+
+Le Vendredi 5 Mai à 15 h 10, Salle 7 ............................ N°241 à fin </toc>
+
+<preface>ETATS DE CONSERVATION 
+
+indiqués 
+
+F.D.C. : Fleur de Coin = 
+
+10/10 
+
+Superbe ou splendide = 8 à 9/10 
+
+Très Beau 
+= 6 à 7/10 
+
+T.B. 
+
+= 4 à 5/10 
+
+B/T/B 
+
+= 2 à 3/10 
+
+Les Numéros reproduits sont précédés d&apos;un astérisque. 
+
+
+Les nombreuses Monnaies et Médailles décrites au 
+présent catalogue forment un véritable panorama de 
+la Numismatique depuis l&apos;Antiquité jusqu&apos;à nos jours. 
+Il convient de citer un très rare statère de Panticapée 
+en or, un tétradrachme en argent frappé à Rhodes, une 
+série très importante de monnaies gauloises, statère 
+d&apos;or, drachmes ou deniers en argent, et plus près de 
+nous, en dehors de nombreuses françaises, une collec-
+tion de monnaies de nécessité, frappées par des villes 
+assiégées et devant faire face, par des moyens de 
+fortune et de réquisition (vaisselle d&apos;or ou d&apos;argent), 
+voir métaux courants), au besoin impérieux d&apos;un numé-
+raire local, ainsi qu&apos;un ensemble de bractéates des 
+X&apos; au XIIe siècles. 
+
+Trois pièces capitales s&apos;ajoutent à l&apos;intérêt de 
+cette Vente : une monnaie de dix doppia frappée en 
+1649 à Gênes, deux médailles artistiques, Louis XII 
+et Anne de Bretagne, Philibert le Beau, Duc de Savoie 
+et Marguerite d&apos;Autriche. 
+
+E.B. </preface>
+
+
+<reference>BIBLIOGRAPHIE 
+
+Bab. 
+
+E. BABELON. Traité des monnaies grecques et romaines. Paris, 1901-1933. 
+
+BMC. 
+
+BRITISH MUSEUM COINS. Catalogue of Greek Coins. London, 1873-1927. 
+
+Br. 
+
+A.B. BRETT. Catalogue of Greek Coins. Boston, 1955. 
+
+C. 
+
+COHEN. Description historique des monnaies frappées sous l&apos;Empire Romain. 2 L&apos;di. 
+
+tion par Cohen et Feuardel). Paris, 1880-1892. 
+
+Du Ch. 
+
+Cte A. Du CHASTEL DE LA HORWARDRIES. Syracuse. Ses monnaies d&apos;argent et d&apos;or au 
+point de vue artistique. Londres, 1898. 
+
+RIC. 
+
+MATTINGLY, SYDENHAM and SUTHERLAND. The Roman Imperial Coinage. London, 1923-1951. 
+
+M. 
+
+MULLER. Numismatique d&apos;Alexandre le Grand. Copenhague, 1855. 
+
+P. 
+
+Pozzi. (Collection de Feu le Prof.). Catalogue de monnaies grecques antiques. Vente 
+
+à Genève, 1920. 
+
+R. 
+
+R. RATTO. Catalogue de monnaies byzantines. Vente à Lugano, 1930. 
+
+Sab. 
+
+J. SABATIER. Description générale des monnaies byzantines frappées sous les empe-
+reurs d&apos;Orient. Paris, 1862. 
+
+S. 
+
+E.A. SYDENHAM. The Coinage of the Roman Republic. London, 1952. 
+
+To. 
+
+J. TOLSTOI. Monnaies byzantines. 1913-1914. 
+
+VI. 
+
+VLASTO. Monnaies de Tarente. London, 1947. 
+
+Wr. 
+
+WROTH. Catalogue of Imperial Byzantine Coins in the British Museum. London, 1908. 
+
+B. 
+
+A. DE BELFORT. Description monnaies mérovingiennes. Paris, 1892. 
+
+Br. 
+
+L. BRAMSEN. Médaillier Napoléon le Grand. Paris, Copenhague, 1904. 
+
+C. 
+
+L. CIANI .Les monnaies royales françaises de Hugues Capet à Louis XVI. Paris, 1926. 
+
+D.d.P. 
+
+L. DESCHAMPS DE PAS. Essais sur l&apos;Histoire Monétaire des Comtes de Flandre de la 
+
+Maison d&apos;Autriche. Paris, 1874. 
+
+F. 
+
+R. FORRER. Keltische Numismatik der Rhein und Donaulande. Strasbourg, 1908. 
+
+G. 
+
+V. GAILLARD. Recherches sur les Monnaies des Comtes de Flandre. Gand, 1852. 
+
+G. &amp; H. 
+
+H.E. VAN GELDER et M. Hoc. Les monnaies des Pays-Bas, Bourguignons et Espagnols. 
+Amsterdam, 1960. 
+
+VG. 
+
+V. GUILLOTEAU. Monnaies françaises. Colonies 1670-1942. Métropole 1774-1942. Versailles, 
+
+1937-1942. 
+
+H. 
+
+HOFFMANN. Les monnaies royales de France depuis Hugues Capet jusqu&apos;à Louis XVI. 
+Paris, 1878. 
+
+L. 
+
+LAFAURIE et PRIEUR. Les monnaies des rois de France. Paris et Bâle, 1951-1956. 
+
+M. 
+
+J. MAZARD. Histoire monétaire et numismatique contemporaine. Paris et Bâle, 1965-1967. 
+
+PA. 
+
+F. PUEY D&apos;AVANT. Monnaies féodales de France. Paris, 1862. 
+
+S. 
+
+F. DE SAULCY. Recherches sur les monnaies des Ducs héréditaires de Lorraine. Metz, 1841. 
+
+LT. 
+
+H. DE LA TOUR. Catalogue des monnaies gauloises de la Bibliothèque Nationale. Paris, 1892. 
+
+T.N. 
+
+Trésor de Numismatique et de Glyptique. Médailles de l&apos;Empire français et de 
+
+l&apos;Empereur Napoléon. Paris, 1840. 
+
+R. 
+
+Vente Collection ROBERT. Vente à Paris, 1886. 
+
+Br. 
+
+G.C. BROOKE. English Coins. London, 1932. 
+CORPUS NUMMORUM ITALICORUM. Primo tentativo di un catalogo generale delle monete 
+
+CNI. 
+
+medievali e moderne coniate in Italia o da italiani in altre paesi. Milano, 1910-1940. 
+
+Dav. 
+
+J.S. DAVENPORT. European Crowns and Talers. 1700-1800. 
+
+Del. 
+
+A. DELMONTE. Le Bénélux d&apos;or et d&apos;argent. Amsterdam, 1964-1967. 
+
+D. 
+
+J.P. Divo. Die Neueren Münzen der Schweiz und der Fürstenstein. Freiburg im 
+Breisgau, 1967. 
+
+F. 
+
+R. FRIEDBERG. Gold Coins of the world. New York, 1965. 
+
+H. 
+
+A. HEISS. Description general de las monedas hispano-cristianas desde la invasion de los 
+Arabes. Madrid, 1865-1869. 
+
+Lop. 
+
+L. LOPEZ-CHAVES. Catalogo de la onza espanola. Madrid, 1961. 
+
+Lop. 
+
+L. LOPEZ-CHAVES. Catalogo del doblon de a dos. Madrid, 1964. 
+
+Lop. 
+
+L. LOPEZ-CHAVES. Catalogo de los reales de a ocho espanoles. Madrid, 1965. 
+
+P. 
+
+PAGANI. Monete Italiane dall&apos; invasione Napoleonica ai giorni nostri. (1796-1961). Milan, 
+
+1962. 
+
+S. 
+
+SEABY. Standard Catalogue of British Coins. Londres. 
+
+Sp. 
+
+G. SPAZIANI TESTA. Ducatoni, scudi, talleri e loro multipli. Part. II. Roma, 1952. 
+
+Yeo. 
+
+R.S. YEOMAN. Modern World Coins. 1850-1964. U.S.A. 1968. </reference>
+
+
+<unit>Le Jeudi 4 Mai 1972 à 14 h 15 
+
+GRÈCE 
+
+* 
+
+-THURIUM. Statère. (ive siècle av. J.-C.). Tête d&apos;Athéna à dr., coiffée du casque athénien, 
+
+orné d&apos;un Scylla. R/. Taureau fonçant à dr. (BMC. 72 var. p. 294). Arg. Très beau. Rare. 
+
+* 
+
+-CALABRE. TARENTE. Statère. Cavalier avec un bouclier galopant à dr. R/. Taras au-dessus 
+
+des flots, assis en amazone sur un dauphin à g., tenant une grappe de raisin (VL. -). Arg. Traces 
+
+de cristallisation. Superbe/Très beau. 
+
+* 
+
+-Statère. Jeune homme nu sur un cheval se cabrant. R/. Taras chevauchant un dauphin à g., 
+
+tenant dans sa main g. une palme, à laquelle un Lemniskos est accroché; derrière, un casque 
+corinthien. (VL. 652). Arg. Très Beau. 
+
+-Statère. Guerrier casqué sur un cheval galopant à g. R/. Taras nu, chevauchant un dauphin à 
+
+g., tenant une quenouille et une grappe de raisin. (VL. 794). Arg. T.B. 
+
+-Statère. Cavalier nu à g., R/. Taras tenant un trident dans la main g., et une corne d&apos;abondance 
+
+dans la main d. (VL. 838). Arg. T.B. 
+
+* 
+
+-SICILE. SYRACUSE. Tétradrachme. Tête d&apos;Aréthuse à dr., les cheveux noués en touffe sur 
+
+le sommet de la tête. R/. Quadrige à g., Niké couronne l&apos;aurige. (Du Ch var. 46 Br. 384). Arg. 
+
+Flan légèrement éclaté. T.B. 
+
+
+* 
+
+7 -Tétradrachme. (Vers 425 av. J.-C.). Tête d&apos;Aréthuse à dr., les cheveux relevés dans une résille 
+
+allongée. R/. Même type. (Du Ch. 53 -Br. 396). Très beau style. Très Beau. 
+
+* 
+
+8-50 Litrae. Tête d&apos;Apollon laurée à g., les cheveux retombant sur la nuque. R/. Trepied. (BMC. 
+
+256 var., Pozzi 631 var.). Or. Superbe. Rare. 
+
+* 
+
+9 -MACÉDOINE. Philippe II. (359-336). Eion. Statère. Tête laurée d&apos;Apollon à dr., les cheveux 
+
+courts. R/. Bige au galop à dr., conduit par un personnage drapé, tenant le fouet. Sous les chevaux 
+un trident. (M. 59). Or. 8,48 g. Très Beau. 
+
+* 10 -Statère. Pella. Même type. R/. Bige au galop à dr. Sous les chevaux un foudre. (M. 1.). Or. 8,50g. 
+
+Beau Style. Très Beau. 
+
+Il -ALEXANDRE le GRAND. Tétradrachme. Tête d&apos;Héraclès à g. R/. Zeus aêtophore, assis à g., 
+
+(M. 498). -THRACE. Lysimaque. Drachme. Tête divinisée d&apos;Alexandre le Grand, R/. Athéna 
+
+nicéphore, assise à g., (P. 1164). Ens. 2 p. Arg. T.B. et Très Beau. 
+
+* 12 -MARONEE. Tétradrachme. (lIe siècle av. J.-C.). Tête de Dionysos imberbe à dr., diadémée 
+
+et couronnée de lierre. R/. Dionysos nu, deb. à g. tenant une grappe et deux baguettes. Arg. 
+
+(BMC. 48 var. p. 128). 
+
+* 13 -PONT EUXIN. PANTICAPÉE. Statère. Or. Tête barbue de satyre portant une couronne de 
+
+lierre et de baies, les cheveux longs, deux boucles relevées à l&apos;arrière de la tête; avec des oreilles 
+pointues. R/. Panthère ailée et cornue, marchant à g., sur un épi de blé, regardant de face et 
+tenant dans sa gueule un javelot. (Br. 1350 -Bab. 1706 -Jam. 1361). 9,07 g. Superbe 
+exemplaire de très grande rareté. 
+
+* -ATTIQUE. ATHÈNES. Tétradrachme. Tête d&apos;Athéna. R/. Chouette debout à dr. Arg. (Br. 
+
+1100 var). Très Beau. 
+
+-Tétradrachme. Nouveau style. Tête d&apos;Athéna à d. R/. Chouette debout de face sur une amphore 
+
+couchée. (BMC. 290 -P. 1594). Arg. T.B. 
+
+* 16 -PAPHLAGONIE. SINOPE. Drachme. Tête de la nymphe Sinopé à g., les cheveux dans une 
+
+sphendone. R/. Aigle, sur un dauphin à g. Arg. (BMC. 7). Superbe. 
+
+17 -MYSIE. PERGAME. Tétradrachme. Cistophore. Serpent se glissant dans la ciste bachique. 
+
+R/. Arc dans le goryte, paré d&apos;aplustre, entouré de deux serpents. (BMC. 89 p. 123). Arg. Flan 
+
+large. T.B./Très Beau. 
+
+* -ILES de CARIE. RHODES. Tétradrachme. Tête d&apos;Hélios presque de face, un peu à dr., les 
+
+cheveux au vent. R/. Rose sur sa tige, avec deux boutons, l&apos;un à g. dirigé vers le bas, l&apos;autre à 
+
+d. dirigé vers le haut. Trace d&apos;un carré creux. (Bab. 1702 (T IP) -BMC voij 19/22 -Jam. 
+
+1551/1553). 15,99 g. Arg. Superbe exemplaire detrès grand style et d&apos;extrême rareté. 
+
+* -SYRIE. Démétrius 1er Soter. (162-150). Tétradrachme. Tête diadémée du roi à dr. R/. Tyché 
+
+assise à g., tenant un sceptre court et une corne d&apos;abondance. (BMC. 33 p. 47). Arg. Oxydation 
+du flan au revers. Très Beau. 
+
+* 20 -JUDÉE. 1&quot; révolte. Shekel. An 2. Calice. R/. Rameau à 3 boutons. (BMC. p. 270 -Reifenberg 
+
+139). Arg. Superbe. Rare. 
+
+21 -RHODES. Tête d&apos;Hélios presque de face. R/. Rose. Drachme. (BMC. 164 var.). Arg. THRACE. 
+LYSIMAQUE. Tétradrachme. Tête divinisée d&apos;Alexandre le Grand. (M. -558. P. 1182). 
+
+Drachmes d&apos;Elide. Arg. 4 p. B/T.B. 
+
+* 22 -KUCHAN DANS L&apos;INDE DU NORD. Bazodeo. (Vasu Deva) (122-176). Statère. Imitation 
+
+barbare. Le roi à g. portant le casque conique et la cotte de maille, tenant un autel et une lance. 
+R/. Civa deb. de face tenant une couronne et un trident; derrière lui, un taureau à g. (BMC. 24. 
+
+var. p. 160). Electrum. Très Beau. 
+
+
+RÉPUBLIQUE ROMAINE 
+
+CONSULAIRES 
+
+* 23 -Didrachme. Tête de Janus Bifrons laurée, avec des boucles de cheveux retombant sur les côtés. 
+
+R/. Jupiter et une victoire dans un quadrige à dr. A l&apos;exergue ROMA. (S. 64). Très Beau. Flan 
+
+large. 
+
+24 -Caius Renius. Denier. Tête casquée de Rome à dr., derrière à g., X. R/. Juno Caprotina dans 
+un bige attelé de deux chèvres, à dr., tenant un sceptre et le fouet. (Renia B. 1 -S. 432). Superbe. 
+*25 -T. Veturius. Denier. Buste de Mars, coiffé d&apos;un casque orné de plumes et d&apos;une crinière, à dr. 
+
+R/. Deux guerriers cuirassés, tenant une lance de la main g. et de la main dr., une épée nue qu&apos;ils 
+
+dirigent sur un jeune porc, que tient dans ses bras le sacerdos fecialis agenouillé; au-dessus 
+
+ROMA. (Véturia. B. 1 -S. 527). Très Beau à Superbe. 
+
+-Denier. Autre type varié. Très Beau à Superbe. 
+
+-Mn. Aemilius. Denier. Buste de la déesse Rome laurée et diadémée. R/. Trois arceaux d&apos;un arc 
+
+de triomphe supportant la statue d&apos;un cavalier. Sous les arceaux, les lettres LEP. de la légende. 
+
+(Aemilia B. 7 -S. 554). Très Beau. 
+
+28 -L. Calpurnius Piso. Denier. Tête laurée d&apos;Appolon à dr.; derrière CXXI. R/. Cavalier au galop 
+
+à dr. tenant une palme; au-dessus, une marque monétaire. (Calpurnia. B. 12 var. -S. 656/662). 
+
+Très Beau. 
+
+-Ogulnius Vergilius. Denier. Tête d&apos;Apollon Vejovis à dr. couronné de chêne. R/. Jupiter dans un 
+
+quadrige à dr. (Vergilia B. -S. 723). Très Beau. 
+
+-M. Fonteius. Denier. Tête laurée d&apos;Apollon Vejovis à dr. R/. Le génie ailé d&apos;Apollon Vejovis 
+
+enfant, monté sur la chèvre Amalthée. (Fonteia. B. 10 -S. 724 a.). Très Beau. 
+
+
+* 31 -L. Censorinus. Denier. Tête laurée d&apos;Apollon à dr. R/. Le satyre Marsyas, deb. à g., avec une 
+
+queue et des brodequins, portant une outre sur l&apos;épaule et levant le bras; derrière lui une colonne 
+surmontée d&apos;une statue drapée. (Marcia. B. 24 -S. 737). Superbe. 
+
+*32 -A. Postumius. Denier. Buste de Diane à dr., avec l&apos;arc et le carquois sur l&apos;épaule. R/. Sacrifi-
+
+cateur revêtu de la toge, deb. à g., sur une montagne, près d&apos;un autel allumé, aspergeant avec 
+un rameau le taureau destiné au sacrifice. (Postumia. B. 7 -S. 745). Très Beau. 
+
+33 -C. Annius. Denier. Buste diadémé d&apos;Annia Perenna à dr. R/. Victoire tenant une longue palme, 
+
+dans un quadrige au galop à dr. (Annia. B. 3 -S. 748c). Très Beau. 
+
+34 -Caecilius Metellus. Denier. Tête diadémée de la piété à dr., devant une cigogne. R/. Eléphant 
+
+tourné à g. (Caecilia. B. 43 -S. 750 (4). T.B. Rare. 
+
+* 35 -Cnaeus Lentullus. Denier. Buste diadémé du génie du peuple romain à dr., avec un sceptre sur 
+
+l&apos;épaule. R/. Le globe terrestre entre un sceptre et une couronne de laurier d&apos;un côté et un gou-
+vernail de l&apos;autre. (Cornelia. B. 55 -S. 752a). Superbe. 
+
+* 36 -Naevius Balbus. Denier. Tête diadémée de Vénus à dr., R/. La victoire dans un trige galopant 
+
+à dr. (Naevia. B. 6 -S. 769). Superbe. 
+
+*37 -L. Procilius. Denier. Tête laurée de Jupiter à dr. R/. JUNON Sospita deb. à dr., armée d&apos;une 
+
+lance et d&apos;un bouclier, et coiffée de la peau de chèvre; à ses pieds le dragon. (Procilia. B. 1 -
+
+S. 771). Très Beau. 
+
+*38 -L. Farsuleius Mensor. Denier. Buste diadémé de la liberté à dr., derrière, un bonnet phrygien. 
+
+R/. Guerrier conduisant un bige à dr., sur lequel un autre personnage revêtu dela toge s&apos;apprête 
+à monter; sous le bige, un scorpion. (Farsuleia. B. 1 -S. 798a). Superbe. 
+
+*39 -Q. Fufius Calenus et Marcius Cordus. Denier. Tête laurée de l&apos;Honneur et tête casquée de la 
+
+valeur, accolée à dr., R/. L&apos;Italie, tenant une corne d&apos;abondance et tendant la main à Rome 
+
+diadémée. (Fufia. B. 1 -S. 797). Superbe. 
+
+* 40 -Manius Aquilius. Denier dentelé. Buste casqué de la valeur à dr. R/. Le consul Man Aquillius 
+
+deb., armé d&apos;un bouclier, relevant la Sicile sous les traits d&apos;une femme à demi-nue affaissée. 
+
+(Caquilia. B. 2 -S. 798). Très Beau. 
+
+*41 -Q. Pomponius Musa. Denier. Tête laurée d&apos;Apollon à dr. ; derrière une étoile. R/. Uranie debout 
+
+à gauche, touchant avec une baguette un globe posé sur un cippe à ses pieds. (Pomponia. B. 
+
+22 -S. 823). Arg. Superbe. Rare. 
+
+*42 -L. Manlius Torquatus. Denier. Tête de la Sibylle ceinte d&apos;un bandeau et tournée à dr. R/. Trépied 
+
+surmonté d&apos;un praefericulum entre deux étoiles; le tout dans une couronne de laurier. ( Manlia. 
+
+B. 12 -S. 837a). Arg. Superbe. Rare. 
+
+* 43 -Faustus Cornelius Sulla. Denier. Buste de Diane à dr., la tête diadémée et surmontée du crois-
+
+sant. R/. Sylla en magistrat romain, assis sur une estrade; devant lui, le roi Bocchus, lui présente 
+une branche d&apos;olivier; derrière lui, Jugurtha en captif, les mains liées derrière le dos. (Cornelia. 
+
+B. 59 -S. 879). Arg. Superbe. 
+
+* 44 -P. Fonteius Capito. Denier. Tête diadémée et voilée de la Concorde à dr. R/. La Villa Publica 
+
+sous l&apos;aspect d&apos;un édifice à 3 étages soutenu par des arcades et des colonnes. (Fonteia. B. 18 -
+
+S. 901). Arg. Superbe. 
+
+*45 -L. Furius Bocchus. Denier. Tête de Cérès couronnée d&apos;épis, tournée à dr. R/. Chaise curule entre 
+
+deux faisceaux de verges, avec des haches de licteurs. (Furia. B. 23 -S. 902). Arg. Superbe. 
+
+*46-Q. Caepio Brutus. Denier. Tête nue de L. Junius Brutus l&apos;Ancien, à dr. R/. Tête nue de Servilius 
+
+Ahala, à dr. (Junia. B. 29 -S. 907). Arg. Très Beau. Rare. 
+
+
+47 -P. Plalltuis Hypsaeus. Denier. Tête diadémée de Leuconoé à dr. ; derrière, un dauphin. R/. 
+
+Jupiter tenant un foudre, dans un quadrige au galop, à g. (Plautia, B. 12 var. -S. 911). Arg. 
+
+Très Beau. 
+
+* 48 -L. Roscius Fabatus. Denier dentelé. Tête de Junon Lanuvienne, couverte d&apos;une peau de chèvre, 
+
+à dr. R/. Jeune fille deb., tournée à dr. et donnant à manger à un dragon qui se dresse devant 
+
+elle. (Roscia. B. 3 var. -S. 915). Arg. Superbe/Très Beau. 
+
+*49 -L. Marcius Philippus. Denier. Tête diadémée du roi Ancus Marcius, à dr. Contremarque sur 
+
+la joue. R/. Statue équestre à dr., sur un aqueduc entre les arceaux duquel on lit : AQUA MAR. 
+
+(Marcia. B. 28 -S. 919). Arg. Superbe. 
+
+* 50 -Mn. Acilius. Denier. Tête laurée de la Santé à dr. R/. La Santé deb. de face, ragardant à g., 
+
+appuyée sur une colonne, et donnant, de la main droite, à manger à un serpent. (Acilia. B. 8 -
+
+S. 922). Arg. Superbe. 
+
+* 51 -Denier. Autre. (B. 8 -S. 922). Superbe. 
+
+* 52 -Paullus Aemiluis Lepidus. Denier. Tête diadémée et voilée de la Concorde à dr. R/. Lucius Aemi-
+
+lius Paullus, en général romain deb., la main dr. étendue sur un trophée, à g. duquel se tient 
+deb. Persée, ayant ses deux fils devant lui. (Aemilia. B. 10 -S. 926). Arg. Très Beau. 
+
+* 53 -Lucuis Scribonius Libo. Denier. Tête diadémée de Bonus Eventus, à dr. R/. Margelle du puits 
+
+Scribonien ornée d&apos;une guirlande de laurier et de deux lyres; en-dessous, des tenailles. (Scri-
+
+bonia. B. 8 -S. 928). Arg. Très Beau. 
+
+* 54 -Denier. Autre. (B. 8 -S. 928). Superbe. 
+
+*55-A. Plautius. Denier. Tête tourelée de Cybèle à dr. R/. Bacchius à genoux à dr., tenant de la main 
+
+g. un chameau par la bride et une branche d&apos;olivier de la main dr. Plautia. (B. 13 -S. 932). 
+
+Arg. Très Beau. 
+
+
+*56 -L. Cassius Longinus. Denier. Tête voilée de Vesta à g. R/. Citoyen romain deb., déposant dans 
+
+une ciste placée à sa dr., un bulletin de vote. (Cassia. B. 10 -S. 935). Arg. Très Beau. 
+
+* 57 -Q. Sicinius Coponius. Denier. Tête diadémée d&apos;Apollon à dr. R/. La massue d&apos;Hercule recou-
+
+verte d&apos;une peau de lion dont la tête est de profil. (Coponia. B. 1 -S. 939). Arg. Superbe. 
+
+* 58 -Albinus Bruti. Denier. Tête nue du consul Aulus Postumius Albinus Regilensis à dr. R/. « Albinu, 
+
+Bruti filius », en deux lignes dans une couronne d&apos;épis. (Postumia. B. 14 -S. 943a). Arg. Très 
+
+Beau. 
+
+* 59 -C. Vibius Pansa. Denier. Masque de Pan, à dr. R/. Deux mains jointes tenant un caducée ailé. 
+
+(Vibia. B. 22 var. -S. 944). Arg. T.B. 
+
+*60 -C. Vibius Pansa. Denier. Masque de Pan, à dr. Derrière, un pedum. R/. Jupiter Axur assis sur 
+
+un trône, à g., la tête radiée, tenant une patère de la main dr. et une haste de la main g. (Vibia. 
+B. 19 -S. 947). Arg. Très Beau. 
+
+* 61 -Cn. Calpurnius Piso. Denier. Tête de Numa à dr., avec un diadème sur lequel on lit « NVMA ». 
+
+R/. Proue de navire à dr. ( Calpurnia. B. 30 -S. 1032). Arg. Très Beau/Superbe. Rare. 
+
+62 -Q. Caecilius Metellus. Denier. Tête laurée et barbue de Jupiter, en Terme, à dr. R/. Eléphant 
+
+marchant à dr. (Caecilia. B. 47 -S. 1046). Arg. T.B. 
+
+*63 -L. Mussidius Longus. Denier. Tête diadémée et voilée de la Concorde, à dr. R/. Deux personnages 
+
+en regard, deb. sur un vaisseau dont la proue est ornée d&apos;un acrostolium; sur la g. du vaisseau, 
+
+une sorte de portique auquel on accède par des gradins. (Mussidia. B. 6 -S. 1093a). Arg. 
+T.B./Très Beau. 
+
+* -Sextus Pompeius. Denier. Tête nue de Pompée à dr. ; devant, le lituus; derrière, le praefericulum. 
+
+R/. Anapias et Amphinomus portant leurs parents sur leurs épaules; entre eux, Neptune deb. 
+à g., tenant l&apos;acrostolium et posant le pied sur une proue de navire. (Pompée B. 27 -C. 17 -
+
+S. 1344). Arg. Très Beau. Rare. 
+
+* 65 -JULES CÉSAR. (44 av. J.-C.). Auréus. Rome. Tête voilée de la Pitié jeune à dr. R/. Bâton 
+
+d&apos;augure, vase à sacrifice et hache. (C. 2). Or. Superbe. 
+
+* -Denier. Tête diadémée de Vénus à dr. R/. Enée portant Anchise et le palladium. (C. 12 -B. 10 -
+
+S. 1013. Arg. Très Beau. 
+
+* -Denier. Tête diadémée de Vénus à dr. ; derrière, Cupidon. R/. Trophée avec deux boucliers et 
+
+deux trompettes gauloises; à g., une femme assise, pleurant; à dr., un captif nu, à genoux, les 
+mains liées derrière le dos. (C. 13 -B. 11 -S. 1014). Arg. Très Beau. 
+
+* 68 -OCTAVE AUGUSTE (44 av. J.-C. -14 ap.). Ephèse? Cistophore. Tête nue d&apos;Auguste à dr. 
+
+R/. Autel entouré de guirlandes et orné de deux cerfs. (C. 33). Arg. Très Beau/T.B. Rare. 
+
+* -Denier. Tête nue d&apos;Auguste à g. R/. Capricorne à dr., tenant un gouvernail auquel est attaché 
+
+un globe; sur son dos une corne d&apos;abondance. (C. 22). Arg. T.B./Très Beau. 
+
+* -Atelier de l&apos;Est. Denier. Tête nue d&apos;Octave à dr. R/. Apollon nu à dr., assis sur un rocher et jouant 
+
+de la lyre. (C. 61). Arg. Très Beau. 
+
+* 71 -Denier. Tête nue d&apos;Octave à dr. trace de contremarque. R/. Trophée naval. (C. 119). Arg. Très 
+
+Beau. 
+
+* -Denier. Tête laurée d&apos;Octave à dr. R/. Statue deb. sur une couronne rostrale, ornée de deux 
+
+ancres. (C. 124). Arg. T.B. 
+
+
+* -Denier. Tête nue d&apos;Auguste à dr., trace de contremarque sur le cou. R/. Taureau cornupète à 
+
+dr. (C. 137. BMC. pl. 11n°1). Arg. Très Beau. 
+
+* -Atelier Lyon. Denier. Tête nue d&apos;Auguste à dr. R/. Apollon en habit de femme, tenant une lyre 
+
+et le plectrum, deb. à g. (C. 144 -BMC. Pl. XII n°3). Arg. Très Beau. 
+
+* -Autre exemplaire. (C. 144 -BMC. Pl. XII n°3). Arg. Superbe. 
+
+* -Denier. Tête nue à dr. R/. Dans une couronne de chêne : OB CIVIS SERVATOS. (C. 208). 
+
+Arg. Superbe. 
+
+* -Atelier de Rome. Denier. Tête tourelée de Féronie à dr. R/. Parthe à genoux à dr., présentant une 
+
+enseigne militaire. (C. 484 -BMC. Pl. 1 n°9). Arg. Très Beau. 
+
+* -NÉRON. (54-68). Auréus. Tête laurée à dr. R/. Auguste radié, tenant un sceptre et une patère, 
+
+et Livie voilée, tenant une patère et une corne d&apos;abondance, tous deux deb. à g. (C. 42 -BMC. 
+
+(E) 1 -p. 208 n°52 -RIC. 1 -p. 147 n°41). Or. Bel Exemplaire. 
+
+* -CONSTANT II. (641-668). Solidus. Buste couronné de face, tenant le globe crucigère. R/. Croix 
+
+sur trois degrés. Lettre en fin de légende; lettre Z dans le champ à dr. (R. -Sab. 2 -To. 7). 
+Or. Très Beau à Superbe. 
+
+* -Sou globuleux. Buste de face et diadémé de Constant II jeune, tenant le globe crucigère dans la 
+
+main dr. R/. Croix pattée sur trois degrés. (Sab. 1 -To. 62 var.). Or. Très Beau. 
+
+
+ROMAINES ET BYZANTINES 
+
+ÉTATS BARBARES DU HAUT MOYEN AGE 
+
+* 81 -LIBIUS SEVERUS ou SEVERE III (461-465). Solidus. Buste diadème, drapé et cuirassé de 
+
+l&apos;Empereur à dr., de style déformé. En légende, SIVERUS au lieu de SEVERUS. R/. Sévère, 
+
+deb. de face, posant le pied dr. sur la tête d&apos;un serpent; de part et d&apos;autre R.A. (Roma). 
+
+(G.8 var.). Or. Très Beau à Superbe. Rare. 
+
+* 82 -Triens. Son buste diadémé à dr. R/. Victoire de style déformé, deb. à g. tenant une croix. (C. 5 
+
+var.). Or. Superbe. Rare. 
+
+* 83 -ANASTASE. Solidus. Buste casqué de face, la lance sur l&apos;épaule, R/. Victoire deb. à g. tenant 
+
+une longue croix, finissant en monogramme au Christ. La fin de légende; lettre en mono-
+gramme. (R. 2467 var. -Belfort 5037). Or. Sauf coup sur la face. Très Beau. Rare. 
+
+* 84 -Triens. Buste diadémé à dr. R/. Victoire à dr. tenant une couronne et une palme; à l&apos;exergue 
+
+CONOB; en légende, VICTORIAAGOSTRUM. (R. 2472 -Belfort 5077 var.). Très Beau 
+à Superbe. Rare. 
+
+* 85 -JUSTINIEN Ier (527-565). Solidus. Buste casqué et cuirassé de face, tenant le globe crucigène 
+
+dans la main dr. R/. Victoire, deb. de face tenant une longue croix et le globe crucigène. (R. 
+445 var.). Or. Très Beau. Rare. 
+
+* -VALENTINIEN III (419-455). Solidus frappé par les Vandales. Buste du Roi, à dr., de style 
+
+déformé. R/. L&apos;Empereur de face mettant le pied sur un serpent. (C. 19 var.). T.B. Rare. 
+
+* -ANASTASE (493-526). Solidus. Buste casqué, au cou allongé, de face. R/. Victoire à g., tenant 
+
+une longue croix. (Belfort voir 5039). Or. Très Beau. Rare. 
+
+* -ZENON. Triens pour Odoacre (476-493)? Buste à dr. R/. Croix dans une couronne. (Wroth. 
+
+pl. V n°12 var.). Or. Très Beau. Rare. 
+
+* -ANASTASE. Triens pour Théodoric (493-526)? Buste à dr. R/. Victoiredé formée. (Wroth pl. V 
+
+n°17). Or. B./T.B. 
+
+* -ZENON. Triens. Frappe barbare. Tête à dr., oeil de face. R/. Victoire tenant la croix. Légende 
+
+inversée. (B. -Wroth -). Or. Superbe. Rare. 
+
+91 -FOCAS (602-610). Solidus. Buste de face. R/. Victoire. (R. 1194 -Wr. II). Or. Troué. -PA-
+
+TRAOS. Tétradrachme. (BMC. 10 var.). Arg. 2 p. B./T.B. 
+
+MONNAIES GAULOISES 
+
+* 92 -ARVERNES. Imitation des Monnaies de Philippe II. Statère. Tête d&apos;Apollon, laurée, à dr. 
+
+R/. Bige à dr., sous les chevaux monogramme AP; au-dessous du monogramme, un foudre. 
+
+(L.T. 3614). Or. 8 g 53. T.B. 
+
+* 93 -1/4 de Statère. Tête laurée d&apos;Apollon, à dr. Bige à dr., trisquèle sous les chevaux. (L.T. 3629 
+
+var.). Or. 2 g 53. Très Beau. 
+
+* 94 -BITURIGES CUBI. (Berry). Statère. Tête à dr., les cheveux disposés en grosses mèches. R/. 
+
+Cheval à dr.; au-dessus, grue entre deux points centrés; dessous trèfle. (L.T. 4072). Electrum. 
+
+7 g 03. T.B./Très Beau. 
+
+
+* 95 -ABUCAT. Statère. Tête à g., les cheveux disposés en grosses mèches. R/. Cheval libre courant 
+
+à g; au-dessus aigle éployé; dessous trois annelets. (L.T. 4173). Or. 6 g 85. Très Beau. 
+
+* 96 -PICTONES. (Poitiers). Statère. Tête à dr. R/. Aurige dirigeant un cheval androcéphale à dr., 
+
+Dessous, main étendue. (L.T. 4395). Or. 6 g 54. Très Beau. 
+
+* 97 -Même type. Autre Statère. (L.T. 4395). Or bas. 6 g 35. B./T.B. 
+
+* 98 -SANTONES. (Saintonge). Statère. Tête à dr., les cheveux divisés en grosses mèches. R/. Bige 
+
+à dr., attelé d&apos;un cheval androcéphale casqué; l&apos;aurige tient le torque; sous le cheval, main 
+
+sur un fleuron. (L.T. 4512). 5 g 60. Billon aurifère. T.B. 
+
+* 99 -MANDUBII. (Alésia). Statère. Tête d&apos;Apollon à g.; R/. Bige à dr., dessous, lyre, accostée de 
+
+AM. (L.T. 5278). Or. 7 g 52. Légèrement décentré. Très Beau à Superbe. 
+
+*101 -TURONES. (Région de Tours). 1/4 de statère. Tête laurée à dr. R/. Bige à dr. Dessous, trisquèle. 
+
+(L.T. 6427). Or. 1 g 76. Bien centré. Très Beau. 
+
+*102 -OSIMII. (Côtes du Nord). Statère. Tête d&apos;Ogmius à dr., coiffée de l&apos;étoile à quatre rayons, 
+
+et entourée de cordons de perles. R/. Bige à g., devant, une rouelle suspendue à un cordon que 
+tient l&apos;aurige. Sous l&apos;androcéphale, tente. (L.T. 6508). Or bas et cuivre. 6 g 15. Echancrures. 
+
+T.B. à Très Beau. Rare. 
+
+*103 -Statère. Tête d&apos;Ogmius à dr. entourée de cordons de perles. R/. Androcéphale à dr., dessous, 
+
+tente. (L.T. 6512 var.). Or bas. 6 g 47. B./T.B. à T.B. Rare. 
+
+*104 -1/4 de Statère. Tête d&apos;Ogmius à dr., coiffée du sanglier et entourée de cordons de perles. R/. 
+
+Bige à dr. Sous le cheval, génie couché avec une longue queue de cheveux. (L.T. 6521). Or 
+
+cuivré. 1 g 65. T.B. 
+
+
+*105 -Statère. Tête d&apos;Ogmius à dr. entourée de cordons perlés, auxquels est attaché une tête qui aboutit 
+
+à l&apos;occiput. Bige à dr., devant, vexillum suspendu, dessous, génie ailé replié sur lui-même. 
+(L.T. 6527). Or bas. 6 g 18. T.B. 
+
+*106 -Statère. Tête d&apos;Ogmius à dr., coiffée de l&apos;étoile et entourée de cordons de perles auxquels est 
+
+attachée une tête devant la bouche du dieu. R/. Bige à dr., roue entre le bras de l&apos;aurige et le 
+cheval; devant, croix suspendue; dessous, génie ailé. (Lat. 6533). Or bas. 5 g 70. B./T.B. 
+
+*107-
+
+-Statère. Tête à dr. d&apos;où partent des cordons aboutissant à un sanglier et trois petites têtes. 
+
+R/. Cheval androcéphale à g., deux cordons aboutissant à des têtes se croisent au-dessus; dessous, 
+sanglier à dr. (L.T. 6541). 6 g 75. Or bas et cuivre. Très Beau. Rare. 
+
+*108 -ANDECAVI. (Anjou). Statère. Tête d&apos;Ogmius à dr. coiffée d&apos;un rayon; autour de sa tête, 
+
+des crodons de perles. R/. Cheval androcéphale à dr., dessous, un génie à mi-corps retient les 
+pattes des chevaux. (L.T. 6723). Or. 7 g 22. Très Beau/T.B. Bien centré. 
+
+*109 -Statère. Autre. (L.T. 6723). Or 7 g 27. B./T.B. 
+
+*110 -1/4 de Statère. Tête d&apos;Ogmius à dr., avec cordons perlés aboutissant à de petites têtes. Croix 
+
+sur le front. R/. Androcéphale à dr.; dessous, figure à mi-corps. (L.T. 6724). Or. 1 g 54. T.B. 
+
+*111 -Statère. Tête d&apos;Ogmius à dr.; croix sur le front. R/. Androcéphale à dr. (L.T. 6728). Or. 7 g 51. 
+
+B./T.B. 
+
+*112 -Statère. Tête d&apos;Ogmius à dr., cordons de perles. R/. Androcéphale à dr., dirigé par un aurige; 
+
+dessous, personnage à mi-corps. (L.T. 6743). Or bas. 6 g 85. T.B. 
+
+*113 -Statère. Autre. (L.T. 6743). cuivre aurifère. 6 g 27. T.B. 
+
+*114 -AULERCI CENOMANI. (Région du Mans). Statère. Tête d&apos;Ogmius à dr., coiffée du sanglier 
+
+et entourée de cordons de perles. R/. Cheval androcéphale non ailé, à dr., l&apos;aurige est armé du 
+stimulus; dessous, génie ailé. (L.T. 6827). Or. 7 g 60. B./T.B. 
+
+115 -1/4 de Statère. Tête d&apos;Ogmius à dr. R/. Androcéphale à g.; dessous, génie ailé. (L.T. 6840). 
+
+Or bas. 1 g 63. Très Beau. (Voir également L.T. 6506 -Osismii). 
+
+*116 -Statère. Tête laurée à dr., mèche isolée devant le front, boucles ramenées sur la joue, formant 
+
+trois perles. R/. Androcéphale ailé à dr. L&apos;aurige tient le vexillum; sous le cheval, un guerrier 
+couché tenant une lance et un glaive recourbé. (L.T. 6858). Or. 7 g 45. Superbe. 
+
+*117 -Statère. Tête laurée à g., boucles sur la joue. R/. Androcéphale ailé à g.; l&apos;aurige tient le vexil-
+
+lum; sous le cheval, guerrier couché, tenant la lance et le glaive. (L.T. 6870). Or. 6 g 91. Eclats 
+au flan. T.B. à Très Beau. 
+
+*118 -PARISII. (Paris). 1/4 de Statère. Tête à dr. les cheveux divisés en grosses mèches. R/. Cheval 
+
+à g., la bride flottante; au-dessus filet, et rosace. (L.T. 7792 var.). Or. 2 g 16. Très Beau. 
+
+*119 -1/4 de Statère. Tête à dr. R/. Cheval à g. (L.T. 7804 var.). Or. 2 g 50. B./T.B. 
+
+*120 -RÉMI. (Reims). Statère. Grand oeil de profil. R/. Cheval à g., dessous, roue. (L.T. 8018). Or. 
+
+5 g 92. B./T.B. à T.B. 
+
+*121 -Statère. Même type. R/. Cheval à dr., dessous, roue. (L.T. 8020). Or. 6 g 14. Superbe. 
+*122 -ATREBATES. (Arras). 1/4 de Statère. Tête barbare à dr. R/. Bige à dr., au-dessus large crois-
+
+sant. (L.T. 8590). Or. 1 g 88. B./T.B. 
+
+*123 -Statère. Buste lauré à dr., tige verticale derrière l&apos;oreille. R/. Cheval disloqué à dr. (L.T. 8597). 
+
+Or. 7 g 18. Sf. traces métalliques sur les cheveux. Très Beau. 
+
+
+*124 -Statère. Buste lauré à dr. Tige verticale derrière l&apos;oreille. R/. Cheval disloqué à dr. (L.T. 8603). 
+
+Or. 6 g 29. B./T.B. à T.B. 
+
+*125 -MORINI. (Région de Calais). Statère. Uniface. R/. Cheval disloqué à dr.; dessous, globule 
+
+et croissant; dessus croissant. (L.T. 8704 var.). Or. 5 g 58. Très Beau. 
+
+*126 -Statère. Uniface. R/. Cheval disloqué à dr.; dessous, globules et croissant; à l&apos;exergue, oves. 
+
+(L.T. 8710). Or. 6 g 78. Superbe. 
+
+*127 -Statère. Uniface, traversé par une baguette et dentelé sur les bords. R/. Cheval disloqué à dr. ; 
+
+dessous, globule et croissant. (L.T. 8717 var.). Or. 6 g 21. Superbe. 
+
+*128 -TREVIRI. (Trèves). Statère. Lucotios. Grand oeil. R/. LUCOTIO. Cheval à g.; dessous, deux 
+
+cercles concentriques. (L.T. 8821). Or. 6 g 02. Très Beau/T.B. 
+
+*129 -NERVII. (Vallèe de l&apos;Escaut). Statère. Tête disloquée dite à l&apos;epsilon. R/. Cheval belge à gorge 
+
+fourchue; au-dessus du cheval, roue isolée. (L.T. 8746). Or. 5 g 64. Echancrures. T.B. 
+
+*130 -TREVIRII. Statère. Grand oeil. R/. Cheval à g., dessous, cercles concentriques. (L.T. 8823). 
+
+Or. 5 g 28. Très Beau. 
+
+*131 -MEDIOMATRICI. (Metz). 1/4 de Statère. Tête d&apos;Apollon à dr. R/. Pegase à dr. A l&apos;exergue 
+
+points simulant une légende. (L.T. 8956). Or. 1 g 53. Très Beau. 
+
+*132 -HELVETII. Statère. Tête laurée à dr. R/. Bige à dr., dirigé par un aurige; sous les chevaux, 
+
+fleur. (L.T. 9302 var.). Or. 7 g 64. B./T.B. 
+
+* 133 -Statère concave. Mêmes types variés. (L.T. -). Or bas. 6 g 26. B. 
+
+
+*134 -PROTO -HELVETES. (Région de Bâle). Statère. Tête d&apos;Apollon à dr. R/. Bige à dr. (F. 520). 
+
+Or. 7 g 76. B. /T.B. 
+
+*135 -CELTES DU DANUBE. IMITATION DU STATÈRE DE LYSIMAQUE. Statère. Tête 
+
+d&apos;Alexandre à dr., portant les cornes d&apos;Amon. R/. Pallas Nicéphore s&apos;appuyant sur un 
+
+bouclier. (F. 375 var.). Or. 8 g 35. Superbe. Rare. 
+
+*136 -ILE DE BRETAGNE. Invasions Gallo-Belges. Statère uniface. R/. Cheval disloqué à dr., dessous, 
+
+globule et croissant. (Mack. 27b, pl. XXIX). Or. 6 g 04. T.B. 
+
+*137 -Statère. Uniface. R/. Cheval à dr., derrière, globule, dessous, rouelle. (Evans. Pl. D n°1 L.T. 
+
+Pl. XLI). Or. 4 g 28. Très Beau. 
+
+*138 -WADDON CHASE. (40 -20 av. J.-C.). Statère. Fragment d&apos;une tête laurée, qui prend la 
+
+forme d&apos;un ornement cruciforme. R/. Cheval galopant à dr. Au-dessus ornement incurvé et 
+globule, un autre se trouvant dessous le cheval. Ligne à l&apos;exergue. (Mack 135a). Or. 5 g 71. 
+
+Très Beau. 
+
+*139 -ESPAGNE TARRAGONNAISE. Monnayage Celtiberien. Huesca. OSCA. Denier. Tête barbue 
+
+à dr., ornée d&apos;un collier; derrière, monogramme. R/. Cavalier à dr., armé d&apos;une lance. (H. pl. 
+
+XIII. 1). Arg. Très Beau. 
+
+*140 -BELSINUM. Denier. Tête barbue à dr. R/. Cavalier nu tête à dr., armé d&apos;une épée. Légende à 
+
+l&apos;exergue. (H. pl. XX, 2). Arg. Superbe. 
+
+141 -GAULE ESPAGNOLE. LERIDA et SALAURIS. Denier. Tête à dr. entre trois poissons. R/. 
+
+Cavalier à dr., le manteau flottant et portant une palme. (H. X 1). Arg. T.B. 
+
+*142 -MASSALIA. Obole. Tête d&apos;Apollon? à dr., coiffée d&apos;un bonnet orné de bandes perlées. (Lau. 
+
+Pl. I, n°3). -Autre. Tête tournée à g., (Lau. Pl. I, n°5). -Obole. Tête de face, sans trace de 
+cou ni d&apos;oreilles, probablement un masque scénique. (Lau. Pl. I, n°18 var.). Ens. 3 P. Arg. 
+Très Beau. 
+
+*143 -MASSILIA. Obole. Tête de lion à g. (Lau. Pl. II, n°27). Tête de veau à dr. (Lau. Pl. II, n°28). 
+
+-Tête de bélier à g. (Lau. PI. II, n°37). -Autre. Ens. 4 p. Arg. Très Beau. 
+
+*144 -Obole. Tête d&apos;Apollon à g., les cheveux hérissés. R/. MA entre les rayons d&apos;une roue. (Lau. 
+
+Pl. V n°83 var.). Arg. Sauf légère échancrure. Superbe. 
+
+*145 -Obole. (Laug. pl. V., Lat. 681). Très Beau. 
+
+*146 -Obole. Tête d&apos;Apollon imberbe, à g., les cheveux disposés en grosses mèches. (L.T. 580). Arg. 
+
+Superbe. 
+
+*147 -Autre. Les cheveux harmonieusement coiffés. (Lau. -). -Autre, la chevelure hérissée. (L.T. 
+
+580 var.). Ens. 2 p. Arg. Très Beau. 
+
+*148 -Denier. Buste de Diane à dr., avec un collier de perles; les cheveux ont une tresse attachée au-
+
+dessus de la tête, et une autre qui descend le long du cou. R/. Lion en arrêt à dr., la patte avant 
+g., levée. (L.T. 992 var.). Arg. Superbe. 
+
+*149 -Denier. Buste diadémé de Diane à dr., avec ses attributs, pendants d&apos;oreilles et collier de perles. 
+
+R/. Lion à g. (Lau. PI. VII, n°109 var.). Arg. Superbe. 
+
+*150 -Denier Incus. Buste diadémé de Diane à dr., Arc, carquois, collier et pendants d&apos;oreilles. (Lau. 
+
+Pl. VIII n°121 var.). Arg. Superbe. 
+
+*151 -Denier. Même type. R/. Lion à g., une des pattes de devant levée. A à l&apos;exergue. (L.T. 1090). 
+
+-Buste de Diane à dr. ; R/. Lion à dr. (L.T. 921 var.). Arg. Ens. 2 p. Très Beau. 
+
+
+152 -IMITATIONS DE MONNAIES MASSALIOTES. Drachme. Tête de Diane à dr., avec de 
+
+petites branches d&apos;olivier dans les cheveux, des pendants d&apos;oreilles. R/. Lion marchant à dr., 
+
+au-dessus, légende déformée. (Lau. pl. XV, n°1). Arg. -Autre. Ens. 2 p. Superbe et Très Beau. 
+
+153 -Autres. Ens. 2 p. (Lau. -). Arg. T.B. 
+*154 -VOLCAE ARECOMICI. (Avignon). Drachme. Tête d&apos;Apollon à dr. R/. Buxte de cheval à 
+
+dr. (L.T. 2524). Arg. T.B./Très Beau. Rare. 
+
+155 -ALLOBROGES. (Dauphiné-Savoie). Drachme. Tête d&apos;Apollon à g. R/. Chamois bondissant 
+
+à g., sus, tige. )L.T. 2895). Arg. Très Beau. 
+
+*156 -VOLCAE TECTOSAGE. (Toulouse). Drachme. Tête de nègre à g. R/. Croix cantonnée de 
+
+quatre croissants recouvrant trois points et un annelet. (L.T. 2986). Arg. Très Beau. 
+
+*157 -CADURQUES TOLOSATES.Drachme. Tête à g., figurée par un triangle renfermant un point; 
+
+devant la face une accolade en forme d&apos;arc. R/. Croix cantonnée d&apos;une hache et de trois points. 
+
+(L.T. 3258). Arg. Très Beau. 
+
+*158 -VOLCAE TECTOSAGE. Drachme. Tête à g. R/. Croix cantonnée de deux olives, un annelet, 
+
+une hache, recouverts par des croissants. (L.T. 3132 pour le R/.). Arg. Très Beau. 
+
+*159 -Drachme. Tête nue à g. R/. Croix cantonnée de trois écrans perlés et d&apos;une hache (L.T. 3467). 
+
+Arg. Superbe. 
+
+160 -Drachme. Tête nue à g. R/. Sanglier à g., au-dessous point et point centré. (L.T. 3444). Arg. -
+
+Autre. (L.T. 3443). Ens. 2 p. T.B. 
+
+*161 -ELUSATES. Drachme. Tête uniforme. R/. Cheval à g. (L.T. 3587). Arg. Superbe. 
+*162 -BITURIGES CUBI. (Berry). Drachme. Tête à g. R/. Cheval libre galopant à g., dessus épée, 
+
+dessous Cambotre. (L.T. 4131). Arg. -Drachme. Tête à g. R/. Cheval au pas à g., au-dessus 
+épée, dessous étoile. (L.T. 4097). Ens. 2 p. T.B. 
+
+
+*163 -SANTONES. (Saintonge). Drachme. Tête à g., casquée .R/. Cheval bridé et sanglé galopant à 
+
+dr., dessous point dans un cercle de perles. (L.T. 4525). Arg. SEQUANI. (Région de Besançon) 
+Drachme. Tête à g. R/. Cheval à g. (L.T. 5405). Arg. Ens. 2p. Très Beau. 
+
+*164 -Drachmes. Tête à g. R/. Cheval à g. (L.T. 5550 var. -L.T. 5550). Ens. 2p. Très Beau et T.B. 
+
+*165 -CARNUTES. (Chartres). Drachme. Tête à dr. R/. Cheval à dr., au-dessus, loup accroupi. 
+
+Dessous trisquèle. (L.T. 6017). Arg. Très Beau. 
+
+*166 -AULERCI DIABLINTES. (Bretagne). Statère. Tête laurée d&apos;Apollon à dr. R/. Aurige et 
+
+cheval androcéphale; dessous, génie (L.T. 6493). Arg. T.B. 
+
+*167 -REDONES. Statère. Tête laurée à dr. R/. Cheval androcéphale à dr., devant vexillum suspendu 
+
+à un cordon que tient l&apos;aurige. Dessous, roue à quatres raies. (L.T. 6774). Arg. Très Beau. 
+
+*168 -Statère. Tête laurée à dr. R/. Même type, dessous roue à huit raies. (L.T. 6782 var.). Arg. Bel 
+
+exemplaire. 
+
+*169 -Statère. Tête laurée à dr. R/. Androcéphale à dr., devant, hippocampe suspendu à un cordon 
+
+que tient l&apos;aurige. Dessous roue à huit raies et symbole enroulé à double volute. (L.T. 6792 
+var.). Arg. T.B. 
+
+*170 -ABRINCATUI. (Région d&apos;Avranches). Statère. Tête laurée et barbue d&apos;Hercule à dr. R/. Andro-
+
+céphale à dr., devant, vexillum suspendu au cordon que tient l&apos;aurige, dessous, roue à huit 
+raies. (L.T. 6813). Arg. Superbe. Rare. 
+
+171 -BAIOCASSES. (Région de Bayeux). Statère. Tête d&apos;Ogmius à dr. R/. Androcéphale à dr., 
+
+sous le cheval sanglier. (L.T. 6969). Arg. -CALETES. 1/4 de Statère. Buste à g. R/Cheval, 
+la longe pendante, galopant à g. Dessus, S couché. (L.T. 7177). Ens. 2p. Arg. T.B. 
+
+*172 -LEUCI. SOLIMA. Drachme. Tête nue à g. R/ Cheval à g. (L.T. 9025). Arg. -Drachme. Hure 
+
+de sanglier à g. (L.T. -). Ens. 2p. Arg. Très Beau. 
+
+173 -Imitation de deniers consulaires. Deniers. Tête à dr. avec Bri. R/. Cavalier à dr. (F. 212 -L.T. 
+
+1816). -Autres. Ens. 4p. Arg. T.B. 
+
+*174 -TROUVAILLE de JERSEY. BAIOCASSES. Statère. Tête d&apos;Apollon à dr. R/. Cheval galo-
+
+pant à dr. dessous, un sanglier. (L.T. 20 -F. 464). -Statère. Tête à dr., devant, rouelle. R/. 
+Cheval à dr. (L.T. 12 var.). Arg. 2p. T.B. 
+
+*175 -PANNONIE. IMITATIONS DE PHILIPPE II DE MACÉDOINE. Tétradrachme. Tête bar-
+
+bare à dr. R/. Cavalier à g. (F. 290). Arg. Flan large. Très Beau. 
+
+*176 -Tétradrachme. Tête de Zeus, de style barbare, à g. R/. Cavalier à g., dessous, trisquèle. (F. 297 
+
+var.). Arg. Bien centré. Très Beau à Superbe. Rare. 
+
+*177 -AUDOLÉON de PANNONIE. Tétradrachme. Même type. R/. Cavalier à dr., entre les pattes 
+
+avant du cheval, trisquèle. Ligne d&apos;exergue. (F. 322). Arg. Superbe. Rare. 
+
+*178 -Autre. (F. 322). Types variés. Superbe. 
+
+*179 -IMITATION DE MONNAIES MACÉDONIENNES. Drachme. Tête d&apos;Hercule à dr. R/. 
+
+Zeus aëtophore à g. (L.T. 9646 var. F. 338 var.). Arg. Très Beau. 
+
+*180 -Drachme. Autre, coins de types différents. Arg. T.B. 
+
+
+*181 -IMITATIONS DE MONNAIES DE THASOS. Tétradrachme. Tête de Bacchus couronné de 
+
+pampres, à dr. R/. Hercule debout appuyé sur sa massue. Monogrammedans le champ. (F. 34). 
+
+Arg. T.B. 
+
+*182 -IMITATION DE MONNAIE MACÉDONIENNE. Tetradrachme. Type fruste et bombé 
+
+simulant la tête d&apos;Hercule. R/. Jupiter aëtophore. Hache dans le champ. (L.T. 9640 var.). Arg. 
+
+T.B./Superbe. 
+
+*183 -BOII DE LA TRANSPADANE. Statère. Tête jeune, imberbe, laurée, à g., les cheveux figurés 
+
+par deux rangs de palmes couchées dans le même sens. R/. Cheval à g. (L.T. 9912 var. -F. 306). 
+
+Arg. -Statère. Guirlande de laurier. Cheval à g., roue au-dessus. (L.T. 9933). Ens. 2p. Arg. 
+
+T.B. 
+
+*184 -Imitations de deniers Romains. Denier. Type consulaire. Buste barbu. R/. Trigé à dr. 2p. Arg. 
+
+T.B. 
+
+-185 -Type de Jules César. Denier. Enée portant Anchisi et le palladium. Arg. Très Beau. 
+
+186 -Type à Auguste. Denier. Les deux César, Caïus et Lucien César. (Voir F .245). Arg. Très Beau. 
+
+w 
+
+187 -Type d&apos;Antonin le Pieux. Denier. Moyen bronze du type de Néron. 2p. Arg. et br. T.B. et Très 
+
+Beau. 
+
+
+Le Vendredi 5 Mai 1972 à, 14 h 15 
+
+FRANÇAISES 
+
+OR 
+
+*190 -PHILIPPE VI DE VALOIS (1328-1350). Ecu d&apos;or (1348). Le Roi sur un trône gothique. R/. 
+
+Croix fleuronnée dansune rosace quadrilobée. (L. 262c -H. 3). Or. B/T.B. 
+
+*191 -JEAN II LE BON (1350-1364). Franc à cheval (1360). Le Roi à cheval au galop, armé, portant 
+
+une tunique fleurdelisée et un heaume surmonté d&apos;un grand lis. R/. Croix fleuronnée dans une 
+
+rosace quadrilobée. (L. 297 -H. 10). Or. T.B. 
+
+*192 -CHARLES VI (1380-1422). Ecu à la couronne (1388). Ecu de France nouveau timbré d&apos;une cou-
+
+ronne fleurdelisée. R/. Croix fleurdelisée dans une rosace. (L. 378). Or. Très Beau. 
+
+*193 -HENRI VI (1422-1453). Salut d&apos;or (1423). La salutation angélique; l&apos;Ange et la Vierge soute-
+
+nant deux écus. R/. Croix latine plaine, accostée d&apos;une fleur de lis et d&apos;un léopard. (L. 447a -
+
+H. 2). Or. T.B./Très Beau. 
+
+*194 -Autre exemplaire. (L. 447a -H. 2). Rouen. 1423. Or. T.B. 
+
+
+*195 -Autre exemplaire. (L. 447a -H. 2). Rouen. 1423. Or. T.B. à Très Beau. 
+
+196 -FRANÇOIS Ier (1515-1547). Ecu au soleil (1519). 4e type. Ecu de France couronné surmonté 
+
+d&apos;un soleil. R/. Croix aux extrémités fleurdelisées. 2 F. et 2 lis. (L. 639 -H. 4). Montpellier. 
+
+Or. T.B. 
+
+197 -Autre exemplaire (1515). 1er type. Ecu de France couronné surmonté d&apos;un soleil. R/. Croix 
+
+aux extrémités fleurdelisées, centre quadrilobé. (L. 634). Bordeaux. Or. B./T.B. 
+
+*198 -CHARLES IX (1560-1574). Ecu. (1564) 1er type. Ecu de France timbré de la couronne fermée. 
+
+R/. Croix fleurdelisée, lettre d&apos;atelier au centre. (L. 890). Limoges. Or. Très Beau. 
+
+*199 -Autre exemplaire (1565). 1er type. (L. 890 -H. 1). Bourges. Or. T.B. 
+
+*200 -LOUIS XV (1715-1774). Louis aux lunettes. Buste drapé à g. R/. Sous une couronne, 2 écus 
+
+ovales aux armes de France et de Navarre. (H. 16). Nantes. 1735. Or. Très Beau/Superbe. 
+
+201 -Autre exemplaire (1726 -H. 16). Paris. Or. B./T.B. 
+
+*202 -Double Louis au bandeau. Tête ceinte d&apos;un bandeau à g. R/. Sous une couronne, deux écus ovales 
+
+de France et de Navarre. (H. 18). Pau. 1759. Or. Sauf griffe transversale. Très Beau. 
+
+203 -BONAPARTE, 1er CONSUL (1799-1804). 40 francs. Tête nue à g. R/. Valeur dans une cou-
+
+ronne. (M. 402 -VG. 1194). Paris. An XI. Or. T.B. 
+
+*204 -NAPOLÉON 1er 1804-1815). 40 francs. Mêmes types. (M. 405 -VG. 7267). Paris. An 14. Or. 
+
+Très Beau. 
+
+*205 -20 francs. Mêmes types. (M. 417 -VG. 1253). Paris. An 12. Or. Superbe. 
+
+
+*206 -Autre exemplaire. (M. 420). Lille. 1806. (4286 ex.). Or. T.B. 
+
+*207 -Autre exemplaire. (M. 421). Turin. 1807. (2557 ex.). Or. T.B. Rare. 
+
+*208 -40 francs. Tête laurée à g. (M. 409). Toulouse. 1808. (4226 ex.). Or. T.B. 
+
+*209 -Autre exemplaire. (M. 409). Lille. 1808. (6356 ex.). Or. T.B. 
+
+*210 -Autre exemplaire. (M. 414 -VG. 2308). Paris. 1813. Or. Très Beau. 
+
+*211 -20 francs. Mêmes types. (M. 424). Toulouse. 1809. (5007 ex.). Or. Très Beau. 
+
+*212 -Autre exemplaire. (M. 424). Perpignan. 1810. (2943 ex.). Or. Très Beau. Rare. 
+
+*213 -Autre exemplaire. (M. 426 -V.G. 2296). Paris. 1811. Or. Très Beau. 
+
+214 -Autre exemplaire. (M. 427 -VG. 2303). Paris. 1812. Or. T.B. 
+
+*215 -Autre exemplaire. (M. 427 -VG. 2303). (6498 ex.). Toulouse. 1812. Or. T.B. 
+
+216 -Autre exemplaire. (M. 429 -VG. 2342). Paris. 1814. Or. Très Beau. 
+
+*217 -Autre exemplaire. (M. 430 -VG. 2379). Paris. 1815. Or. Très Beau. 
+
+218 -Autre exemplaire. (M. 430 -VG. 2379). Paris. 1815. Or. T.B. 
+
+219 -Autre exemplaire. (M. 430 -VG. 2379). Paris. 1815. Or. T.B. 
+
+*220 -Autre exemplaire. (M. 430 -VG. 2379). Bayonne. 1815. Or. Très Beau. 
+
+221 -Règne italique. 40 lires. Tête nue à g. R/. Armes couronnées. (P. 13 -VG. 1345). Milan. 1810. 
+
+Or. Très Beau. 
+
+*222 -PARME. MARIE-LOUISE (1815-1847). 40 lire. Buste diadémé à g. R/. Armes. (P. 1 -VG. 
+
+2402 var. -F. 933). Milan. 1815. Or. Très Beau. 
+
+223 -Autre exemplaire. (P. 1 -VG. 2402 var. -F. 933). Milan. 1815. Or. T.B. 
+
+*224 -NAPLES. GIOACCHINO NAPOLEONE (1808-1815). 20 lires. Tête nue à g. R/. Valeur entre 
+
+deux rameaux. (P. 55b -VG. 2250). 1813. Or. Traces de griffes. T.B. 
+
+*225 -WESTPHALIE. JÉROME NAPOLÉON (1807-1813). 20 frank. Tête laurée à g. R/. Valeur 
+
+dans une couronne de laurier. (VG. 2003). Brunswick. 1808. Or. T.B. 
+
+*226 -LOUIS XVIII (1815-1824). 20 francs. Buste habillé à dr. R/. Ecu couronné entre deux branches 
+
+de laurier. (M. 655 -VG. 2362). Paris. 1814. Or. Superbe. 
+
+*227 -Autre exemplaire. (M. 656 -VG. 2362). Paris. 1815. Or. Superbe. 
+
+*228 -Autre exemplaire. (M. 656 -VG. 2362). Londres. 1815. Or. Très Beau. 
+
+229 -Autre exemplaire. Buste nu à dr. (M. 661 -VG. 2512). Paris. 1819. Or. Très Beau. 
+
+
+230 -NAPOLÉON III (1848-1852). 20 francs. (M. 1441 -VG. 3548). Strasbourg. 1860. Or. T.B. 
+
+231 -100 francs. Tête nue à dr. (M. 1408 -VG. 3523). Paris. 1858. Or. Superbe. 
+
+*232 -100 francs. Tête laurée, à dr. (M. 1418 -VG. 3740). Paris. 1869. Or. Très Beau à Superbe. 
+
+233 -5 francs. Mêmes types. Essai, tr. lisse. (M. 1624 var. -VG. 3372). Paris. 1854. Or. F.D.C. 
+
+234 -10 francs. Tête laurée, à dr. R/. Même type. (M. 1464 var. -VG. 3695 var.). Strasbourg. 1866. 
+
+Platine. Très Beau. Rare. 
+
+235 -III&apos; RÉPUBLIQUE (1871-1940). 100 francs. Génie gravant la Constitution. (M. 1791 -VG. 
+
+4671). Paris. 1911. Or. Très Beau. 
+
+*236 -50 francs. Mêmes types. (M. 1800 -VG. 4509). Paris. 1904. Or. Très Beau. Rare. 
+
+237 -20 francs. Mêmes types. (M. 1819 -VG. 4288). Paris. 1897. Or. Très Beau. 
+
+*238 -100 francs. Effigie de la République, à g. R/. Epi de blé entre deux rameaux d&apos;olivier et de laurier 
+
+sur un fond rayonnant. (M. 2344 -VG. 5344). (Frappé à 300 ex. non mis en circulation). 
+Essai, sans le mot Essai. 1933. Or. F.D.C. Rare. 
+
+239 -TUNISIE. 20 francs. (VG. 4529). Paris. 1904. Superbe. 
+
+
+MÉDAILLES 
+
+240 A -LOUIS XII et ANNE de BRETAGNE. D/. + FELICE.LVDOVICO.REGNATE.DVODE-
+
+CIMO.CESARE.ALTERO.GAVDET.OMNIS.NACIO. Buste du roi à dr. coiffé du mortier 
+
+sur champ semé de fleurs de lis. A l&apos;exergue, un lion. R/. + LVGDVN.RE.PVBLICA.GAVDETE. 
+
+BIS.REGNANTE.BENIGNE.SIC.FVD.CONFLATA.1499. Buste d&apos;Anne à g. sur champ 
+
+mi-parti de lis et d&apos;hermines. A l&apos;exergue, un lion. Bronze fonte originale. Diamètre 115 mm; 
+poids : 468 g. Superbe exemplaire de très haute qualité. 
+
+Médaille modelée par Nicolas Le Clerc et Jean de Saint-Priest et coulée par Jean Le Père et son frère 
+
+Colin, offerte par la ville de Lyon à Anne de Bretagne le jour de son entrée à Lyon le 15 mars 1499 après 
+
+l&apos;occupation du duché de Milan. 
+
+(Mazerolle 27). 
+
+Nicolas Le Clerc, maître tailleur d&apos;images (sculpteur et maçon), vivait à Lyon de 1487 à 1507. 
+
+Jean de Saint-Priest, tailleur d&apos;images ou sculpteur vivait à Lyon de 1490 à 1516. 
+
+Jean Le Père, maître dorier et orfèvre vivait à Lyon, où il mourut, de 1492 à 1534 ou 1537. 
+
+
+
+240 B -PHILIBERT le BEAU et MARGUERITE d&apos;AUTRICHE. D/. : PHILIBERTVS.DVX. 
+
+SABAVDIE.VIII MARGVA.MAXI.CAE.AVG.FI.D.SA. Bustes affrontés sur un champ 
+semé de lacs et de marguerites. Au bas, une palissade. R/. : GLORIA IN ALTISSIMIS.DEO 
+
+ET IN TERRA PAX.HOMNIBVS : BVRGVS. Ecusson mi-parti de Savoie et d&apos;Autriche 
+accosté de FE-RT. Au-dessus, un grand lac; de part et d&apos;autre, lacs et marguerites. Bronze 
+
+fonte originale. Diamètre : 103 mm; poids : 221 g. Superbe Exemplaire de très haute qualité. 
+
+Exemplaire de la collection A. Bouclier. Vente juin 1953 n°41. 
+
+Exemplaire Vte E de P n°263. 
+
+Médaille par Jean Marende, offerte par la ville de Bourg au duc et à la duchesse de Savoie lors de leur 
+entrée à Bourg le 2 août 1502. 
+
+Natalis Rondot, dans son étude « Jean Marende et la Médaille de Philibert le Beau et de Marguerite 
+d&apos;Autriche » (Lyon-1883), a classé les exemplaires originaux de bronze, dont il en mentionne 12, selon 
+le nombre de « devises » (lacs et marguerites du champ de l&apos;avers). La présente médaille serait classée 
+
+dans « l&apos;état III » (19 devises : 10 lacs dont 8 entiers, et 9 marguerites dont 8 entières). 
+
+(Mazerolle 30). 
+
+L&apos;étude documentée de N. Rondot sur cette médaille (Lyon 1883) sera jointe. 
+
+
+
+240 C -GÊNES. République. 10 Doppiad&apos;or. 1649. En légende : ET REGE EOS -1649 -(!B) N. La 
+
+Vierge assise de face sur un nuage, tenant l&apos;Enfant Jésus dans le bras gauche et un sceptre de 
+la main droite; au-dessus, entourant sa tête, couronne de onze étoiles tenue par deux anges 
+
+ailés se faisant vis à vis. R/. DVX ET GVBERNATORES REIP GENV. Croix fleuronnéeentourée 
+de quatre têtes d&apos;anges ailées. Or. (Référence -Corpus Nummorum Italicorum III. p. 363 n°3-
+Friedberg Gold Coins of the World n°4 26). Magnifique monnaie de très haute qualité dont 
+
+l&apos;iconographie est très proche de l&apos;art statutaire. De la plus haute rareté. 
+
+
+FRANÇAISES 
+
+ARGENT ET BRONZE 
+
+241 -CHARLES LE CHAUVE (875-877). Nevers. Denier. CARLUSIMPAVG. R/. NEVERNISCI-
+
+VIT ; monogramme (G. Pl. 24 n°91 -P. 596). Arg. Très/ Beau Superbe. 
+
+242 -CHARLES VI (1380-1422). Guénar. Ecu aux trois lis. R/. Croix cantonnée de deux couron-
+
+nelles et de deux fleurs de lis. (L. 381a -H. -). Montpellier. 1389. -Autre exemplaire. Paris. 
+1411. -Autre exemplaire. St-Lô. 1411. -1/2 guénar. (L. 382b -H. -). La Rochelle. 1389. Ens. 
+4p. Arg. Superbe/Très Beau. 
+
+243 -LOUIS XI (1461-1483). Blanc au soleil (1475). Trois fleurs de lis. R/. Croix dans un quadrilobe. 
+
+(L. 535 -H. 19). Lyon. Arg. Très Beau. 
+
+244 -LOUIS XIII (1610-1643). 1/4 d&apos;écu. Croix fleurdelisée. R/. Ecu de France accosté de II -II. 
+
+(H. 30). Saint-Lô. 1643. Arg. Superbe. 
+
+*245 -Louis de 30 sols. Buste lauré à col nu, les épaules drapées, à dr. R/. Ecu couronné. (H. 88). Paris. 
+
+1643. Arg. T.B. 
+
+*246 -15 sols. Mêmes types. (H. 97). Paris. 1643. Arg. T.B. 
+
+*247 -LOUIS XIV (1643-1715). Demi-écu à la mèche courte. Buste enfantin, lauré, drapé et cuirassé, 
+
+avec la croix du St-Esprit. R/. Ecu couronné. (H. 59). Paris. 1643. Arg. Superbe. 
+
+*248 -Ecu à la mèche longue. Mêmes types. (H. 74). Poitiers. 1646. Arg. Très Beau. Rare. 
+
+249 -Autre exemplaire. (H. 74). Rouen. 1651. Arg. T.B. 
+
+
+-Autre exemplaire. (H. 74). Bordeaux. 1648. Arg. T.B. à Très Beau. 
+
+251 -Demi-écu à la mèche longue. Mêmes types. (H. 76 var.). La Rochelle. 1654. Arg. T.B. 
+
+251a -Autre exemplaire. (H. 76). Arras. 1652. Arg. T.B. Atelier. Rare. 
+
+*252 -Demi-écu au buste juvénile. Buste jeune, lauré et drapé, avec longue perruque. R/. Ecu couronné. 
+
+(H. 103 var.). Rennes. 1660. Arg. Très Beau. 
+
+*253 -LOUIS XV (1715-1774). Ecu Vertudadin. Reformation. Buste enfantin drapé à dr.; dessous, 
+
+une rose. R/. Ecu rond couronné. (H. 26 var.). Lille. 1716. Très Beau. 
+
+-Ecu de Navarre. Buste drapé et lauré. R/. Ecu couronné, écartelé de France et Navarre. Tranche 
+
+inscrite. (H. 34). Paris. 1719. Arg. Très Beau/T.B. 
+
+-Tiers d&apos;écu. Buste lauré et drapé, à dr. R/. Ecu couronné. (H. 42). Orléans. 1721. Arg. Superbe. 
+
+-Autre exemplaire. Mêmes types; tranche cordonnée. (H. 42). Lille. 1720. Arg. Très Beau. 
+
+*257 -Ecu au bandeau. Tête à g., ceinte d&apos;un bandeau, dessous, un différent. R/. Ecu ovale couronné 
+
+entre deux branches de laurier. (H. 56). Paris. 1740. Arg. Très Beau/Superbe. 
+
+*258 -Ecu à la vieille tete. Buste vieilli lauré à g.; dessous, différent. R/. Même type. (H. 62). Bayonne. 
+
+1774. Arg. T.B. à Très Beau. 
+
+-Ecu au bandeau. Mêmes types. (H. 56). Orléans. 1764. Henri IV. Demi-franc. Saint-Lô 1590. 
+
+Ens. 2 p. Arg. T.B. 
+
+
+
+*260 -LOUIS XVI (1774-1793). Ecu aux lauriers. Buste à g. avec plaque et cordon du Saint-Esprit. 
+
+R/. Entre deux branches de laurier, écu ovale couronné aux armes de France. (H. Il). Pau. 1786. 
+
+Arg. Sauf rayures au R/. Très Beau. 
+
+261 -Autre exemplaire. (H. 12). Paris. 1789. Arg. Très Beau à Superbe. 
+
+262 -Autre exemplaire. (H. 12). Paris. 1790. Autre exemplaire. (H. 12). Paris. 1791. Arg. Ens 2p. 
+
+Sauf rayures. Très Beau. 
+
+263 -Autre exemplaire. (H. 12). Paris. 1791. Arg. Très Beau. 
+
+*264 -Petit écu. Mêmes types. (H. 13). Paris. 1791. Arg. T.B. à Très Beau. 
+
+265 -24 sols. Mêmes types. (H. 14). La Rochelle. 1788. -Autre. Paris. 1785. Arg. Ens. 2p. Superbe 
+
+et Très Beau. 
+
+*266 -Ecu de 6 livres. Tête à g.; dessous, symbole et date. R/. Génie gravant la Constitution; à g., 
+
+symbole et faisceau; à dr., coq et lettre d&apos;atelier. (H. 60). Paris. 1792. Arg. Quelques rayures. 
+
+Très Beau. 
+
+*267 -Autre exemplaire. (H. 60 -M. 3). Paris. 1793. Arg. Presque Superbe. 
+
+268 -Autre exemplaire. (H. 60 -M. 3). Lyon. 1793. Arg. T.B. Atelier. Rare. 
+
+*269 -Petit écu de 3 livres. Mêmes types. (H. 62). Paris. 1792. Arg. Très Beau. 
+
+270 -Autre exemplaire. (H. 62). Paris. 1792. Arg. Presque Très Beau. 
+
+*271 -CONVENTION. Ecu de 6 livres. Génie gravant la Constitution. R/. Valeur dans une couronne 
+
+de feuillage. (M. 251 -VG. 407). Lyon. An 11-1793. Arg. Très Beau. Atelier. Rare. 
+
+*272 -Autre exemplaire. (M. 251 -VG. 407). Marseille. 1793. Arg. T.B. Atelier. Rare. 
+
+273 -Autre exemplaire. (M. 251 -VG. 407). Bayonne. 1793. Arg. T.B. à Très Beau. 
+
+274 -RÉVOLUTION. Monneron de 5 sols. (M. 150 -VG. 294). -Autre exemplaire. (M. 145 -
+
+VG. 291). -Monneron de 5 sols à l&apos;Hercule. (M. 163 -VG. 295). Paris. 1792. Br. Ens. 3p. 
+
+Superbe. 
+
+275 -DIRECTOIRE. Essai de 1 centime. Buste de la République à g. (M. 313 var. -VG. 601 var.). 
+
+Paris. An 6. -Essai du centime. Egalité Liberté; bonnet à g. (M. 303 -VG. 425). Paris. An 2. 
+Br. Ens. 2p. Superbe. Rare. 
+
+*276 -NAPOLÉON Ier (1804-1815). 5 francs. Effigie à dr. R/. Couronne de laurier; au centre, millé-
+
+sime. (M. 438 -VG. 1269). Paris. An 13. Arg. Sauf très légère échancrure. Superbe. 
+
+*277 -Autre exemplaire. (M. 438 -VG. 1269). Marseille. An 13. Arg. Très Beau à Superbe. Atelier. 
+
+Rare. 
+
+278 -Autre exemplaire. (M. 440 -VG. 1498). Paris. 1806. Arg. Très Beau. 
+
+279 -5 francs. Effigie, laurée à dr. (M. 446 -VG. 2298). Paris. 1811. Arg. Très Beau. 
+
+*280 -Autre exemplaire. (M. 446 -VG. 2298). Rouen. 1811. Arg. Superbe. 
+
+*281 -Autre exemplaire. (M. 447 -VG. 2304). Paris. 1812. Arg. Très Beau à Superbe. 
+
+
+*282 -Autre exemplaire. (M. 450 -VG. 2380). Paris. 1815 (cent jours). Arg. Très Beau. 
+
+*283 -NAPOLÉON II. Essai de 5 francs. Buste enfantin, nu, à g. R/. Valeur. Tranche lisse. (M. 637 -
+
+VG. 2402). 1816. Frappe de souvenir (1860). Arg. Sauf quelques défauts du coin. Superbe. 
+
+Rare. 
+
+*284 -Essai de 2 francs. Mêmes types. (M. 638 -2404). 1816. Frappe de souvenir (1860). Arg. Presque 
+
+Superbe. Rare. 
+
+285 -Essai d&apos;un quart de franc. Mêmes types. (M. 641 -VG. 2410). 1816. Frappe de souvenir 
+
+vers 1860. Arg. Superbe. Rare-
+
+286 -LOUIS XVIII (1815-1824). 5 francs. Tête nue à g. R/. Ecu couronné, accosté de 5 F entre deux 
+
+branches d&apos;olivier. (M. 675 -VG. 2539). Paris. 1822. Flan bruni. Arg. F.D.C. 
+
+*287 -HENRI V. 1 franc. Buste juvénile en uniforme à g. R/. Ecu de France couronné dans une cou-
+ronne de lauriers et accosté de 5-F. (M. 912 -VG. 2706). 1832. Flan bruni.F.D.C. Arg. 
+*288 -CHARLES X (1824-1830). 5 francs. Tête nue à g. R/. Mêmes types. (M. 819 -V.G. 2640). 
+
+Lille. 1827. Tr. en creux. Arg. Très Beau. 
+
+*289 -Autre exemplaire. (M. 822 -VG. 2676). Lille. 1830. Tr. en creux. Arg. Superbe. 
+-Autre exemplaire. (M. 820 -VG. 2662). Paris. 1829. -Autre exemplaire. (M. 822a -G. 2677). 
+
+Paris. 1830. Tr. en relief. (R.). Arg. Ens. 2p. Très Beau et T.B. 
+
+*291 -LOUIS PHILIPPE (1830-1848). 5 francs. Effigie à dr. R/. Millésime dans une couronne de 
+
+feuillage. (M. 961 -VG. 2815). Lille. 1831. Arg. Superbe. 
+
+292 -Autre exemplaire. (M. 961 -VG. 2815). Rouen. 1831. Arg. T.B. 
+293 -Essai d&apos;un décime, par Barré. Effigie laurée à g. R/. Millésime dans une couronne de laurier-
+
+(M. 1143 -VG. 2915). -Autre de flan plus épais. 1840. Br. Ens. 2p. F.D.C. 
+
+-Essai de 5 centimes. Mêmes types. Grand et petit module. (M. 1145 -VG. 2917). 1840. Br&apos; 
+
+Ens. 2p. F.D.C. 
+
+295 -Autre exemplaire. -Essai de 2 centimes. Effigie laurée à g. R/. Couronne royale entre deux 
+
+palmes; au-dessous; millésime. (M. 1119 -VG. 2998). 1847. Br. Ens. 2p. F.D.C. 
+
+-Essai bi-métallique du décime. Au centre d&apos;un cercle de perlettes : LP. R/. Au centre d&apos;un cercle 
+
+de perlettes : DECIME. (M. 1136 -VG. 2994). Paris. 1847. -Essai pour la Monnaie de Genève. 
+Effigie couronnée à dr. R/. Essai de la Presse de Genève. J. Bovy. (M. 1161a -VG. 2945). Br. 
+Ens. 2p. F.D.C. 
+
+-IIe RÉPUBLIQUE (1848-1852). 5 francs à l&apos;Hercule. (M. 1180 -VG. 3237). Paris. 1849. Arg. 
+
+(M. 1181 -VG. 3242). Strasbourg. 1849. Arg. 1 centime. (M. 1202 -VG. 3274). Paris. 1851. 
+Br. (M. 1199 -VG. 3230). Paris. 1848. Br. 50 centimes. (M. 1193 -VG. 3261). Paris. 1850. 
+Arg. 20 centimes. (M. 1197 -VG. 3262). Paris. 1850. Arg. 1 centime. (M. 1200 -VG. 3239). 
+Paris. 1849. Br. Ens. 7p. Superbe. 
+
+-IIIe RÉPUBLIQUE (1871-1940). Essai de 10 centimes, au type de Rude. (M. 2285). 1909. Al. -
+
+Essai de 5 centimes. (M. 2205 -VG. 4608b). 1908. -2 francs. (M. 1890a -VG. 4790). 1914. 
+Castelsarrasin (2p.). 25 centimes. (M. 1951 -2446 -2448a -VG. 4794 -4835 -4867). 
+1914 -1915 -1917). Ens. 7p. Superbe. 
+
+-Essai de 10 francs. (M. 2614 -VG. 5298). Turin. Arg. Essai de 5 francs. (M. 2569 var. -VG. 
+
+5243b var.). 1929. Nk. Ens. 2p. F.D.C. 
+
+-Essai d&apos;alliage binaire d&apos;argent. (M. 2609 -VG. -). Essai de 10 centimes. M. -VG. 5543). 
+
+1940. Ens. 2p. F.D.C. 
+
+301 -Essai de 20 francs. (M. 2745). 1945. -Essai de 10 francs. (M. 2746). 1945. Ens. 2p. Br. de Nickel. 
+
+F.D.C. 
+
+
+
+MONNAIES DE SIÈGE 
+
+*303 -Aire. 25 sols. Les armes couronnées de M. de Goesbriand, gouverneur de la ville; dessous, le 
+
+millésime. 1710. (Maillet 1-6). Arg. Très Beau. 
+
+*304 -AMSTERDAM. 10 sols. Dans un encadrement orné, les armes de la ville, accostées de 15-78; 
+
+des deux côtés de la couronne, la valeur : X-S; au-dessus, un briquet en contremarque. (M. 
+
+Pl. IV n°1 0). 1578. Arg. Très Beau. 
+
+305 -ANVERS. 10 centimes. Grand N, dans une couronne d&apos;olivier. R/. Monnaie Obsidionale; 
+
+Champ : 10-Cent. (M. 2p.26 ). (M. 4d -p. 27). 5 centimes. (M. Pl. VII -17 -M. Pl. VI -
+9). 1814. Cu. Ens. 4p. Très Beau. 
+
+*306 -BARCELONE. 5 pesetas. Ecu losangé aux armes de la députation de Catalogne. R/. Valeur. 
+
+(M. Pl. 12 n°1 9 -VG. 2089). 1809. Arg. Très Beau. 
+
+*307 -BREDA. 20 Stuyvers. Flan carré. 1625. (M. Pl. XVIII n°14). 2 Stuyvers. Flan carré. 1625. 
+
+(M. Pl. XVIII n°15). Arg. et Cu. Ens. 2p. Superbe. 
+
+*308 -BRISACH. 48 batz. Flan carré. 1633. Ecussons d&apos;Autriche, d&apos;Alsace, de Brisach. R/. Inscription. 
+
+(M. 2e supp. Pl. D n°1 ). Arg. Légère échancrure. T.B. 
+
+*309 -CAMBRAI. Maximilien de Berghes (1556-1570). Ecu. L&apos;écu écartelé surmonté d&apos;un heaume à 
+
+cimier. R/. -Aigle bicéphale couronné. (D. 406). 1569. Arg. 20 patards. Flan octogonal. (M. 
+
+Pl. XXII n°15). 1595. Cu. Ens. 2p. Très Beau. 
+
+*310 -CATTARO. 5 francs. Grand N couronné, accosté de la valeur. R/. Dans une couronne de laurier 
+
+ouverte, une épée, un canon et un fusil en faisceau. (M. Pl. XXV n°3 -VG. 2316). 1813. 
+Arg. 29 g 60. T.B. Rare. 
+
+*311 -1 franc. Grand N couronné; au-dessous, valeur. R/. CATTARO -1813. (M. Pl. XXV n°4 -
+
+VG. 2317). 1813. Arg. 5 g 80. T.B. 
+
+312 -EICHSTAEDT. Demi-thaler. Buste de l&apos;évêque Joseph, à dr. R/. Armes couronnées. (M. Pl. 
+
+XXXVIII n°2). 1796. Arg. Très Beau. 
+
+*313 -GIRONNE. 1 duro. En bas, une estampille : FER-VII. R/. En haut, une estampille : GN A-
+
+1808-UN DURO. (M. Pl. XLII n°10 -VG. 2137). 1808. Arg. T.B. 
+
+314 -GENÈVE. 12 sols. Les armes de la ville au milieu d&apos;une grande étoile à huit pointes ondulées; 
+
+entre chaque pointe, un ornement. R/. P. XII -SOLS -POUR LES SOLDATS DE GENÈVE 
+
+-1590. (M. Pl. XLI n°1). 6 sols. (M. Pl. XLI n°2). 1590. Br. Ens 2p. Très Beau. 
+
+*315 -GRONINGUE. 25 sols. Flan carré. Les armes de la province, surmontées d&apos;une couronne et 
+
+accostées de la valeur. 1672. -12 sols et demi. Même type. Flan carré. 1672. (M. Pl. XLIV 
+
+n°11 -XLV n°13). Arg. Ens. 2p. Revers lisses. Très Beau. 
+
+316 -HAMBOURG. 32 schillinge. Ecussons aux armes de la ville; au-dessous, les lettres : G.A.I.G. 
+
+R/. 32 Schillinge -1809. (M. Pl. XVL n°3). -Autre Ex. Arg. Ens. 2p. Superbe. 
+
+*317 -SIÈGE DE LANDAU. 1 florin 4 kreuzer. Flan carré aux angles coupés. Les armes couronnées 
+
+du Duc de Würtemberg. (M. Pl. LXIX n°8). 1713. Arg. Superbe. 
+
+318 -LILLE. Les armes couronnées de M. de Boufflers. 20 sols, 10 sols, 5 sols. (M. LXXIII n°1, 2, 
+
+3). 1708. Cu. Ens. 3p. Très Beau. 
+
+
+*319 -LUXEMBOURG. 78 as. Inscription : AD VSUM LUXEMBURGI CC VALATI. 1795. R/. 
+
+Valeur entre rameaux. (M. LXXIII n°1). 1795. Arg. Très Beau. Rare. 
+
+320 -MAYENCE. République Française. 5 sols, 2 sols, 1 sol. (M. Pl. LXX n°5, 6, 8). 1793. Cu. Ens. 
+
+3p. Très Beau. 
+
+*321 -MAESTRICHT. 100 Stuyvers. Uniface. 4 estampilles : le millésime, l&apos;étoile de M., la valeur 
+
+et la marque de l&apos;essayeur juré. (M. LXXVI n°17 VG. 449). 1794. Arg. -1 stuyvers. (M. Pl. 
+LXXVI n°13). 1579. Cu. Ens. 2p. Très Beau et T.B. 
+
+*322 -MIDDELBOURG. 2 thaler. Flan uniface, carré. Dans un cercle, D.R.P. -F. MIDD. -1.5.7.2., 
+
+deux contremarques, l&apos;une, aux armes de Zélande, l&apos;autre, aux armes de la ville. (M. Pl. LXXXIII 
+
+n°2). 1572. Arg. Très Beau. Rare. 
+
+*323 -MODÈNE. 103 sous ou 1/3 de scudo. MVTI N AE Sold 103, en quatre lignes, dans un écusson. 
+
+R/. Aigle, de face, la tête à gauche. (F. 791). Or. Très Beau. 
+
+*324 -PALMA-NOVA. 50 centimes. (M. Pl. XC n°1). 1814. Cu. MAJORQUE. 30 sous. (M. Pl. 
+
+LXXVIII n°6). 1821. Arg. Troué. NEWARK. 9 sols. (M. supp. PL. 60 n°2 var.). 1646. Troué. 
+
+Arg. Ens. 3p. T.B. 
+
+*325 -ULM. Florin. Flan carré. Les armes ornées de la ville. R/. Le double aigle impériale, portant 
+
+sur la poitrine, le globe crucigère surmonté d&apos;une couronne. (M. Pl. CXIV n°6). 1704. Arg. 
+
+Très Beau. Rare. 
+
+*326 -TOURNAI. 20 sols. Uniface, carrée, irrégulière. Buste lauré à g.; au-dessus, valeur; au-dessous, 
+
+une petite tour. (M. Pl. CXII n°14 (3). 1709. Arg. Très Beau. 
+
+*327 -SILÉSIE. 3 thaler. Flan uniface, carré. L&apos;aigle éployée de Silésie, portant au cou le croissant 
+
+surmonté d&apos;une petite croix et accostée de la date 16-21 ; entre les plumes de la queue, les lettres 
+
+H-R; 2 contremarques. (M. Pl. Cil n°4). 1621. Arg. Très Beau. 
+
+328 -VALENCE. 4 réaux. Ferdinand VII. (M. Pl. CXIV). 1823. Arg. VENETIE. 1 lire. (M. Pl. CXIX 
+
+n°4). 1802. Billon. Ens. 2p. 
+
+*329 -ZARA. lonce. Dans un carré, l&apos;aigle impérial couronné. R/. Dans un carré, la valeur et le millé-
+
+sime, séparés par un trait. (M. Pl. CXXX n°3 -VG. 2321). 1813. Arg. 29 g 60. Superbe. 
+
+*330 -FRANCE et BONAPARTE (Iles de). 10 livres. Aigle surmonté de la couronne impériale. R/. 
+
+Dans une couronne de laurier, la valeur. En-dessous, le millésime. (M. Pl. XXXIX n°1 -VG. 
+
+2290). 1810. Arg. T.B. 
+
+*331 -DEVENTER. 2 sols. (M. Pl. 31 n°3 -supp.). 1578. Cu. -1/2 sol. (M. Pl. 37 n°11). 1578. 
+
+Cu. -HONGRIE. 10 poltuna. 1705. (M. Pl. LIV n°23). 1705. Cu. -JAVA. Louis-Napoléon. -
+
+DUYT. (VG. 1611). 1810. Cu. -STRASBOURG. 1 décime. (M. Pl. Cil n°3). 1814. Cu. -
+
+BRÉSIL. Joseph Ier. 1774. Ens. 7p. Br. T.B. 
+
+*332 -ANGLETERRE. VICTORIA. 5 livres. Buste voilé et couronné, à g. R/. Saint Georges terras-
+
+sant le dragon, à dr. (Yeo. 26). 1887. Or. Superbe. 
+
+333 -BELGIQUE. ALBERT Ier. 20 francs. (Fr. 12). 1914. ANGLETERRE. EDOUARD VII. 
+
+1 livre. (Fr. 258). 1907. -LUXEMBOURG. LE GRAND-DUC JEAN et JOSÉPHINE 
+
+CHARLOTTE. 20 francs. (Fr. 12). 1953. -Ens. 3p. Or. Très Beau. 
+
+*334 -PROVINCES UNIES. Ecu. Lion tenant l&apos;écusson. R/. Cercle de Il écussons. Frappé pendant 
+
+l&apos;insurrection contre l&apos;Autriche. 1790. Arg. Très Beau. 
+
+
+
+335 -PAYS-BAS. Ducat au chevalier. Chevalier deb. tenant une épée et un faisceau. (Fr. 90). 1770. 
+
+Or. T.B. 
+
+336 -HAINAUT. Tournai. Philippe II. Ecu Philippe. Buste à g. R/. L&apos;écusson du Portugal en surtout. 
+
+(Del. 45). 1589. Gros des Flandres. Arg. 3p. T.B. 
+
+337 -ITALIE. Victor Emmanuel II. 5 lire. Tête à g. (Fr. 16). Turin 1863. Or. T.B. 
+
+*338 -Charles Felix. 40 lire. Tête à g. (F. 1134). Turin. 1822. Or. T.B. 
+
+*339 -MONACO. Albert Ier. 100 francs. Tête à g. (F. 13). 1891. Or. Très Beau. 
+
+340 -VENISE. Francesco II. Ducat. (CNI. Pl. XLII n°8-0). Or. T.B. 
+
+341 -MANTOUE. CHARLES II. 60 soldi. Buste à g. -1 soldo du siège de 1799. 2p. Arg. et Br. Très 
+
+Beau. 
+
+*342 -MALTE. Jean de la Valette. 4 tari. Les armes de l&apos;ordre. R/. Tête de Saint-Jean-Baptiste. (Sch. 
+
+Pl. 4 n°6 var.). -EMMANUEL DE ROHAN. Scudo. (M. Pl. 22 n°2 var.). 1796. Arg. 2p. 
+
+Très Beau. 
+
+*343 -PORTUGAL. Luis 1er. 10 000 reis. Tête à g. R/. Ecu couronné. (F. 131). 1883. Or. Très Beau 
+
+à Superbe. 
+
+*344 -SAINT EMPIRE GERMANIQUE. Leopold 1er. Thaler. Son buste à dr. R/. Ecusson. 1671. 
+
+Arg. Superbe. 
+
+-FULDA. Aldabert III. Gulden. (Reinmann 2585). 1796. -PRUSSE. Frédéric Guillaume IV. 
+
+Vereinsthaler. (Davenport 775). Berlin. 1859. -HESSE-DARMSTADT. Louis III. Vereins-
+thaler. (D. 707). 1862. -PRUSSE. Frédéric II le Grand. Reichsthaler. (D. 2590). Berlin. 1786. 
+Ens. 4p. Arg. Très Beau et T.B. 
+
+BRACTEATES 
+
+-BALE. Pfennig à l&apos;étoile (1) au buste à l&apos;Evêque g. (3). Ecusson à la Ville (2). Ens. 6p. T.B. 
+
+-FREIBURG UM BRISGAU. Rappen. Pigeon à g. (3) -ZURICH. Tête de religieux de face, 
+
+nimbée. Ens. 4p. T.B. 
+
+a -ZOFINGEN.Casque surmonté de la queue de paon (1) -Tête de face (2). Tête de profil (1). 
+
+Ens. 4 p. T.B. 
+
+b -BODENSEEGEBIET. UEBERLINGEN. Lion à g., retournant la tête; dans un cercle perlé 
+
+(1). -ROTTWEIL. Aigle (fendu). -TODTNAU. Cimier. Ens. 3 p. T.B. 
+
+c -RAVENSBURG. Frédéric II. Tête du Roi au centre au-dessus d&apos;un château à deux tourelles 
+
+de part et d&apos;autre de la tête; cercle perlé. Superbe. 
+
+348 d -Autre type varié. Buste du Roi entre deux tours. Superbe. 
+
+
+
+348 e -AUGSBOURG. Buste de l&apos;Evêque tenant la crosse et le livre.-Autre exemplaire de type 
+
+varié, sans la crosse ni le livre. -Autre type varié. Ens. 3 p. Superbe. 
+
+348 f -BRAUNSCHWEIG. Lion à g.; la queue relevée (2 ex.). -Autre, de diamètre plus petit. 
+
+Ens. 3 p. Superbe. 
+
+348 g -MAGDEBURG. Château fort flanqué de 3 tours, au-dessus d&apos;une maison. Légende au pour-
+
+tour. Superbe. 
+
+348 h -FULDA. L&apos;Evêque, tenant la crosse et le livre surmontés d&apos;une croix. Très Beau. 
+
+348 i -STRASBOURG. Lot de 4 monnaies avec la fleur de lys. -HAGUENEAU. Fleur à 5 filets. 
+
+Uniface. Ens. 5 p. Très Beau. 
+
+348 j -Lot de 2 bracteates de BRANDENBURG et MAINZ. T.B. 
+
+348 k -Lot de 12 bractéates, dont une pour la Saxe, de 40 mm. T.B. 
+
+348 f -Lot de 21 pièces dont 8 bractéates et 13 divisionnaires allemandes. T.B. et B./T.B. 
+
+*349 -ESPAGNE. Philippe V. 8 Escudos. Croix. R/. Colonnes d&apos;Hercule. Lima. 1727. (Lop. Chavez 
+
+n°75). Or. Bel exemplaire. 
+
+*350 -Autre exemplaire daté 1734 (Lopez Chavez n°84). Or. 8 Réales d&apos;argent. Mexico. Ens. 2 p. 
+
+Or et arg. Beaux exemplaires. 
+
+351 -BOLIVIE. 4 Sueldos. 1830. (Craig 54). MEXIQUE. 8 Réales. 1865. (Yeo. 19 var.). 2 p. Arg. 
+
+Très Beau. 
+
+-Mohur. Caractères Persans. Or. T.B. 
+
+-Tical du SIAM. -20 Sen du JAPON. -Bullet money -6 lingots d&apos;argent de types variés. 
+
+Annam. Ens. 10 p. Très Beau. 
+
+-Médaillettes en or, ovales de Louis XV et de la Duchesse de Bourgogne. -Réduction décoration. 
+
+Or de Grégoire le Grand. Ens. 3 p. Très Beau. 
+
+MÉDAILLES DE NAPOLÉON 
+
+355 -Dans un écrin d&apos;époque, ens. de 145 médailles en bronze et 4 en argent, de types différents 
+
+relatives aux événements de l&apos;Empire. Très bel état. -Ouvrage en anglais sur les Médailles 
+de Napoléon Bonaparte par Laskey. Londres. 1818. Exemplaires de travail. 
+
+
+ADDITIF 
+
+MONNAIES BYZANTINES 
+
+A -FOCAS. (602-610). Solidus. Buste couronné de face tenant le globe crucigère. R/. Victoire debout 
+
+de face, tenant une longue croix finissant en monogramme du Christ et le globe crucigère. (Ratto 
+
+1181). Superbe. 
+
+B -HERACLIUS et HERACLIUS CONSTANTINUS. (613-630). Solidus. Les deux bustes couronnés 
+
+de face; une petite croix en haut. R/. Croix sur trois degrés. (R. 1359). Superbe. 
+
+C -CONSTANS II. (641-668). Buste couronné de face, avec une longue barbe, tenant le globe cruci-
+
+gère. R/. Croix sur trois degrés. (R. 1513 var.). Superbe. 
+
+MONNAIES FRANÇAISES 
+
+D -CHARLES V. (1364-1380). Franc à pied. Le Roi debout sous un dais gothique; il tient l&apos;épée et 
+
+la main de justice. R/. Croix fleuronnée cantonnée de deux couronnelles et de deux lis. (L. 371 -
+
+H. 2). B/TB. 
+
+E -LOUIS XI. (1461-1483). Ecu au soleil. Lyon. Ecu couronné sommé d&apos;un soleil flamboyant. R/. 
+
+Croix fleurdelisée. (L. 529). B/TB. 
+
+F -LOUIS XII. (1498-1515). Ecu d&apos;or au soleil. Lyon. Ecu couronné sommé d&apos;un soleil flamboyant. 
+
+R/. Croix fleurdelisée. (L. 592). B/T.B. 
+
+G -LOUIS XII. Ecu d&apos;or au soleil. Même type. (L. 592). AB. 
+H -LOUIS XIII. (1610-1643). Ecu d&apos;or. Ecu couronné sommé d&apos;un soleil. R/. Croix à volutes fleurde-
+
+lisée. A au centre; Paris. (H. 6). Plie. Superbe. 
+
+1 
+
+-LOUIS XIII. Louis à la mèche longue. (1641). Tête laurée à d. R/. Croix formée de huit L couronnés 
+
+cantonnée de quatre lis. Paris. (H. 22). Superbe. 
+
+J -LOUIS XIII. Demi Louis à la mèche longue. Mêmes types. Paris. 1642. (H. 24). Superbe. 
+K -Demi-Louis à la mèche courte. Mêmes types. (H. 24). Superbe. 
+L -LOUIS XIV (1643-1715). Louis à la mèche courte. Tête enfantine les cheveux courts, laurée à d. 
+
+R/. Croix formée de huit L couronnés, cantonnée de quatre lis. 1648. (H. 6). T.B. 
+
+M -Louis à la mèche longue. Tête enfantine les cheveux longs laurée. R/. Même type. Amiens, 1652. 
+
+(H. 12). Très Beau. 
+
+N -LOUIS XVI. (1774-1793). Double Louis au buste nu. Buste nu à g. R/. Sous une couronne deux 
+
+écus carrés de France et de Navarre. Nantes, 1786. (H. 5). Très Beau à Superbe. 
+
+0 -Double Louis. Autre exemplaire. Bordeaux. 1787. (H. 5). T.B. 
+
+P -Louis au buste nu. Mêmes types. Lyon, 1786. (H. 6). T.B. 
+Q -Autre exemplaire. Lille, 1786. (H. 6). Très Beau. 
+
+ITALIE 
+
+R -VENISE. ANDREA GRITTI. (1523-1539). Scudo. Croix. R/. Lion dans un écu. (F. 1448). B. </unit>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</text>
+</tei>
