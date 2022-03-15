@@ -1073,7 +1073,7 @@ public class DatacatSegmenterParser extends AbstractParser {
      * @param pathTEI   path to TEI, the file is not labeled yet
      * @param id        id
      */
-    public Document createBlankTrainingFromPDF(File inputFile,
+    public Document createBlankTrainingFromPDFWithoutTEI(File inputFile,
                                                String pathRaw,
                                                String pathTEI,
                                                int id) {

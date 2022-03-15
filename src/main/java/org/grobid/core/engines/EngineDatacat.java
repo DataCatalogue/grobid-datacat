@@ -107,7 +107,7 @@ public class EngineDatacat extends Engine {
     }
 
     public void createTrainingBlank(File inputFile, String pathRaw, String pathTEI, int id) {
-        this.parsers.getDatacatSegmenterParser().createBlankTrainingFromPDF(inputFile, pathRaw, pathTEI, id);
+        this.parsers.getDatacatSegmenterParser().createBlankTrainingFromPDFWithoutTEI(inputFile, pathRaw, pathTEI, id);
     }
 
     public int batchCreateTrainingBlankBlockParsing(String directoryPath, String resultPath, int ind) {
