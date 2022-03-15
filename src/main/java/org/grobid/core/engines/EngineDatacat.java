@@ -106,6 +106,52 @@ public class EngineDatacat extends Engine {
         }
     }
 
+    public void createTrainingBlank(File inputFile, String pathRaw, String pathTEI, int id) {
+        this.parsers.getDatacatSegmenterParser().createBlankTrainingFromPDF(inputFile, pathRaw, pathTEI, id);
+    }
+
+    public int batchCreateTrainingBlankBlockParsing(String directoryPath, String resultPath, int ind) {
+        try {
+            File path = new File(directoryPath);
+            File[] refFiles = path.listFiles(new FilenameFilter() {
+                public boolean accept(File dir, String name) {
+                    System.out.println(name);
+                    return name.endsWith(".pdf") || name.endsWith(".PDF");
+                }
+            });
+            if (refFiles == null) {
+                return 0;
+            } else {
+                System.out.println(refFiles.length + " files to be processed.");
+                int n = 0;
+                if (ind == -1) {
+                    n = 1;
+                }
+
+                File[] var7 = refFiles;
+                int var8 = refFiles.length;
+
+                for(int var9 = 0; var9 < var8; ++var9) {
+                    File pdfFile = var7[var9];
+
+                    try {
+                        this.createTrainingBlank(pdfFile, resultPath, resultPath, ind + n);
+                    } catch (Exception var12) {
+                        LOGGER.error("An error occured while processing the following pdf: " + pdfFile.getPath(), var12);
+                    }
+
+                    if (ind != -1) {
+                        ++n;
+                    }
+                }
+
+                return refFiles.length;
+            }
+        } catch (Exception var13) {
+            throw new GrobidException("An exception occured while running Grobid batch.", var13);
+        }
+    }
+
     @Override
     public synchronized void close() throws IOException {
         CrossrefClient.getInstance().close();
