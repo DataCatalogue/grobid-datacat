@@ -124,7 +124,7 @@ public class ProcessEngineDatacat implements Closeable {
     /**
      * Infer the input path for pdfs if not given in arguments.
      *
-     * @param pGbdArgs The GrobidMedicalReportMainArgs.
+     * @param pGbdArgs The GrobidDatacatMainArgs.
      */
     protected final static void inferPdfInputPath(final GrobidDatacatMainArgs pGbdArgs) {
         String tmpFilePath;
@@ -138,7 +138,7 @@ public class ProcessEngineDatacat implements Closeable {
     /**
      * Infer the output path if not given in arguments.
      *
-     * @param pGbdArgs The GrobidMedicalReportMainArgs.
+     * @param pGbdArgs The GrobidDatacatReportMainArgs.
      */
     protected final static void inferOutputPath(final GrobidDatacatMainArgs pGbdArgs) {
         String tmpFilePath;
