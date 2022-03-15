@@ -1135,9 +1135,9 @@ public class DatacatSegmenterParser extends AbstractParser {
 
                 builder.append("</text>\n</tei>");
                 // write the TEI file
-                writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), "UTF-8");
-                writer.write(builder.toString());
-                writer.close();
+                //writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), "UTF-8");
+                //writer.write(builder.toString());
+                //writer.close();
 
                 // besides the tagged TEI file, we also need the raw file with some key layout featuresAsString
                 // gather the features by blocks
