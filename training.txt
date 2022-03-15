@@ -1,0 +1,2298 @@
+> Task :train_datacat-segmenter
+19:21:56.936 [main] DEBUG org.grobid.core.utilities.GrobidProperties - synchronized getNewInstance
+19:21:56.941 [main] WARN org.grobid.core.main.GrobidHomeFinder - No Grobid property was provided. Attempting to find Grobid home in the current directory...
+19:21:56.941 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+19:21:56.941 [main] WARN org.grobid.core.main.GrobidHomeFinder - *** USING GROBID HOME: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home
+19:21:56.941 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+19:21:56.941 [main] DEBUG org.grobid.core.utilities.GrobidProperties - loading grobid config yaml
+19:21:56.941 [main] WARN org.grobid.core.main.GrobidHomeFinder - Grobid config file location was not explicitly set via 'org.grobid.config' system variable, defaulting to: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/config/grobid.yaml
+19:21:57.075 [main] DEBUG org.grobid.core.utilities.GrobidProperties - loading pdfalto command path
+19:21:57.076 [main] DEBUG org.grobid.core.utilities.GrobidProperties - pdfalto executable home directory set to /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/pdfalto/lin-64
+19:21:57.080 [main] INFO org.grobid.core.main.LibraryLoader - Loading external native sequence labelling library
+19:21:57.080 [main] DEBUG org.grobid.core.main.LibraryLoader - /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/lib/lin-64
+19:21:57.083 [main] INFO org.grobid.core.main.LibraryLoader - Loading Wapiti native library...
+19:21:57.084 [main] INFO org.grobid.core.main.LibraryLoader - Native library for sequence labelling loaded
+19:21:57.085 [main] DEBUG org.grobid.core.lexicon.Lexicon - Get new instance of Lexicon
+19:21:57.085 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating dictionary
+19:21:57.085 [main] INFO org.grobid.core.lexicon.Lexicon - End of Initialization of dictionary
+19:21:57.085 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating names
+19:21:57.085 [main] INFO org.grobid.core.lexicon.Lexicon - End of initialization of names
+19:21:57.331 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating country codes
+19:21:57.331 [main] INFO org.grobid.core.lexicon.Lexicon - End of initialization of country codes
+sourceTEIPathLabel: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/tei
+sourceRawPathLabel: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/raw
+trainingOutputPath: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/tmp/datacat-segmenter4619905843356643352.train
+evalOutputPath: null
+380 tei files
+19:21:57.442 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777334f.training.monograph.tei.xml
+Total data found between CRF and TEI files 1249 from total 1651 examples.
+19:21:57.774 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779630f.training.monograph.tei.xml
+Total data found between CRF and TEI files 596 from total 814 examples.
+19:21:57.892 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777569b.training.monograph.tei.xml
+Total data found between CRF and TEI files 453 from total 589 examples.
+19:21:57.953 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08846_19240227.training.monograph.tei.xml
+Total data found between CRF and TEI files 223 from total 235 examples.
+19:21:57.961 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04068_19180506.training.monograph.tei.xml
+Total data found between CRF and TEI files 364 from total 429 examples.
+19:21:57.988 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781698.training.monograph.tei.xml
+Total data found between CRF and TEI files 1322 from total 1785 examples.
+19:21:58.313 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780655r.training.monograph.tei.xml
+Total data found between CRF and TEI files 1199 from total 2532 examples.
+19:21:58.774 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03000_19140612.training.monograph.tei.xml
+Total data found between CRF and TEI files 661 from total 828 examples.
+19:21:58.795 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778597z.training.monograph.tei.xml
+Total data found between CRF and TEI files 772 from total 1273 examples.
+19:21:58.928 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08430_19230630.training.monograph.tei.xml
+Total data found between CRF and TEI files 214 from total 235 examples.
+19:21:58.933 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97775611.training.monograph.tei.xml
+Total data found between CRF and TEI files 1342 from total 1628 examples.
+19:21:58.982 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07035_19220324.training.monograph.tei.xml
+Total data found between CRF and TEI files 176 from total 186 examples.
+19:21:58.985 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778269m.training.monograph.tei.xml
+Total data found between CRF and TEI files 117 from total 252 examples.
+19:21:58.993 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784647.training.monograph.tei.xml
+Total data found between CRF and TEI files 435 from total 486 examples.
+19:21:59.003 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03680_19170503.training.monograph.tei.xml
+Total data found between CRF and TEI files 367 from total 423 examples.
+19:21:59.015 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780940.training.monograph.tei.xml
+Total data found between CRF and TEI files 67 from total 97 examples.
+19:21:59.017 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778063f.training.monograph.tei.xml
+Total data found between CRF and TEI files 265 from total 368 examples.
+19:21:59.022 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778316t.training.monograph.tei.xml
+Total data found between CRF and TEI files 199 from total 398 examples.
+19:21:59.037 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777357.training.monograph.tei.xml
+Total data found between CRF and TEI files 909 from total 1437 examples.
+19:21:59.167 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779633p.training.monograph.tei.xml
+Total data found between CRF and TEI files 362 from total 400 examples.
+19:21:59.175 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779629s.training.monograph.tei.xml
+Total data found between CRF and TEI files 262 from total 378 examples.
+19:21:59.188 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777614q.training.monograph.tei.xml
+Total data found between CRF and TEI files 465 from total 813 examples.
+19:21:59.231 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777779d.training.monograph.tei.xml
+Total data found between CRF and TEI files 99 from total 157 examples.
+19:21:59.235 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05165_19200313.training.monograph.tei.xml
+Total data found between CRF and TEI files 297 from total 341 examples.
+19:21:59.240 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778036j.training.monograph.tei.xml
+Total data found between CRF and TEI files 958 from total 1434 examples.
+19:21:59.352 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774193.training.monograph.tei.xml
+Total data found between CRF and TEI files 176 from total 418 examples.
+19:21:59.376 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044719f.training.monograph.tei.xml
+Total data found between CRF and TEI files 342 from total 405 examples.
+19:21:59.381 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09203_19240620.training.monograph.tei.xml
+Total data found between CRF and TEI files 80 from total 85 examples.
+19:21:59.384 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778599s.training.monograph.tei.xml
+Total data found between CRF and TEI files 830 from total 1339 examples.
+19:21:59.468 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777750x.training.monograph.tei.xml
+Total data found between CRF and TEI files 334 from total 371 examples.
+19:21:59.476 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778168v.training.monograph.tei.xml
+Total data found between CRF and TEI files 353 from total 636 examples.
+19:21:59.511 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777803m.training.monograph.tei.xml
+Total data found between CRF and TEI files 1027 from total 1660 examples.
+19:21:59.635 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781468.training.monograph.tei.xml
+Total data found between CRF and TEI files 65 from total 132 examples.
+19:21:59.637 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778341w.training.monograph.tei.xml
+Total data found between CRF and TEI files 519 from total 566 examples.
+19:21:59.644 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779191d.training.monograph.tei.xml
+Total data found between CRF and TEI files 33 from total 33 examples.
+19:21:59.644 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09390_19241113.training.monograph.tei.xml
+Total data found between CRF and TEI files 309 from total 350 examples.
+19:21:59.649 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781112.training.monograph.tei.xml
+Total data found between CRF and TEI files 781 from total 1295 examples.
+19:21:59.790 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780643j.training.monograph.tei.xml
+Total data found between CRF and TEI files 1528 from total 1732 examples.
+19:21:59.828 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777751b.training.monograph.tei.xml
+Total data found between CRF and TEI files 120 from total 234 examples.
+19:21:59.834 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044852d.training.monograph.tei.xml
+Total data found between CRF and TEI files 379 from total 447 examples.
+19:21:59.839 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03561_19170123.training.monograph.tei.xml
+Total data found between CRF and TEI files 198 from total 213 examples.
+19:21:59.841 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9797044b.training.monograph.tei.xml
+Total data found between CRF and TEI files 96 from total 157 examples.
+19:21:59.844 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780495.training.monograph.tei.xml
+Total data found between CRF and TEI files 438 from total 582 examples.
+19:21:59.858 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03675_19170430.training.monograph.tei.xml
+Total data found between CRF and TEI files 1637 from total 1801 examples.
+19:21:59.902 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044988c.training.monograph.tei.xml
+Total data found between CRF and TEI files 127 from total 158 examples.
+19:21:59.903 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778117j.training.monograph.tei.xml
+Total data found between CRF and TEI files 81 from total 103 examples.
+19:21:59.905 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778237n.training.monograph.tei.xml
+Total data found between CRF and TEI files 201 from total 231 examples.
+19:21:59.908 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07799_19230131.training.monograph.tei.xml
+Total data found between CRF and TEI files 297 from total 393 examples.
+19:21:59.916 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05883_19201224.training.monograph.tei.xml
+Total data found between CRF and TEI files 184 from total 195 examples.
+19:21:59.918 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777999v.training.monograph.tei.xml
+Total data found between CRF and TEI files 33 from total 38 examples.
+19:21:59.919 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777366d.training.monograph.tei.xml
+Total data found between CRF and TEI files 1528 from total 2344 examples.
+19:22:00.120 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3043439v.training.monograph.tei.xml
+Total data found between CRF and TEI files 769 from total 963 examples.
+19:22:00.133 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779277g.training.monograph.tei.xml
+Total data found between CRF and TEI files 417 from total 546 examples.
+19:22:00.152 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785598.training.monograph.tei.xml
+Total data found between CRF and TEI files 154 from total 406 examples.
+19:22:00.164 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778082s.training.monograph.tei.xml
+Total data found between CRF and TEI files 1749 from total 2442 examples.
+19:22:00.435 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774141.training.monograph.tei.xml
+Total data found between CRF and TEI files 386 from total 546 examples.
+19:22:00.452 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773279.training.monograph.tei.xml
+Total data found between CRF and TEI files 767 from total 894 examples.
+19:22:00.475 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784736.training.monograph.tei.xml
+Total data found between CRF and TEI files 165 from total 300 examples.
+19:22:00.484 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777989g.training.monograph.tei.xml
+Total data found between CRF and TEI files 737 from total 934 examples.
+19:22:00.520 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783036.training.monograph.tei.xml
+Total data found between CRF and TEI files 169 from total 274 examples.
+19:22:00.527 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778339t.training.monograph.tei.xml
+Total data found between CRF and TEI files 367 from total 681 examples.
+19:22:00.557 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782634.training.monograph.tei.xml
+Total data found between CRF and TEI files 397 from total 927 examples.
+19:22:00.639 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06057_19210228.training.monograph.tei.xml
+Total data found between CRF and TEI files 93 from total 108 examples.
+19:22:00.641 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07127_19220426.training.monograph.tei.xml
+Total data found between CRF and TEI files 190 from total 240 examples.
+19:22:00.644 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06808_19220113.training.monograph.tei.xml
+Total data found between CRF and TEI files 89 from total 106 examples.
+19:22:00.646 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777987n.training.monograph.tei.xml
+Total data found between CRF and TEI files 356 from total 493 examples.
+19:22:00.659 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774037.training.monograph.tei.xml
+Total data found between CRF and TEI files 760 from total 894 examples.
+19:22:00.682 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773687.training.monograph.tei.xml
+Total data found between CRF and TEI files 606 from total 688 examples.
+19:22:00.696 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777630t.training.monograph.tei.xml
+Total data found between CRF and TEI files 204 from total 357 examples.
+19:22:00.707 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777980r.training.monograph.tei.xml
+Total data found between CRF and TEI files 240 from total 295 examples.
+19:22:00.710 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780687q.training.monograph.tei.xml
+Total data found between CRF and TEI files 298 from total 530 examples.
+19:22:00.733 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783088.training.monograph.tei.xml
+Total data found between CRF and TEI files 142 from total 176 examples.
+19:22:00.736 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777969q.training.monograph.tei.xml
+Total data found between CRF and TEI files 55 from total 57 examples.
+19:22:00.736 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781520.training.monograph.tei.xml
+Total data found between CRF and TEI files 571 from total 789 examples.
+19:22:00.776 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778048r.training.monograph.tei.xml
+Total data found between CRF and TEI files 148 from total 233 examples.
+19:22:00.781 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778639v.training.monograph.tei.xml
+Total data found between CRF and TEI files 114 from total 137 examples.
+19:22:00.783 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783748.training.monograph.tei.xml
+Total data found between CRF and TEI files 113 from total 217 examples.
+19:22:00.789 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777394q.training.monograph.tei.xml
+Total data found between CRF and TEI files 857 from total 987 examples.
+19:22:00.810 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778458h.training.monograph.tei.xml
+Total data found between CRF and TEI files 117 from total 131 examples.
+19:22:00.811 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777822z.training.monograph.tei.xml
+Total data found between CRF and TEI files 998 from total 1217 examples.
+19:22:00.854 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05988_19210209.training.monograph.tei.xml
+Total data found between CRF and TEI files 212 from total 243 examples.
+19:22:00.857 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044368j.training.monograph.tei.xml
+Total data found between CRF and TEI files 842 from total 1074 examples.
+19:22:00.880 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776332.training.monograph.tei.xml
+Total data found between CRF and TEI files 629 from total 1393 examples.
+19:22:01.065 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777976v.training.monograph.tei.xml
+Total data found between CRF and TEI files 83 from total 119 examples.
+19:22:01.067 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05887_19201227.training.monograph.tei.xml
+Total data found between CRF and TEI files 304 from total 365 examples.
+19:22:01.073 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776243.training.monograph.tei.xml
+Total data found between CRF and TEI files 590 from total 1081 examples.
+19:22:01.121 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791381.training.monograph.tei.xml
+Total data found between CRF and TEI files 3079 from total 4473 examples.
+19:22:02.159 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777993c.training.monograph.tei.xml
+Total data found between CRF and TEI files 74 from total 121 examples.
+19:22:02.162 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777385r.training.monograph.tei.xml
+Total data found between CRF and TEI files 776 from total 959 examples.
+19:22:02.185 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778027k.training.monograph.tei.xml
+Total data found between CRF and TEI files 177 from total 344 examples.
+19:22:02.197 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778103h.training.monograph.tei.xml
+Total data found between CRF and TEI files 84 from total 100 examples.
+19:22:02.198 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773724.training.monograph.tei.xml
+Total data found between CRF and TEI files 1318 from total 1724 examples.
+19:22:02.286 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784239.training.monograph.tei.xml
+Total data found between CRF and TEI files 464 from total 673 examples.
+19:22:02.307 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06389_19210609.training.monograph.tei.xml
+Total data found between CRF and TEI files 300 from total 330 examples.
+19:22:02.311 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778023x.training.monograph.tei.xml
+Total data found between CRF and TEI files 149 from total 182 examples.
+19:22:02.313 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09212_19240623.training.monograph.tei.xml
+Total data found between CRF and TEI files 154 from total 175 examples.
+19:22:02.315 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780532.training.monograph.tei.xml
+Total data found between CRF and TEI files 107 from total 169 examples.
+19:22:02.318 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779815.training.monograph.tei.xml
+Total data found between CRF and TEI files 271 from total 344 examples.
+19:22:02.325 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05028_19200202.training.monograph.tei.xml
+Total data found between CRF and TEI files 255 from total 366 examples.
+19:22:02.339 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777413m.training.monograph.tei.xml
+Total data found between CRF and TEI files 835 from total 963 examples.
+19:22:02.359 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044779q.training.monograph.tei.xml
+Total data found between CRF and TEI files 381 from total 500 examples.
+19:22:02.365 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05248_19200401.training.monograph.tei.xml
+Total data found between CRF and TEI files 149 from total 162 examples.
+19:22:02.367 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778539h.training.monograph.tei.xml
+Total data found between CRF and TEI files 1635 from total 2525 examples.
+19:22:02.762 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777646p.training.monograph.tei.xml
+Total data found between CRF and TEI files 737 from total 1539 examples.
+19:22:03.003 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782278.training.monograph.tei.xml
+Total data found between CRF and TEI files 221 from total 425 examples.
+19:22:03.017 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781327.training.monograph.tei.xml
+Total data found between CRF and TEI files 1050 from total 1219 examples.
+19:22:03.050 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783607.training.monograph.tei.xml
+Total data found between CRF and TEI files 48 from total 57 examples.
+19:22:03.051 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08241_19230522.training.monograph.tei.xml
+Total data found between CRF and TEI files 201 from total 217 examples.
+19:22:03.054 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778112g.training.monograph.tei.xml
+Total data found between CRF and TEI files 277 from total 305 examples.
+19:22:03.057 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777446.training.monograph.tei.xml
+Total data found between CRF and TEI files 549 from total 1186 examples.
+19:22:03.184 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779240f.training.monograph.tei.xml
+Total data found between CRF and TEI files 48 from total 64 examples.
+19:22:03.185 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03638_19170329.training.monograph.tei.xml
+Total data found between CRF and TEI files 223 from total 258 examples.
+19:22:03.188 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05042_19200207.training.monograph.tei.xml
+Total data found between CRF and TEI files 168 from total 196 examples.
+19:22:03.190 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05300_19200419.training.monograph.tei.xml
+Total data found between CRF and TEI files 1038 from total 1182 examples.
+19:22:03.219 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778472s.training.monograph.tei.xml
+Total data found between CRF and TEI files 434 from total 611 examples.
+19:22:03.233 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778552c.training.monograph.tei.xml
+Total data found between CRF and TEI files 1517 from total 3120 examples.
+19:22:03.993 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778462d.training.monograph.tei.xml
+Total data found between CRF and TEI files 437 from total 483 examples.
+19:22:03.999 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05217_19200325.training.monograph.tei.xml
+Total data found between CRF and TEI files 411 from total 462 examples.
+19:22:04.005 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV02553_19140226.training.monograph.tei.xml
+Total data found between CRF and TEI files 167 from total 192 examples.
+19:22:04.007 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08398_19230623.training.monograph.tei.xml
+Total data found between CRF and TEI files 198 from total 220 examples.
+19:22:04.009 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778090b.training.monograph.tei.xml
+Total data found between CRF and TEI files 172 from total 224 examples.
+19:22:04.013 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3043976v.training.monograph.tei.xml
+Total data found between CRF and TEI files 6489 from total 7553 examples.
+19:22:04.507 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779356n.training.monograph.tei.xml
+Total data found between CRF and TEI files 49 from total 66 examples.
+19:22:04.509 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03902_19171215.training.monograph.tei.xml
+Total data found between CRF and TEI files 296 from total 387 examples.
+19:22:04.514 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777966g.training.monograph.tei.xml
+Total data found between CRF and TEI files 139 from total 163 examples.
+19:22:04.516 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774089.training.monograph.tei.xml
+Total data found between CRF and TEI files 644 from total 888 examples.
+19:22:04.546 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782293.training.monograph.tei.xml
+Total data found between CRF and TEI files 196 from total 288 examples.
+19:22:04.554 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777798r.training.monograph.tei.xml
+Total data found between CRF and TEI files 380 from total 532 examples.
+19:22:04.568 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778273h.training.monograph.tei.xml
+Total data found between CRF and TEI files 240 from total 322 examples.
+19:22:04.577 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05830_19201211.training.monograph.tei.xml
+Total data found between CRF and TEI files 81 from total 94 examples.
+19:22:04.578 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04623_19190623.training.monograph.tei.xml
+Total data found between CRF and TEI files 105 from total 116 examples.
+19:22:04.579 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05380_19200510.training.monograph.tei.xml
+Total data found between CRF and TEI files 45 from total 146 examples.
+19:22:04.580 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778405c.training.monograph.tei.xml
+Total data found between CRF and TEI files 144 from total 231 examples.
+19:22:04.586 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97775930.training.monograph.tei.xml
+Total data found between CRF and TEI files 173 from total 219 examples.
+19:22:04.590 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778061m.training.monograph.tei.xml
+Total data found between CRF and TEI files 314 from total 529 examples.
+19:22:04.606 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778232k.training.monograph.tei.xml
+Total data found between CRF and TEI files 113 from total 192 examples.
+19:22:04.610 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778627n.training.monograph.tei.xml
+Total data found between CRF and TEI files 128 from total 259 examples.
+19:22:04.617 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777736n.training.monograph.tei.xml
+Total data found between CRF and TEI files 498 from total 681 examples.
+19:22:04.636 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07006_19220317.training.monograph.tei.xml
+Total data found between CRF and TEI files 253 from total 280 examples.
+19:22:04.639 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777764z.training.monograph.tei.xml
+Total data found between CRF and TEI files 1038 from total 1474 examples.
+19:22:04.785 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08719_19240118.training.monograph.tei.xml
+Total data found between CRF and TEI files 230 from total 245 examples.
+19:22:04.787 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776406.training.monograph.tei.xml
+Total data found between CRF and TEI files 44 from total 81 examples.
+19:22:04.789 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782226.training.monograph.tei.xml
+Total data found between CRF and TEI files 149 from total 167 examples.
+19:22:04.791 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779820r.training.monograph.tei.xml
+Total data found between CRF and TEI files 6395 from total 10483 examples.
+19:22:07.868 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778562r.training.monograph.tei.xml
+Total data found between CRF and TEI files 868 from total 1084 examples.
+19:22:07.918 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05072_19200214.training.monograph.tei.xml
+Total data found between CRF and TEI files 157 from total 178 examples.
+19:22:07.921 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778165m.training.monograph.tei.xml
+Total data found between CRF and TEI files 205 from total 255 examples.
+19:22:07.925 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779904.training.monograph.tei.xml
+Total data found between CRF and TEI files 48 from total 68 examples.
+19:22:07.926 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05182_19200318.training.monograph.tei.xml
+Total data found between CRF and TEI files 238 from total 317 examples.
+19:22:07.931 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05175_19200315.training.monograph.tei.xml
+Total data found between CRF and TEI files 387 from total 416 examples.
+19:22:07.936 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778369z.training.monograph.tei.xml
+Total data found between CRF and TEI files 155 from total 216 examples.
+19:22:07.940 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778382t.training.monograph.tei.xml
+Total data found between CRF and TEI files 382 from total 477 examples.
+19:22:07.950 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779882.training.monograph.tei.xml
+Total data found between CRF and TEI files 318 from total 394 examples.
+19:22:07.958 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781821z.training.monograph.tei.xml
+Total data found between CRF and TEI files 105 from total 304 examples.
+19:22:07.969 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3045913z.training.monograph.tei.xml
+Total data found between CRF and TEI files 303 from total 333 examples.
+19:22:07.973 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07694_19221218.training.monograph.tei.xml
+Total data found between CRF and TEI files 305 from total 319 examples.
+19:22:07.977 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06973_19220308.training.monograph.tei.xml
+Total data found between CRF and TEI files 25 from total 26 examples.
+19:22:07.977 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780551r.training.monograph.tei.xml
+Total data found between CRF and TEI files 68 from total 116 examples.
+19:22:07.979 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782864.training.monograph.tei.xml
+Total data found between CRF and TEI files 161 from total 172 examples.
+19:22:07.981 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777550.training.monograph.tei.xml
+Total data found between CRF and TEI files 264 from total 360 examples.
+19:22:07.991 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778075n.training.monograph.tei.xml
+Total data found between CRF and TEI files 383 from total 761 examples.
+19:22:08.037 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05338_19200428.training.monograph.tei.xml
+Total data found between CRF and TEI files 1187 from total 1701 examples.
+19:22:08.135 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778583x.training.monograph.tei.xml
+Total data found between CRF and TEI files 235 from total 397 examples.
+19:22:08.140 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777793p.training.monograph.tei.xml
+Total data found between CRF and TEI files 1301 from total 2456 examples.
+19:22:08.588 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08239_19230519.training.monograph.tei.xml
+Total data found between CRF and TEI files 222 from total 249 examples.
+19:22:08.591 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97775893.training.monograph.tei.xml
+Total data found between CRF and TEI files 1670 from total 2487 examples.
+19:22:08.926 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779142x.training.monograph.tei.xml
+Total data found between CRF and TEI files 483 from total 743 examples.
+19:22:08.954 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780650p.training.monograph.tei.xml
+Total data found between CRF and TEI files 84 from total 180 examples.
+19:22:08.958 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779365m.training.monograph.tei.xml
+Total data found between CRF and TEI files 28 from total 46 examples.
+19:22:08.958 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777387k.training.monograph.tei.xml
+Total data found between CRF and TEI files 714 from total 828 examples.
+19:22:08.976 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777738g.training.monograph.tei.xml
+Total data found between CRF and TEI files 1073 from total 1628 examples.
+19:22:09.085 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778336k.training.monograph.tei.xml
+Total data found between CRF and TEI files 19 from total 23 examples.
+19:22:09.086 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09001_19240414.training.monograph.tei.xml
+Total data found between CRF and TEI files 146 from total 171 examples.
+19:22:09.088 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04683_19190708.training.monograph.tei.xml
+Total data found between CRF and TEI files 1859 from total 2376 examples.
+19:22:09.285 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07018_19220320.training.monograph.tei.xml
+Total data found between CRF and TEI files 241 from total 262 examples.
+19:22:09.288 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09399_19241115.training.monograph.tei.xml
+Total data found between CRF and TEI files 228 from total 234 examples.
+19:22:09.290 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773650.training.monograph.tei.xml
+Total data found between CRF and TEI files 695 from total 796 examples.
+19:22:09.306 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777819g.training.monograph.tei.xml
+Total data found between CRF and TEI files 626 from total 712 examples.
+19:22:09.319 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777597n.training.monograph.tei.xml
+Total data found between CRF and TEI files 368 from total 595 examples.
+19:22:09.332 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044557f.training.monograph.tei.xml
+Total data found between CRF and TEI files 365 from total 451 examples.
+19:22:09.336 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778151k.training.monograph.tei.xml
+Total data found between CRF and TEI files 623 from total 772 examples.
+19:22:09.357 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06543_19211017.training.monograph.tei.xml
+Total data found between CRF and TEI files 21 from total 27 examples.
+19:22:09.357 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777337p.training.monograph.tei.xml
+Total data found between CRF and TEI files 602 from total 933 examples.
+19:22:09.392 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778086f.training.monograph.tei.xml
+Total data found between CRF and TEI files 139 from total 271 examples.
+19:22:09.398 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03038_19140622.training.monograph.tei.xml
+Total data found between CRF and TEI files 737 from total 900 examples.
+19:22:09.428 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777641m.training.monograph.tei.xml
+Total data found between CRF and TEI files 50 from total 79 examples.
+19:22:09.429 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06431_19210620.training.monograph.tei.xml
+Total data found between CRF and TEI files 305 from total 323 examples.
+19:22:09.433 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778463t.training.monograph.tei.xml
+Total data found between CRF and TEI files 416 from total 479 examples.
+19:22:09.439 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778070k.training.monograph.tei.xml
+Total data found between CRF and TEI files 897 from total 1090 examples.
+19:22:09.468 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06622_19211118.training.monograph.tei.xml
+Total data found between CRF and TEI files 156 from total 175 examples.
+19:22:09.470 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777971s.training.monograph.tei.xml
+Total data found between CRF and TEI files 380 from total 538 examples.
+19:22:09.478 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97786304.training.monograph.tei.xml
+Total data found between CRF and TEI files 120 from total 128 examples.
+19:22:09.480 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778636m.training.monograph.tei.xml
+Total data found between CRF and TEI files 500 from total 1017 examples.
+19:22:09.560 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779206d.training.monograph.tei.xml
+Total data found between CRF and TEI files 1174 from total 1375 examples.
+19:22:09.595 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778460k.training.monograph.tei.xml
+Total data found between CRF and TEI files 104 from total 138 examples.
+19:22:09.597 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781023.training.monograph.tei.xml
+Total data found between CRF and TEI files 160 from total 384 examples.
+19:22:09.602 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06548_19211019.training.monograph.tei.xml
+Total data found between CRF and TEI files 189 from total 205 examples.
+19:22:09.604 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778130d.training.monograph.tei.xml
+Total data found between CRF and TEI files 129 from total 162 examples.
+19:22:09.607 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05800_19201204.training.monograph.tei.xml
+Total data found between CRF and TEI files 55 from total 57 examples.
+19:22:09.607 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778046x.training.monograph.tei.xml
+Total data found between CRF and TEI files 198 from total 326 examples.
+19:22:09.615 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05973_19210202.training.monograph.tei.xml
+Total data found between CRF and TEI files 325 from total 340 examples.
+19:22:09.618 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778078.training.monograph.tei.xml
+Total data found between CRF and TEI files 1573 from total 2498 examples.
+19:22:09.900 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777775r.training.monograph.tei.xml
+Total data found between CRF and TEI files 27 from total 29 examples.
+19:22:09.901 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03909_19171219.training.monograph.tei.xml
+Total data found between CRF and TEI files 301 from total 337 examples.
+19:22:09.904 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778480b.training.monograph.tei.xml
+Total data found between CRF and TEI files 200 from total 311 examples.
+19:22:09.912 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780571h.training.monograph.tei.xml
+Total data found between CRF and TEI files 2233 from total 3342 examples.
+19:22:10.419 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777371q.training.monograph.tei.xml
+Total data found between CRF and TEI files 783 from total 1161 examples.
+19:22:10.477 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06428_19210618.training.monograph.tei.xml
+Total data found between CRF and TEI files 168 from total 177 examples.
+19:22:10.478 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782901.training.monograph.tei.xml
+Total data found between CRF and TEI files 766 from total 1347 examples.
+19:22:10.582 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777791v.training.monograph.tei.xml
+Total data found between CRF and TEI files 566 from total 604 examples.
+19:22:10.589 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06916_19220220.training.monograph.tei.xml
+Total data found between CRF and TEI files 475 from total 510 examples.
+19:22:10.597 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780836.training.monograph.tei.xml
+Total data found between CRF and TEI files 241 from total 280 examples.
+19:22:10.600 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 2148-bpt6k97784009.training.monograph.tei.xml
+Total data found between CRF and TEI files 211 from total 255 examples.
+19:22:10.602 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03052_19140625.training.monograph.tei.xml
+Total data found between CRF and TEI files 430 from total 511 examples.
+19:22:10.609 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778375p.training.monograph.tei.xml
+Total data found between CRF and TEI files 177 from total 404 examples.
+19:22:10.626 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044495s.training.monograph.tei.xml
+Total data found between CRF and TEI files 154 from total 183 examples.
+19:22:10.628 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781379.training.monograph.tei.xml
+Total data found between CRF and TEI files 264 from total 442 examples.
+19:22:10.639 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03426_19160629.training.monograph.tei.xml
+Total data found between CRF and TEI files 386 from total 468 examples.
+19:22:10.646 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780592p.training.monograph.tei.xml
+Total data found between CRF and TEI files 1579 from total 2355 examples.
+19:22:10.897 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778467g.training.monograph.tei.xml
+Total data found between CRF and TEI files 199 from total 266 examples.
+19:22:10.901 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06801_19220111.training.monograph.tei.xml
+Total data found between CRF and TEI files 204 from total 220 examples.
+19:22:10.903 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780888.training.monograph.tei.xml
+Total data found between CRF and TEI files 219 from total 256 examples.
+19:22:10.906 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781124s.training.monograph.tei.xml
+Total data found between CRF and TEI files 226 from total 342 examples.
+19:22:10.914 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780580g.training.monograph.tei.xml
+Total data found between CRF and TEI files 2080 from total 3847 examples.
+19:22:11.754 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780653x.training.monograph.tei.xml
+Total data found between CRF and TEI files 225 from total 489 examples.
+19:22:11.775 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04853_19191201.training.monograph.tei.xml
+Total data found between CRF and TEI files 1314 from total 1525 examples.
+19:22:11.817 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07198_19220512.training.monograph.tei.xml
+Total data found between CRF and TEI files 646 from total 897 examples.
+19:22:11.843 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044892x.training.monograph.tei.xml
+Total data found between CRF and TEI files 609 from total 755 examples.
+19:22:11.858 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780404r.training.monograph.tei.xml
+Total data found between CRF and TEI files 4680 from total 7182 examples.
+19:22:14.158 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778040f.training.monograph.tei.xml
+Total data found between CRF and TEI files 106 from total 182 examples.
+19:22:14.162 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778172r.training.monograph.tei.xml
+Total data found between CRF and TEI files 843 from total 1046 examples.
+19:22:14.195 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777635w.training.monograph.tei.xml
+Total data found between CRF and TEI files 677 from total 733 examples.
+19:22:14.203 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777777k.training.monograph.tei.xml
+Total data found between CRF and TEI files 710 from total 936 examples.
+19:22:14.236 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779143b.training.monograph.tei.xml
+Total data found between CRF and TEI files 1429 from total 2074 examples.
+19:22:14.402 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07167_19220508.training.monograph.tei.xml
+Total data found between CRF and TEI files 86 from total 89 examples.
+19:22:14.403 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07823_19230205.training.monograph.tei.xml
+Total data found between CRF and TEI files 1432 from total 1726 examples.
+19:22:14.518 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778129r.training.monograph.tei.xml
+Total data found between CRF and TEI files 357 from total 386 examples.
+19:22:14.523 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781827f.training.monograph.tei.xml
+Total data found between CRF and TEI files 264 from total 384 examples.
+19:22:14.531 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780622c.training.monograph.tei.xml
+Total data found between CRF and TEI files 150 from total 178 examples.
+19:22:14.533 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780579t.training.monograph.tei.xml
+Total data found between CRF and TEI files 2154 from total 3065 examples.
+19:22:14.847 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777781g.training.monograph.tei.xml
+Total data found between CRF and TEI files 648 from total 770 examples.
+19:22:14.861 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779864x.training.monograph.tei.xml
+Total data found between CRF and TEI files 2804 from total 3889 examples.
+19:22:15.366 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780578d.training.monograph.tei.xml
+Total data found between CRF and TEI files 1921 from total 2687 examples.
+19:22:15.607 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06770_19211222.training.monograph.tei.xml
+Total data found between CRF and TEI files 214 from total 247 examples.
+19:22:15.610 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777375c.training.monograph.tei.xml
+Total data found between CRF and TEI files 1291 from total 1757 examples.
+19:22:15.697 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773709.training.monograph.tei.xml
+Total data found between CRF and TEI files 604 from total 1272 examples.
+19:22:15.837 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06616_19211117.training.monograph.tei.xml
+Total data found between CRF and TEI files 19 from total 22 examples.
+19:22:15.838 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06907_19220217.training.monograph.tei.xml
+Total data found between CRF and TEI files 341 from total 394 examples.
+19:22:15.843 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779956.training.monograph.tei.xml
+Total data found between CRF and TEI files 118 from total 180 examples.
+19:22:15.846 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778468w.training.monograph.tei.xml
+Total data found between CRF and TEI files 1147 from total 1367 examples.
+19:22:15.887 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97786000.training.monograph.tei.xml
+Total data found between CRF and TEI files 871 from total 1377 examples.
+19:22:16.032 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780661g.training.monograph.tei.xml
+Total data found between CRF and TEI files 254 from total 316 examples.
+19:22:16.037 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08120_19230425.training.monograph.tei.xml
+Total data found between CRF and TEI files 207 from total 227 examples.
+19:22:16.039 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05882_19201222.training.monograph.tei.xml
+Total data found between CRF and TEI files 330 from total 359 examples.
+19:22:16.043 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779111c.training.monograph.tei.xml
+Total data found between CRF and TEI files 472 from total 650 examples.
+19:22:16.065 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778555m.training.monograph.tei.xml
+Total data found between CRF and TEI files 1320 from total 2087 examples.
+19:22:16.287 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778087v.training.monograph.tei.xml
+Total data found between CRF and TEI files 162 from total 282 examples.
+19:22:16.296 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03907_19171218.training.monograph.tei.xml
+Total data found between CRF and TEI files 432 from total 542 examples.
+19:22:16.305 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773865.training.monograph.tei.xml
+Total data found between CRF and TEI files 254 from total 385 examples.
+19:22:16.315 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782723.training.monograph.tei.xml
+Total data found between CRF and TEI files 1271 from total 2159 examples.
+19:22:16.585 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06327_19210524.training.monograph.tei.xml
+Total data found between CRF and TEI files 47 from total 52 examples.
+19:22:16.586 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06043_19210223.training.monograph.tei.xml
+Total data found between CRF and TEI files 202 from total 218 examples.
+19:22:16.590 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778181q.training.monograph.tei.xml
+Total data found between CRF and TEI files 1066 from total 1371 examples.
+19:22:16.649 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778481r.training.monograph.tei.xml
+Total data found between CRF and TEI files 438 from total 493 examples.
+19:22:16.657 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778167f.training.monograph.tei.xml
+Total data found between CRF and TEI files 442 from total 666 examples.
+19:22:16.681 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV02982_19140606.training.monograph.tei.xml
+Total data found between CRF and TEI files 113 from total 144 examples.
+19:22:16.683 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779344f.training.monograph.tei.xml
+Total data found between CRF and TEI files 27 from total 27 examples.
+19:22:16.684 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779822k.training.monograph.tei.xml
+Total data found between CRF and TEI files 948 from total 2130 examples.
+19:22:17.010 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07797_19230129.training.monograph.tei.xml
+Total data found between CRF and TEI files 4673 from total 5075 examples.
+19:22:17.475 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778372f.training.monograph.tei.xml
+Total data found between CRF and TEI files 243 from total 356 examples.
+19:22:17.485 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07191_19220512.training.monograph.tei.xml
+Total data found between CRF and TEI files 450 from total 562 examples.
+19:22:17.492 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777332m.training.monograph.tei.xml
+Total data found between CRF and TEI files 667 from total 1085 examples.
+19:22:17.547 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778068h.training.monograph.tei.xml
+Total data found between CRF and TEI files 354 from total 399 examples.
+19:22:17.552 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07148_19220502.training.monograph.tei.xml
+Total data found between CRF and TEI files 180 from total 193 examples.
+19:22:17.554 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778235t.training.monograph.tei.xml
+Total data found between CRF and TEI files 882 from total 1285 examples.
+19:22:17.628 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778000x.training.monograph.tei.xml
+Total data found between CRF and TEI files 181 from total 270 examples.
+19:22:17.633 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780654b.training.monograph.tei.xml
+Total data found between CRF and TEI files 407 from total 1067 examples.
+19:22:17.754 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777648h.training.monograph.tei.xml
+Total data found between CRF and TEI files 209 from total 338 examples.
+19:22:17.761 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777617z.training.monograph.tei.xml
+Total data found between CRF and TEI files 398 from total 658 examples.
+19:22:17.790 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779836m.training.monograph.tei.xml
+Total data found between CRF and TEI files 386 from total 475 examples.
+19:22:17.799 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778396v.training.monograph.tei.xml
+Total data found between CRF and TEI files 445 from total 593 examples.
+19:22:17.813 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780657k.training.monograph.tei.xml
+Total data found between CRF and TEI files 929 from total 1077 examples.
+19:22:17.829 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07157_19220504.training.monograph.tei.xml
+Total data found between CRF and TEI files 388 from total 442 examples.
+19:22:17.835 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779245h.training.monograph.tei.xml
+Total data found between CRF and TEI files 460 from total 789 examples.
+19:22:17.878 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778029d.training.monograph.tei.xml
+Total data found between CRF and TEI files 167 from total 231 examples.
+19:22:17.882 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777373j.training.monograph.tei.xml
+Total data found between CRF and TEI files 779 from total 915 examples.
+19:22:17.901 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778244s.training.monograph.tei.xml
+Total data found between CRF and TEI files 32 from total 40 examples.
+19:22:17.902 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778026.training.monograph.tei.xml
+Total data found between CRF and TEI files 1373 from total 2202 examples.
+19:22:18.148 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777815t.training.monograph.tei.xml
+Total data found between CRF and TEI files 424 from total 593 examples.
+19:22:18.166 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08919_19240322.training.monograph.tei.xml
+Total data found between CRF and TEI files 255 from total 269 examples.
+19:22:18.169 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780569f.training.monograph.tei.xml
+Total data found between CRF and TEI files 161 from total 217 examples.
+19:22:18.173 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08390_19230621.training.monograph.tei.xml
+Total data found between CRF and TEI files 295 from total 306 examples.
+19:22:18.176 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778211d.training.monograph.tei.xml
+Total data found between CRF and TEI files 1170 from total 2007 examples.
+19:22:18.411 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778377h.training.monograph.tei.xml
+Total data found between CRF and TEI files 826 from total 1040 examples.
+19:22:18.438 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778072d.training.monograph.tei.xml
+Total data found between CRF and TEI files 1262 from total 1834 examples.
+19:22:18.610 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04838_19191127.training.monograph.tei.xml
+Total data found between CRF and TEI files 182 from total 205 examples.
+19:22:18.612 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781090.training.monograph.tei.xml
+Total data found between CRF and TEI files 108 from total 219 examples.
+19:22:18.617 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08696_19231228.training.monograph.tei.xml
+Total data found between CRF and TEI files 359 from total 393 examples.
+19:22:18.621 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07830_19230207.training.monograph.tei.xml
+Total data found between CRF and TEI files 569 from total 746 examples.
+19:22:18.641 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791470.training.monograph.tei.xml
+Total data found between CRF and TEI files 569 from total 728 examples.
+19:22:18.661 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777743s.training.monograph.tei.xml
+Total data found between CRF and TEI files 1183 from total 2130 examples.
+19:22:18.887 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776154.training.monograph.tei.xml
+Total data found between CRF and TEI files 1052 from total 1724 examples.
+19:22:19.039 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06822_19220120.training.monograph.tei.xml
+Total data found between CRF and TEI files 87 from total 95 examples.
+19:22:19.040 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782686.training.monograph.tei.xml
+Total data found between CRF and TEI files 616 from total 1226 examples.
+19:22:19.147 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777422k.training.monograph.tei.xml
+Total data found between CRF and TEI files 2912 from total 4090 examples.
+19:22:19.640 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777355m.training.monograph.tei.xml
+Total data found between CRF and TEI files 236 from total 412 examples.
+19:22:19.651 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09262_19240706.training.monograph.tei.xml
+Total data found between CRF and TEI files 40 from total 45 examples.
+19:22:19.652 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05966_19210131.training.monograph.tei.xml
+Total data found between CRF and TEI files 124 from total 141 examples.
+19:22:19.653 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778285q.training.monograph.tei.xml
+Total data found between CRF and TEI files 2250 from total 3969 examples.
+19:22:20.722 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778105b.training.monograph.tei.xml
+Total data found between CRF and TEI files 44 from total 70 examples.
+19:22:20.723 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779149t.training.monograph.tei.xml
+Total data found between CRF and TEI files 1854 from total 3167 examples.
+19:22:21.213 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778564k.training.monograph.tei.xml
+Total data found between CRF and TEI files 452 from total 798 examples.
+19:22:21.264 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06756_19211219.training.monograph.tei.xml
+Total data found between CRF and TEI files 72 from total 403 examples.
+19:22:21.268 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780035.training.monograph.tei.xml
+Total data found between CRF and TEI files 76 from total 101 examples.
+19:22:21.269 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778278k.training.monograph.tei.xml
+Total data found between CRF and TEI files 1394 from total 1811 examples.
+19:22:21.376 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08870_19240305.training.monograph.tei.xml
+Total data found between CRF and TEI files 690 from total 805 examples.
+19:22:21.393 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07697_19221218.training.monograph.tei.xml
+Total data found between CRF and TEI files 1486 from total 1658 examples.
+19:22:21.435 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778465n.training.monograph.tei.xml
+Total data found between CRF and TEI files 386 from total 433 examples.
+19:22:21.440 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03916_19171222.training.monograph.tei.xml
+Total data found between CRF and TEI files 29 from total 35 examples.
+19:22:21.441 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776013.training.monograph.tei.xml
+Total data found between CRF and TEI files 539 from total 844 examples.
+19:22:21.478 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778414b.training.monograph.tei.xml
+Total data found between CRF and TEI files 315 from total 405 examples.
+19:22:21.485 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778221s.training.monograph.tei.xml
+Total data found between CRF and TEI files 857 from total 1597 examples.
+19:22:21.652 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778171b.training.monograph.tei.xml
+Total data found between CRF and TEI files 535 from total 901 examples.
+19:22:21.692 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778156n.training.monograph.tei.xml
+Total data found between CRF and TEI files 1352 from total 1451 examples.
+19:22:21.710 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780747.training.monograph.tei.xml
+Total data found between CRF and TEI files 955 from total 1748 examples.
+19:22:22.026 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07685_19221216.training.monograph.tei.xml
+Total data found between CRF and TEI files 289 from total 370 examples.
+19:22:22.032 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782241.training.monograph.tei.xml
+Total data found between CRF and TEI files 50 from total 66 examples.
+19:22:22.033 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779842b.training.monograph.tei.xml
+Total data found between CRF and TEI files 3257 from total 4809 examples.
+19:22:22.999 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9797045r.training.monograph.tei.xml
+Total data found between CRF and TEI files 166 from total 212 examples.
+19:22:23.005 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779867.training.monograph.tei.xml
+Total data found between CRF and TEI files 157 from total 313 examples.
+19:22:23.012 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784610.training.monograph.tei.xml
+Total data found between CRF and TEI files 118 from total 164 examples.
+19:22:23.015 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777928.training.monograph.tei.xml
+Total data found between CRF and TEI files 715 from total 870 examples.
+19:22:23.032 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04754_19191027.training.monograph.tei.xml
+Total data found between CRF and TEI files 71 from total 79 examples.
+19:22:23.033 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781750.training.monograph.tei.xml
+Total data found between CRF and TEI files 223 from total 342 examples.
+19:22:23.040 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778283w.training.monograph.tei.xml
+Total data found between CRF and TEI files 130 from total 211 examples.
+19:22:23.045 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778055w.training.monograph.tei.xml
+Total data found between CRF and TEI files 265 from total 427 examples.
+19:22:23.056 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783800.training.monograph.tei.xml
+Total data found between CRF and TEI files 118 from total 145 examples.
+19:22:23.058 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791062.training.monograph.tei.xml
+Total data found between CRF and TEI files 2201 from total 2840 examples.
+19:22:23.293 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07646_19221208.training.monograph.tei.xml
+Total data found between CRF and TEI files 4432 from total 4975 examples.
+19:22:23.768 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779105n.training.monograph.tei.xml
+Total data found between CRF and TEI files 718 from total 892 examples.
+19:22:23.789 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778470z.training.monograph.tei.xml
+Total data found between CRF and TEI files 107 from total 166 examples.
+19:22:23.792 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777352c.training.monograph.tei.xml
+Total data found between CRF and TEI files 2556 from total 3327 examples.
+19:22:24.274 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778291f.training.monograph.tei.xml
+Total data found between CRF and TEI files 366 from total 629 examples.
+19:22:24.309 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3043438f.training.monograph.tei.xml
+Total data found between CRF and TEI files 566 from total 684 examples.
+19:22:24.316 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05133_19200303.training.monograph.tei.xml
+Total data found between CRF and TEI files 453 from total 535 examples.
+19:22:24.324 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780680t.training.monograph.tei.xml
+Total data found between CRF and TEI files 42 from total 58 examples.
+19:22:24.325 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773791.training.monograph.tei.xml
+Total data found between CRF and TEI files 1576 from total 2110 examples.
+19:22:24.447 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05911_19210114.training.monograph.tei.xml
+Total data found between CRF and TEI files 118 from total 165 examples.
+19:22:24.449 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776317.training.monograph.tei.xml
+Total data found between CRF and TEI files 959 from total 1526 examples.
+19:22:24.556 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08529_19231113.training.monograph.tei.xml
+Total data found between CRF and TEI files 191 from total 202 examples.
+19:22:24.558 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05309_19200422.training.monograph.tei.xml
+Total data found between CRF and TEI files 164 from total 195 examples.
+19:22:24.560 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778543d.training.monograph.tei.xml
+Total data found between CRF and TEI files 1006 from total 1054 examples.
+19:22:24.571 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780050.training.monograph.tei.xml
+Total data found between CRF and TEI files 935 from total 1016 examples.
+19:22:24.584 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07272_19220527.training.monograph.tei.xml
+Total data found between CRF and TEI files 155 from total 175 examples.
+19:22:24.586 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791010.training.monograph.tei.xml
+Total data found between CRF and TEI files 1325 from total 1895 examples.
+19:22:24.735 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777782w.training.monograph.tei.xml
+Total data found between CRF and TEI files 412 from total 538 examples.
+19:22:24.760 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07041_19220327.training.monograph.tei.xml
+Total data found between CRF and TEI files 1330 from total 1638 examples.
+19:22:24.831 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782471.training.monograph.tei.xml
+Total data found between CRF and TEI files 161 from total 171 examples.
+19:22:24.833 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06796_19220109.training.monograph.tei.xml
+Total data found between CRF and TEI files 87 from total 106 examples.
+19:22:24.834 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773880.training.monograph.tei.xml
+Total data found between CRF and TEI files 183 from total 232 examples.
+19:22:24.838 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779627z.training.monograph.tei.xml
+Total data found between CRF and TEI files 402 from total 634 examples.
+19:22:24.873 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780682n.training.monograph.tei.xml
+Total data found between CRF and TEI files 737 from total 1278 examples.
+19:22:25.013 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778167.training.monograph.tei.xml
+Total data found between CRF and TEI files 284 from total 420 examples.
+19:22:25.026 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778645k.training.monograph.tei.xml
+Total data found between CRF and TEI files 329 from total 631 examples.
+19:22:25.057 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778355x.training.monograph.tei.xml
+Total data found between CRF and TEI files 1313 from total 2175 examples.
+19:22:25.348 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778329f.training.monograph.tei.xml
+Total data found between CRF and TEI files 374 from total 389 examples.
+19:22:25.351 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3044995h.training.monograph.tei.xml
+Total data found between CRF and TEI files 447 from total 515 examples.
+19:22:25.355 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779838f.training.monograph.tei.xml
+Total data found between CRF and TEI files 1026 from total 1651 examples.
+19:22:25.487 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773598.training.monograph.tei.xml
+Total data found between CRF and TEI files 609 from total 998 examples.
+19:22:25.542 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785635.training.monograph.tei.xml
+Total data found between CRF and TEI files 599 from total 788 examples.
+19:22:25.559 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05011_19200126.training.monograph.tei.xml
+Total data found between CRF and TEI files 595 from total 751 examples.
+19:22:25.579 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778274x.training.monograph.tei.xml
+Total data found between CRF and TEI files 183 from total 505 examples.
+19:22:25.610 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782849.training.monograph.tei.xml
+Total data found between CRF and TEI files 192 from total 495 examples.
+19:22:25.630 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781661.training.monograph.tei.xml
+Total data found between CRF and TEI files 126 from total 308 examples.
+19:22:25.639 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777806v.training.monograph.tei.xml
+Total data found between CRF and TEI files 754 from total 986 examples.
+19:22:25.676 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779238c.training.monograph.tei.xml
+Total data found between CRF and TEI files 911 from total 1219 examples.
+19:22:25.732 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06812_19220116.training.monograph.tei.xml
+Total data found between CRF and TEI files 65 from total 71 examples.
+19:22:25.732 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778398p.training.monograph.tei.xml
+Total data found between CRF and TEI files 132 from total 147 examples.
+19:22:25.734 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780652h.training.monograph.tei.xml
+Total data found between CRF and TEI files 461 from total 879 examples.
+19:22:25.784 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778050t.training.monograph.tei.xml
+Total data found between CRF and TEI files 209 from total 269 examples.
+        epsilon: 1.0E-7
+        window: 50
+        nb max iterations: 2000
+        nb threads: 16
+* Load patterns
+* Load training data
+* Initialize the model
+* Summary
+    nb train:    380
+    nb labels:   20
+    nb blocks:   912587
+    nb features: 18252120
+* Train the model with l-bfgs
+  [   1] obj=439300.74  act=2096725  err=26.15%/100.00% time=6.82s/6.82s
+  [   2] obj=274111.47  act=1882154  err=26.15%/100.00% time=4.12s/10.93s
+  [   3] obj=210513.64  act=1135258  err=19.32%/100.00% time=10.42s/21.36s
+  [   4] obj=205458.12  act=1274219  err=26.15%/100.00% time=10.57s/31.93s
+  [   5] obj=198035.52  act=1268097  err=26.14%/100.00% time=10.73s/42.67s
+  [   6] obj=194633.91  act=1271681  err=26.15%/100.00% time=10.97s/53.64s
+  [   7] obj=191626.94  act=1255727  err=26.15%/100.00% time=16.51s/70.15s
+  [   8] obj=186652.29  act=1235583  err=26.15%/100.00% time=4.71s/74.86s
+  [   9] obj=176733.14  act=1146598  err=16.74%/100.00% time=5.22s/80.08s
+  [  10] obj=168717.75  act=1050494  err=26.15%/100.00% time=5.39s/85.47s
+  [  11] obj=156342.22  act=851257   err=16.14%/100.00% time=5.14s/90.62s
+  [  12] obj=153319.05  act=946647   err=26.11%/100.00% time=5.06s/95.68s
+  [  13] obj=145345.51  act=873370   err=15.06%/100.00% time=5.12s/100.79s
+  [  14] obj=136679.88  act=902716   err=17.08%/100.00% time=5.09s/105.89s
+  [  15] obj=121454.21  act=862907   err=14.23%/100.00% time=5.08s/110.97s
+  [  16] obj=108639.23  act=809244   err=13.76%/100.00% time=5.09s/116.06s
+  [  17] obj=99469.49   act=705786   err=15.15%/100.00% time=5.13s/121.18s
+  [  18] obj=86179.18   act=708028   err=12.96%/100.00% time=5.05s/126.23s
+  [  19] obj=75174.12   act=683817   err=11.93%/100.00% time=5.09s/131.33s
+  [  20] obj=56988.03   act=626717   err=10.02%/100.00% time=5.04s/136.36s
+  [  21] obj=55177.58   act=616461   err= 9.76%/100.00% time=15.46s/151.82s
+  [  22] obj=53076.25   act=625479   err=13.90%/100.00% time=5.05s/156.87s
+  [  23] obj=44575.04   act=629161   err= 8.72%/100.00% time=8.49s/165.37s
+  [  24] obj=44398.79   act=622354   err=13.67%/100.00% time=5.10s/170.47s
+  [  25] obj=41634.84   act=622116   err= 8.98%/100.00% time=5.02s/175.49s
+  [  26] obj=36788.45   act=638220   err= 8.25%/100.00% time=5.03s/180.52s
+  [  27] obj=35573.44   act=610961   err= 7.30%/100.00% time=8.40s/188.92s
+  [  28] obj=32452.99   act=614989   err= 8.47%/100.00% time=5.04s/193.95s
+  [  29] obj=29720.37   act=605929   err= 6.36%/100.00% time=8.47s/202.42s
+  [  30] obj=26414.22   act=616748   err= 6.95%/100.00% time=5.04s/207.46s
+  [  31] obj=24474.47   act=596996   err= 5.51%/100.00% time=8.52s/215.98s
+  [  32] obj=20884.09   act=598963   err= 5.54%/100.00% time=5.02s/221.01s
+  [  33] obj=19683.79   act=582207   err= 4.48%/100.00% time=8.48s/229.49s
+  [  34] obj=17646.21   act=582787   err= 4.77%/100.00% time=5.09s/234.58s
+  [  35] obj=17104.02   act=563773   err= 4.93%/99.47% time=5.08s/239.66s
+  [  36] obj=14887.55   act=613655   err= 3.82%/99.74% time=5.08s/244.74s
+  [  37] obj=14214.15   act=573450   err= 3.79%/99.47% time=5.08s/249.83s
+  [  38] obj=12784.35   act=569908   err= 3.43%/99.74% time=5.03s/254.86s
+  [  39] obj=11914.90   act=545675   err= 3.07%/98.42% time=5.01s/259.86s
+  [  40] obj=10752.49   act=531138   err= 3.04%/98.68% time=5.09s/264.96s
+  [  41] obj=10407.40   act=507506   err= 3.12%/97.63% time=5.05s/270.01s
+  [  42] obj=9216.17    act=515778   err= 2.39%/97.37% time=5.06s/275.06s
+  [  43] obj=8731.68    act=490208   err= 2.34%/97.11% time=5.05s/280.11s
+  [  44] obj=8379.70    act=440220   err= 2.42%/95.26% time=5.03s/285.14s
+  [  45] obj=7656.58    act=436486   err= 1.96%/95.00% time=5.12s/290.26s
+  [  46] obj=7181.78    act=399618   err= 1.82%/93.95% time=5.04s/295.30s
+  [  47] obj=6836.95    act=357369   err= 2.28%/91.58% time=5.04s/300.33s
+  [  48] obj=6138.78    act=371963   err= 1.40%/91.32% time=5.04s/305.38s
+  [  49] obj=5898.10    act=349030   err= 1.39%/90.79% time=5.09s/310.46s
+  [  50] obj=5607.34    act=301797   err= 1.43%/87.89% time=5.01s/315.48s
+  [  51] obj=5196.36    act=300215   err= 1.15%/86.58% time=5.05s/320.53s
+  [  52] obj=4867.78    act=275747   err= 1.28%/84.21% time=5.06s/325.59s
+  [  53] obj=4658.50    act=261371   err= 1.03%/82.37% time=5.04s/330.64s
+  [  54] obj=4428.18    act=260086   err= 0.84%/81.05% time=5.07s/335.71s
+  [  55] obj=4215.28    act=245562   err= 0.88%/78.42% time=4.99s/340.70s
+  [  56] obj=4059.47    act=229530   err= 0.87%/74.74% time=5.01s/345.72s
+  [  57] obj=3785.61    act=233033   err= 0.59%/73.42% time=5.10s/350.81s
+  [  58] obj=3639.64    act=213099   err= 0.45%/70.00% time=5.05s/355.87s
+  [  59] obj=3391.76    act=178962   err= 0.40%/61.05% time=5.01s/360.88s
+  [  60] obj=3282.33    act=170064   err= 0.32%/57.63% time=5.01s/365.89s
+  [  61] obj=3153.70    act=160693   err= 0.35%/54.21% time=5.05s/370.94s
+  [  62] obj=3011.51    act=141295   err= 0.20%/46.32% time=5.08s/376.03s
+  [  63] obj=2905.61    act=134475   err= 0.24%/45.79% time=5.05s/381.08s
+  [  64] obj=2790.38    act=117518   err= 0.17%/39.47% time=5.10s/386.18s
+  [  65] obj=2719.29    act=103118   err= 0.32%/34.74% time=5.10s/391.27s
+  [  66] obj=2638.64    act=106551   err= 0.12%/30.53% time=5.10s/396.38s
+  [  67] obj=2583.37    act=96828    err= 0.14%/28.16% time=5.01s/401.39s
+  [  68] obj=2493.62    act=80697    err= 0.08%/23.42% time=5.04s/406.42s
+  [  69] obj=2436.75    act=77414    err= 0.10%/22.37% time=5.04s/411.46s
+  [  70] obj=2384.11    act=68878    err= 0.06%/18.16% time=5.07s/416.54s
+  [  71] obj=2315.13    act=57374    err= 0.09%/19.47% time=5.06s/421.60s
+  [  72] obj=2282.59    act=53381    err= 0.07%/17.63% time=5.10s/426.70s
+  [  73] obj=2246.57    act=49989    err= 0.07%/16.58% time=5.04s/431.74s
+  [  74] obj=2210.79    act=45794    err= 0.06%/15.00% time=5.09s/436.83s
+  [  75] obj=2182.60    act=43978    err= 0.07%/15.79% time=5.04s/441.88s
+  [  76] obj=2155.29    act=41376    err= 0.04%/13.16% time=5.08s/446.96s
+  [  77] obj=2126.96    act=39531    err= 0.05%/11.84% time=5.05s/452.01s
+  [  78] obj=2102.30    act=37773    err= 0.04%/ 8.68% time=5.10s/457.11s
+  [  79] obj=2081.58    act=36262    err= 0.04%/ 7.89% time=5.09s/462.20s
+  [  80] obj=2060.68    act=34049    err= 0.03%/ 6.58% time=5.12s/467.32s
+  [  81] obj=2040.92    act=32217    err= 0.05%/ 8.16% time=5.11s/472.44s
+  [  82] obj=2024.48    act=31094    err= 0.04%/ 6.32% time=5.01s/477.45s
+  [  83] obj=2008.46    act=29583    err= 0.04%/ 6.58% time=5.08s/482.52s
+  [  84] obj=1990.65    act=28221    err= 0.03%/ 5.26% time=5.07s/487.59s
+  [  85] obj=1976.58    act=26809    err= 0.04%/ 6.32% time=5.03s/492.62s
+  [  86] obj=1961.86    act=26230    err= 0.03%/ 5.79% time=5.03s/497.65s
+  [  87] obj=1948.85    act=24925    err= 0.03%/ 7.11% time=5.02s/502.67s
+  [  88] obj=1934.89    act=24453    err= 0.03%/ 5.79% time=5.09s/507.77s
+  [  89] obj=1925.14    act=24769    err= 0.03%/ 6.05% time=5.05s/512.82s
+  [  90] obj=1914.44    act=24059    err= 0.03%/ 4.47% time=5.05s/517.87s
+  [  91] obj=1905.67    act=23918    err= 0.03%/ 5.79% time=5.06s/522.93s
+  [  92] obj=1897.27    act=23257    err= 0.01%/ 5.00% time=5.05s/527.98s
+  [  93] obj=1889.21    act=22854    err= 0.03%/ 5.79% time=5.07s/533.05s
+  [  94] obj=1880.43    act=22129    err= 0.03%/ 4.74% time=5.06s/538.11s
+  [  95] obj=1872.52    act=21478    err= 0.03%/ 5.00% time=5.04s/543.16s
+  [  96] obj=1864.68    act=20824    err= 0.01%/ 3.95% time=5.06s/548.22s
+  [  97] obj=1857.98    act=20441    err= 0.03%/ 4.47% time=5.11s/553.32s
+  [  98] obj=1849.10    act=19851    err= 0.01%/ 3.16% time=5.01s/558.33s
+  [  99] obj=1842.81    act=19231    err= 0.03%/ 3.42% time=5.00s/563.34s
+  [ 100] obj=1835.95    act=18621    err= 0.00%/ 2.11% time=5.06s/568.40s
+  [ 101] obj=1827.56    act=18648    err= 0.02%/ 2.89% time=5.11s/573.51s
+  [ 102] obj=1821.87    act=17954    err= 0.00%/ 2.11% time=5.02s/578.53s
+  [ 103] obj=1817.13    act=17588    err= 0.02%/ 2.63% time=5.06s/583.59s
+  [ 104] obj=1810.74    act=17314    err= 0.00%/ 2.11% time=5.08s/588.67s
+  [ 105] obj=1806.09    act=16955    err= 0.02%/ 2.63% time=5.03s/593.70s
+  [ 106] obj=1801.07    act=16539    err= 0.01%/ 2.37% time=5.04s/598.74s
+  [ 107] obj=1796.22    act=16253    err= 0.01%/ 2.37% time=5.05s/603.79s
+  [ 108] obj=1791.68    act=15912    err= 0.01%/ 2.63% time=5.12s/608.91s
+  [ 109] obj=1786.66    act=15599    err= 0.01%/ 2.63% time=5.02s/613.93s
+  [ 110] obj=1782.74    act=15277    err= 0.00%/ 2.63% time=5.04s/618.96s
+  [ 111] obj=1778.53    act=15180    err= 0.01%/ 2.63% time=5.04s/624.00s
+  [ 112] obj=1774.67    act=14968    err= 0.00%/ 2.11% time=5.04s/629.04s
+  [ 113] obj=1771.07    act=14821    err= 0.00%/ 1.32% time=5.06s/634.10s
+  [ 114] obj=1767.62    act=14588    err= 0.00%/ 1.05% time=5.02s/639.12s
+  [ 115] obj=1764.45    act=14418    err= 0.00%/ 1.05% time=5.06s/644.18s
+  [ 116] obj=1760.95    act=14260    err= 0.00%/ 1.05% time=5.07s/649.25s
+  [ 117] obj=1757.95    act=14037    err= 0.00%/ 0.79% time=5.06s/654.31s
+  [ 118] obj=1754.66    act=13887    err= 0.00%/ 1.32% time=5.06s/659.37s
+  [ 119] obj=1751.78    act=13731    err= 0.02%/ 1.32% time=5.08s/664.45s
+  [ 120] obj=1749.10    act=13582    err= 0.00%/ 1.32% time=5.05s/669.50s
+  [ 121] obj=1746.51    act=13432    err= 0.02%/ 1.58% time=5.03s/674.54s
+  [ 122] obj=1744.10    act=13290    err= 0.00%/ 1.58% time=5.01s/679.54s
+  [ 123] obj=1741.93    act=13205    err= 0.02%/ 2.11% time=5.04s/684.58s
+  [ 124] obj=1739.34    act=13108    err= 0.00%/ 1.58% time=5.04s/689.63s
+  [ 125] obj=1737.20    act=13031    err= 0.02%/ 1.84% time=4.98s/694.61s
+  [ 126] obj=1734.64    act=12924    err= 0.00%/ 1.84% time=5.00s/699.61s
+  [ 127] obj=1732.67    act=12856    err= 0.02%/ 2.11% time=5.11s/704.71s
+  [ 128] obj=1730.09    act=12780    err= 0.00%/ 1.84% time=5.05s/709.76s
+  [ 129] obj=1728.53    act=12650    err= 0.02%/ 1.84% time=5.08s/714.84s
+  [ 130] obj=1726.07    act=12561    err= 0.00%/ 1.84% time=5.13s/719.97s
+  [ 131] obj=1724.32    act=12439    err= 0.02%/ 1.84% time=5.04s/725.02s
+  [ 132] obj=1721.91    act=12399    err= 0.00%/ 1.84% time=5.03s/730.04s
+  [ 133] obj=1720.47    act=12278    err= 0.02%/ 2.11% time=5.08s/735.12s
+  [ 134] obj=1718.00    act=12228    err= 0.00%/ 1.58% time=5.04s/740.16s
+  [ 135] obj=1716.85    act=12095    err= 0.02%/ 1.84% time=5.07s/745.23s
+  [ 136] obj=1714.69    act=12024    err= 0.00%/ 1.58% time=5.07s/750.30s
+  [ 137] obj=1713.11    act=11942    err= 0.02%/ 1.84% time=5.01s/755.31s
+  [ 138] obj=1711.11    act=11862    err= 0.00%/ 1.32% time=5.04s/760.35s
+  [ 139] obj=1709.61    act=11720    err= 0.02%/ 1.84% time=5.06s/765.41s
+  [ 140] obj=1707.68    act=11641    err= 0.00%/ 1.32% time=5.13s/770.54s
+  [ 141] obj=1706.35    act=11546    err= 0.02%/ 1.84% time=5.05s/775.60s
+  [ 142] obj=1704.45    act=11445    err= 0.00%/ 1.32% time=5.02s/780.62s
+  [ 143] obj=1703.14    act=11356    err= 0.02%/ 1.58% time=5.04s/785.66s
+  [ 144] obj=1701.24    act=11284    err= 0.00%/ 1.05% time=5.08s/790.74s
+  [ 145] obj=1700.10    act=11226    err= 0.02%/ 1.58% time=5.09s/795.83s
+  [ 146] obj=1698.31    act=11189    err= 0.00%/ 1.05% time=5.06s/800.88s
+  [ 147] obj=1697.22    act=11077    err= 0.02%/ 1.84% time=5.06s/805.94s
+  [ 148] obj=1695.67    act=11032    err= 0.00%/ 0.79% time=5.06s/811.01s
+  [ 149] obj=1694.76    act=10990    err= 0.02%/ 1.32% time=5.04s/816.04s
+  [ 150] obj=1693.11    act=10967    err= 0.00%/ 0.53% time=5.01s/821.06s
+  [ 151] obj=1692.07    act=10871    err= 0.02%/ 1.32% time=5.04s/826.10s
+  [ 152] obj=1690.57    act=10795    err= 0.00%/ 0.53% time=5.05s/831.15s
+  [ 153] obj=1689.76    act=10760    err= 0.00%/ 0.79% time=5.02s/836.17s
+  [ 154] obj=1688.15    act=10702    err= 0.00%/ 0.53% time=5.09s/841.26s
+  [ 155] obj=1687.51    act=10663    err= 0.00%/ 0.79% time=5.08s/846.34s
+  [ 156] obj=1685.81    act=10612    err= 0.00%/ 0.53% time=5.05s/851.39s
+  [ 157] obj=1684.99    act=10543    err= 0.00%/ 0.53% time=5.01s/856.40s
+  [ 158] obj=1683.74    act=10491    err= 0.00%/ 0.53% time=5.05s/861.45s
+  [ 159] obj=1682.91    act=10433    err= 0.00%/ 0.53% time=5.05s/866.50s
+  [ 160] obj=1681.44    act=10401    err= 0.00%/ 0.53% time=5.02s/871.52s
+  [ 161] obj=1680.46    act=10362    err= 0.00%/ 0.53% time=5.05s/876.56s
+  [ 162] obj=1679.05    act=10342    err= 0.00%/ 0.53% time=5.04s/881.60s
+  [ 163] obj=1678.15    act=10257    err= 0.00%/ 0.53% time=5.04s/886.64s
+  [ 164] obj=1677.00    act=10216    err= 0.00%/ 0.53% time=5.04s/891.68s
+  [ 165] obj=1676.19    act=10146    err= 0.00%/ 0.53% time=5.06s/896.74s
+  [ 166] obj=1674.97    act=10107    err= 0.00%/ 0.53% time=5.02s/901.76s
+  [ 167] obj=1674.41    act=10059    err= 0.00%/ 0.53% time=5.03s/906.79s
+  [ 168] obj=1673.07    act=10027    err= 0.00%/ 0.79% time=5.03s/911.82s
+  [ 169] obj=1672.47    act=9997     err= 0.00%/ 0.79% time=5.06s/916.88s
+  [ 170] obj=1671.17    act=9955     err= 0.00%/ 0.53% time=5.05s/921.93s
+  [ 171] obj=1670.48    act=9900     err= 0.00%/ 0.53% time=5.02s/926.96s
+  [ 172] obj=1669.33    act=9839     err= 0.00%/ 0.53% time=5.03s/931.98s
+  [ 173] obj=1668.87    act=9793     err= 0.00%/ 0.53% time=5.05s/937.03s
+  [ 174] obj=1667.52    act=9794     err= 0.00%/ 0.53% time=5.01s/942.04s
+  [ 175] obj=1666.68    act=9755     err= 0.00%/ 0.53% time=5.00s/947.03s
+  [ 176] obj=1665.48    act=9703     err= 0.00%/ 0.53% time=5.11s/952.15s
+  [ 177] obj=1664.67    act=9664     err= 0.00%/ 0.53% time=5.05s/957.20s
+  [ 178] obj=1663.63    act=9609     err= 0.00%/ 0.53% time=5.13s/962.33s
+  [ 179] obj=1662.92    act=9591     err= 0.00%/ 0.79% time=5.04s/967.37s
+  [ 180] obj=1661.88    act=9531     err= 0.00%/ 0.53% time=5.07s/972.44s
+  [ 181] obj=1661.52    act=9484     err= 0.00%/ 0.79% time=5.00s/977.44s
+  [ 182] obj=1660.04    act=9513     err= 0.00%/ 0.53% time=5.03s/982.47s
+  [ 183] obj=1659.40    act=9461     err= 0.00%/ 0.79% time=5.01s/987.48s
+  [ 184] obj=1658.32    act=9443     err= 0.00%/ 0.53% time=5.02s/992.50s
+  [ 185] obj=1657.72    act=9405     err= 0.00%/ 0.79% time=5.01s/997.51s
+  [ 186] obj=1656.83    act=9356     err= 0.00%/ 0.53% time=5.04s/1002.55s
+  [ 187] obj=1656.39    act=9329     err= 0.00%/ 1.05% time=5.06s/1007.61s
+  [ 188] obj=1655.31    act=9277     err= 0.00%/ 0.79% time=5.01s/1012.62s
+  [ 189] obj=1654.81    act=9261     err= 0.00%/ 1.05% time=5.08s/1017.70s
+  [ 190] obj=1653.81    act=9197     err= 0.00%/ 0.79% time=5.03s/1022.74s
+  [ 191] obj=1653.34    act=9187     err= 0.00%/ 1.05% time=5.05s/1027.79s
+  [ 192] obj=1652.41    act=9173     err= 0.00%/ 0.79% time=5.05s/1032.84s
+  [ 193] obj=1651.90    act=9164     err= 0.00%/ 1.05% time=5.05s/1037.89s
+  [ 194] obj=1651.07    act=9134     err= 0.00%/ 0.79% time=5.10s/1042.99s
+  [ 195] obj=1650.55    act=9114     err= 0.00%/ 0.79% time=5.05s/1048.04s
+  [ 196] obj=1649.68    act=9063     err= 0.00%/ 0.53% time=5.01s/1053.05s
+  [ 197] obj=1649.11    act=9050     err= 0.00%/ 0.79% time=5.03s/1058.07s
+  [ 198] obj=1648.29    act=9020     err= 0.00%/ 0.53% time=5.06s/1063.13s
+  [ 199] obj=1647.86    act=8994     err= 0.00%/ 0.79% time=5.01s/1068.14s
+  [ 200] obj=1646.90    act=8970     err= 0.00%/ 0.53% time=5.05s/1073.19s
+  [ 201] obj=1646.39    act=8947     err= 0.00%/ 0.79% time=5.07s/1078.27s
+  [ 202] obj=1645.53    act=8927     err= 0.00%/ 0.53% time=5.09s/1083.35s
+  [ 203] obj=1644.98    act=8914     err= 0.00%/ 0.79% time=5.05s/1088.40s
+  [ 204] obj=1644.22    act=8887     err= 0.00%/ 0.53% time=5.08s/1093.48s
+  [ 205] obj=1643.75    act=8870     err= 0.00%/ 0.79% time=5.10s/1098.58s
+  [ 206] obj=1642.95    act=8829     err= 0.00%/ 0.53% time=5.06s/1103.64s
+  [ 207] obj=1642.52    act=8781     err= 0.00%/ 0.79% time=5.02s/1108.66s
+  [ 208] obj=1641.76    act=8755     err= 0.00%/ 0.53% time=5.06s/1113.72s
+  [ 209] obj=1641.25    act=8735     err= 0.00%/ 0.79% time=5.01s/1118.72s
+  [ 210] obj=1640.46    act=8735     err= 0.00%/ 0.53% time=5.06s/1123.79s
+  [ 211] obj=1640.02    act=8703     err= 0.00%/ 0.79% time=5.03s/1128.82s
+  [ 212] obj=1639.32    act=8673     err= 0.00%/ 0.53% time=5.07s/1133.89s
+  [ 213] obj=1638.95    act=8679     err= 0.00%/ 0.53% time=5.10s/1138.99s
+  [ 214] obj=1638.18    act=8657     err= 0.00%/ 0.53% time=5.08s/1144.08s
+  [ 215] obj=1637.77    act=8666     err= 0.00%/ 0.53% time=5.09s/1149.16s
+  [ 216] obj=1636.96    act=8635     err= 0.00%/ 0.53% time=5.09s/1154.26s
+  [ 217] obj=1636.51    act=8623     err= 0.00%/ 0.53% time=5.07s/1159.33s
+  [ 218] obj=1635.82    act=8594     err= 0.00%/ 0.53% time=5.03s/1164.36s
+  [ 219] obj=1635.51    act=8592     err= 0.00%/ 0.53% time=5.06s/1169.41s
+  [ 220] obj=1634.62    act=8577     err= 0.00%/ 0.53% time=5.02s/1174.43s
+  [ 221] obj=1634.18    act=8603     err= 0.00%/ 0.53% time=5.02s/1179.45s
+  [ 222] obj=1633.33    act=8572     err= 0.00%/ 0.53% time=5.03s/1184.48s
+  [ 223] obj=1632.96    act=8572     err= 0.00%/ 0.53% time=5.04s/1189.51s
+  [ 224] obj=1632.30    act=8533     err= 0.00%/ 0.53% time=5.08s/1194.59s
+  [ 225] obj=1632.03    act=8522     err= 0.00%/ 0.53% time=5.05s/1199.65s
+  [ 226] obj=1631.36    act=8488     err= 0.00%/ 0.53% time=5.01s/1204.65s
+  [ 227] obj=1630.92    act=8480     err= 0.00%/ 0.79% time=5.01s/1209.66s
+  [ 228] obj=1630.21    act=8490     err= 0.00%/ 0.53% time=5.00s/1214.66s
+  [ 229] obj=1629.83    act=8466     err= 0.00%/ 0.53% time=5.05s/1219.71s
+  [ 230] obj=1629.11    act=8457     err= 0.00%/ 0.53% time=5.02s/1224.73s
+  [ 231] obj=1628.79    act=8449     err= 0.00%/ 0.79% time=5.10s/1229.83s
+  [ 232] obj=1628.13    act=8403     err= 0.00%/ 0.79% time=5.15s/1234.98s
+  [ 233] obj=1627.99    act=8404     err= 0.00%/ 0.79% time=5.07s/1240.05s
+  [ 234] obj=1627.09    act=8407     err= 0.00%/ 0.79% time=5.05s/1245.10s
+  [ 235] obj=1626.75    act=8398     err= 0.00%/ 0.79% time=5.06s/1250.15s
+  [ 236] obj=1626.09    act=8354     err= 0.00%/ 0.79% time=5.08s/1255.23s
+  [ 237] obj=1625.72    act=8337     err= 0.00%/ 0.53% time=5.04s/1260.27s
+  [ 238] obj=1625.11    act=8297     err= 0.00%/ 0.79% time=5.09s/1265.36s
+  [ 239] obj=1624.76    act=8271     err= 0.00%/ 0.53% time=5.08s/1270.43s
+  [ 240] obj=1624.12    act=8254     err= 0.00%/ 0.53% time=5.07s/1275.51s
+  [ 241] obj=1623.87    act=8236     err= 0.00%/ 0.53% time=5.02s/1280.53s
+  [ 242] obj=1623.15    act=8213     err= 0.00%/ 0.53% time=5.10s/1285.63s
+  [ 243] obj=1622.92    act=8216     err= 0.00%/ 0.53% time=5.10s/1290.73s
+  [ 244] obj=1622.18    act=8187     err= 0.00%/ 0.53% time=5.05s/1295.78s
+  [ 245] obj=1621.83    act=8161     err= 0.00%/ 0.53% time=5.01s/1300.79s
+  [ 246] obj=1621.25    act=8161     err= 0.00%/ 0.53% time=5.04s/1305.83s
+  [ 247] obj=1621.07    act=8151     err= 0.00%/ 0.53% time=5.05s/1310.88s
+  [ 248] obj=1620.24    act=8162     err= 0.00%/ 0.53% time=5.09s/1315.97s
+  [ 249] obj=1619.93    act=8179     err= 0.00%/ 0.53% time=5.00s/1320.98s
+  [ 250] obj=1619.19    act=8155     err= 0.00%/ 0.53% time=5.06s/1326.04s
+  [ 251] obj=1618.86    act=8132     err= 0.00%/ 0.53% time=5.12s/1331.16s
+  [ 252] obj=1618.30    act=8098     err= 0.00%/ 0.53% time=5.07s/1336.22s
+  [ 253] obj=1618.15    act=8078     err= 0.00%/ 0.53% time=5.04s/1341.27s
+  [ 254] obj=1617.50    act=8066     err= 0.00%/ 0.53% time=5.09s/1346.35s
+  [ 255] obj=1617.29    act=8075     err= 0.00%/ 0.53% time=5.03s/1351.39s
+  [ 256] obj=1616.64    act=8066     err= 0.00%/ 0.53% time=5.14s/1356.52s
+  [ 257] obj=1616.36    act=8058     err= 0.00%/ 0.53% time=5.06s/1361.58s
+  [ 258] obj=1615.82    act=8035     err= 0.00%/ 0.53% time=5.09s/1366.67s
+  [ 259] obj=1615.45    act=8020     err= 0.00%/ 0.53% time=5.05s/1371.73s
+  [ 260] obj=1614.96    act=7990     err= 0.00%/ 0.53% time=5.03s/1376.75s
+  [ 261] obj=1614.68    act=8014     err= 0.00%/ 0.53% time=5.04s/1381.79s
+  [ 262] obj=1614.02    act=8001     err= 0.00%/ 0.53% time=5.03s/1386.83s
+  [ 263] obj=1613.79    act=7994     err= 0.00%/ 0.53% time=5.07s/1391.90s
+  [ 264] obj=1613.08    act=7999     err= 0.00%/ 0.53% time=5.00s/1396.90s
+  [ 265] obj=1612.81    act=7965     err= 0.00%/ 0.53% time=5.11s/1402.01s
+  [ 266] obj=1612.26    act=7947     err= 0.00%/ 0.53% time=5.06s/1407.07s
+  [ 267] obj=1612.07    act=7949     err= 0.00%/ 0.53% time=5.00s/1412.07s
+  [ 268] obj=1611.47    act=7925     err= 0.00%/ 0.53% time=5.00s/1417.07s
+  [ 269] obj=1611.34    act=7935     err= 0.00%/ 0.53% time=5.06s/1422.13s
+  [ 270] obj=1610.67    act=7904     err= 0.00%/ 0.53% time=5.06s/1427.19s
+  [ 271] obj=1610.37    act=7890     err= 0.00%/ 0.79% time=4.99s/1432.18s
+  [ 272] obj=1609.77    act=7866     err= 0.00%/ 0.79% time=5.05s/1437.23s
+  [ 273] obj=1609.65    act=7874     err= 0.00%/ 0.79% time=4.99s/1442.22s
+  [ 274] obj=1608.93    act=7823     err= 0.00%/ 0.79% time=5.03s/1447.25s
+  [ 275] obj=1608.42    act=7860     err= 0.00%/ 0.79% time=8.40s/1455.65s
+  [ 276] obj=1608.38    act=7799     err= 0.00%/ 0.79% time=5.05s/1460.70s
+  [ 277] obj=1607.80    act=7971     err= 0.00%/ 0.79% time=5.08s/1465.78s
+  [ 278] obj=1607.01    act=8106     err= 0.00%/ 0.53% time=5.06s/1470.84s
+  [ 279] obj=1606.39    act=8087     err= 0.00%/ 0.53% time=5.07s/1475.91s
+  [ 280] obj=1605.71    act=8107     err= 0.00%/ 0.53% time=8.49s/1484.41s
+  [ 281] obj=1605.27    act=7981     err= 0.00%/ 0.53% time=8.43s/1492.84s
+  [ 282] obj=1605.13    act=7908     err= 0.00%/ 0.53% time=5.08s/1497.92s
+  [ 283] obj=1603.92    act=8011     err= 0.00%/ 0.53% time=8.45s/1506.36s
+  [ 284] obj=1603.46    act=7918     err= 0.00%/ 0.53% time=8.41s/1514.77s
+  [ 285] obj=1602.95    act=7990     err= 0.00%/ 0.79% time=8.47s/1523.24s
+  [ 286] obj=1602.32    act=7932     err= 0.00%/ 0.53% time=8.48s/1531.71s
+  [ 287] obj=1601.49    act=7976     err= 0.00%/ 0.79% time=8.46s/1540.17s
+  [ 288] obj=1600.94    act=7929     err= 0.00%/ 0.53% time=8.42s/1548.59s
+  [ 289] obj=1600.38    act=7907     err= 0.00%/ 0.79% time=8.43s/1557.02s
+  [ 290] obj=1599.76    act=7851     err= 0.00%/ 0.53% time=8.44s/1565.46s
+  [ 291] obj=1599.26    act=7810     err= 0.00%/ 0.53% time=8.44s/1573.89s
+  [ 292] obj=1598.61    act=7845     err= 0.00%/ 0.53% time=8.47s/1582.37s
+  [ 293] obj=1598.32    act=7848     err= 0.00%/ 0.79% time=8.50s/1590.87s
+  [ 294] obj=1597.45    act=7909     err= 0.00%/ 0.53% time=8.40s/1599.27s
+  [ 295] obj=1596.95    act=7875     err= 0.00%/ 0.79% time=8.46s/1607.73s
+  [ 296] obj=1596.23    act=7856     err= 0.00%/ 0.53% time=8.47s/1616.20s
+  [ 297] obj=1595.72    act=7790     err= 0.00%/ 0.79% time=8.42s/1624.61s
+  [ 298] obj=1595.14    act=7735     err= 0.00%/ 0.53% time=8.46s/1633.07s
+  [ 299] obj=1594.58    act=7711     err= 0.00%/ 0.53% time=8.38s/1641.45s
+  [ 300] obj=1594.08    act=7705     err= 0.00%/ 0.53% time=8.50s/1649.94s
+  [ 301] obj=1593.47    act=7787     err= 0.00%/ 0.53% time=8.40s/1658.34s
+  [ 302] obj=1592.84    act=7743     err= 0.00%/ 0.53% time=8.46s/1666.81s
+  [ 303] obj=1592.17    act=7746     err= 0.00%/ 0.53% time=8.45s/1675.26s
+  [ 304] obj=1591.65    act=7688     err= 0.00%/ 0.53% time=8.43s/1683.69s
+  [ 305] obj=1591.04    act=7680     err= 0.00%/ 0.53% time=8.50s/1692.19s
+  [ 306] obj=1590.54    act=7630     err= 0.00%/ 0.53% time=8.44s/1700.64s
+  [ 307] obj=1590.00    act=7657     err= 0.00%/ 0.79% time=8.43s/1709.07s
+  [ 308] obj=1589.41    act=7754     err= 0.00%/ 0.53% time=8.42s/1717.49s
+  [ 309] obj=1588.95    act=7690     err= 0.00%/ 0.79% time=8.41s/1725.90s
+  [ 310] obj=1588.26    act=7704     err= 0.00%/ 0.79% time=8.48s/1734.38s
+  [ 311] obj=1587.77    act=7677     err= 0.00%/ 0.79% time=8.48s/1742.86s
+  [ 312] obj=1587.26    act=7602     err= 0.00%/ 0.79% time=8.47s/1751.33s
+  [ 313] obj=1586.79    act=7582     err= 0.00%/ 0.79% time=8.51s/1759.84s
+  [ 314] obj=1586.22    act=7581     err= 0.00%/ 0.53% time=8.45s/1768.29s
+  [ 315] obj=1585.80    act=7583     err= 0.00%/ 0.53% time=8.46s/1776.75s
+  [ 316] obj=1585.39    act=7598     err= 0.00%/ 0.53% time=8.40s/1785.15s
+  [ 317] obj=1584.72    act=7594     err= 0.00%/ 0.53% time=8.42s/1793.57s
+  [ 318] obj=1584.15    act=7610     err= 0.00%/ 0.53% time=8.46s/1802.03s
+  [ 319] obj=1583.66    act=7593     err= 0.00%/ 0.53% time=8.46s/1810.49s
+  [ 320] obj=1583.18    act=7568     err= 0.00%/ 0.53% time=8.41s/1818.90s
+  [ 321] obj=1583.06    act=7505     err= 0.00%/ 0.53% time=5.07s/1823.97s
+  [ 322] obj=1582.53    act=7926     err= 0.00%/ 0.26% time=5.02s/1828.99s
+  [ 323] obj=1581.33    act=8057     err= 0.00%/ 0.79% time=5.07s/1834.06s
+  [ 324] obj=1580.81    act=7946     err= 0.00%/ 0.79% time=5.00s/1839.06s
+  [ 325] obj=1579.95    act=7986     err= 0.00%/ 0.79% time=4.98s/1844.04s
+  [ 326] obj=1579.59    act=7736     err= 0.00%/ 0.79% time=5.04s/1849.08s
+  [ 327] obj=1578.85    act=7660     err= 0.00%/ 1.05% time=5.07s/1854.15s
+  [ 328] obj=1578.63    act=7520     err= 0.00%/ 0.53% time=5.03s/1859.18s
+  [ 329] obj=1578.19    act=7492     err= 0.00%/ 1.05% time=5.04s/1864.23s
+  [ 330] obj=1577.71    act=7480     err= 0.00%/ 1.05% time=5.05s/1869.28s
+  [ 331] obj=1577.33    act=7455     err= 0.00%/ 1.32% time=5.06s/1874.34s
+  [ 332] obj=1576.83    act=7447     err= 0.00%/ 1.05% time=5.04s/1879.38s
+  [ 333] obj=1576.31    act=7399     err= 0.00%/ 1.32% time=5.09s/1884.46s
+  [ 334] obj=1575.93    act=7409     err= 0.00%/ 1.32% time=5.05s/1889.52s
+  [ 335] obj=1575.52    act=7396     err= 0.00%/ 1.32% time=5.09s/1894.61s
+  [ 336] obj=1575.12    act=7412     err= 0.00%/ 1.32% time=5.05s/1899.65s
+  [ 337] obj=1574.66    act=7389     err= 0.00%/ 1.58% time=5.05s/1904.71s
+  [ 338] obj=1574.26    act=7389     err= 0.00%/ 1.32% time=5.08s/1909.78s
+  [ 339] obj=1573.78    act=7351     err= 0.00%/ 1.58% time=5.06s/1914.84s
+  [ 340] obj=1573.41    act=7339     err= 0.00%/ 1.05% time=5.01s/1919.86s
+  [ 341] obj=1573.01    act=7324     err= 0.00%/ 1.58% time=5.05s/1924.90s
+  [ 342] obj=1572.57    act=7332     err= 0.00%/ 1.32% time=5.05s/1929.96s
+  [ 343] obj=1572.26    act=7280     err= 0.00%/ 1.58% time=5.16s/1935.11s
+  [ 344] obj=1571.88    act=7272     err= 0.00%/ 1.32% time=5.03s/1940.14s
+  [ 345] obj=1571.35    act=7339     err= 0.00%/ 1.32% time=5.01s/1945.16s
+  [ 346] obj=1571.10    act=7282     err= 0.00%/ 1.32% time=5.03s/1950.18s
+  [ 347] obj=1570.53    act=7363     err= 0.00%/ 1.32% time=5.04s/1955.23s
+  [ 348] obj=1570.26    act=7316     err= 0.00%/ 1.32% time=5.08s/1960.31s
+  [ 349] obj=1570.03    act=7321     err= 0.00%/ 1.32% time=5.07s/1965.38s
+  [ 350] obj=1569.54    act=7376     err= 0.00%/ 1.05% time=5.04s/1970.41s
+  [ 351] obj=1569.05    act=7290     err= 0.00%/ 1.32% time=5.05s/1975.47s
+  [ 352] obj=1568.94    act=7266     err= 0.00%/ 1.32% time=5.05s/1980.52s
+  [ 353] obj=1568.25    act=7260     err= 0.00%/ 1.32% time=5.08s/1985.59s
+  [ 354] obj=1568.01    act=7226     err= 0.00%/ 1.32% time=5.07s/1990.66s
+  [ 355] obj=1567.87    act=7207     err= 0.00%/ 1.32% time=5.01s/1995.68s
+  [ 356] obj=1567.12    act=7272     err= 0.00%/ 0.79% time=5.06s/2000.74s
+  [ 357] obj=1567.07    act=7200     err= 0.00%/ 0.79% time=5.03s/2005.77s
+  [ 358] obj=1566.22    act=7276     err= 0.00%/ 0.79% time=5.09s/2010.86s
+  [ 359] obj=1566.11    act=7203     err= 0.00%/ 1.05% time=5.05s/2015.91s
+  [ 360] obj=1565.45    act=7217     err= 0.00%/ 1.05% time=5.04s/2020.95s
+  [ 361] obj=1565.25    act=7185     err= 0.00%/ 1.05% time=5.07s/2026.02s
+  [ 362] obj=1564.74    act=7213     err= 0.00%/ 1.05% time=5.02s/2031.04s
+  [ 363] obj=1564.61    act=7237     err= 0.00%/ 1.32% time=5.13s/2036.17s
+  [ 364] obj=1563.98    act=7199     err= 0.00%/ 1.32% time=5.08s/2041.25s
+  [ 365] obj=1563.59    act=7175     err= 0.00%/ 1.58% time=5.07s/2046.32s
+  [ 366] obj=1562.93    act=7178     err= 0.00%/ 1.32% time=5.05s/2051.37s
+  [ 367] obj=1562.91    act=7135     err= 0.00%/ 1.58% time=5.03s/2056.40s
+  [ 368] obj=1562.23    act=7114     err= 0.00%/ 1.32% time=5.06s/2061.46s
+  [ 369] obj=1562.15    act=7108     err= 0.00%/ 1.58% time=5.07s/2066.53s
+  [ 370] obj=1561.54    act=7112     err= 0.00%/ 1.32% time=5.00s/2071.52s
+  [ 371] obj=1561.43    act=7119     err= 0.00%/ 1.58% time=5.06s/2076.58s
+  [ 372] obj=1560.76    act=7130     err= 0.00%/ 1.32% time=5.05s/2081.63s
+  [ 373] obj=1560.31    act=7187     err= 0.00%/ 1.32% time=8.50s/2090.13s
+  [ 374] obj=1560.00    act=7108     err= 0.00%/ 1.32% time=8.47s/2098.61s
+  [ 375] obj=1559.70    act=7092     err= 0.00%/ 1.32% time=8.43s/2107.04s
+  [ 376] obj=1559.16    act=7089     err= 0.00%/ 1.32% time=8.43s/2115.47s
+  [ 377] obj=1558.76    act=7084     err= 0.00%/ 1.32% time=8.46s/2123.93s
+  [ 378] obj=1558.46    act=7085     err= 0.00%/ 1.32% time=8.45s/2132.38s
+  [ 379] obj=1557.74    act=7388     err= 0.00%/ 1.32% time=8.41s/2140.79s
+  [ 380] obj=1557.49    act=7120     err= 0.00%/ 1.32% time=8.43s/2149.22s
+  [ 381] obj=1556.93    act=7263     err= 0.00%/ 1.32% time=8.51s/2157.73s
+  [ 382] obj=1556.92    act=7058     err= 0.00%/ 1.32% time=5.03s/2162.77s
+  [ 383] obj=1556.29    act=7335     err= 0.00%/ 1.32% time=5.00s/2167.77s
+  [ 384] obj=1555.38    act=7504     err= 0.00%/ 1.32% time=5.16s/2172.92s
+  [ 385] obj=1554.88    act=7478     err= 0.00%/ 1.05% time=8.46s/2181.38s
+  [ 386] obj=1554.46    act=7362     err= 0.00%/ 1.05% time=8.45s/2189.83s
+  [ 387] obj=1554.18    act=7258     err= 0.00%/ 1.05% time=8.43s/2198.26s
+  [ 388] obj=1553.79    act=7258     err= 0.00%/ 1.05% time=8.43s/2206.69s
+  [ 389] obj=1553.35    act=7214     err= 0.00%/ 1.05% time=8.57s/2215.25s
+  [ 390] obj=1553.09    act=7148     err= 0.00%/ 0.79% time=8.53s/2223.79s
+  [ 391] obj=1552.59    act=7144     err= 0.00%/ 0.79% time=8.44s/2232.23s
+  [ 392] obj=1552.20    act=7095     err= 0.00%/ 0.79% time=8.45s/2240.67s
+  [ 393] obj=1552.19    act=7000     err= 0.00%/ 0.79% time=5.11s/2245.78s
+  [ 394] obj=1551.35    act=7082     err= 0.00%/ 0.79% time=5.03s/2250.82s
+  [ 395] obj=1550.81    act=7186     err= 0.00%/ 0.79% time=5.06s/2255.88s
+  [ 396] obj=1550.26    act=7178     err= 0.00%/ 0.79% time=8.48s/2264.36s
+  [ 397] obj=1549.96    act=7070     err= 0.00%/ 0.79% time=8.50s/2272.86s
+  [ 398] obj=1549.53    act=7022     err= 0.00%/ 0.79% time=8.46s/2281.31s
+  [ 399] obj=1549.34    act=7052     err= 0.00%/ 0.79% time=8.41s/2289.72s
+  [ 400] obj=1548.84    act=7023     err= 0.00%/ 0.53% time=8.55s/2298.27s
+  [ 401] obj=1548.69    act=6970     err= 0.00%/ 0.79% time=8.53s/2306.81s
+  [ 402] obj=1548.09    act=7027     err= 0.00%/ 0.53% time=8.47s/2315.27s
+  [ 403] obj=1547.80    act=6989     err= 0.00%/ 0.53% time=8.44s/2323.71s
+  [ 404] obj=1547.74    act=6922     err= 0.00%/ 0.53% time=5.01s/2328.72s
+  [ 405] obj=1546.80    act=7131     err= 0.00%/ 0.53% time=8.51s/2337.23s
+  [ 406] obj=1546.47    act=6996     err= 0.00%/ 0.53% time=8.38s/2345.61s
+  [ 407] obj=1546.22    act=6932     err= 0.00%/ 0.53% time=8.45s/2354.06s
+  [ 408] obj=1546.01    act=6914     err= 0.00%/ 0.53% time=8.53s/2362.59s
+  [ 409] obj=1545.36    act=6970     err= 0.00%/ 0.53% time=8.48s/2371.07s
+  [ 410] obj=1545.17    act=6861     err= 0.00%/ 0.53% time=8.43s/2379.50s
+  [ 411] obj=1544.72    act=6856     err= 0.00%/ 0.53% time=8.46s/2387.96s
+  [ 412] obj=1544.58    act=6808     err= 0.00%/ 0.53% time=8.49s/2396.44s
+  [ 413] obj=1544.20    act=6789     err= 0.00%/ 1.05% time=5.06s/2401.51s
+  [ 414] obj=1543.49    act=6865     err= 0.00%/ 1.05% time=8.41s/2409.92s
+  [ 415] obj=1543.14    act=6783     err= 0.00%/ 0.79% time=8.50s/2418.42s
+  [ 416] obj=1542.73    act=6919     err= 0.00%/ 1.05% time=8.51s/2426.93s
+  [ 417] obj=1542.49    act=6890     err= 0.00%/ 0.79% time=8.40s/2435.32s
+  [ 418] obj=1542.19    act=6922     err= 0.00%/ 0.79% time=8.45s/2443.77s
+  [ 419] obj=1541.78    act=7009     err= 0.00%/ 0.79% time=8.43s/2452.20s
+  [ 420] obj=1541.38    act=6964     err= 0.00%/ 0.79% time=8.38s/2460.59s
+  [ 421] obj=1541.08    act=6951     err= 0.00%/ 0.79% time=8.39s/2468.98s
+  [ 422] obj=1540.53    act=7141     err= 0.00%/ 0.79% time=8.43s/2477.41s
+  [ 423] obj=1540.12    act=7004     err= 0.00%/ 0.79% time=8.41s/2485.82s
+  [ 424] obj=1539.89    act=6887     err= 0.00%/ 0.79% time=8.36s/2494.18s
+  [ 425] obj=1539.71    act=6765     err= 0.00%/ 0.79% time=5.06s/2499.24s
+  [ 426] obj=1539.44    act=7064     err= 0.00%/ 0.53% time=5.05s/2504.29s
+  [ 427] obj=1539.15    act=7259     err= 0.00%/ 0.79% time=5.08s/2509.37s
+  [ 428] obj=1538.08    act=8085     err= 0.00%/ 0.53% time=5.01s/2514.38s
+  [ 429] obj=1537.01    act=7337     err= 0.00%/ 0.53% time=8.47s/2522.85s
+  [ 430] obj=1536.83    act=7029     err= 0.00%/ 0.53% time=8.46s/2531.32s
+  [ 431] obj=1536.48    act=6985     err= 0.00%/ 0.79% time=8.52s/2539.84s
+  [ 432] obj=1536.19    act=6956     err= 0.00%/ 0.79% time=8.44s/2548.28s
+  [ 433] obj=1535.92    act=6867     err= 0.00%/ 0.79% time=8.39s/2556.67s
+  [ 434] obj=1535.85    act=6786     err= 0.00%/ 0.79% time=5.10s/2561.77s
+  [ 435] obj=1535.23    act=6966     err= 0.00%/ 0.79% time=8.45s/2570.22s
+  [ 436] obj=1534.87    act=6892     err= 0.00%/ 0.79% time=8.45s/2578.67s
+  [ 437] obj=1534.70    act=6758     err= 0.00%/ 0.79% time=8.50s/2587.17s
+  [ 438] obj=1534.48    act=6751     err= 0.00%/ 0.53% time=8.53s/2595.69s
+  [ 439] obj=1533.92    act=6864     err= 0.00%/ 0.79% time=8.41s/2604.10s
+  [ 440] obj=1533.70    act=6748     err= 0.00%/ 0.53% time=8.48s/2612.58s
+  [ 441] obj=1533.33    act=6771     err= 0.00%/ 0.79% time=8.43s/2621.01s
+  [ 442] obj=1533.03    act=6779     err= 0.00%/ 0.53% time=8.45s/2629.46s
+  [ 443] obj=1532.67    act=6744     err= 0.00%/ 0.53% time=8.42s/2637.88s
+  [ 444] obj=1532.36    act=6764     err= 0.00%/ 0.53% time=8.48s/2646.36s
+  [ 445] obj=1532.07    act=6776     err= 0.00%/ 0.53% time=8.38s/2654.74s
+  [ 446] obj=1531.60    act=6824     err= 0.00%/ 0.53% time=8.44s/2663.17s
+  [ 447] obj=1531.30    act=6763     err= 0.00%/ 0.53% time=8.48s/2671.65s
+  [ 448] obj=1530.96    act=6727     err= 0.00%/ 0.53% time=8.45s/2680.10s
+  [ 449] obj=1530.74    act=6757     err= 0.00%/ 0.79% time=8.45s/2688.56s
+  [ 450] obj=1530.33    act=6702     err= 0.00%/ 0.79% time=8.41s/2696.97s
+  [ 451] obj=1530.00    act=6718     err= 0.00%/ 0.79% time=8.43s/2705.40s
+  [ 452] obj=1529.67    act=6724     err= 0.00%/ 1.05% time=8.45s/2713.85s
+  [ 453] obj=1529.42    act=6733     err= 0.00%/ 1.05% time=8.48s/2722.32s
+  [ 454] obj=1529.09    act=6692     err= 0.00%/ 1.05% time=8.48s/2730.80s
+  [ 455] obj=1528.90    act=6748     err= 0.00%/ 1.05% time=8.40s/2739.20s
+  [ 456] obj=1528.57    act=6760     err= 0.00%/ 1.05% time=8.44s/2747.64s
+  [ 457] obj=1528.30    act=6787     err= 0.00%/ 1.05% time=8.46s/2756.10s
+  [ 458] obj=1528.00    act=6769     err= 0.00%/ 1.05% time=8.51s/2764.61s
+  [ 459] obj=1527.79    act=6744     err= 0.00%/ 1.05% time=8.45s/2773.05s
+  [ 460] obj=1527.69    act=6681     err= 0.00%/ 1.05% time=5.08s/2778.13s
+  [ 461] obj=1527.31    act=6786     err= 0.00%/ 0.79% time=5.12s/2783.25s
+  [ 462] obj=1526.66    act=6844     err= 0.00%/ 1.05% time=5.05s/2788.30s
+  [ 463] obj=1526.31    act=6830     err= 0.00%/ 0.79% time=5.04s/2793.34s
+  [ 464] obj=1526.21    act=6796     err= 0.00%/ 1.05% time=5.01s/2798.35s
+  [ 465] obj=1525.65    act=6834     err= 0.00%/ 1.05% time=5.03s/2803.38s
+  [ 466] obj=1525.50    act=6776     err= 0.00%/ 1.32% time=5.11s/2808.49s
+  [ 467] obj=1525.27    act=6826     err= 0.00%/ 1.05% time=5.08s/2813.57s
+  [ 468] obj=1524.98    act=6763     err= 0.00%/ 1.32% time=5.04s/2818.61s
+  [ 469] obj=1524.75    act=6725     err= 0.00%/ 1.05% time=5.06s/2823.67s
+  [ 470] obj=1524.33    act=6757     err= 0.00%/ 1.32% time=5.09s/2828.76s
+  [ 471] obj=1524.24    act=6704     err= 0.00%/ 1.05% time=5.07s/2833.83s
+  [ 472] obj=1523.79    act=6700     err= 0.00%/ 1.05% time=5.05s/2838.88s
+  [ 473] obj=1523.66    act=6704     err= 0.00%/ 1.32% time=5.07s/2843.95s
+  [ 474] obj=1523.38    act=6711     err= 0.00%/ 1.32% time=5.11s/2849.06s
+  [ 475] obj=1523.14    act=6787     err= 0.00%/ 1.05% time=5.00s/2854.06s
+  [ 476] obj=1522.96    act=6724     err= 0.00%/ 1.05% time=5.08s/2859.14s
+  [ 477] obj=1522.65    act=6802     err= 0.00%/ 0.79% time=5.09s/2864.23s
+  [ 478] obj=1522.37    act=6735     err= 0.00%/ 0.79% time=5.09s/2869.31s
+  [ 479] obj=1522.21    act=6669     err= 0.00%/ 0.79% time=5.08s/2874.39s
+  [ 480] obj=1521.84    act=6706     err= 0.00%/ 0.79% time=5.04s/2879.43s
+  [ 481] obj=1521.75    act=6687     err= 0.00%/ 1.05% time=5.09s/2884.52s
+  [ 482] obj=1521.33    act=6676     err= 0.00%/ 0.79% time=5.07s/2889.59s
+  [ 483] obj=1521.14    act=6648     err= 0.00%/ 0.53% time=8.47s/2898.06s
+  [ 484] obj=1520.99    act=6602     err= 0.00%/ 0.53% time=8.43s/2906.49s
+  [ 485] obj=1520.85    act=6621     err= 0.00%/ 0.79% time=8.51s/2915.01s
+  [ 486] obj=1520.84    act=6579     err= 0.00%/ 0.26% time=5.01s/2920.02s
+  [ 487] obj=1520.40    act=6691     err= 0.00%/ 0.53% time=5.04s/2925.06s
+  [ 488] obj=1520.10    act=6683     err= 0.00%/ 0.53% time=5.11s/2930.18s
+  [ 489] obj=1519.92    act=6628     err= 0.00%/ 0.53% time=5.06s/2935.24s
+  [ 490] obj=1519.68    act=6607     err= 0.00%/ 0.26% time=5.03s/2940.27s
+  [ 491] obj=1519.49    act=6575     err= 0.00%/ 0.53% time=5.06s/2945.33s
+  [ 492] obj=1519.27    act=6581     err= 0.00%/ 0.26% time=5.06s/2950.39s
+  [ 493] obj=1519.03    act=6580     err= 0.00%/ 0.53% time=5.03s/2955.42s
+  [ 494] obj=1518.99    act=6569     err= 0.00%/ 0.26% time=5.05s/2960.47s
+  [ 495] obj=1518.65    act=6683     err= 0.00%/ 0.53% time=5.04s/2965.51s
+  [ 496] obj=1518.47    act=6572     err= 0.00%/ 0.26% time=5.09s/2970.60s
+  [ 497] obj=1518.14    act=6610     err= 0.00%/ 0.53% time=5.07s/2975.67s
+  [ 498] obj=1517.98    act=6533     err= 0.00%/ 0.26% time=5.08s/2980.75s
+  [ 499] obj=1517.78    act=6516     err= 0.00%/ 0.26% time=5.07s/2985.82s
+  [ 500] obj=1517.52    act=6500     err= 0.00%/ 0.26% time=5.06s/2990.88s
+  [ 501] obj=1517.40    act=6487     err= 0.00%/ 0.26% time=5.04s/2995.92s
+  [ 502] obj=1517.10    act=6486     err= 0.00%/ 0.26% time=5.05s/3000.97s
+  [ 503] obj=1517.00    act=6473     err= 0.00%/ 0.26% time=5.11s/3006.08s
+  [ 504] obj=1516.69    act=6452     err= 0.00%/ 0.26% time=5.10s/3011.17s
+  [ 505] obj=1516.62    act=6455     err= 0.00%/ 0.26% time=5.05s/3016.22s
+  [ 506] obj=1516.35    act=6421     err= 0.00%/ 0.53% time=5.05s/3021.27s
+  [ 507] obj=1516.30    act=6471     err= 0.00%/ 0.53% time=5.03s/3026.30s
+  [ 508] obj=1516.01    act=6424     err= 0.00%/ 0.53% time=5.06s/3031.35s
+  [ 509] obj=1515.92    act=6457     err= 0.00%/ 0.53% time=5.05s/3036.40s
+  [ 510] obj=1515.67    act=6422     err= 0.00%/ 0.53% time=5.05s/3041.45s
+  [ 511] obj=1515.50    act=6454     err= 0.00%/ 0.53% time=5.04s/3046.49s
+  [ 512] obj=1515.35    act=6421     err= 0.00%/ 0.53% time=5.04s/3051.53s
+  [ 513] obj=1515.12    act=6447     err= 0.00%/ 0.53% time=4.98s/3056.52s
+  [ 514] obj=1514.91    act=6408     err= 0.00%/ 0.53% time=5.05s/3061.56s
+  [ 515] obj=1514.75    act=6358     err= 0.00%/ 0.53% time=5.03s/3066.59s
+  [ 516] obj=1514.49    act=6355     err= 0.00%/ 0.53% time=5.03s/3071.62s
+  [ 517] obj=1514.38    act=6377     err= 0.00%/ 0.79% time=5.04s/3076.66s
+  [ 518] obj=1514.18    act=6321     err= 0.00%/ 0.53% time=5.04s/3081.70s
+  [ 519] obj=1514.05    act=6388     err= 0.00%/ 0.79% time=5.03s/3086.73s
+  [ 520] obj=1513.82    act=6330     err= 0.00%/ 0.53% time=5.08s/3091.81s
+  [ 521] obj=1513.67    act=6354     err= 0.00%/ 0.79% time=5.06s/3096.87s
+  [ 522] obj=1513.49    act=6320     err= 0.00%/ 0.53% time=5.07s/3101.94s
+  [ 523] obj=1513.27    act=6338     err= 0.00%/ 0.53% time=5.05s/3107.00s
+  [ 524] obj=1513.11    act=6302     err= 0.00%/ 0.53% time=5.05s/3112.05s
+  [ 525] obj=1512.83    act=6333     err= 0.00%/ 0.53% time=5.09s/3117.14s
+  [ 526] obj=1512.67    act=6280     err= 0.00%/ 0.53% time=5.08s/3122.21s
+  [ 527] obj=1512.46    act=6311     err= 0.00%/ 0.79% time=5.06s/3127.27s
+  [ 528] obj=1512.29    act=6301     err= 0.00%/ 0.79% time=5.05s/3132.33s
+  [ 529] obj=1512.13    act=6331     err= 0.00%/ 0.79% time=5.15s/3137.48s
+  [ 530] obj=1511.93    act=6308     err= 0.00%/ 0.53% time=5.06s/3142.54s
+  [ 531] obj=1511.72    act=6357     err= 0.00%/ 0.79% time=5.09s/3147.63s
+  [ 532] obj=1511.55    act=6300     err= 0.00%/ 0.53% time=5.09s/3152.72s
+  [ 533] obj=1511.42    act=6328     err= 0.00%/ 0.53% time=5.06s/3157.77s
+  [ 534] obj=1511.20    act=6324     err= 0.00%/ 0.26% time=5.06s/3162.83s
+  [ 535] obj=1511.08    act=6351     err= 0.00%/ 0.26% time=5.05s/3167.88s
+  [ 536] obj=1510.84    act=6316     err= 0.00%/ 0.26% time=5.10s/3172.98s
+  [ 537] obj=1510.71    act=6323     err= 0.00%/ 0.26% time=5.06s/3178.04s
+  [ 538] obj=1510.49    act=6292     err= 0.00%/ 0.26% time=5.07s/3183.11s
+  [ 539] obj=1510.39    act=6299     err= 0.00%/ 0.00% time=5.15s/3188.26s
+  [ 540] obj=1510.11    act=6259     err= 0.00%/ 0.26% time=5.07s/3193.33s
+  [ 541] obj=1509.97    act=6255     err= 0.00%/ 0.26% time=5.09s/3198.42s
+  [ 542] obj=1509.83    act=6252     err= 0.00%/ 0.26% time=5.09s/3203.51s
+  [ 543] obj=1509.68    act=6297     err= 0.00%/ 0.26% time=5.05s/3208.56s
+  [ 544] obj=1509.50    act=6283     err= 0.00%/ 0.26% time=5.08s/3213.64s
+  [ 545] obj=1509.36    act=6256     err= 0.00%/ 0.26% time=5.04s/3218.68s
+  [ 546] obj=1509.22    act=6216     err= 0.00%/ 0.26% time=5.06s/3223.74s
+  [ 547] obj=1509.11    act=6239     err= 0.00%/ 0.53% time=5.06s/3228.79s
+  [ 548] obj=1508.90    act=6213     err= 0.00%/ 0.53% time=5.06s/3233.86s
+  [ 549] obj=1508.85    act=6226     err= 0.00%/ 0.53% time=5.07s/3238.92s
+  [ 550] obj=1508.60    act=6221     err= 0.00%/ 0.53% time=5.06s/3243.98s
+  [ 551] obj=1508.49    act=6186     err= 0.00%/ 0.53% time=5.10s/3249.08s
+  [ 552] obj=1508.31    act=6181     err= 0.00%/ 0.53% time=5.09s/3254.17s
+  [ 553] obj=1508.19    act=6216     err= 0.00%/ 0.53% time=5.10s/3259.27s
+  [ 554] obj=1508.03    act=6158     err= 0.00%/ 0.53% time=5.10s/3264.37s
+  [ 555] obj=1507.92    act=6149     err= 0.00%/ 0.53% time=5.07s/3269.44s
+  [ 556] obj=1507.63    act=6128     err= 0.00%/ 0.53% time=5.07s/3274.51s
+  [ 557] obj=1507.53    act=6169     err= 0.00%/ 0.53% time=8.45s/3282.97s
+  [ 558] obj=1507.51    act=6103     err= 0.00%/ 0.53% time=5.07s/3288.03s
+  [ 559] obj=1507.33    act=6107     err= 0.00%/ 0.53% time=5.04s/3293.07s
+  [ 560] obj=1507.14    act=6174     err= 0.00%/ 0.53% time=5.04s/3298.11s
+  [ 561] obj=1507.12    act=6165     err= 0.00%/ 0.53% time=5.07s/3303.18s
+  [ 562] obj=1506.77    act=6208     err= 0.00%/ 0.53% time=5.02s/3308.20s
+  [ 563] obj=1506.72    act=6167     err= 0.00%/ 0.79% time=5.00s/3313.21s
+  [ 564] obj=1506.49    act=6164     err= 0.00%/ 0.53% time=5.01s/3318.21s
+  [ 565] obj=1506.43    act=6209     err= 0.00%/ 0.79% time=5.09s/3323.30s
+  [ 566] obj=1506.23    act=6156     err= 0.00%/ 0.79% time=5.01s/3328.32s
+  [ 567] obj=1506.06    act=6224     err= 0.00%/ 0.79% time=5.00s/3333.32s
+  [ 568] obj=1505.89    act=6155     err= 0.00%/ 0.79% time=8.43s/3341.75s
+  [ 569] obj=1505.81    act=6124     err= 0.00%/ 0.79% time=8.49s/3350.24s
+  [ 570] obj=1505.68    act=6131     err= 0.00%/ 0.79% time=8.50s/3358.75s
+  [ 571] obj=1505.55    act=6159     err= 0.00%/ 0.79% time=8.44s/3367.19s
+  [ 572] obj=1505.43    act=6159     err= 0.00%/ 0.79% time=8.39s/3375.58s
+  [ 573] obj=1505.27    act=6171     err= 0.00%/ 0.79% time=8.46s/3384.04s
+  [ 574] obj=1505.16    act=6147     err= 0.00%/ 0.79% time=8.43s/3392.47s
+  [ 575] obj=1505.00    act=6148     err= 0.00%/ 0.79% time=8.49s/3400.95s
+  [ 576] obj=1504.85    act=6142     err= 0.00%/ 0.79% time=8.43s/3409.38s
+  [ 577] obj=1504.74    act=6094     err= 0.00%/ 0.79% time=8.49s/3417.87s
+  [ 578] obj=1504.60    act=6108     err= 0.00%/ 0.79% time=8.51s/3426.38s
+  [ 579] obj=1504.46    act=6087     err= 0.00%/ 0.79% time=8.54s/3434.92s
+  [ 580] obj=1504.34    act=6114     err= 0.00%/ 0.79% time=8.52s/3443.44s
+  [ 581] obj=1504.26    act=6154     err= 0.00%/ 0.79% time=8.48s/3451.92s
+  [ 582] obj=1504.06    act=6100     err= 0.00%/ 0.79% time=8.51s/3460.43s
+  [ 583] obj=1503.93    act=6105     err= 0.00%/ 0.79% time=8.43s/3468.86s
+  [ 584] obj=1503.75    act=6068     err= 0.00%/ 0.79% time=8.47s/3477.32s
+  [ 585] obj=1503.65    act=6066     err= 0.00%/ 0.79% time=8.48s/3485.81s
+  [ 586] obj=1503.65    act=6018     err= 0.00%/ 0.53% time=5.06s/3490.87s
+  [ 587] obj=1503.42    act=6089     err= 0.00%/ 0.53% time=5.02s/3495.88s
+  [ 588] obj=1503.10    act=6178     err= 0.00%/ 0.53% time=5.01s/3500.89s
+  [ 589] obj=1503.07    act=6128     err= 0.00%/ 0.53% time=5.06s/3505.96s
+  [ 590] obj=1502.75    act=6150     err= 0.00%/ 0.53% time=5.03s/3510.99s
+  [ 591] obj=1502.65    act=6094     err= 0.00%/ 0.53% time=5.06s/3516.05s
+  [ 592] obj=1502.47    act=6062     err= 0.00%/ 0.53% time=5.03s/3521.08s
+  [ 593] obj=1502.41    act=6074     err= 0.00%/ 0.53% time=5.10s/3526.18s
+  [ 594] obj=1502.23    act=6057     err= 0.00%/ 0.53% time=5.06s/3531.24s
+  [ 595] obj=1502.18    act=6079     err= 0.00%/ 0.53% time=5.04s/3536.29s
+  [ 596] obj=1501.99    act=6062     err= 0.00%/ 0.53% time=5.01s/3541.30s
+  [ 597] obj=1501.90    act=6080     err= 0.00%/ 0.53% time=5.02s/3546.32s
+  [ 598] obj=1501.71    act=6070     err= 0.00%/ 0.53% time=5.10s/3551.41s
+  [ 599] obj=1501.67    act=6081     err= 0.00%/ 0.53% time=5.01s/3556.43s
+  [ 600] obj=1501.46    act=6067     err= 0.00%/ 0.53% time=5.03s/3561.45s
+  [ 601] obj=1501.41    act=6117     err= 0.00%/ 0.53% time=5.07s/3566.52s
+  [ 602] obj=1501.18    act=6105     err= 0.00%/ 0.53% time=5.10s/3571.62s
+  [ 603] obj=1501.05    act=6089     err= 0.00%/ 0.53% time=5.05s/3576.67s
+  [ 604] obj=1500.96    act=6082     err= 0.00%/ 0.53% time=5.03s/3581.70s
+  [ 605] obj=1500.83    act=6103     err= 0.00%/ 0.79% time=5.02s/3586.72s
+  [ 606] obj=1500.75    act=6069     err= 0.00%/ 0.53% time=5.05s/3591.78s
+  [ 607] obj=1500.56    act=6108     err= 0.00%/ 0.79% time=5.06s/3596.83s
+  [ 608] obj=1500.50    act=6030     err= 0.00%/ 0.79% time=5.02s/3601.86s
+  [ 609] obj=1500.38    act=6016     err= 0.00%/ 0.79% time=5.07s/3606.92s
+  [ 610] obj=1500.24    act=6016     err= 0.00%/ 0.79% time=5.05s/3611.97s
+  [ 611] obj=1500.17    act=6033     err= 0.00%/ 0.79% time=5.07s/3617.04s
+  [ 612] obj=1500.00    act=6062     err= 0.00%/ 0.79% time=5.04s/3622.08s
+  [ 613] obj=1499.93    act=6054     err= 0.00%/ 0.79% time=5.09s/3627.17s
+  [ 614] obj=1499.80    act=6004     err= 0.00%/ 0.79% time=5.01s/3632.17s
+  [ 615] obj=1499.68    act=6012     err= 0.00%/ 0.79% time=5.03s/3637.21s
+  [ 616] obj=1499.67    act=6003     err= 0.00%/ 0.79% time=5.02s/3642.22s
+  [ 617] obj=1499.46    act=6036     err= 0.00%/ 0.79% time=5.04s/3647.27s
+  [ 618] obj=1499.40    act=6011     err= 0.00%/ 0.79% time=5.06s/3652.32s
+  [ 619] obj=1499.24    act=6031     err= 0.00%/ 0.79% time=5.11s/3657.43s
+  [ 620] obj=1499.21    act=5991     err= 0.00%/ 0.53% time=5.01s/3662.45s
+  [ 621] obj=1499.07    act=5966     err= 0.00%/ 0.79% time=5.05s/3667.49s
+  [ 622] obj=1498.96    act=5960     err= 0.00%/ 0.53% time=5.11s/3672.60s
+  [ 623] obj=1498.83    act=5965     err= 0.00%/ 0.79% time=5.07s/3677.67s
+  [ 624] obj=1498.78    act=5922     err= 0.00%/ 0.53% time=5.05s/3682.72s
+  [ 625] obj=1498.65    act=5932     err= 0.00%/ 0.79% time=5.00s/3687.72s
+  [ 626] obj=1498.57    act=5929     err= 0.00%/ 0.79% time=5.03s/3692.75s
+  [ 627] obj=1498.46    act=5942     err= 0.00%/ 0.79% time=5.06s/3697.82s
+  [ 628] obj=1498.34    act=5914     err= 0.00%/ 0.79% time=5.05s/3702.87s
+  [ 629] obj=1498.29    act=5915     err= 0.00%/ 0.79% time=5.06s/3707.93s
+  [ 630] obj=1498.10    act=5941     err= 0.00%/ 0.53% time=5.06s/3712.98s
+  [ 631] obj=1498.09    act=5924     err= 0.00%/ 0.79% time=5.03s/3718.02s
+  [ 632] obj=1497.85    act=5909     err= 0.00%/ 0.53% time=5.02s/3723.04s
+  [ 633] obj=1497.79    act=5891     err= 0.00%/ 0.79% time=5.09s/3728.13s
+  [ 634] obj=1497.63    act=5903     err= 0.00%/ 0.53% time=5.05s/3733.18s
+  [ 635] obj=1497.57    act=5903     err= 0.00%/ 0.79% time=5.09s/3738.27s
+  [ 636] obj=1497.48    act=5893     err= 0.00%/ 0.53% time=5.06s/3743.34s
+  [ 637] obj=1497.31    act=5920     err= 0.00%/ 0.53% time=5.07s/3748.41s
+  [ 638] obj=1497.22    act=5882     err= 0.00%/ 0.53% time=5.13s/3753.54s
+  [ 639] obj=1497.11    act=5882     err= 0.00%/ 0.53% time=5.12s/3758.65s
+  [ 640] obj=1496.97    act=5860     err= 0.00%/ 0.53% time=5.08s/3763.74s
+  [ 641] obj=1496.94    act=5870     err= 0.00%/ 0.53% time=5.02s/3768.76s
+  [ 642] obj=1496.79    act=5858     err= 0.00%/ 0.53% time=5.09s/3773.85s
+  [ 643] obj=1496.68    act=5870     err= 0.00%/ 0.53% time=8.48s/3782.33s
+  [ 644] obj=1496.62    act=5848     err= 0.00%/ 0.53% time=8.51s/3790.84s
+  [ 645] obj=1496.53    act=5871     err= 0.00%/ 0.53% time=8.45s/3799.29s
+  [ 646] obj=1496.45    act=5860     err= 0.00%/ 0.26% time=8.48s/3807.77s
+  [ 647] obj=1496.32    act=5899     err= 0.00%/ 0.79% time=8.50s/3816.27s
+  [ 648] obj=1496.28    act=5899     err= 0.00%/ 0.26% time=8.43s/3824.70s
+  [ 649] obj=1496.09    act=5954     err= 0.00%/ 0.53% time=8.45s/3833.15s
+  [ 650] obj=1496.05    act=5860     err= 0.00%/ 0.26% time=5.03s/3838.18s
+  [ 651] obj=1496.00    act=5890     err= 0.00%/ 0.53% time=5.02s/3843.20s
+  [ 652] obj=1495.66    act=5922     err= 0.00%/ 0.53% time=5.03s/3848.23s
+  [ 653] obj=1495.57    act=5920     err= 0.00%/ 0.53% time=8.44s/3856.67s
+  [ 654] obj=1495.46    act=5897     err= 0.00%/ 0.53% time=8.53s/3865.21s
+  [ 655] obj=1495.37    act=5881     err= 0.00%/ 0.53% time=8.46s/3873.66s
+  [ 656] obj=1495.25    act=5884     err= 0.00%/ 0.26% time=8.41s/3882.07s
+  [ 657] obj=1495.16    act=5881     err= 0.00%/ 0.53% time=8.48s/3890.55s
+  [ 658] obj=1495.09    act=5883     err= 0.00%/ 0.26% time=8.47s/3899.01s
+  [ 659] obj=1494.92    act=5907     err= 0.00%/ 0.53% time=8.46s/3907.47s
+  [ 660] obj=1494.83    act=5875     err= 0.00%/ 0.26% time=8.38s/3915.85s
+  [ 661] obj=1494.71    act=5870     err= 0.00%/ 0.53% time=8.44s/3924.29s
+  [ 662] obj=1494.59    act=5840     err= 0.00%/ 0.26% time=8.44s/3932.73s
+  [ 663] obj=1494.47    act=5825     err= 0.00%/ 0.53% time=8.47s/3941.20s
+  [ 664] obj=1494.39    act=5835     err= 0.00%/ 0.53% time=8.46s/3949.66s
+  [ 665] obj=1494.29    act=5902     err= 0.00%/ 0.53% time=8.48s/3958.14s
+  [ 666] obj=1494.20    act=5855     err= 0.00%/ 0.26% time=8.47s/3966.61s
+  [ 667] obj=1494.00    act=5901     err= 0.00%/ 0.53% time=8.50s/3975.12s
+  [ 668] obj=1493.91    act=5861     err= 0.00%/ 0.26% time=8.47s/3983.58s
+  [ 669] obj=1493.75    act=5828     err= 0.00%/ 0.53% time=8.57s/3992.15s
+  [ 670] obj=1493.72    act=5798     err= 0.00%/ 0.26% time=5.07s/3997.22s
+  [ 671] obj=1493.44    act=5921     err= 0.00%/ 0.26% time=8.52s/4005.73s
+  [ 672] obj=1493.23    act=5914     err= 0.00%/ 0.53% time=5.09s/4010.83s
+  [ 673] obj=1493.03    act=5908     err= 0.00%/ 0.53% time=8.49s/4019.32s
+  [ 674] obj=1492.87    act=6007     err= 0.00%/ 0.53% time=11.87s/4031.19s
+  [ 675] obj=1492.80    act=5982     err= 0.00%/ 0.53% time=8.50s/4039.69s
+  [ 676] obj=1492.64    act=5931     err= 0.00%/ 0.53% time=8.46s/4048.15s
+  [ 677] obj=1492.44    act=5978     err= 0.00%/ 0.79% time=8.50s/4056.66s
+  [ 678] obj=1492.17    act=5960     err= 0.00%/ 0.53% time=8.42s/4065.08s
+  [ 679] obj=1492.10    act=5920     err= 0.00%/ 0.79% time=8.47s/4073.55s
+  [ 680] obj=1491.98    act=5882     err= 0.00%/ 0.53% time=8.46s/4082.01s
+  [ 681] obj=1491.93    act=5855     err= 0.00%/ 0.79% time=8.43s/4090.44s
+  [ 682] obj=1491.80    act=5880     err= 0.00%/ 0.53% time=8.47s/4098.91s
+  [ 683] obj=1491.72    act=5829     err= 0.00%/ 0.79% time=8.46s/4107.37s
+  [ 684] obj=1491.61    act=5863     err= 0.00%/ 0.53% time=8.49s/4115.87s
+  [ 685] obj=1491.52    act=5844     err= 0.00%/ 0.79% time=8.42s/4124.28s
+  [ 686] obj=1491.41    act=5821     err= 0.00%/ 0.53% time=8.50s/4132.79s
+  [ 687] obj=1491.32    act=5821     err= 0.00%/ 0.79% time=8.44s/4141.23s
+  [ 688] obj=1491.21    act=5801     err= 0.00%/ 0.79% time=8.51s/4149.73s
+  [ 689] obj=1491.11    act=5823     err= 0.00%/ 0.79% time=8.46s/4158.20s
+  [ 690] obj=1490.99    act=5796     err= 0.00%/ 0.79% time=8.48s/4166.67s
+  [ 691] obj=1490.91    act=5798     err= 0.00%/ 0.79% time=8.45s/4175.12s
+  [ 692] obj=1490.78    act=5800     err= 0.00%/ 0.53% time=8.51s/4183.63s
+  [ 693] obj=1490.70    act=5810     err= 0.00%/ 0.79% time=8.46s/4192.09s
+  [ 694] obj=1490.58    act=5804     err= 0.00%/ 0.53% time=8.44s/4200.53s
+  [ 695] obj=1490.47    act=5808     err= 0.00%/ 0.53% time=8.44s/4208.97s
+  [ 696] obj=1490.40    act=5803     err= 0.00%/ 0.53% time=4.98s/4213.95s
+  [ 697] obj=1490.19    act=5868     err= 0.00%/ 0.53% time=8.48s/4222.42s
+  [ 698] obj=1490.10    act=5861     err= 0.00%/ 0.53% time=8.46s/4230.89s
+  [ 699] obj=1489.99    act=5819     err= 0.00%/ 0.53% time=8.49s/4239.37s
+  [ 700] obj=1489.92    act=5814     err= 0.00%/ 0.53% time=8.53s/4247.91s
+  [ 701] obj=1489.73    act=5812     err= 0.00%/ 0.53% time=8.43s/4256.34s
+  [ 702] obj=1489.64    act=5801     err= 0.00%/ 0.53% time=8.52s/4264.87s
+  [ 703] obj=1489.55    act=5753     err= 0.00%/ 0.53% time=8.50s/4273.36s
+  [ 704] obj=1489.44    act=5772     err= 0.00%/ 0.53% time=8.54s/4281.90s
+  [ 705] obj=1489.36    act=5731     err= 0.00%/ 0.53% time=8.42s/4290.32s
+  [ 706] obj=1489.25    act=5761     err= 0.00%/ 0.53% time=8.57s/4298.88s
+  [ 707] obj=1489.18    act=5761     err= 0.00%/ 0.53% time=8.47s/4307.35s
+  [ 708] obj=1489.05    act=5727     err= 0.00%/ 0.53% time=8.45s/4315.80s
+  [ 709] obj=1488.98    act=5736     err= 0.00%/ 0.53% time=8.47s/4324.27s
+  [ 710] obj=1488.86    act=5704     err= 0.00%/ 0.53% time=8.34s/4332.61s
+  [ 711] obj=1488.82    act=5674     err= 0.00%/ 0.53% time=5.01s/4337.62s
+  [ 712] obj=1488.66    act=5826     err= 0.00%/ 0.26% time=5.05s/4342.67s
+  [ 713] obj=1488.50    act=5927     err= 0.00%/ 0.26% time=5.01s/4347.69s
+  [ 714] obj=1488.42    act=5922     err= 0.00%/ 0.26% time=5.01s/4352.70s
+  [ 715] obj=1488.19    act=5973     err= 0.00%/ 0.26% time=5.02s/4357.72s
+  [ 716] obj=1488.13    act=5874     err= 0.00%/ 0.26% time=5.03s/4362.75s
+  [ 717] obj=1487.99    act=5849     err= 0.00%/ 0.26% time=5.01s/4367.76s
+  [ 718] obj=1487.91    act=5816     err= 0.00%/ 0.26% time=5.04s/4372.80s
+  [ 719] obj=1487.85    act=5813     err= 0.00%/ 0.26% time=5.03s/4377.83s
+  [ 720] obj=1487.67    act=5810     err= 0.00%/ 0.26% time=5.03s/4382.85s
+  [ 721] obj=1487.60    act=5787     err= 0.00%/ 0.26% time=5.02s/4387.87s
+  [ 722] obj=1487.51    act=5776     err= 0.00%/ 0.26% time=5.09s/4392.96s
+  [ 723] obj=1487.43    act=5783     err= 0.00%/ 0.26% time=5.02s/4397.99s
+  [ 724] obj=1487.32    act=5781     err= 0.00%/ 0.26% time=5.03s/4403.02s
+  [ 725] obj=1487.24    act=5804     err= 0.00%/ 0.26% time=5.05s/4408.07s
+  [ 726] obj=1487.13    act=5794     err= 0.00%/ 0.26% time=5.05s/4413.12s
+  [ 727] obj=1487.04    act=5770     err= 0.00%/ 0.26% time=5.07s/4418.19s
+  [ 728] obj=1486.99    act=5789     err= 0.00%/ 0.26% time=5.02s/4423.20s
+  [ 729] obj=1486.88    act=5772     err= 0.00%/ 0.53% time=5.11s/4428.31s
+  [ 730] obj=1486.81    act=5778     err= 0.00%/ 0.26% time=5.06s/4433.37s
+  [ 731] obj=1486.70    act=5777     err= 0.00%/ 0.53% time=5.07s/4438.44s
+  [ 732] obj=1486.63    act=5758     err= 0.00%/ 0.53% time=5.01s/4443.45s
+  [ 733] obj=1486.56    act=5740     err= 0.00%/ 0.53% time=5.03s/4448.48s
+  [ 734] obj=1486.47    act=5692     err= 0.00%/ 0.53% time=5.00s/4453.48s
+  [ 735] obj=1486.43    act=5682     err= 0.00%/ 0.53% time=5.11s/4458.59s
+  [ 736] obj=1486.32    act=5675     err= 0.00%/ 0.53% time=5.07s/4463.66s
+  [ 737] obj=1486.29    act=5685     err= 0.00%/ 0.53% time=5.06s/4468.72s
+  [ 738] obj=1486.19    act=5670     err= 0.00%/ 0.53% time=5.05s/4473.77s
+  [ 739] obj=1486.17    act=5651     err= 0.00%/ 0.53% time=5.02s/4478.79s
+  [ 740] obj=1486.06    act=5653     err= 0.00%/ 0.53% time=5.14s/4483.93s
+  [ 741] obj=1486.04    act=5656     err= 0.00%/ 0.53% time=5.03s/4488.96s
+  [ 742] obj=1485.93    act=5637     err= 0.00%/ 0.53% time=5.00s/4493.95s
+  [ 743] obj=1485.91    act=5635     err= 0.00%/ 0.53% time=5.03s/4498.99s
+  [ 744] obj=1485.80    act=5642     err= 0.00%/ 0.53% time=5.06s/4504.04s
+  [ 745] obj=1485.77    act=5641     err= 0.00%/ 0.53% time=5.06s/4509.10s
+  [ 746] obj=1485.69    act=5621     err= 0.00%/ 0.53% time=5.06s/4514.16s
+  [ 747] obj=1485.66    act=5633     err= 0.00%/ 0.53% time=4.99s/4519.15s
+  [ 748] obj=1485.56    act=5615     err= 0.00%/ 0.53% time=5.02s/4524.17s
+  [ 749] obj=1485.52    act=5626     err= 0.00%/ 0.79% time=5.05s/4529.22s
+  [ 750] obj=1485.45    act=5610     err= 0.00%/ 0.53% time=5.05s/4534.27s
+  [ 751] obj=1485.40    act=5620     err= 0.00%/ 0.79% time=5.08s/4539.35s
+  [ 752] obj=1485.34    act=5607     err= 0.00%/ 0.79% time=5.04s/4544.39s
+  [ 753] obj=1485.28    act=5615     err= 0.00%/ 0.79% time=5.11s/4549.50s
+  [ 754] obj=1485.21    act=5601     err= 0.00%/ 0.79% time=5.08s/4554.58s
+  [ 755] obj=1485.17    act=5605     err= 0.00%/ 0.79% time=5.00s/4559.58s
+  [ 756] obj=1485.09    act=5607     err= 0.00%/ 0.79% time=5.03s/4564.61s
+  [ 757] obj=1485.07    act=5595     err= 0.00%/ 0.79% time=5.09s/4569.70s
+  [ 758] obj=1484.98    act=5593     err= 0.00%/ 0.79% time=5.04s/4574.74s
+  [ 759] obj=1484.96    act=5585     err= 0.00%/ 0.79% time=5.05s/4579.79s
+  [ 760] obj=1484.87    act=5588     err= 0.00%/ 0.79% time=5.06s/4584.85s
+  [ 761] obj=1484.85    act=5585     err= 0.00%/ 0.79% time=5.07s/4589.92s
+  [ 762] obj=1484.76    act=5574     err= 0.00%/ 0.26% time=5.06s/4594.98s
+  [ 763] obj=1484.72    act=5563     err= 0.00%/ 0.53% time=5.05s/4600.03s
+  [ 764] obj=1484.66    act=5572     err= 0.00%/ 0.26% time=5.06s/4605.10s
+  [ 765] obj=1484.61    act=5569     err= 0.00%/ 0.26% time=5.04s/4610.14s
+  [ 766] obj=1484.56    act=5569     err= 0.00%/ 0.26% time=5.11s/4615.25s
+  [ 767] obj=1484.52    act=5569     err= 0.00%/ 0.26% time=5.04s/4620.29s
+  [ 768] obj=1484.45    act=5545     err= 0.00%/ 0.26% time=4.99s/4625.29s
+  [ 769] obj=1484.41    act=5551     err= 0.00%/ 0.26% time=5.04s/4630.33s
+  [ 770] obj=1484.35    act=5528     err= 0.00%/ 0.26% time=5.02s/4635.35s
+  [ 771] obj=1484.31    act=5527     err= 0.00%/ 0.26% time=5.01s/4640.36s
+  [ 772] obj=1484.25    act=5521     err= 0.00%/ 0.26% time=5.06s/4645.42s
+  [ 773] obj=1484.23    act=5519     err= 0.00%/ 0.26% time=5.01s/4650.43s
+  [ 774] obj=1484.16    act=5510     err= 0.00%/ 0.26% time=5.03s/4655.47s
+  [ 775] obj=1484.12    act=5507     err= 0.00%/ 0.53% time=5.05s/4660.51s
+  [ 776] obj=1484.07    act=5517     err= 0.00%/ 0.26% time=5.04s/4665.55s
+  [ 777] obj=1484.02    act=5520     err= 0.00%/ 0.53% time=5.03s/4670.58s
+  [ 778] obj=1483.99    act=5522     err= 0.00%/ 0.26% time=5.02s/4675.60s
+  [ 779] obj=1483.93    act=5504     err= 0.00%/ 0.53% time=5.02s/4680.62s
+  [ 780] obj=1483.87    act=5500     err= 0.00%/ 0.26% time=5.12s/4685.74s
+  [ 781] obj=1483.84    act=5491     err= 0.00%/ 0.53% time=5.03s/4690.77s
+  [ 782] obj=1483.77    act=5494     err= 0.00%/ 0.26% time=5.09s/4695.86s
+  [ 783] obj=1483.75    act=5469     err= 0.00%/ 0.53% time=5.01s/4700.88s
+  [ 784] obj=1483.69    act=5473     err= 0.00%/ 0.26% time=5.06s/4705.94s
+  [ 785] obj=1483.67    act=5478     err= 0.00%/ 0.26% time=5.04s/4710.98s
+  [ 786] obj=1483.60    act=5469     err= 0.00%/ 0.26% time=5.10s/4716.08s
+  [ 787] obj=1483.57    act=5471     err= 0.00%/ 0.26% time=5.08s/4721.16s
+  [ 788] obj=1483.52    act=5459     err= 0.00%/ 0.26% time=5.06s/4726.22s
+  [ 789] obj=1483.49    act=5461     err= 0.00%/ 0.26% time=5.03s/4731.24s
+  [ 790] obj=1483.44    act=5448     err= 0.00%/ 0.26% time=5.02s/4736.27s
+  [ 791] obj=1483.40    act=5446     err= 0.00%/ 0.26% time=5.04s/4741.30s
+  [ 792] obj=1483.35    act=5448     err= 0.00%/ 0.26% time=5.14s/4746.44s
+  [ 793] obj=1483.32    act=5448     err= 0.00%/ 0.26% time=5.04s/4751.48s
+  [ 794] obj=1483.26    act=5442     err= 0.00%/ 0.26% time=5.10s/4756.58s
+  [ 795] obj=1483.24    act=5447     err= 0.00%/ 0.26% time=5.06s/4761.63s
+  [ 796] obj=1483.17    act=5434     err= 0.00%/ 0.26% time=5.04s/4766.67s
+  [ 797] obj=1483.15    act=5428     err= 0.00%/ 0.26% time=5.09s/4771.76s
+  [ 798] obj=1483.09    act=5440     err= 0.00%/ 0.26% time=5.02s/4776.78s
+  [ 799] obj=1483.05    act=5428     err= 0.00%/ 0.53% time=5.08s/4781.86s
+  [ 800] obj=1483.02    act=5421     err= 0.00%/ 0.26% time=5.01s/4786.87s
+  [ 801] obj=1482.98    act=5414     err= 0.00%/ 0.53% time=5.02s/4791.89s
+  [ 802] obj=1482.93    act=5417     err= 0.00%/ 0.26% time=5.08s/4796.96s
+  [ 803] obj=1482.89    act=5418     err= 0.00%/ 0.26% time=5.22s/4802.19s
+  [ 804] obj=1482.85    act=5401     err= 0.00%/ 0.26% time=5.06s/4807.25s
+  [ 805] obj=1482.82    act=5401     err= 0.00%/ 0.26% time=5.07s/4812.32s
+  [ 806] obj=1482.77    act=5391     err= 0.00%/ 0.26% time=5.03s/4817.36s
+  [ 807] obj=1482.74    act=5396     err= 0.00%/ 0.53% time=5.00s/4822.35s
+  [ 808] obj=1482.69    act=5387     err= 0.00%/ 0.53% time=5.08s/4827.43s
+  [ 809] obj=1482.67    act=5389     err= 0.00%/ 0.53% time=5.04s/4832.47s
+  [ 810] obj=1482.61    act=5394     err= 0.00%/ 0.26% time=5.03s/4837.50s
+  [ 811] obj=1482.59    act=5396     err= 0.00%/ 0.53% time=5.05s/4842.55s
+  [ 812] obj=1482.54    act=5410     err= 0.00%/ 0.53% time=5.12s/4847.67s
+  [ 813] obj=1482.50    act=5406     err= 0.00%/ 0.53% time=5.02s/4852.69s
+  [ 814] obj=1482.47    act=5392     err= 0.00%/ 0.53% time=5.03s/4857.72s
+  [ 815] obj=1482.43    act=5394     err= 0.00%/ 0.53% time=5.04s/4862.77s
+  [ 816] obj=1482.38    act=5383     err= 0.00%/ 0.53% time=5.04s/4867.81s
+  [ 817] obj=1482.36    act=5380     err= 0.00%/ 0.53% time=5.04s/4872.85s
+  [ 818] obj=1482.30    act=5365     err= 0.00%/ 0.53% time=5.15s/4877.99s
+  [ 819] obj=1482.29    act=5373     err= 0.00%/ 0.53% time=5.02s/4883.02s
+  [ 820] obj=1482.23    act=5361     err= 0.00%/ 0.26% time=5.10s/4888.12s
+  [ 821] obj=1482.21    act=5359     err= 0.00%/ 0.53% time=5.10s/4893.22s
+  [ 822] obj=1482.16    act=5378     err= 0.00%/ 0.26% time=5.06s/4898.28s
+  [ 823] obj=1482.13    act=5379     err= 0.00%/ 0.53% time=5.04s/4903.32s
+  [ 824] obj=1482.09    act=5362     err= 0.00%/ 0.26% time=5.05s/4908.38s
+  [ 825] obj=1482.06    act=5360     err= 0.00%/ 0.53% time=5.04s/4913.42s
+  [ 826] obj=1482.01    act=5355     err= 0.00%/ 0.26% time=5.07s/4918.49s
+  [ 827] obj=1481.99    act=5352     err= 0.00%/ 0.53% time=5.05s/4923.54s
+  [ 828] obj=1481.94    act=5339     err= 0.00%/ 0.26% time=5.02s/4928.56s
+  [ 829] obj=1481.92    act=5357     err= 0.00%/ 0.53% time=5.10s/4933.66s
+  [ 830] obj=1481.86    act=5348     err= 0.00%/ 0.26% time=5.12s/4938.77s
+  [ 831] obj=1481.84    act=5333     err= 0.00%/ 0.53% time=5.05s/4943.83s
+  [ 832] obj=1481.79    act=5354     err= 0.00%/ 0.26% time=5.14s/4948.97s
+  [ 833] obj=1481.75    act=5350     err= 0.00%/ 0.53% time=5.01s/4953.98s
+  [ 834] obj=1481.72    act=5333     err= 0.00%/ 0.26% time=5.01s/4958.99s
+  [ 835] obj=1481.68    act=5384     err= 0.00%/ 0.53% time=5.04s/4964.03s
+  [ 836] obj=1481.64    act=5344     err= 0.00%/ 0.26% time=5.06s/4969.09s
+  [ 837] obj=1481.62    act=5341     err= 0.00%/ 0.26% time=5.06s/4974.16s
+  [ 838] obj=1481.57    act=5343     err= 0.00%/ 0.26% time=5.04s/4979.20s
+  [ 839] obj=1481.54    act=5345     err= 0.00%/ 0.26% time=5.11s/4984.31s
+  [ 840] obj=1481.50    act=5341     err= 0.00%/ 0.53% time=5.04s/4989.35s
+  [ 841] obj=1481.47    act=5392     err= 0.00%/ 0.53% time=5.03s/4994.39s
+  [ 842] obj=1481.42    act=5383     err= 0.00%/ 0.53% time=5.04s/4999.43s
+  [ 843] obj=1481.38    act=5376     err= 0.00%/ 0.53% time=5.01s/5004.44s
+  [ 844] obj=1481.34    act=5359     err= 0.00%/ 0.53% time=4.99s/5009.43s
+  [ 845] obj=1481.30    act=5360     err= 0.00%/ 0.53% time=5.04s/5014.47s
+  [ 846] obj=1481.27    act=5331     err= 0.00%/ 0.53% time=5.03s/5019.49s
+  [ 847] obj=1481.24    act=5332     err= 0.00%/ 0.53% time=5.03s/5024.52s
+  [ 848] obj=1481.20    act=5321     err= 0.00%/ 0.53% time=5.02s/5029.54s
+  [ 849] obj=1481.18    act=5316     err= 0.00%/ 0.79% time=5.01s/5034.55s
+  [ 850] obj=1481.13    act=5315     err= 0.00%/ 0.53% time=5.04s/5039.59s
+  [ 851] obj=1481.11    act=5319     err= 0.00%/ 0.79% time=5.04s/5044.63s
+  [ 852] obj=1481.06    act=5321     err= 0.00%/ 0.53% time=5.12s/5049.75s
+  [ 853] obj=1481.04    act=5325     err= 0.00%/ 0.79% time=5.02s/5054.78s
+  [ 854] obj=1481.00    act=5326     err= 0.00%/ 0.53% time=5.05s/5059.83s
+  [ 855] obj=1480.97    act=5339     err= 0.00%/ 0.79% time=5.04s/5064.87s
+  [ 856] obj=1480.92    act=5317     err= 0.00%/ 0.26% time=5.11s/5069.97s
+  [ 857] obj=1480.89    act=5325     err= 0.00%/ 0.79% time=5.04s/5075.01s
+  [ 858] obj=1480.86    act=5317     err= 0.00%/ 0.26% time=5.01s/5080.03s
+  [ 859] obj=1480.83    act=5324     err= 0.00%/ 0.53% time=5.04s/5085.07s
+  [ 860] obj=1480.79    act=5307     err= 0.00%/ 0.26% time=5.09s/5090.16s
+  [ 861] obj=1480.77    act=5310     err= 0.00%/ 0.79% time=5.12s/5095.28s
+  [ 862] obj=1480.72    act=5302     err= 0.00%/ 0.53% time=5.05s/5100.33s
+  [ 863] obj=1480.69    act=5313     err= 0.00%/ 0.79% time=5.10s/5105.44s
+  [ 864] obj=1480.66    act=5302     err= 0.00%/ 0.53% time=5.04s/5110.48s
+  [ 865] obj=1480.63    act=5307     err= 0.00%/ 0.79% time=5.06s/5115.54s
+  [ 866] obj=1480.60    act=5298     err= 0.00%/ 0.53% time=5.05s/5120.59s
+  [ 867] obj=1480.55    act=5304     err= 0.00%/ 0.79% time=5.10s/5125.69s
+  [ 868] obj=1480.52    act=5309     err= 0.00%/ 0.53% time=5.04s/5130.72s
+  [ 869] obj=1480.49    act=5308     err= 0.00%/ 0.79% time=5.06s/5135.78s
+  [ 870] obj=1480.45    act=5304     err= 0.00%/ 0.79% time=5.06s/5140.84s
+  [ 871] obj=1480.42    act=5300     err= 0.00%/ 0.79% time=5.02s/5145.86s
+  [ 872] obj=1480.38    act=5293     err= 0.00%/ 0.53% time=5.09s/5150.95s
+  [ 873] obj=1480.36    act=5292     err= 0.00%/ 0.79% time=5.02s/5155.97s
+  [ 874] obj=1480.31    act=5296     err= 0.00%/ 0.53% time=5.06s/5161.02s
+  [ 875] obj=1480.30    act=5303     err= 0.00%/ 0.79% time=5.00s/5166.03s
+  [ 876] obj=1480.25    act=5296     err= 0.00%/ 0.53% time=5.05s/5171.07s
+  [ 877] obj=1480.22    act=5299     err= 0.00%/ 0.79% time=5.09s/5176.16s
+  [ 878] obj=1480.20    act=5318     err= 0.00%/ 0.26% time=5.04s/5181.20s
+  [ 879] obj=1480.15    act=5326     err= 0.00%/ 0.53% time=4.99s/5186.20s
+  [ 880] obj=1480.12    act=5304     err= 0.00%/ 0.26% time=5.12s/5191.32s
+  [ 881] obj=1480.08    act=5316     err= 0.00%/ 0.53% time=5.07s/5196.39s
+  [ 882] obj=1480.04    act=5306     err= 0.00%/ 0.26% time=5.01s/5201.40s
+  [ 883] obj=1480.01    act=5301     err= 0.00%/ 0.79% time=5.00s/5206.40s
+  [ 884] obj=1479.97    act=5297     err= 0.00%/ 0.53% time=5.03s/5211.44s
+  [ 885] obj=1479.96    act=5298     err= 0.00%/ 0.79% time=5.01s/5216.44s
+  [ 886] obj=1479.91    act=5308     err= 0.00%/ 0.53% time=5.07s/5221.51s
+  [ 887] obj=1479.89    act=5305     err= 0.00%/ 0.79% time=5.02s/5226.54s
+  [ 888] obj=1479.84    act=5310     err= 0.00%/ 0.53% time=5.04s/5231.57s
+  [ 889] obj=1479.82    act=5291     err= 0.00%/ 0.79% time=5.02s/5236.60s
+  [ 890] obj=1479.78    act=5299     err= 0.00%/ 0.53% time=5.07s/5241.67s
+  [ 891] obj=1479.76    act=5291     err= 0.00%/ 0.79% time=5.12s/5246.79s
+  [ 892] obj=1479.72    act=5284     err= 0.00%/ 0.53% time=5.08s/5251.88s
+  [ 893] obj=1479.69    act=5289     err= 0.00%/ 0.79% time=5.05s/5256.93s
+  [ 894] obj=1479.65    act=5290     err= 0.00%/ 0.53% time=5.00s/5261.93s
+  [ 895] obj=1479.62    act=5299     err= 0.00%/ 0.53% time=5.06s/5267.00s
+  [ 896] obj=1479.59    act=5277     err= 0.00%/ 0.53% time=4.99s/5271.99s
+  [ 897] obj=1479.56    act=5291     err= 0.00%/ 0.79% time=5.06s/5277.05s
+  [ 898] obj=1479.52    act=5276     err= 0.00%/ 0.53% time=5.05s/5282.11s
+  [ 899] obj=1479.48    act=5292     err= 0.00%/ 0.53% time=5.03s/5287.13s
+  [ 900] obj=1479.46    act=5283     err= 0.00%/ 0.53% time=5.07s/5292.21s
+  [ 901] obj=1479.42    act=5283     err= 0.00%/ 0.79% time=5.03s/5297.24s
+  [ 902] obj=1479.40    act=5270     err= 0.00%/ 0.53% time=5.04s/5302.27s
+  [ 903] obj=1479.37    act=5264     err= 0.00%/ 0.79% time=5.10s/5307.38s
+  [ 904] obj=1479.33    act=5264     err= 0.00%/ 0.53% time=5.04s/5312.42s
+  [ 905] obj=1479.31    act=5267     err= 0.00%/ 0.53% time=5.04s/5317.46s
+  [ 906] obj=1479.27    act=5267     err= 0.00%/ 0.53% time=5.05s/5322.51s
+  [ 907] obj=1479.25    act=5261     err= 0.00%/ 0.79% time=5.10s/5327.61s
+  [ 908] obj=1479.21    act=5260     err= 0.00%/ 0.53% time=5.06s/5332.67s
+  [ 909] obj=1479.19    act=5262     err= 0.00%/ 0.79% time=5.04s/5337.71s
+  [ 910] obj=1479.15    act=5263     err= 0.00%/ 0.53% time=5.04s/5342.76s
+  [ 911] obj=1479.13    act=5276     err= 0.00%/ 0.53% time=5.04s/5347.80s
+  [ 912] obj=1479.08    act=5264     err= 0.00%/ 0.53% time=5.08s/5352.88s
+  [ 913] obj=1479.06    act=5264     err= 0.00%/ 0.79% time=5.04s/5357.91s
+  [ 914] obj=1479.02    act=5270     err= 0.00%/ 0.53% time=5.07s/5362.98s
+  [ 915] obj=1478.99    act=5256     err= 0.00%/ 0.79% time=5.08s/5368.06s
+  [ 916] obj=1478.96    act=5237     err= 0.00%/ 0.53% time=5.06s/5373.11s
+  [ 917] obj=1478.93    act=5234     err= 0.00%/ 0.79% time=5.02s/5378.14s
+  [ 918] obj=1478.90    act=5232     err= 0.00%/ 0.53% time=5.07s/5383.20s
+  [ 919] obj=1478.87    act=5224     err= 0.00%/ 0.79% time=5.00s/5388.20s
+  [ 920] obj=1478.84    act=5218     err= 0.00%/ 0.53% time=5.02s/5393.23s
+  [ 921] obj=1478.82    act=5234     err= 0.00%/ 0.53% time=5.03s/5398.25s
+  [ 922] obj=1478.79    act=5231     err= 0.00%/ 0.26% time=5.03s/5403.28s
+  [ 923] obj=1478.76    act=5260     err= 0.00%/ 0.53% time=5.04s/5408.32s
+  [ 924] obj=1478.72    act=5243     err= 0.00%/ 0.26% time=5.05s/5413.37s
+  [ 925] obj=1478.68    act=5245     err= 0.00%/ 0.53% time=5.06s/5418.43s
+  [ 926] obj=1478.66    act=5229     err= 0.00%/ 0.53% time=5.05s/5423.48s
+  [ 927] obj=1478.63    act=5219     err= 0.00%/ 0.53% time=5.07s/5428.54s
+  [ 928] obj=1478.59    act=5227     err= 0.00%/ 0.53% time=5.07s/5433.61s
+  [ 929] obj=1478.57    act=5233     err= 0.00%/ 0.53% time=5.04s/5438.66s
+  [ 930] obj=1478.52    act=5224     err= 0.00%/ 0.53% time=5.05s/5443.70s
+  [ 931] obj=1478.50    act=5218     err= 0.00%/ 0.53% time=5.07s/5448.77s
+  [ 932] obj=1478.47    act=5218     err= 0.00%/ 0.53% time=5.07s/5453.84s
+  [ 933] obj=1478.45    act=5250     err= 0.00%/ 0.79% time=5.01s/5458.84s
+  [ 934] obj=1478.41    act=5218     err= 0.00%/ 0.53% time=5.02s/5463.86s
+  [ 935] obj=1478.38    act=5228     err= 0.00%/ 0.53% time=5.04s/5468.90s
+  [ 936] obj=1478.35    act=5229     err= 0.00%/ 0.53% time=5.07s/5473.97s
+  [ 937] obj=1478.32    act=5257     err= 0.00%/ 0.53% time=5.05s/5479.02s
+  [ 938] obj=1478.29    act=5223     err= 0.00%/ 0.53% time=5.07s/5484.09s
+  [ 939] obj=1478.25    act=5267     err= 0.00%/ 0.53% time=5.02s/5489.11s
+  [ 940] obj=1478.22    act=5245     err= 0.00%/ 0.53% time=5.11s/5494.21s
+  [ 941] obj=1478.19    act=5234     err= 0.00%/ 0.53% time=5.03s/5499.24s
+  [ 942] obj=1478.16    act=5227     err= 0.00%/ 0.53% time=5.03s/5504.27s
+  [ 943] obj=1478.14    act=5215     err= 0.00%/ 0.53% time=5.02s/5509.29s
+  [ 944] obj=1478.10    act=5235     err= 0.00%/ 0.53% time=5.02s/5514.31s
+  [ 945] obj=1478.09    act=5229     err= 0.00%/ 0.79% time=5.03s/5519.34s
+  [ 946] obj=1478.05    act=5206     err= 0.00%/ 0.53% time=5.01s/5524.35s
+  [ 947] obj=1478.04    act=5201     err= 0.00%/ 0.79% time=5.07s/5529.43s
+  [ 948] obj=1477.99    act=5194     err= 0.00%/ 0.53% time=5.06s/5534.49s
+  [ 949] obj=1477.97    act=5223     err= 0.00%/ 0.79% time=5.07s/5539.56s
+  [ 950] obj=1477.94    act=5227     err= 0.00%/ 0.53% time=5.06s/5544.62s
+  [ 951] obj=1477.91    act=5231     err= 0.00%/ 0.79% time=5.04s/5549.65s
+  [ 952] obj=1477.89    act=5226     err= 0.00%/ 0.53% time=5.04s/5554.69s
+  [ 953] obj=1477.84    act=5213     err= 0.00%/ 0.79% time=5.07s/5559.77s
+  [ 954] obj=1477.81    act=5205     err= 0.00%/ 0.79% time=5.04s/5564.81s
+  [ 955] obj=1477.78    act=5202     err= 0.00%/ 0.79% time=5.00s/5569.81s
+  [ 956] obj=1477.75    act=5199     err= 0.00%/ 0.79% time=5.01s/5574.82s
+  [ 957] obj=1477.73    act=5193     err= 0.00%/ 0.79% time=5.05s/5579.87s
+  [ 958] obj=1477.70    act=5183     err= 0.00%/ 0.79% time=5.10s/5584.98s
+  [ 959] obj=1477.68    act=5203     err= 0.00%/ 0.79% time=5.08s/5590.06s
+  [ 960] obj=1477.64    act=5182     err= 0.00%/ 0.79% time=5.06s/5595.12s
+  [ 961] obj=1477.62    act=5195     err= 0.00%/ 0.79% time=5.01s/5600.13s
+  [ 962] obj=1477.60    act=5196     err= 0.00%/ 0.79% time=5.08s/5605.21s
+  [ 963] obj=1477.56    act=5202     err= 0.00%/ 0.79% time=5.02s/5610.23s
+  [ 964] obj=1477.54    act=5194     err= 0.00%/ 0.79% time=5.09s/5615.32s
+  [ 965] obj=1477.50    act=5204     err= 0.00%/ 0.79% time=5.01s/5620.32s
+  [ 966] obj=1477.47    act=5180     err= 0.00%/ 0.79% time=5.05s/5625.37s
+  [ 967] obj=1477.44    act=5195     err= 0.00%/ 0.79% time=5.06s/5630.44s
+  [ 968] obj=1477.41    act=5180     err= 0.00%/ 0.79% time=5.06s/5635.50s
+  [ 969] obj=1477.39    act=5183     err= 0.00%/ 0.79% time=5.04s/5640.54s
+  [ 970] obj=1477.35    act=5178     err= 0.00%/ 0.79% time=5.05s/5645.59s
+  [ 971] obj=1477.33    act=5198     err= 0.00%/ 0.79% time=5.05s/5650.64s
+  [ 972] obj=1477.29    act=5173     err= 0.00%/ 0.79% time=5.05s/5655.69s
+  [ 973] obj=1477.28    act=5170     err= 0.00%/ 0.79% time=5.07s/5660.75s
+  [ 974] obj=1477.24    act=5166     err= 0.00%/ 0.79% time=4.99s/5665.74s
+  [ 975] obj=1477.22    act=5170     err= 0.00%/ 0.79% time=5.08s/5670.82s
+  [ 976] obj=1477.19    act=5195     err= 0.00%/ 0.79% time=5.05s/5675.87s
+  [ 977] obj=1477.15    act=5219     err= 0.00%/ 0.79% time=5.06s/5680.93s
+  [ 978] obj=1477.14    act=5202     err= 0.00%/ 0.79% time=5.00s/5685.93s
+  [ 979] obj=1477.09    act=5216     err= 0.00%/ 0.79% time=5.04s/5690.97s
+  [ 980] obj=1477.07    act=5204     err= 0.00%/ 0.79% time=5.03s/5695.99s
+  [ 981] obj=1477.03    act=5190     err= 0.00%/ 0.79% time=5.03s/5701.02s
+  [ 982] obj=1477.00    act=5189     err= 0.00%/ 0.79% time=5.06s/5706.09s
+  [ 983] obj=1476.98    act=5187     err= 0.00%/ 0.79% time=5.12s/5711.21s
+  [ 984] obj=1476.95    act=5170     err= 0.00%/ 0.53% time=5.10s/5716.31s
+  [ 985] obj=1476.93    act=5172     err= 0.00%/ 0.79% time=5.08s/5721.39s
+  [ 986] obj=1476.89    act=5163     err= 0.00%/ 0.53% time=5.03s/5726.42s
+  [ 987] obj=1476.88    act=5163     err= 0.00%/ 0.79% time=5.10s/5731.51s
+  [ 988] obj=1476.83    act=5169     err= 0.00%/ 0.53% time=5.06s/5736.57s
+  [ 989] obj=1476.83    act=5173     err= 0.00%/ 0.79% time=5.05s/5741.63s
+  [ 990] obj=1476.77    act=5182     err= 0.00%/ 0.53% time=5.03s/5746.66s
+  [ 991] obj=1476.75    act=5191     err= 0.00%/ 0.79% time=5.08s/5751.74s
+  [ 992] obj=1476.71    act=5222     err= 0.00%/ 0.53% time=5.10s/5756.83s
+  [ 993] obj=1476.67    act=5223     err= 0.00%/ 0.53% time=5.06s/5761.90s
+  [ 994] obj=1476.66    act=5186     err= 0.00%/ 0.53% time=5.01s/5766.91s
+  [ 995] obj=1476.61    act=5170     err= 0.00%/ 0.53% time=5.03s/5771.94s
+  [ 996] obj=1476.58    act=5150     err= 0.00%/ 0.53% time=5.07s/5777.01s
+  [ 997] obj=1476.56    act=5183     err= 0.00%/ 0.53% time=5.04s/5782.05s
+  [ 998] obj=1476.52    act=5174     err= 0.00%/ 0.53% time=5.06s/5787.11s
+  [ 999] obj=1476.50    act=5188     err= 0.00%/ 0.53% time=5.05s/5792.16s
+  [1000] obj=1476.47    act=5182     err= 0.00%/ 0.53% time=5.11s/5797.27s
+  [1001] obj=1476.45    act=5195     err= 0.00%/ 0.53% time=5.10s/5802.37s
+  [1002] obj=1476.41    act=5184     err= 0.00%/ 0.53% time=5.06s/5807.43s
+  [1003] obj=1476.38    act=5218     err= 0.00%/ 0.79% time=5.05s/5812.48s
+  [1004] obj=1476.35    act=5169     err= 0.00%/ 0.53% time=5.04s/5817.52s
+  [1005] obj=1476.33    act=5165     err= 0.00%/ 0.79% time=5.05s/5822.57s
+  [1006] obj=1476.29    act=5163     err= 0.00%/ 0.53% time=5.08s/5827.65s
+  [1007] obj=1476.28    act=5152     err= 0.00%/ 0.79% time=5.09s/5832.75s
+  [1008] obj=1476.23    act=5144     err= 0.00%/ 0.53% time=5.01s/5837.76s
+  [1009] obj=1476.21    act=5149     err= 0.00%/ 0.53% time=5.06s/5842.82s
+  [1010] obj=1476.19    act=5164     err= 0.00%/ 0.53% time=5.07s/5847.89s
+  [1011] obj=1476.16    act=5164     err= 0.00%/ 0.53% time=5.10s/5852.99s
+  [1012] obj=1476.13    act=5159     err= 0.00%/ 0.53% time=5.08s/5858.07s
+  [1013] obj=1476.09    act=5177     err= 0.00%/ 0.53% time=5.03s/5863.10s
+  [1014] obj=1476.07    act=5154     err= 0.00%/ 0.53% time=5.10s/5868.20s
+  [1015] obj=1476.04    act=5168     err= 0.00%/ 0.53% time=5.08s/5873.28s
+  [1016] obj=1476.01    act=5160     err= 0.00%/ 0.53% time=5.05s/5878.33s
+  [1017] obj=1475.99    act=5154     err= 0.00%/ 0.53% time=5.11s/5883.44s
+  [1018] obj=1475.94    act=5150     err= 0.00%/ 0.53% time=5.03s/5888.47s
+  [1019] obj=1475.93    act=5148     err= 0.00%/ 0.53% time=5.02s/5893.49s
+  [1020] obj=1475.89    act=5150     err= 0.00%/ 0.53% time=5.05s/5898.54s
+  [1021] obj=1475.88    act=5148     err= 0.00%/ 0.79% time=5.04s/5903.58s
+  [1022] obj=1475.83    act=5140     err= 0.00%/ 0.53% time=5.03s/5908.61s
+  [1023] obj=1475.82    act=5152     err= 0.00%/ 0.79% time=5.04s/5913.65s
+  [1024] obj=1475.79    act=5164     err= 0.00%/ 0.79% time=5.04s/5918.68s
+  [1025] obj=1475.76    act=5160     err= 0.00%/ 0.79% time=5.00s/5923.69s
+  [1026] obj=1475.73    act=5150     err= 0.00%/ 0.79% time=5.06s/5928.75s
+  [1027] obj=1475.69    act=5154     err= 0.00%/ 0.79% time=5.04s/5933.79s
+  [1028] obj=1475.68    act=5137     err= 0.00%/ 0.53% time=5.02s/5938.81s
+  [1029] obj=1475.64    act=5142     err= 0.00%/ 0.79% time=5.03s/5943.84s
+  [1030] obj=1475.61    act=5135     err= 0.00%/ 0.79% time=5.04s/5948.87s
+  [1031] obj=1475.57    act=5154     err= 0.00%/ 0.79% time=5.08s/5953.95s
+  [1032] obj=1475.54    act=5127     err= 0.00%/ 0.53% time=5.08s/5959.03s
+  [1033] obj=1475.52    act=5125     err= 0.00%/ 0.79% time=5.08s/5964.11s
+  [1034] obj=1475.48    act=5122     err= 0.00%/ 0.53% time=5.02s/5969.12s
+  [1035] obj=1475.48    act=5126     err= 0.00%/ 0.79% time=5.03s/5974.16s
+  [1036] obj=1475.43    act=5127     err= 0.00%/ 0.53% time=5.04s/5979.19s
+  [1037] obj=1475.42    act=5127     err= 0.00%/ 0.79% time=5.04s/5984.23s
+  [1038] obj=1475.37    act=5130     err= 0.00%/ 0.53% time=5.02s/5989.25s
+  [1039] obj=1475.36    act=5136     err= 0.00%/ 0.79% time=5.03s/5994.28s
+  [1040] obj=1475.32    act=5140     err= 0.00%/ 0.53% time=5.11s/5999.40s
+  [1041] obj=1475.30    act=5143     err= 0.00%/ 0.79% time=5.07s/6004.47s
+  [1042] obj=1475.25    act=5138     err= 0.00%/ 0.79% time=5.02s/6009.49s
+  [1043] obj=1475.22    act=5149     err= 0.00%/ 0.79% time=5.08s/6014.57s
+  [1044] obj=1475.20    act=5129     err= 0.00%/ 0.79% time=5.03s/6019.60s
+  [1045] obj=1475.16    act=5116     err= 0.00%/ 0.79% time=5.05s/6024.65s
+  [1046] obj=1475.13    act=5110     err= 0.00%/ 0.79% time=5.07s/6029.72s
+  [1047] obj=1475.10    act=5141     err= 0.00%/ 0.79% time=5.04s/6034.76s
+  [1048] obj=1475.06    act=5140     err= 0.00%/ 0.79% time=5.03s/6039.79s
+  [1049] obj=1475.05    act=5118     err= 0.00%/ 0.79% time=5.03s/6044.81s
+  [1050] obj=1475.00    act=5115     err= 0.00%/ 0.53% time=5.02s/6049.83s
+  [1051] obj=1475.00    act=5157     err= 0.00%/ 0.79% time=5.04s/6054.88s
+  [1052] obj=1474.95    act=5134     err= 0.00%/ 0.53% time=5.06s/6059.93s
+  [1053] obj=1474.92    act=5161     err= 0.00%/ 0.79% time=5.06s/6064.99s
+  [1054] obj=1474.90    act=5128     err= 0.00%/ 0.53% time=5.08s/6070.07s
+  [1055] obj=1474.86    act=5132     err= 0.00%/ 0.79% time=5.06s/6075.13s
+  [1056] obj=1474.85    act=5126     err= 0.00%/ 0.79% time=5.05s/6080.18s
+  [1057] obj=1474.80    act=5131     err= 0.00%/ 0.79% time=5.05s/6085.23s
+  [1058] obj=1474.77    act=5148     err= 0.00%/ 0.79% time=5.08s/6090.31s
+  [1059] obj=1474.74    act=5141     err= 0.00%/ 0.79% time=5.06s/6095.37s
+  [1060] obj=1474.71    act=5134     err= 0.00%/ 0.53% time=5.14s/6100.51s
+  [1061] obj=1474.68    act=5132     err= 0.00%/ 0.79% time=5.00s/6105.51s
+  [1062] obj=1474.64    act=5120     err= 0.00%/ 0.53% time=5.12s/6110.63s
+  [1063] obj=1474.62    act=5148     err= 0.00%/ 0.79% time=5.12s/6115.75s
+  [1064] obj=1474.58    act=5108     err= 0.00%/ 0.53% time=5.00s/6120.75s
+  [1065] obj=1474.57    act=5143     err= 0.00%/ 0.79% time=5.06s/6125.81s
+  [1066] obj=1474.52    act=5115     err= 0.00%/ 0.53% time=5.08s/6130.89s
+  [1067] obj=1474.52    act=5140     err= 0.00%/ 0.79% time=5.08s/6135.97s
+  [1068] obj=1474.46    act=5113     err= 0.00%/ 0.79% time=5.05s/6141.02s
+  [1069] obj=1474.46    act=5117     err= 0.00%/ 0.79% time=5.08s/6146.10s
+  [1070] obj=1474.41    act=5118     err= 0.00%/ 0.79% time=5.03s/6151.13s
+  [1071] obj=1474.38    act=5125     err= 0.00%/ 0.79% time=8.50s/6159.63s
+  [1072] obj=1474.37    act=5101     err= 0.00%/ 0.53% time=5.04s/6164.67s
+  [1073] obj=1474.36    act=5120     err= 0.00%/ 0.79% time=5.06s/6169.73s
+  [1074] obj=1474.30    act=5126     err= 0.00%/ 0.53% time=5.06s/6174.79s
+  [1075] obj=1474.23    act=5165     err= 0.00%/ 0.79% time=5.01s/6179.80s
+  [1076] obj=1474.18    act=5196     err= 0.00%/ 0.79% time=8.49s/6188.29s
+  [1077] obj=1474.16    act=5141     err= 0.00%/ 0.79% time=5.03s/6193.31s
+  [1078] obj=1474.14    act=5171     err= 0.00%/ 0.53% time=5.04s/6198.35s
+  [1079] obj=1474.05    act=5233     err= 0.00%/ 0.79% time=5.03s/6203.38s
+  [1080] obj=1473.98    act=5233     err= 0.00%/ 0.53% time=8.49s/6211.87s
+  [1081] obj=1473.92    act=5243     err= 0.00%/ 0.79% time=5.02s/6216.89s
+  [1082] obj=1473.87    act=5306     err= 0.00%/ 0.53% time=8.51s/6225.40s
+  [1083] obj=1473.79    act=5325     err= 0.00%/ 0.79% time=8.49s/6233.89s
+  [1084] obj=1473.78    act=5295     err= 0.00%/ 0.53% time=8.47s/6242.35s
+  [1085] obj=1473.69    act=5322     err= 0.00%/ 0.79% time=8.48s/6250.84s
+  [1086] obj=1473.65    act=5295     err= 0.00%/ 0.79% time=8.50s/6259.34s
+  [1087] obj=1473.57    act=5272     err= 0.00%/ 0.79% time=8.50s/6267.84s
+  [1088] obj=1473.56    act=5227     err= 0.00%/ 0.53% time=5.06s/6272.90s
+  [1089] obj=1473.49    act=5295     err= 0.00%/ 0.79% time=5.11s/6278.01s
+  [1090] obj=1473.44    act=5265     err= 0.00%/ 0.53% time=5.08s/6283.09s
+  [1091] obj=1473.29    act=5288     err= 0.00%/ 0.79% time=5.06s/6288.15s
+  [1092] obj=1473.25    act=5325     err= 0.00%/ 0.53% time=5.09s/6293.24s
+  [1093] obj=1473.15    act=5337     err= 0.00%/ 0.79% time=5.11s/6298.35s
+  [1094] obj=1473.07    act=5313     err= 0.00%/ 0.79% time=5.13s/6303.48s
+  [1095] obj=1473.05    act=5315     err= 0.00%/ 0.79% time=5.06s/6308.54s
+  [1096] obj=1472.94    act=5298     err= 0.00%/ 0.79% time=5.10s/6313.64s
+  [1097] obj=1472.88    act=5307     err= 0.00%/ 0.79% time=8.53s/6322.17s
+  [1098] obj=1472.85    act=5265     err= 0.00%/ 0.79% time=5.10s/6327.26s
+  [1099] obj=1472.76    act=5313     err= 0.00%/ 0.79% time=8.52s/6335.78s
+  [1100] obj=1472.72    act=5304     err= 0.00%/ 0.53% time=8.45s/6344.23s
+  [1101] obj=1472.69    act=5308     err= 0.00%/ 0.79% time=8.47s/6352.70s
+  [1102] obj=1472.67    act=5335     err= 0.00%/ 0.53% time=8.52s/6361.23s
+  [1103] obj=1472.53    act=5351     err= 0.00%/ 0.53% time=8.57s/6369.79s
+  [1104] obj=1472.49    act=5323     err= 0.00%/ 0.53% time=5.13s/6374.92s
+  [1105] obj=1472.49    act=5381     err= 0.00%/ 0.79% time=5.09s/6380.01s
+  [1106] obj=1472.47    act=5399     err= 0.00%/ 0.53% time=5.08s/6385.10s
+  [1107] obj=1472.13    act=5419     err= 0.00%/ 0.53% time=5.09s/6390.19s
+  [1108] obj=1471.98    act=5407     err= 0.00%/ 0.79% time=5.06s/6395.25s
+  [1109] obj=1471.95    act=5378     err= 0.00%/ 0.79% time=11.97s/6407.22s
+  [1110] obj=1471.77    act=5577     err= 0.00%/ 0.53% time=11.83s/6419.04s
+  [1111] obj=1471.70    act=5584     err= 0.00%/ 0.79% time=11.89s/6430.94s
+  [1112] obj=1471.64    act=5632     err= 0.00%/ 0.53% time=11.88s/6442.82s
+  [1113] obj=1471.50    act=5661     err= 0.00%/ 0.53% time=11.85s/6454.67s
+  [1114] obj=1471.43    act=5593     err= 0.00%/ 0.53% time=8.48s/6463.15s
+  [1115] obj=1471.36    act=5545     err= 0.00%/ 0.53% time=8.48s/6471.63s
+  [1116] obj=1471.28    act=5472     err= 0.00%/ 0.53% time=5.05s/6476.69s
+  [1117] obj=1471.24    act=5474     err= 0.00%/ 0.53% time=8.43s/6485.11s
+  [1118] obj=1471.16    act=5481     err= 0.00%/ 0.53% time=8.42s/6493.53s
+  [1119] obj=1471.08    act=5526     err= 0.00%/ 0.79% time=8.41s/6501.94s
+  [1120] obj=1471.07    act=5505     err= 0.00%/ 0.53% time=8.46s/6510.40s
+  [1121] obj=1471.02    act=5493     err= 0.00%/ 0.79% time=5.10s/6515.50s
+  [1122] obj=1470.85    act=5475     err= 0.00%/ 0.79% time=5.10s/6520.60s
+  [1123] obj=1470.82    act=5451     err= 0.00%/ 0.79% time=5.08s/6525.68s
+  [1124] obj=1470.73    act=5441     err= 0.00%/ 0.79% time=5.11s/6530.79s
+  [1125] obj=1470.68    act=5430     err= 0.00%/ 0.79% time=5.05s/6535.84s
+  [1126] obj=1470.61    act=5422     err= 0.00%/ 0.79% time=5.04s/6540.88s
+  [1127] obj=1470.54    act=5415     err= 0.00%/ 0.79% time=4.99s/6545.87s
+  [1128] obj=1470.48    act=5405     err= 0.00%/ 0.79% time=5.07s/6550.94s
+  [1129] obj=1470.40    act=5396     err= 0.00%/ 0.79% time=5.16s/6556.10s
+  [1130] obj=1470.34    act=5402     err= 0.00%/ 0.79% time=5.02s/6561.12s
+  [1131] obj=1470.27    act=5390     err= 0.00%/ 0.79% time=5.03s/6566.15s
+  [1132] obj=1470.22    act=5396     err= 0.00%/ 0.79% time=5.07s/6571.22s
+  [1133] obj=1470.15    act=5376     err= 0.00%/ 0.79% time=5.01s/6576.23s
+  [1134] obj=1470.11    act=5382     err= 0.00%/ 0.79% time=5.06s/6581.29s
+  [1135] obj=1470.03    act=5364     err= 0.00%/ 0.79% time=5.02s/6586.31s
+  [1136] obj=1470.00    act=5359     err= 0.00%/ 0.79% time=5.08s/6591.39s
+  [1137] obj=1469.93    act=5340     err= 0.00%/ 0.79% time=5.03s/6596.42s
+  [1138] obj=1469.89    act=5346     err= 0.00%/ 0.79% time=5.05s/6601.47s
+  [1139] obj=1469.82    act=5340     err= 0.00%/ 0.79% time=5.07s/6606.54s
+  [1140] obj=1469.79    act=5337     err= 0.00%/ 0.79% time=5.00s/6611.53s
+  [1141] obj=1469.72    act=5315     err= 0.00%/ 0.79% time=5.05s/6616.59s
+  [1142] obj=1469.69    act=5308     err= 0.00%/ 0.79% time=5.05s/6621.63s
+  [1143] obj=1469.63    act=5291     err= 0.00%/ 0.79% time=5.11s/6626.74s
+  [1144] obj=1469.59    act=5284     err= 0.00%/ 0.79% time=5.05s/6631.79s
+  [1145] obj=1469.53    act=5253     err= 0.00%/ 0.79% time=5.02s/6636.80s
+  [1146] obj=1469.50    act=5258     err= 0.00%/ 0.79% time=5.04s/6641.84s
+  [1147] obj=1469.44    act=5252     err= 0.00%/ 0.79% time=5.12s/6646.96s
+  [1148] obj=1469.41    act=5255     err= 0.00%/ 0.79% time=5.13s/6652.09s
+  [1149] obj=1469.36    act=5251     err= 0.00%/ 0.79% time=4.99s/6657.09s
+  [1150] obj=1469.33    act=5253     err= 0.00%/ 0.79% time=5.03s/6662.12s
+  [1151] obj=1469.27    act=5245     err= 0.00%/ 0.79% time=5.09s/6667.21s
+  [1152] obj=1469.24    act=5241     err= 0.00%/ 0.79% time=5.01s/6672.22s
+  [1153] obj=1469.19    act=5225     err= 0.00%/ 0.79% time=5.01s/6677.23s
+  [1154] obj=1469.16    act=5224     err= 0.00%/ 0.79% time=5.15s/6682.37s
+  [1155] obj=1469.11    act=5219     err= 0.00%/ 0.79% time=5.01s/6687.39s
+  [1156] obj=1469.08    act=5209     err= 0.00%/ 0.53% time=5.08s/6692.47s
+  [1157] obj=1469.03    act=5205     err= 0.00%/ 0.53% time=5.00s/6697.46s
+  [1158] obj=1469.00    act=5209     err= 0.00%/ 0.53% time=5.02s/6702.49s
+  [1159] obj=1468.95    act=5198     err= 0.00%/ 0.53% time=5.07s/6707.55s
+  [1160] obj=1468.93    act=5196     err= 0.00%/ 0.53% time=5.09s/6712.64s
+  [1161] obj=1468.89    act=5194     err= 0.00%/ 0.53% time=5.02s/6717.66s
+  [1162] obj=1468.87    act=5194     err= 0.00%/ 0.53% time=5.06s/6722.72s
+  [1163] obj=1468.82    act=5189     err= 0.00%/ 0.53% time=5.05s/6727.77s
+  [1164] obj=1468.80    act=5181     err= 0.00%/ 0.53% time=5.15s/6732.91s
+  [1165] obj=1468.76    act=5168     err= 0.00%/ 0.53% time=5.08s/6737.99s
+  [1166] obj=1468.73    act=5161     err= 0.00%/ 0.53% time=5.08s/6743.07s
+  [1167] obj=1468.69    act=5165     err= 0.00%/ 0.53% time=5.06s/6748.13s
+  [1168] obj=1468.67    act=5164     err= 0.00%/ 0.53% time=5.08s/6753.21s
+  [1169] obj=1468.63    act=5153     err= 0.00%/ 0.53% time=5.09s/6758.30s
+  [1170] obj=1468.61    act=5156     err= 0.00%/ 0.53% time=5.08s/6763.38s
+  [1171] obj=1468.57    act=5145     err= 0.00%/ 0.53% time=5.05s/6768.43s
+  [1172] obj=1468.56    act=5149     err= 0.00%/ 0.53% time=5.07s/6773.50s
+  [1173] obj=1468.52    act=5141     err= 0.00%/ 0.79% time=4.99s/6778.49s
+  [1174] obj=1468.50    act=5143     err= 0.00%/ 0.53% time=5.03s/6783.52s
+  [1175] obj=1468.47    act=5142     err= 0.00%/ 0.79% time=5.02s/6788.54s
+  [1176] obj=1468.45    act=5138     err= 0.00%/ 0.79% time=5.08s/6793.62s
+  [1177] obj=1468.42    act=5110     err= 0.00%/ 0.79% time=5.09s/6798.71s
+  [1178] obj=1468.40    act=5113     err= 0.00%/ 0.79% time=5.06s/6803.77s
+  [1179] obj=1468.37    act=5105     err= 0.00%/ 0.79% time=5.02s/6808.80s
+  [1180] obj=1468.35    act=5114     err= 0.00%/ 0.79% time=5.02s/6813.82s
+  [1181] obj=1468.32    act=5101     err= 0.00%/ 0.79% time=5.02s/6818.84s
+  [1182] obj=1468.30    act=5114     err= 0.00%/ 0.53% time=5.06s/6823.90s
+  [1183] obj=1468.27    act=5105     err= 0.00%/ 0.79% time=5.04s/6828.94s
+  [1184] obj=1468.25    act=5110     err= 0.00%/ 0.53% time=5.10s/6834.04s
+  [1185] obj=1468.22    act=5090     err= 0.00%/ 0.79% time=5.03s/6839.07s
+  [1186] obj=1468.21    act=5093     err= 0.00%/ 0.53% time=5.12s/6844.19s
+  [1187] obj=1468.18    act=5082     err= 0.00%/ 0.79% time=5.07s/6849.26s
+  [1188] obj=1468.16    act=5092     err= 0.00%/ 0.53% time=5.06s/6854.32s
+  [1189] obj=1468.13    act=5081     err= 0.00%/ 0.53% time=5.06s/6859.38s
+  [1190] obj=1468.12    act=5082     err= 0.00%/ 0.53% time=5.06s/6864.44s
+  [1191] obj=1468.09    act=5078     err= 0.00%/ 0.53% time=5.04s/6869.48s
+  [1192] obj=1468.08    act=5074     err= 0.00%/ 0.53% time=5.05s/6874.53s
+  [1193] obj=1468.05    act=5060     err= 0.00%/ 0.53% time=5.09s/6879.61s
+  [1194] obj=1468.03    act=5064     err= 0.00%/ 0.53% time=5.05s/6884.66s
+  [1195] obj=1468.01    act=5065     err= 0.00%/ 0.53% time=5.02s/6889.68s
+  [1196] obj=1467.99    act=5078     err= 0.00%/ 0.53% time=5.02s/6894.70s
+  [1197] obj=1467.96    act=5080     err= 0.00%/ 0.53% time=5.03s/6899.74s
+  [1198] obj=1467.95    act=5069     err= 0.00%/ 0.53% time=5.04s/6904.78s
+  [1199] obj=1467.92    act=5056     err= 0.00%/ 0.53% time=5.09s/6909.87s
+  [1200] obj=1467.91    act=5056     err= 0.00%/ 0.53% time=5.05s/6914.93s
+  [1201] obj=1467.88    act=5045     err= 0.00%/ 0.53% time=5.06s/6919.98s
+  [1202] obj=1467.87    act=5034     err= 0.00%/ 0.53% time=5.05s/6925.03s
+  [1203] obj=1467.84    act=5024     err= 0.00%/ 0.53% time=5.05s/6930.08s
+  [1204] obj=1467.83    act=5016     err= 0.00%/ 0.53% time=5.05s/6935.13s
+  [1205] obj=1467.81    act=5008     err= 0.00%/ 0.53% time=5.11s/6940.23s
+  [1206] obj=1467.80    act=5013     err= 0.00%/ 0.53% time=5.03s/6945.26s
+  [1207] obj=1467.77    act=5004     err= 0.00%/ 0.53% time=5.01s/6950.27s
+  [1208] obj=1467.76    act=5015     err= 0.00%/ 0.53% time=5.02s/6955.29s
+  [1209] obj=1467.74    act=4997     err= 0.00%/ 0.53% time=5.06s/6960.35s
+  [1210] obj=1467.73    act=5004     err= 0.00%/ 0.53% time=5.09s/6965.43s
+  [1211] obj=1467.70    act=4993     err= 0.00%/ 0.53% time=5.05s/6970.49s
+  [1212] obj=1467.69    act=4998     err= 0.00%/ 0.53% time=5.04s/6975.53s
+  [1213] obj=1467.66    act=4991     err= 0.00%/ 0.53% time=5.01s/6980.54s
+  [1214] obj=1467.65    act=4994     err= 0.00%/ 0.53% time=5.04s/6985.58s
+  [1215] obj=1467.63    act=4986     err= 0.00%/ 0.53% time=5.01s/6990.60s
+  [1216] obj=1467.62    act=4989     err= 0.00%/ 0.53% time=5.02s/6995.61s
+  [1217] obj=1467.60    act=5000     err= 0.00%/ 0.79% time=4.99s/7000.60s
+  [1218] obj=1467.59    act=4990     err= 0.00%/ 0.53% time=5.05s/7005.65s
+  [1219] obj=1467.56    act=5006     err= 0.00%/ 0.79% time=5.05s/7010.70s
+  [1220] obj=1467.55    act=5002     err= 0.00%/ 0.53% time=5.07s/7015.77s
+  [1221] obj=1467.53    act=4987     err= 0.00%/ 0.79% time=5.06s/7020.83s
+  [1222] obj=1467.52    act=4998     err= 0.00%/ 0.79% time=5.03s/7025.86s
+  [1223] obj=1467.49    act=4975     err= 0.00%/ 0.79% time=5.07s/7030.93s
+  [1224] obj=1467.48    act=5001     err= 0.00%/ 0.79% time=5.12s/7036.06s
+  [1225] obj=1467.46    act=4977     err= 0.00%/ 0.79% time=5.09s/7041.14s
+  [1226] obj=1467.45    act=4979     err= 0.00%/ 0.79% time=5.12s/7046.26s
+  [1227] obj=1467.43    act=4983     err= 0.00%/ 0.79% time=5.12s/7051.38s
+  [1228] obj=1467.42    act=4988     err= 0.00%/ 0.79% time=5.06s/7056.44s
+  [1229] obj=1467.39    act=4974     err= 0.00%/ 0.79% time=5.13s/7061.57s
+  [1230] obj=1467.39    act=4973     err= 0.00%/ 0.53% time=5.14s/7066.70s
+  [1231] obj=1467.36    act=4981     err= 0.00%/ 0.79% time=5.10s/7071.80s
+  [1232] obj=1467.35    act=4968     err= 0.00%/ 0.53% time=5.16s/7076.96s
+  [1233] obj=1467.33    act=4967     err= 0.00%/ 0.79% time=5.16s/7082.12s
+  [1234] obj=1467.31    act=4959     err= 0.00%/ 0.53% time=5.11s/7087.23s
+  [1235] obj=1467.29    act=4966     err= 0.00%/ 0.79% time=5.16s/7092.39s
+  [1236] obj=1467.29    act=4972     err= 0.00%/ 0.53% time=5.13s/7097.52s
+  [1237] obj=1467.26    act=4973     err= 0.00%/ 0.79% time=5.13s/7102.65s
+  [1238] obj=1467.25    act=5000     err= 0.00%/ 0.53% time=5.07s/7107.72s
+  [1239] obj=1467.22    act=4979     err= 0.00%/ 0.53% time=5.18s/7112.90s
+  [1240] obj=1467.21    act=4987     err= 0.00%/ 0.53% time=5.09s/7117.99s
+  [1241] obj=1467.19    act=4966     err= 0.00%/ 0.53% time=5.07s/7123.07s
+  [1242] obj=1467.18    act=4971     err= 0.00%/ 0.53% time=5.11s/7128.17s
+  [1243] obj=1467.16    act=4980     err= 0.00%/ 0.53% time=5.11s/7133.29s
+  [1244] obj=1467.15    act=4962     err= 0.00%/ 0.53% time=5.10s/7138.38s
+  [1245] obj=1467.12    act=4969     err= 0.00%/ 0.53% time=5.15s/7143.53s
+  [1246] obj=1467.11    act=4960     err= 0.00%/ 0.53% time=5.09s/7148.62s
+  [1247] obj=1467.09    act=4946     err= 0.00%/ 0.53% time=5.09s/7153.71s
+  [1248] obj=1467.08    act=4954     err= 0.00%/ 0.53% time=5.04s/7158.74s
+  [1249] obj=1467.06    act=4938     err= 0.00%/ 0.53% time=5.06s/7163.80s
+  [1250] obj=1467.05    act=4937     err= 0.00%/ 0.53% time=5.12s/7168.91s
+  [1251] obj=1467.03    act=4933     err= 0.00%/ 0.53% time=5.10s/7174.01s
+  [1252] obj=1467.02    act=4936     err= 0.00%/ 0.53% time=5.08s/7179.09s
+  [1253] obj=1466.99    act=4930     err= 0.00%/ 0.79% time=5.02s/7184.12s
+  [1254] obj=1466.98    act=4924     err= 0.00%/ 0.53% time=5.09s/7189.20s
+  [1255] obj=1466.96    act=4921     err= 0.00%/ 0.79% time=5.11s/7194.31s
+  [1256] obj=1466.96    act=4941     err= 0.00%/ 0.53% time=5.03s/7199.34s
+  [1257] obj=1466.93    act=4929     err= 0.00%/ 0.79% time=5.06s/7204.40s
+  [1258] obj=1466.92    act=4934     err= 0.00%/ 0.53% time=5.07s/7209.48s
+  [1259] obj=1466.90    act=4924     err= 0.00%/ 0.79% time=5.04s/7214.51s
+  [1260] obj=1466.89    act=4928     err= 0.00%/ 0.53% time=5.05s/7219.57s
+  [1261] obj=1466.86    act=4922     err= 0.00%/ 0.53% time=5.04s/7224.61s
+  [1262] obj=1466.86    act=4923     err= 0.00%/ 0.53% time=5.09s/7229.70s
+  [1263] obj=1466.83    act=4914     err= 0.00%/ 0.53% time=5.11s/7234.81s
+  [1264] obj=1466.82    act=4931     err= 0.00%/ 0.53% time=5.06s/7239.87s
+  [1265] obj=1466.80    act=4904     err= 0.00%/ 0.53% time=5.11s/7244.98s
+  [1266] obj=1466.78    act=4920     err= 0.00%/ 0.53% time=5.01s/7249.99s
+  [1267] obj=1466.77    act=4897     err= 0.00%/ 0.53% time=5.03s/7255.02s
+  [1268] obj=1466.75    act=4894     err= 0.00%/ 0.53% time=5.06s/7260.08s
+  [1269] obj=1466.73    act=4906     err= 0.00%/ 0.53% time=5.07s/7265.16s
+  [1270] obj=1466.71    act=4910     err= 0.00%/ 0.53% time=8.44s/7273.60s
+  [1271] obj=1466.70    act=4887     err= 0.00%/ 0.53% time=5.06s/7278.67s
+  [1272] obj=1466.66    act=5008     err= 0.00%/ 0.53% time=8.47s/7287.13s
+  [1273] obj=1466.65    act=4938     err= 0.00%/ 0.53% time=5.12s/7292.25s
+  [1274] obj=1466.57    act=5057     err= 0.00%/ 0.53% time=8.53s/7300.78s
+  [1275] obj=1466.56    act=5104     err= 0.00%/ 0.53% time=8.45s/7309.23s
+  [1276] obj=1466.52    act=5054     err= 0.00%/ 0.53% time=8.48s/7317.71s
+  [1277] obj=1466.49    act=5084     err= 0.00%/ 0.53% time=8.43s/7326.14s
+  [1278] obj=1466.44    act=5051     err= 0.00%/ 0.53% time=8.55s/7334.69s
+  [1279] obj=1466.41    act=5009     err= 0.00%/ 0.53% time=5.06s/7339.75s
+  [1280] obj=1466.37    act=5062     err= 0.00%/ 0.53% time=8.50s/7348.25s
+  [1281] obj=1466.34    act=5071     err= 0.00%/ 0.53% time=8.55s/7356.80s
+  [1282] obj=1466.32    act=5030     err= 0.00%/ 0.53% time=8.50s/7365.30s
+  [1283] obj=1466.29    act=5051     err= 0.00%/ 0.53% time=8.48s/7373.78s
+  [1284] obj=1466.24    act=5003     err= 0.00%/ 0.53% time=8.47s/7382.25s
+  [1285] obj=1466.22    act=5022     err= 0.00%/ 0.53% time=8.47s/7390.72s
+  [1286] obj=1466.18    act=4988     err= 0.00%/ 0.53% time=8.41s/7399.13s
+  [1287] obj=1466.17    act=5015     err= 0.00%/ 0.53% time=8.49s/7407.61s
+  [1288] obj=1466.13    act=5009     err= 0.00%/ 0.53% time=8.44s/7416.05s
+  [1289] obj=1466.12    act=5018     err= 0.00%/ 0.53% time=5.09s/7421.14s
+  [1290] obj=1466.09    act=5136     err= 0.00%/ 0.53% time=5.08s/7426.22s
+  [1291] obj=1466.03    act=5166     err= 0.00%/ 0.53% time=5.08s/7431.30s
+  [1292] obj=1465.94    act=5208     err= 0.00%/ 0.53% time=5.06s/7436.37s
+  [1293] obj=1465.89    act=5187     err= 0.00%/ 0.53% time=5.03s/7441.40s
+  [1294] obj=1465.84    act=5132     err= 0.00%/ 0.53% time=5.08s/7446.47s
+  [1295] obj=1465.79    act=5095     err= 0.00%/ 0.53% time=5.06s/7451.53s
+  [1296] obj=1465.75    act=5053     err= 0.00%/ 0.53% time=5.08s/7456.61s
+  [1297] obj=1465.73    act=5067     err= 0.00%/ 0.53% time=5.08s/7461.69s
+  [1298] obj=1465.68    act=5032     err= 0.00%/ 0.53% time=5.09s/7466.78s
+  [1299] obj=1465.65    act=5075     err= 0.00%/ 0.53% time=8.44s/7475.23s
+  [1300] obj=1465.64    act=5034     err= 0.00%/ 0.53% time=5.01s/7480.24s
+  [1301] obj=1465.63    act=5064     err= 0.00%/ 0.53% time=5.00s/7485.24s
+  [1302] obj=1465.53    act=5140     err= 0.00%/ 0.53% time=5.01s/7490.26s
+  [1303] obj=1465.48    act=5116     err= 0.00%/ 0.53% time=8.47s/7498.73s
+  [1304] obj=1465.45    act=5100     err= 0.00%/ 0.53% time=8.48s/7507.21s
+  [1305] obj=1465.41    act=5086     err= 0.00%/ 0.53% time=8.51s/7515.72s
+  [1306] obj=1465.38    act=5074     err= 0.00%/ 0.53% time=8.47s/7524.19s
+  [1307] obj=1465.35    act=5091     err= 0.00%/ 0.53% time=8.55s/7532.74s
+  [1308] obj=1465.32    act=5071     err= 0.00%/ 0.53% time=8.48s/7541.22s
+  [1309] obj=1465.28    act=5089     err= 0.00%/ 0.53% time=8.51s/7549.72s
+* Save the model
+* Done
+Model for datacat-segmenter created in 7584027 ms
+sourceTEIPathLabel: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/evaluation/tei
+sourceRawPathLabel: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/evaluation/raw
+trainingOutputPath: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/tmp/datacat-segmenter7963041285153388030.test
+evalOutputPath: null
+77 tei files
+21:28:21.572 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10732_19260312.training.monograph.tei.xml
+Total data found between CRF and TEI files 568 from total 597 examples.
+21:28:21.579 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779652.training.monograph.tei.xml
+Total data found between CRF and TEI files 1098 from total 1498 examples.
+21:28:21.647 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806832.training.monograph.tei.xml
+Total data found between CRF and TEI files 34 from total 51 examples.
+21:28:21.648 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10613_19260204.training.monograph.tei.xml
+Total data found between CRF and TEI files 362 from total 376 examples.
+21:28:21.653 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10479_19251214.training.monograph.tei.xml
+Total data found between CRF and TEI files 654 from total 773 examples.
+21:28:21.664 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10433_19251207.training.monograph.tei.xml
+Total data found between CRF and TEI files 280 from total 310 examples.
+21:28:21.667 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03195_19160629.training.monograph.tei.xml
+Total data found between CRF and TEI files 383 from total 504 examples.
+21:28:21.676 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09509_19241208.training.monograph.tei.xml
+Total data found between CRF and TEI files 346 from total 387 examples.
+21:28:21.680 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08847_19240227.training.monograph.tei.xml
+Total data found between CRF and TEI files 262 from total 338 examples.
+21:28:21.686 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10839_19260417.training.monograph.tei.xml
+Total data found between CRF and TEI files 142 from total 156 examples.
+21:28:21.687 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805703.training.monograph.tei.xml
+Total data found between CRF and TEI files 314 from total 381 examples.
+21:28:21.693 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09524_19241211.training.monograph.tei.xml
+Total data found between CRF and TEI files 218 from total 233 examples.
+21:28:21.695 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10009_19250513.training.monograph.tei.xml
+Total data found between CRF and TEI files 267 from total 329 examples.
+21:28:21.698 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10078_19250603.training.monograph.tei.xml
+Total data found between CRF and TEI files 149 from total 161 examples.
+21:28:21.700 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10452_19251209.training.monograph.tei.xml
+Total data found between CRF and TEI files 241 from total 273 examples.
+21:28:21.703 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10412_19251202.training.monograph.tei.xml
+Total data found between CRF and TEI files 239 from total 287 examples.
+21:28:21.706 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07881_19230221.training.monograph.tei.xml
+Total data found between CRF and TEI files 121 from total 129 examples.
+21:28:21.707 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k30434371.training.monograph.tei.xml
+Total data found between CRF and TEI files 696 from total 849 examples.
+21:28:21.716 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10832_19260416.training.monograph.tei.xml
+Total data found between CRF and TEI files 230 from total 243 examples.
+21:28:21.718 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806491.training.monograph.tei.xml
+Total data found between CRF and TEI files 1088 from total 2006 examples.
+21:28:22.089 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97801143.training.monograph.tei.xml
+Total data found between CRF and TEI files 248 from total 431 examples.
+21:28:22.099 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k3052182s.training.monograph.tei.xml
+Total data found between CRF and TEI files 382 from total 446 examples.
+21:28:22.103 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792621.training.monograph.tei.xml
+Total data found between CRF and TEI files 1685 from total 2594 examples.
+21:28:22.341 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10030_19250518.training.monograph.tei.xml
+Total data found between CRF and TEI files 532 from total 692 examples.
+21:28:22.360 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10420_19251203.training.monograph.tei.xml
+Total data found between CRF and TEI files 375 from total 442 examples.
+21:28:22.366 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792354.training.monograph.tei.xml
+Total data found between CRF and TEI files 3473 from total 4908 examples.
+21:28:23.047 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k30447789.training.monograph.tei.xml
+Total data found between CRF and TEI files 977 from total 1380 examples.
+21:28:23.082 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806580.training.monograph.tei.xml
+Total data found between CRF and TEI files 1073 from total 1840 examples.
+21:28:23.280 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07850_19230212.training.monograph.tei.xml
+Total data found between CRF and TEI files 405 from total 431 examples.
+21:28:23.284 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10104_19250610.training.monograph.tei.xml
+Total data found between CRF and TEI files 302 from total 335 examples.
+21:28:23.287 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10524_19251221.training.monograph.tei.xml
+Total data found between CRF and TEI files 1675 from total 1801 examples.
+21:28:23.331 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792443.training.monograph.tei.xml
+Total data found between CRF and TEI files 245 from total 362 examples.
+21:28:23.339 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10580_19260125.training.monograph.tei.xml
+Total data found between CRF and TEI files 126 from total 145 examples.
+21:28:23.340 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03249_19240407.training.monograph.tei.xml
+Total data found between CRF and TEI files 187 from total 338 examples.
+21:28:23.344 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10669_19260222.training.monograph.tei.xml
+Total data found between CRF and TEI files 980 from total 1054 examples.
+21:28:23.360 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798534.training.monograph.tei.xml
+Total data found between CRF and TEI files 640 from total 662 examples.
+21:28:23.366 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09472_19241201.training.monograph.tei.xml
+Total data found between CRF and TEI files 312 from total 477 examples.
+21:28:23.376 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10107_19250611.training.monograph.tei.xml
+Total data found between CRF and TEI files 0 from total 17 examples.
+21:28:23.376 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97793980.training.monograph.tei.xml
+Total data found between CRF and TEI files 24 from total 26 examples.
+21:28:23.377 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03202_19171215.training.monograph.tei.xml
+Total data found between CRF and TEI files 300 from total 387 examples.
+21:28:23.392 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k30446838.training.monograph.tei.xml
+Total data found between CRF and TEI files 453 from total 524 examples.
+21:28:23.403 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97818580.training.monograph.tei.xml
+Total data found between CRF and TEI files 91 from total 203 examples.
+21:28:23.419 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09664_19250206.training.monograph.tei.xml
+Total data found between CRF and TEI files 114 from total 122 examples.
+21:28:23.420 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k30450059.training.monograph.tei.xml
+Total data found between CRF and TEI files 350 from total 418 examples.
+21:28:23.427 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805525.training.monograph.tei.xml
+Total data found between CRF and TEI files 762 from total 2088 examples.
+21:28:23.571 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10630_19260210.training.monograph.tei.xml
+Total data found between CRF and TEI files 720 from total 909 examples.
+21:28:23.603 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10477_19251214.training.monograph.tei.xml
+Total data found between CRF and TEI files 209 from total 238 examples.
+21:28:23.606 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10641_19260213.training.monograph.tei.xml
+Total data found between CRF and TEI files 140 from total 153 examples.
+21:28:23.608 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805918.training.monograph.tei.xml
+Total data found between CRF and TEI files 967 from total 1403 examples.
+21:28:23.676 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10752_19260318.training.monograph.tei.xml
+Total data found between CRF and TEI files 204 from total 238 examples.
+21:28:23.692 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97794048.training.monograph.tei.xml
+Total data found between CRF and TEI files 517 from total 569 examples.
+21:28:23.719 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10114_19250612.training.monograph.tei.xml
+Total data found between CRF and TEI files 283 from total 303 examples.
+21:28:23.730 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03254_19250508.training.monograph.tei.xml
+Total data found between CRF and TEI files 698 from total 802 examples.
+21:28:23.841 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03200_19171025.training.monograph.tei.xml
+Total data found between CRF and TEI files 448 from total 598 examples.
+21:28:23.870 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09567_19241219.training.monograph.tei.xml
+Total data found between CRF and TEI files 131 from total 152 examples.
+21:28:23.872 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k30444840.training.monograph.tei.xml
+Total data found between CRF and TEI files 48 from total 56 examples.
+21:28:23.873 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97817681.training.monograph.tei.xml
+Total data found between CRF and TEI files 985 from total 1794 examples.
+21:28:24.093 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10432_19251207.training.monograph.tei.xml
+Total data found between CRF and TEI files 287 from total 330 examples.
+21:28:24.098 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09432_19241122.training.monograph.tei.xml
+Total data found between CRF and TEI files 228 from total 247 examples.
+21:28:24.100 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806513.training.monograph.tei.xml
+Total data found between CRF and TEI files 152 from total 297 examples.
+21:28:24.107 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10555_19260114.training.monograph.tei.xml
+Total data found between CRF and TEI files 540 from total 568 examples.
+21:28:24.113 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780673.training.monograph.tei.xml
+Total data found between CRF and TEI files 743 from total 1006 examples.
+21:28:24.138 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10424_19251204.training.monograph.tei.xml
+Total data found between CRF and TEI files 519 from total 540 examples.
+21:28:24.143 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805592.training.monograph.tei.xml
+Total data found between CRF and TEI files 3165 from total 5157 examples.
+21:28:25.104 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781394.training.monograph.tei.xml
+Total data found between CRF and TEI files 1997 from total 2498 examples.
+21:28:25.158 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10709_19260306.training.monograph.tei.xml
+Total data found between CRF and TEI files 215 from total 224 examples.
+21:28:25.160 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792584.training.monograph.tei.xml
+Total data found between CRF and TEI files 123 from total 144 examples.
+21:28:25.161 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08892_19240312.training.monograph.tei.xml
+Total data found between CRF and TEI files 68 from total 83 examples.
+21:28:25.162 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792762.training.monograph.tei.xml
+Total data found between CRF and TEI files 748 from total 1382 examples.
+21:28:25.260 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97818246.training.monograph.tei.xml
+Total data found between CRF and TEI files 5102 from total 6622 examples.
+21:28:26.484 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805488.training.monograph.tei.xml
+Total data found between CRF and TEI files 737 from total 1705 examples.
+21:28:26.733 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k30446764.training.monograph.tei.xml
+Total data found between CRF and TEI files 179 from total 203 examples.
+21:28:26.735 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792517.training.monograph.tei.xml
+Total data found between CRF and TEI files 648 from total 1037 examples.
+21:28:26.788 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805770.training.monograph.tei.xml
+Total data found between CRF and TEI files 354 from total 543 examples.
+21:28:26.803 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10823_19260414.training.monograph.tei.xml
+Total data found between CRF and TEI files 238 from total 252 examples.
+21:28:26.806 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03258_19250612.training.monograph.tei.xml
+Total data found between CRF and TEI files 1196 from total 1325 examples.
+21:28:26.831 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03250_19240411.training.monograph.tei.xml
+Total data found between CRF and TEI files 163 from total 191 examples.
+21:28:26.833 [main] DEBUG org.grobid.core.utilities.GrobidProperties - No configuration parameter defined for DeLFT engine for model datacat-segmenter
+21:28:26.833 [main] INFO org.grobid.core.jni.WapitiModel - Loading model: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti (size: 14538414)
+[Wapiti] Loading model: "/home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti"
+Model path: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti
+Labeling took: 1710 ms
+
+===== Field-level results =====
+
+label                accuracy     precision    recall       f1           support
+
+<annex>              97.81        41.67        45.45        43.48        11     
+<back>               93.94        33.33        2.86         5.26         35     
+<cover>              89.39        58.49        43.06        49.6         72     
+<index>              99.66        50           50           50           2      
+<preface>            87.21        57.14        50.57        53.66        87     
+<reference>          98.65        61.54        72.73        66.67        11     
+<title>              84.68        41.67        37.97        39.74        79     
+<toc>                96.3         41.18        36.84        38.89        19     
+<unit>               83.5         39.51        39.51        39.51        81     
+
+all (micro avg.)     92.35        48.18        40.05        43.74        397    
+all (macro avg.)     92.35        47.17        42.11        42.98        397    
+
+===== Instance-level results =====
+
+Total expected instances:   76
+Correct instances:          10
+Instance-level recall:      13.16
