@@ -1230,7 +1230,7 @@ public class DatacatSegmenterParser extends AbstractParser {
                 rawtxt.append(txtline.getText());
             }
             String outPathRawtext = pathFullText + File.separator +
-                PDFFileName.replace(".pdf", ".training.monograph.rawtxt");
+                PDFFileName.replace(".pdf", ".datacat.rawtxt");
             FileUtils.writeStringToFile(new File(outPathRawtext), rawtxt.toString(), "UTF-8");
 
         } catch (Exception e) {

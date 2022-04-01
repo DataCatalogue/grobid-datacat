@@ -84,6 +84,20 @@ public class ProcessEngineDatacat implements Closeable {
     }
 
     /**
+     * Generate blank training data from provided directory of PDF documents, i.e. where TEI files are text only
+     * without tags. This can be used to start from scratch any new model.
+     *
+     * @param pGbdArgs The parameters.
+     * @throws Exception
+     */
+    public void extractTxtFromPDF(final GrobidDatacatMainArgs pGbdArgs) throws Exception {
+        inferPdfInputPath(pGbdArgs);
+        inferOutputPath(pGbdArgs);
+        int result = getEngine().batchExtractTxtFromPDF(pGbdArgs.getPath2Input(), pGbdArgs.getPath2Output(), -1);
+        LOGGER.info(result + " files processed.");
+    }
+
+    /**
      * List the engine methods that can be called.
      *
      * @return List<String> containing the list of the methods.
