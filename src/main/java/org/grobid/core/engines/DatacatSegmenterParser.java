@@ -1069,60 +1069,94 @@ public class DatacatSegmenterParser extends AbstractParser {
      * Create a blank training data for new monograph model
      *
      * @param inputFile input PDF file
-     * @param outputFile   path to raw monograph featured sequence
+     * @param pathRaw   path to raw monograph featured sequence
+     * @param pathTEI   path to TEI, the file is not labeled yet
      * @param id        id
      */
-    public void createBlankTrainingFromPDF(File inputFile,
-                                               String outputFile,
+    public Document createBlankTrainingFromPDF(File inputFile,
+                                               String pathRaw,
+                                               String pathTEI,
                                                int id) {
         DocumentSource documentSource = null;
+        Document doc = null;
+        List<Block> blocks = null;
+        Writer writer = null;
+        StringBuilder builder = null;
+        String lang = null;
+        Language langID = null;
         try {
-            File file = inputFile;
+            builder = new StringBuilder();
+            if (!inputFile.exists()) {
+                throw new GrobidResourceException("Cannot train for monograph, because file '" +
+                    inputFile.getAbsolutePath() + "' does not exists.");
+            }
+            String pdfFileName = inputFile.getName();
 
-            documentSource = DocumentSource.fromPdf(file, -1, -1, true, true, true);
-            Document doc = new Document(documentSource);
+            File outputTEIFile = new File(pathTEI + "/" + pdfFileName.replace(".pdf", ".training.monograph.tei.xml"));
+            File outputRawFile = new File(pathRaw + "/" + pdfFileName.replace(".pdf", ".training.monograph"));
 
-            String PDFFileName = file.getName();
+            documentSource = DocumentSource.fromPdf(inputFile, -1, -1, false, true, true);
+            doc = new Document(documentSource);
             doc.addTokenizedDocument(GrobidAnalysisConfig.defaultInstance());
+            blocks = doc.getBlocks();
 
-            if (doc.getBlocks() == null) {
+            if (blocks == null) {
                 throw new Exception("PDF parsing resulted in empty content");
-            }
-            doc.produceStatistics();
+            } else {
+                // detect the language
+                String contentSample = "";
+                int sampleLength = 0;
+                for (int i = 0; i < blocks.size(); i++) {
+                    contentSample += doc.getBlocks().get(i).getText();
+                    if (sampleLength > 500) // it's assumed we need 500 characters of sample content for detecting the language
+                        break;
+                }
 
-            String fulltext = getAllLinesFeatured(doc);
-            List<LayoutToken> tokenizations = doc.getTokenizations();
+                langID = languageUtilities.getInstance().runLanguageId(contentSample);
+                if (langID != null) {
+                    lang = langID.getLang();
+                } else {
+                    lang = "en"; // by default, id = english
+                }
 
-            // we write the full text untagged (but featurized)
-            String outPathFulltext = outputFile + File.separator +
-                PDFFileName.replace(".pdf", ".training.datacat.blank");
-            Writer writer = new OutputStreamWriter(new FileOutputStream(new File(outPathFulltext), false), "UTF-8");
-            writer.write(fulltext);
-            writer.close();
+                builder.append("<?xml version=\"1.0\" ?>\n<tei xml:space=\"preserve\">\n\t<teiHeader>\n\t\t<fileDesc xml:id=\"" + id +
+                    "\"/>\n\t</teiHeader>\n\t<text xml:lang=\"" + lang + "\">\n");
 
-            // also write the raw text as seen before segmentation
-            StringBuffer rawtxt = new StringBuffer();
-            for (LayoutToken txtline : tokenizations) {
-                rawtxt.append(TextUtilities.HTMLEncode(txtline.getText()));
-            }
+                // output an XML document based on the provided outline and the tokenization
+                List<LayoutToken> tokens = doc.getTokenizations();
+                // create blank training data
+                if (tokens != null) {
+                    for (LayoutToken token : tokens) {
+                        if (token.getText() != null) {
+                            builder.append(TextUtilities.HTMLEncode(token.getText()));
+                        }
+                    }
+                }
 
-            fulltext = rawtxt.toString();
-            if (isNotBlank(fulltext)) {
-                // write the TEI file to reflect the extact layout of the text as extracted from the pdf
-                writer = new OutputStreamWriter(new FileOutputStream(new File(outputFile +
-                    File.separator +
-                    PDFFileName.replace(".pdf", ".training.datacat.blank.tei.xml")), false), "UTF-8");
-                writer.write("<?xml version=\"1.0\" ?>\n<tei xml:space=\"preserve\">\n\t<teiHeader>\n\t\t<fileDesc xml:id=\"" + id +
-                    "\"/>\n\t</teiHeader>\n\t<text xml:lang=\"en\">\n");
+                builder.append("</text>\n</tei>");
+                // write the TEI file
+                writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), "UTF-8");
+                writer.write(builder.toString());
+                writer.close();
 
-                writer.write(fulltext);
-                writer.write("\n\t</text>\n</tei>\n");
+                // besides the tagged TEI file, we also need the raw file with some key layout featuresAsString
+                // gather the features by blocks
+                //String rawText = getAllBlocksFeatured(doc);
+
+                // gather the features by lines
+                String rawText = getAllLinesFeatured(doc);
+
+                // Let us now take care of the raw file
+                writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), "UTF-8");
+                writer.write(rawText);
                 writer.close();
             }
 
+            return doc;
+
         } catch (Exception e) {
-            throw new GrobidException("An exception occurred while running grobid-datacat blank training" +
-                " data generation for the datacat-segmenter model.", e);
+            throw new GrobidException("An exception occurred while running Grobid training" +
+                " data generation for datacat.", e);
         } finally {
             DocumentSource.close(documentSource, true, true, true);
         }

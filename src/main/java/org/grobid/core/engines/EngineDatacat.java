@@ -42,16 +42,18 @@ public class EngineDatacat extends Engine {
     }
 
     /**
-     * Create training data for all models based on the application of
-     * the current full text model on a new PDF
+     * Generate blank training data from provided directory of PDF documents, i.e. where TEI files are text only
+     * without tags. This can be used to start from scratch any new model.
      *
      * @param inputFile    : the path of the PDF file to be processed
-     * @param pathOutput   : the path where to put the CRF feature file and  the annotated TEI representation (the
-     *                      file to be corrected for gold-level training data)
-     * @param id           : an optional ID to be used in the TEI file, -1 if not used
+     * @param pathRaw      : the path where to put the CRF feature file
+     * @param pathTEI      : the path where to put the annotated TEI representation (the
+     *                     file to be annotated for "from scratch" training data)
+     * @param id           : an optional ID to be used in the TEI file and the full text
+     *                     file, -1 if not used
      */
-    public void createTrainingBlank(File inputFile, String pathOutput,  int id) {
-        parsers.getDatacatSegmenterParser().createBlankTrainingFromPDF(inputFile, pathOutput, id);
+    public void createTrainingBlank(File inputFile, String pathRaw, String pathTEI,  int id) {
+        parsers.getDatacatSegmenterParser().createBlankTrainingFromPDF(inputFile, pathRaw, pathTEI, id);
     }
 
     /**
@@ -169,7 +171,7 @@ public class EngineDatacat extends Engine {
             }
             for (final File pdfFile : refFiles) {
                 try {
-                    createTrainingBlank(pdfFile, resultPath, ind + n);
+                    createTrainingBlank(pdfFile, resultPath, resultPath, ind + n);
                 } catch (final Exception exp) {
                     LOGGER.error("An error occurred while processing the following pdf: "
                         + pdfFile.getPath(), exp);
