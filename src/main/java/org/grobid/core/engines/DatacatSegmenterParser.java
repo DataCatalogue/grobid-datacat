@@ -1095,9 +1095,9 @@ public class DatacatSegmenterParser extends AbstractParser {
 
             // we write the full text untagged (but featurized)
             String outPathFulltext = outputFile + File.separator +
-                PDFFileName.replace(".pdf", ".training.datacat");
+                PDFFileName.replace(".pdf", ".training.datacat.blank");
             Writer writer = new OutputStreamWriter(new FileOutputStream(new File(outPathFulltext), false), "UTF-8");
-            writer.write(fulltext + "\n");
+            writer.write(fulltext);
             writer.close();
 
             // also write the raw text as seen before segmentation
