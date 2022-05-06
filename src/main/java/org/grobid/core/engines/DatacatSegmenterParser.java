@@ -1,4 +1,7 @@
 package org.grobid.core.engines;
+// GROBID features for high level segmentation
+import org.grobid.core.features.FeaturesVectorDatacatSegmenter;
+import org.grobid.core.features.FeaturesVectorSegmentation;
 
 import eugfc.imageio.plugins.PNMRegistry;
 import org.apache.commons.io.FileUtils;
@@ -11,7 +14,6 @@ import org.grobid.core.exceptions.GrobidException;
 import org.grobid.core.exceptions.GrobidExceptionStatus;
 import org.grobid.core.exceptions.GrobidResourceException;
 import org.grobid.core.features.FeatureFactory;
-import org.grobid.core.features.FeaturesVectorDatacatSegmenter;
 import org.grobid.core.lang.Language;
 import org.grobid.core.layout.*;
 import org.grobid.core.lexicon.FastMatcher;
@@ -74,9 +76,6 @@ public class DatacatSegmenterParser extends AbstractParser {
     // projection scale for line length
     private static final int LINESCALE = 10;
 
-    // projection scale for block length
-    private static final int BLOCKSCALE = 10;
-
     private FeatureFactory featureFactory = FeatureFactory.getInstance();
 
     private File tmpPath = null;
@@ -98,12 +97,18 @@ public class DatacatSegmenterParser extends AbstractParser {
      * @param input file
      * @return the built TEI
      */
+    /**
+     * Segment a PDF document into high level zones: cover page, document header,
+     * page footer, page header, body, page numbers, biblio section and annexes.
+     *
+     * @param documentSource     document source
+     * @return Document object with segmentation information
+     */
     public Document processing(DocumentSource documentSource, GrobidAnalysisConfig config) {
         try {
             Document doc = new Document(documentSource);
             if (config.getAnalyzer() != null)
                 doc.setAnalyzer(config.getAnalyzer());
-
             doc.addTokenizedDocument(config);
             doc = prepareDocument(doc);
 
@@ -120,8 +125,7 @@ public class DatacatSegmenterParser extends AbstractParser {
             /*if (config.getPdfAssetPath() == null) {
                 // remove the pdfalto tmp file
                 DocumentSource.close(documentSource, false, true, true);
-            } else*/
-            {
+            } else*/ {
                 // remove the pdfalto tmp files, including the sub-directories
                 DocumentSource.close(documentSource, true, true, true);
             }
@@ -138,12 +142,11 @@ public class DatacatSegmenterParser extends AbstractParser {
         List<LayoutToken> tokenizations = doc.getTokenizations();
         if (tokenizations.size() > GrobidProperties.getPdfTokensMax()) {
             throw new GrobidException("The document has " + tokenizations.size() + " tokens, but the limit is " + GrobidProperties.getPdfTokensMax(),
-                GrobidExceptionStatus.TOO_MANY_TOKENS);
+                    GrobidExceptionStatus.TOO_MANY_TOKENS);
         }
 
         doc.produceStatistics();
         String content = getAllLinesFeatured(doc);
-        // String content = getAllBlocksFeatured(doc);
         if (isNotEmpty(trim(content))) {
             String labelledResult = label(content);
             // set the different sections of the Document object
@@ -188,9 +191,9 @@ public class DatacatSegmenterParser extends AbstractParser {
                                 LOGGER.error("Cannot copy file " + currFile.getAbsolutePath() + " to " + assetFile.getAbsolutePath(), e);
                             }
                         } else if (toLowerCaseName.endsWith(".jpg")
-                            || toLowerCaseName.endsWith(".ppm")
+                                || toLowerCaseName.endsWith(".ppm")
                             //	|| currFile.getName().toLowerCase().endsWith(".pbm")
-                        ) {
+                                ) {
 
                             String outputFilePath = "";
                             try {
@@ -198,7 +201,7 @@ public class DatacatSegmenterParser extends AbstractParser {
 
                                 if (toLowerCaseName.endsWith(".jpg")) {
                                     outputFilePath = assetFile.getPath() + File.separator +
-                                        toLowerCaseName.replace(".jpg", ".png");
+                                            toLowerCaseName.replace(".jpg", ".png");
                                 }
                                 /*else if (currFile.getName().toLowerCase().endsWith(".pbm")) {
                                     outputFilePath = assetFile.getPath() + File.separator +
@@ -206,7 +209,7 @@ public class DatacatSegmenterParser extends AbstractParser {
                                 }*/
                                 else {
                                     outputFilePath = assetFile.getPath() + File.separator +
-                                        toLowerCaseName.replace(".ppm", ".png");
+                                            toLowerCaseName.replace(".ppm", ".png");
                                 }
                                 ImageIO.write(bi, "png", new File(outputFilePath));
                                 nbFiles++;
@@ -231,7 +234,7 @@ public class DatacatSegmenterParser extends AbstractParser {
                             continue;
                         }
                         fileImage = fileImage.replace(".ppm", ".png")
-                            .replace(".jpg", ".png");
+                                .replace(".jpg", ".png");
                         ind = fileImage.indexOf("/");
                         image.setFilePath(subPath + fileImage.substring(ind, fileImage.length()));
                     }
@@ -243,12 +246,12 @@ public class DatacatSegmenterParser extends AbstractParser {
     /**
      * Addition of the features at line level for the complete document.
      * <p/>
-     * This is an alternative to the token level, where the unit for labeling is the line - so allowing faster
-     * processing and involving less features.
-     * Lexical features becomes line prefix and suffix, the feature text unit is the first 10 characters of the
-     * line without space.
-     * The dictionary flags are at line level (i.e. the line contains a name mention, a place mention, a year, etc.)
-     * Regarding layout features: font, size and style are the one associated to the first token of the line.
+     * This is an alternative to the token level, where the unit for labeling is the line - so allowing even
+     * faster processing and involving less features.
+     * Lexical features becomes block prefix and suffix, the feature text unit is the first 10 characters of the
+     * block without space.
+     * The dictionary flags are at block level (i.e. the block contains a name mention, a place mention, a year, etc.)
+     * Regarding layout features: font, size and style are the one associated to the first token of the block.
      */
     public String getAllLinesFeatured(Document doc) {
 
@@ -259,70 +262,7 @@ public class DatacatSegmenterParser extends AbstractParser {
 
         //guaranteeing quality of service. Otherwise, there are some PDF that may contain 300k blocks and thousands of extracted "images" that ruins the performance
         if (blocks.size() > GrobidProperties.getPdfBlocksMax()) {
-            throw new GrobidException("Postprocessed document is too big, contains: " + blocks.size(), GrobidExceptionStatus.TOO_MANY_BLOCKS);
-        }
-
-        //boolean graphicVector = false;
-        //boolean graphicBitmap = false;
-
-        // list of textual patterns at the head and foot of pages which can be re-occur on several pages
-        // (typically indicating a publisher foot or head notes)
-        Map<String, Integer> patterns = new TreeMap<String, Integer>();
-        Map<String, Boolean> firstTimePattern = new TreeMap<String, Boolean>();
-
-        for (Page page : doc.getPages()) {
-            // we just look at the two first and last blocks of the page
-            if ((page.getBlocks() != null) && (page.getBlocks().size() > 0)) {
-                for (int blockIndex = 0; blockIndex < page.getBlocks().size(); blockIndex++) {
-                    if ((blockIndex < 2) || (blockIndex > page.getBlocks().size() - 2)) {
-                        Block block = page.getBlocks().get(blockIndex);
-                        String localText = block.getText();
-                        if ((localText != null) && (localText.length() > 0)) {
-                            String[] lines = localText.split("[\\n\\r]");
-                            if (lines.length > 0) {
-                                String line = lines[0];
-                                String pattern = featureFactory.getPattern(line);
-                                if (pattern.length() > 8) {
-                                    Integer nb = patterns.get(pattern);
-                                    if (nb == null) {
-                                        patterns.put(pattern, Integer.valueOf(1));
-                                        firstTimePattern.put(pattern, false);
-                                    } else
-                                        patterns.put(pattern, Integer.valueOf(nb + 1));
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        String featuresAsString = getFeatureVectorsAsString(doc,
-            patterns, firstTimePattern);
-
-        return featuresAsString;
-    }
-
-    /**
-     * Addition of the features at block level for the complete document.
-     * <p/>
-     * This is an alternative to the token and line level, where the unit for labeling is the block - so allowing even
-     * faster processing and involving less features.
-     * Lexical features becomes block prefix and suffix, the feature text unit is the first 10 characters of the
-     * block without space.
-     * The dictionary flags are at block level (i.e. the block contains a name mention, a place mention, a year, etc.)
-     * Regarding layout features: font, size and style are the one associated to the first token of the block.
-     */
-    public String getAllBlocksFeatured(Document doc) {
-
-        List<Block> blocks = doc.getBlocks();
-        if ((blocks == null) || blocks.size() == 0) {
-            return null;
-        }
-
-        //guaranteeing quality of service. Otherwise, there are some PDF that may contain 300k blocks and thousands of extracted "images" that ruins the performance
-        if (blocks.size() > GrobidProperties.getPdfBlocksMax()) {
-            throw new GrobidException("Postprocessed document is too big, contains: " + blocks.size(), GrobidExceptionStatus.TOO_MANY_BLOCKS);
+            throw new GrobidException("Post processed document is too big, contains: " + blocks.size(), GrobidExceptionStatus.TOO_MANY_BLOCKS);
         }
 
         //boolean graphicVector = false;
@@ -341,15 +281,19 @@ public class DatacatSegmenterParser extends AbstractParser {
                         Block block = page.getBlocks().get(blockIndex);
                         String localText = block.getText();
                         if ((localText != null) && (localText.length() > 0)) {
-                            String pattern = featureFactory.getPattern(localText);
-                            if (pattern.length() > 8) {
-                                Integer nb = patterns.get(pattern);
-                                if (nb == null) {
-                                    patterns.put(pattern, Integer.valueOf("1"));
-                                    firstTimePattern.put(pattern, false);
+                            String[] lines = localText.split("[\\n\\r]");
+                            if (lines.length > 0) {
+                                String line = lines[0];
+                                String pattern = featureFactory.getPattern(line);
+                                if (pattern.length() > 8) {
+                                    Integer nb = patterns.get(pattern);
+                                    if (nb == null) {
+                                        patterns.put(pattern, Integer.valueOf(1));
+                                        firstTimePattern.put(pattern, false);
+                                    }
+                                    else
+                                        patterns.put(pattern, Integer.valueOf(nb+1));
                                 }
-                                else
-                                    patterns.put(pattern, Integer.valueOf(nb+1));
                             }
                         }
                     }
@@ -357,363 +301,15 @@ public class DatacatSegmenterParser extends AbstractParser {
             }
         }
 
-        String featuresAsString = getFeatureVectorBlocksAsString(doc,
+        String featuresAsString = getFeatureVectorsLinesAsString(doc,
             patterns, firstTimePattern);
 
         return featuresAsString;
     }
 
-    private String getFeatureVectorBlocksAsString(Document doc, Map<String, Integer> patterns,
+    private String getFeatureVectorsLinesAsString(Document doc, Map<String, Integer> patterns,
                                                   Map<String, Boolean> firstTimePattern) {
-        StringBuilder featureDatacatSegmenter = new StringBuilder();
-        int documentLength = doc.getDocumentLenghtChar();
-
-        String currentFont = null;
-        int currentFontSize = -1;
-
-        boolean newPage;
-        int mm = 0; // page position
-        int nn = 0; // document position
-        int pageLength = 0; // length of the current page
-        double pageHeight = 0.0;
-
-        // vector for features
-        FeaturesVectorDatacatSegmenter features = null;
-        FeaturesVectorDatacatSegmenter previousFeatures = null;
-
-        for (Page page : doc.getPages()) {
-            pageHeight = page.getHeight();
-            newPage = true;
-            double spacingPreviousBlock = 0.0; // discretized
-            double lowestPos = 0.0;
-            pageLength = page.getPageLengthChar();
-            BoundingBox pageBoundingBox = page.getMainArea();
-            mm = 0;
-
-            if ((page.getBlocks() == null) || (page.getBlocks().size() == 0))
-                continue;
-
-            int maxBlockLength = 0;
-            for (int blockIndex = 0; blockIndex < page.getBlocks().size(); blockIndex++) {
-                Block block = page.getBlocks().get(blockIndex);
-
-                boolean graphicVector = false;
-                boolean graphicBitmap = false;
-
-                boolean lastPageBlock = false;
-                boolean firstPageBlock = false;
-
-                if (blockIndex == 0) {
-                    firstPageBlock = true;
-                }
-
-                if (blockIndex == page.getBlocks().size() - 1) {
-                    lastPageBlock = true;
-                }
-
-                // check if we have a graphical object connected to the current block
-                List<GraphicObject> localImages = Document.getConnectedGraphics(block, doc);
-                if (localImages != null) {
-                    for (GraphicObject localImage : localImages) {
-                        if (localImage.getType() == GraphicObjectType.BITMAP)
-                            graphicBitmap = true;
-                        if (localImage.getType() == GraphicObjectType.VECTOR)
-                            graphicVector = true;
-                    }
-                }
-
-                if (lowestPos > block.getY()) {
-                    // we have a vertical shift, which can be due to a change of column or other particular layout formatting
-                    spacingPreviousBlock = doc.getMaxBlockSpacing() / 5.0; // default
-                } else
-                    spacingPreviousBlock = block.getY() - lowestPos;
-
-                String localText = block.getText();
-                if (localText == null)
-                    continue;
-
-                if (localText.length() > maxBlockLength)
-                    maxBlockLength = localText.length();
-
-                // character density of the block
-                double density = 0.0;
-                if ((block.getHeight() != 0.0) && (block.getWidth() != 0.0) &&
-                    (block.getText() != null) && (!block.getText().contains("@PAGE")) &&
-                    (!block.getText().contains("@IMAGE")))
-                    density = (double) block.getText().length() / (block.getHeight() * block.getWidth());
-
-                // is the current block in the main area of the page or not?
-                boolean inPageMainArea = true;
-                BoundingBox blockBoundingBox = BoundingBox.fromPointAndDimensions(page.getNumber(),
-                    block.getX(), block.getY(), block.getWidth(), block.getHeight());
-                if (pageBoundingBox == null || (!pageBoundingBox.contains(blockBoundingBox) && !pageBoundingBox.intersect(blockBoundingBox)))
-                    inPageMainArea = false;
-
-                String[] lines = localText.split("[\\n\\r]");
-                // set the max length of the lines in the block, in number of characters
-                int maxLineLength = 0;
-                for (int p = 0; p < lines.length; p++) {
-                    if (lines[p].length() > maxLineLength)
-                        maxLineLength = lines[p].length();
-                }
-                List<LayoutToken> tokens = block.getTokens();
-                if ((tokens == null) || (tokens.size() == 0)) {
-                    continue;
-                }
-
-                // treat the information by blocks
-
-                // for the layout information of the block, we take simply the first layout token
-                LayoutToken token = null;
-                if (tokens.size() > 0)
-                    token = tokens.get(0);
-
-                double coordinateLineY = token.getY();
-
-                features = new FeaturesVectorDatacatSegmenter();
-
-                features.block = localText;
-
-                if ((blockIndex < 2) || (blockIndex > page.getBlocks().size() - 2)) {
-                    String pattern = featureFactory.getPattern(localText);
-                    Integer nb = patterns.get(pattern);
-                    if ((nb != null) && (nb > 1)) {
-                        features.repetitivePattern = true;
-
-                        Boolean firstTimeDone = firstTimePattern.get(pattern);
-                        if ((firstTimeDone != null) && !firstTimeDone) {
-                            features.firstRepetitivePattern = true;
-                            firstTimePattern.put(pattern, true);
-                        }
-                    }
-                }
-
-                /* we take tokens from the first two lines of each block
-                then we consider the first token of the line as usual lexical CRF token
-                and the second token of the line as feature */
-                String line0 = lines[0], line1 = null;
-                if (lines.length >= 2) {
-                    line1 = lines[1];
-                } else {
-                    line1 = lines[0];
-                }
-
-                StringTokenizer tokens0 = new StringTokenizer(line0, " \t");
-                StringTokenizer tokens1 = new StringTokenizer(line1, " \t");
-                String text00 = null, text01 = null, text10 = null, text11 = null;
-
-                if (tokens0.hasMoreTokens())
-                    text00 = tokens0.nextToken();
-
-                if (tokens0.hasMoreTokens())
-                    text01 = tokens0.nextToken();
-
-                if (tokens1.hasMoreTokens())
-                    text10 = tokens1.nextToken();
-
-                if (tokens1.hasMoreTokens())
-                    text11 = tokens1.nextToken();
-
-                if (text00 == null)
-                    continue;
-
-                if (text01 == null)
-                    continue;
-
-                if (text10 == null)
-                    continue;
-
-                if (text11 == null)
-                    continue;
-
-                // final sanitisation and filtering
-                text00 = text00.replaceAll("[ \n]", "").trim();
-                text01 = text01.replaceAll("[ \n]", "").trim();
-                text10 = text10.replaceAll("[ \n]", "").trim();
-                text11 = text11.replaceAll("[ \n]", "").trim();
-
-                if ((text00.length() == 0) || (text01.length() == 0) ||
-                    (text10.length() == 0) || (text11.length() == 0) ||
-                    (TextUtilities.filterLine(localText))) {
-                    continue;
-                }
-
-                features.string = text00;
-                features.secondString = text01;
-                //features.thirdString = text10;
-                //features.fourthString = text11;
-
-                features.firstPageBlock = firstPageBlock;
-                features.lastPageBlock = lastPageBlock;
-
-                features.blockLength = featureFactory.linearScaling(localText.length(), maxBlockLength, BLOCKSCALE);
-
-                features.punctuationProfile = TextUtilities.punctuationProfile(localText);
-
-                if (graphicBitmap) {
-                    features.bitmapAround = true;
-                }
-                if (graphicVector) {
-                    features.vectorAround = true;
-                }
-
-                features.punctType = null;
-
-                if (firstPageBlock) {
-                    features.blockStatus = "BLOCKSTART"; // the first block of each page
-                } else if (lastPageBlock) {
-                    features.blockStatus = "BLOCKEND"; // the last block of each page
-                } else {
-                    features.blockStatus = "BLOCKIN"; // the rest of the blocks in page
-                }
-
-                if (newPage) {
-                    features.pageStatus = "PAGESTART";
-                    newPage = false;
-                    if (previousFeatures != null)
-                        previousFeatures.pageStatus = "PAGEEND";
-                } else {
-                    features.pageStatus = "PAGEIN";
-                    newPage = false;
-                }
-
-                if (localText.length() == 1) {
-                    features.singleChar = true;
-                }
-
-                if (Character.isUpperCase(localText.charAt(0))) {
-                    features.capitalisation = "INITCAP";
-                }
-
-                if (featureFactory.test_all_capital(localText)) {
-                    features.capitalisation = "ALLCAP";
-                }
-
-                if (featureFactory.test_digit(localText)) {
-                    features.digit = "CONTAINSDIGITS";
-                }
-
-                if (featureFactory.test_common(localText)) {
-                    features.commonName = true;
-                }
-
-                if (featureFactory.test_names(localText)) {
-                    features.properName = true;
-                }
-
-                if (featureFactory.test_month(localText)) {
-                    features.month = true;
-                }
-
-                Matcher m = featureFactory.isDigit.matcher(localText);
-                if (m.find()) {
-                    features.digit = "ALLDIGIT";
-                }
-
-                Matcher m2 = featureFactory.year.matcher(localText);
-                if (m2.find()) {
-                    features.year = true;
-                }
-
-                Matcher m3 = featureFactory.email.matcher(localText);
-                if (m3.find()) {
-                    features.email = true;
-                }
-
-                Matcher m4 = featureFactory.http.matcher(localText);
-                if (m4.find()) {
-                    features.http = true;
-                }
-
-                // font information
-                if (currentFont == null) {
-                    currentFont = token.getFont();
-                    features.fontStatus = "NEWFONT";
-                } else if (!currentFont.equals(token.getFont())) {
-                    currentFont = token.getFont();
-                    features.fontStatus = "NEWFONT";
-                } else
-                    features.fontStatus = "SAMEFONT";
-
-                // font size information
-                int newFontSize = (int) token.getFontSize();
-                if (currentFontSize == -1) {
-                    currentFontSize = newFontSize;
-                    features.fontSize = "HIGHERFONT";
-                } else if (currentFontSize == newFontSize) {
-                    features.fontSize = "SAMEFONTSIZE";
-                } else if (currentFontSize < newFontSize) {
-                    features.fontSize = "HIGHERFONT";
-                    currentFontSize = newFontSize;
-                } else if (currentFontSize > newFontSize) {
-                    features.fontSize = "LOWERFONT";
-                    currentFontSize = newFontSize;
-                }
-
-                //TODO: Trop général ? (italique/gras)
-                if (token.isBold())
-                    features.bold = true;
-
-                if (token.isItalic())
-                    features.italic = true;
-
-                if (features.capitalisation == null)
-                    features.capitalisation = "NOCAPS";
-
-                if (features.digit == null)
-                    features.digit = "NODIGIT";
-
-                features.relativeDocumentPosition = featureFactory
-                    .linearScaling(nn, documentLength, NBBINS_POSITION);
-
-                features.relativePagePositionChar = featureFactory
-                    .linearScaling(mm, pageLength, NBBINS_POSITION);
-
-                int pagePos = featureFactory
-                    .linearScaling(coordinateLineY, pageHeight, NBBINS_POSITION);
-
-                if (pagePos > NBBINS_POSITION)
-                    pagePos = NBBINS_POSITION;
-
-                features.relativePagePosition = pagePos;
-
-                if (spacingPreviousBlock != 0.0) {
-                    features.spacingWithPreviousBlock = featureFactory
-                        .linearScaling(spacingPreviousBlock - doc.getMinBlockSpacing(), doc.getMaxBlockSpacing() - doc.getMinBlockSpacing(), NBBINS_SPACE);
-                }
-
-                features.inMainArea = inPageMainArea;
-
-                if (density != -1.0) {
-                    features.characterDensity = featureFactory
-                        .linearScaling(density - doc.getMinCharacterDensity(), doc.getMaxCharacterDensity() - doc.getMinCharacterDensity(), NBBINS_DENSITY);
-                }
-
-                // lowest position of the block
-                lowestPos = block.getY() + block.getHeight();
-
-                // update page-level and document-level positions
-                if (tokens != null) {
-                    mm += tokens.size();
-                    nn += tokens.size();
-                }
-
-                if (previousFeatures != null) {
-                    String vector = previousFeatures.printVector();
-                    featureDatacatSegmenter.append(vector);
-                }
-                previousFeatures = features;
-            }
-        }
-
-        if (previousFeatures != null)
-            featureDatacatSegmenter.append(previousFeatures.printVector());
-        return featureDatacatSegmenter.toString();
-    }
-
-    private String getFeatureVectorsAsString(Document doc, Map<String, Integer> patterns,
-                                             Map<String, Boolean> firstTimePattern) {
-        StringBuilder fulltext = new StringBuilder();
+        StringBuilder monographFeatures = new StringBuilder();
         int documentLength = doc.getDocumentLenghtChar();
 
         String currentFont = null;
@@ -743,7 +339,7 @@ public class DatacatSegmenterParser extends AbstractParser {
             if ((page.getBlocks() == null) || (page.getBlocks().size() == 0))
                 continue;
 
-            for (int blockIndex = 0; blockIndex < page.getBlocks().size(); blockIndex++) {
+            for(int blockIndex=0; blockIndex < page.getBlocks().size(); blockIndex++) {
                 Block block = page.getBlocks().get(blockIndex);
                 /*if (start) {
                     newPage = true;
@@ -762,17 +358,10 @@ public class DatacatSegmenterParser extends AbstractParser {
                     firstPageBlock = true;
                 }
 
-                //endblock = false;
-
-                /*if (endPage) {
-                    newPage = true;
-                    mm = 0;
-                }*/
-
                 // check if we have a graphical object connected to the current block
                 List<GraphicObject> localImages = Document.getConnectedGraphics(block, doc);
                 if (localImages != null) {
-                    for (GraphicObject localImage : localImages) {
+                    for(GraphicObject localImage : localImages) {
                         if (localImage.getType() == GraphicObjectType.BITMAP)
                             graphicBitmap = true;
                         if (localImage.getType() == GraphicObjectType.VECTOR || localImage.getType() == GraphicObjectType.VECTOR_BOX)
@@ -780,7 +369,7 @@ public class DatacatSegmenterParser extends AbstractParser {
                     }
                 }
 
-                if (lowestPos > block.getY()) {
+                if (lowestPos >  block.getY()) {
                     // we have a vertical shift, which can be due to a change of column or other particular layout formatting
                     spacingPreviousBlock = doc.getMaxBlockSpacing() / 5.0; // default
                 } else
@@ -792,10 +381,10 @@ public class DatacatSegmenterParser extends AbstractParser {
 
                 // character density of the block
                 double density = 0.0;
-                if ((block.getHeight() != 0.0) && (block.getWidth() != 0.0) &&
+                if ( (block.getHeight() != 0.0) && (block.getWidth() != 0.0) &&
                     (block.getText() != null) && (!block.getText().contains("@PAGE")) &&
-                    (!block.getText().contains("@IMAGE")))
-                    density = (double) block.getText().length() / (block.getHeight() * block.getWidth());
+                    (!block.getText().contains("@IMAGE")) )
+                    density = (double)block.getText().length() / (block.getHeight() * block.getWidth());
 
                 // is the current block in the main area of the page or not?
                 boolean inPageMainArea = true;
@@ -807,7 +396,7 @@ public class DatacatSegmenterParser extends AbstractParser {
                 String[] lines = localText.split("[\\n\\r]");
                 // set the max length of the lines in the block, in number of characters
                 int maxLineLength = 0;
-                for (int p = 0; p < lines.length; p++) {
+                for(int p=0; p<lines.length; p++) {
                     if (lines[p].length() > maxLineLength)
                         maxLineLength = lines[p].length();
                 }
@@ -817,14 +406,6 @@ public class DatacatSegmenterParser extends AbstractParser {
                 }
                 for (int li = 0; li < lines.length; li++) {
                     String line = lines[li];
-                    /*boolean firstPageBlock = false;
-                    boolean lastPageBlock = false;
-
-                    if (newPage)
-                        firstPageBlock = true;
-                    if (endPage)
-                        lastPageBlock = true;
-                    */
 
                     // for the layout information of the block, we take simply the first layout token
                     LayoutToken token = null;
@@ -837,7 +418,7 @@ public class DatacatSegmenterParser extends AbstractParser {
                     features.token = token;
                     features.line = line;
 
-                    if ((blockIndex < 2) || (blockIndex > page.getBlocks().size() - 2)) {
+                    if ( (blockIndex < 2) || (blockIndex > page.getBlocks().size()-2)) {
                         String pattern = featureFactory.getPattern(line);
                         Integer nb = patterns.get(pattern);
                         if ((nb != null) && (nb > 1)) {
@@ -853,7 +434,7 @@ public class DatacatSegmenterParser extends AbstractParser {
 
                     // we consider the first token of the line as usual lexical CRF token
                     // and the second token of the line as feature
-                    StringTokenizer st2 = new StringTokenizer(line, " \t");
+                    StringTokenizer st2 = new StringTokenizer(line, " \t\f\u00A0");
                     // alternatively, use a grobid analyser
                     String text = null;
                     String text2 = null;
@@ -866,13 +447,10 @@ public class DatacatSegmenterParser extends AbstractParser {
                         continue;
 
                     // final sanitisation and filtering
-                    text = text.replaceAll("[ \n]", "");
+                    text = text.replaceAll("[ \n\r]", "");
                     text = text.trim();
 
-                    if ((text.length() == 0) ||
-//                            (text.equals("\n")) ||
-//                            (text.equals("\r")) ||
-//                            (text.equals("\n\r")) ||
+                    if ( (text.length() == 0) ||
                         (TextUtilities.filterLine(line))) {
                         continue;
                     }
@@ -882,7 +460,6 @@ public class DatacatSegmenterParser extends AbstractParser {
 
                     features.firstPageBlock = firstPageBlock;
                     features.lastPageBlock = lastPageBlock;
-                    //features.lineLength = line.length() / LINESCALE;
                     features.lineLength = featureFactory
                         .linearScaling(line.length(), maxLineLength, LINESCALE);
 
@@ -958,7 +535,6 @@ public class DatacatSegmenterParser extends AbstractParser {
                         features.year = true;
                     }
 
-                    //TODO: Supprimer ?
                     Matcher m3 = featureFactory.email.matcher(text);
                     if (m3.find()) {
                         features.email = true;
@@ -992,16 +568,11 @@ public class DatacatSegmenterParser extends AbstractParser {
                         currentFontSize = newFontSize;
                     }
 
-                    if (token.getBold())
+                    if (token.isBold())
                         features.bold = true;
 
-                    if (token.getItalic())
+                    if (token.isItalic())
                         features.italic = true;
-
-                    // HERE horizontal information
-                    // CENTERED
-                    // LEFTAJUSTED
-                    // CENTERED
 
                     if (features.capitalisation == null)
                         features.capitalisation = "NOCAPS";
@@ -1009,45 +580,37 @@ public class DatacatSegmenterParser extends AbstractParser {
                     if (features.digit == null)
                         features.digit = "NODIGIT";
 
-                    //if (features.punctType == null)
-                    //    features.punctType = "NOPUNCT";
-
                     features.relativeDocumentPosition = featureFactory
                         .linearScaling(nn, documentLength, NBBINS_POSITION);
-//System.out.println(nn + " " + documentLength + " " + NBBINS_POSITION + " " + features.relativeDocumentPosition);
+
                     features.relativePagePositionChar = featureFactory
                         .linearScaling(mm, pageLength, NBBINS_POSITION);
-//System.out.println(mm + " " + pageLength + " " + NBBINS_POSITION + " " + features.relativePagePositionChar);
+
                     int pagePos = featureFactory
                         .linearScaling(coordinateLineY, pageHeight, NBBINS_POSITION);
-//System.out.println(coordinateLineY + " " + pageHeight + " " + NBBINS_POSITION + " " + pagePos);
+
                     if (pagePos > NBBINS_POSITION)
                         pagePos = NBBINS_POSITION;
                     features.relativePagePosition = pagePos;
-//System.out.println(coordinateLineY + "\t" + pageHeight);
 
                     if (spacingPreviousBlock != 0.0) {
                         features.spacingWithPreviousBlock = featureFactory
-                            .linearScaling(spacingPreviousBlock - doc.getMinBlockSpacing(), doc.getMaxBlockSpacing() - doc.getMinBlockSpacing(), NBBINS_SPACE);
+                            .linearScaling(spacingPreviousBlock-doc.getMinBlockSpacing(), doc.getMaxBlockSpacing()-doc.getMinBlockSpacing(), NBBINS_SPACE);
                     }
 
                     features.inMainArea = inPageMainArea;
 
                     if (density != -1.0) {
                         features.characterDensity = featureFactory
-                            .linearScaling(density - doc.getMinCharacterDensity(), doc.getMaxCharacterDensity() - doc.getMinCharacterDensity(), NBBINS_DENSITY);
-//System.out.println((density-doc.getMinCharacterDensity()) + " " + (doc.getMaxCharacterDensity()-doc.getMinCharacterDensity()) + " " + NBBINS_DENSITY + " " + features.characterDensity);
+                            .linearScaling(density-doc.getMinCharacterDensity(), doc.getMaxCharacterDensity()-doc.getMinCharacterDensity(), NBBINS_DENSITY);
                     }
 
                     if (previousFeatures != null) {
                         String vector = previousFeatures.printVector();
-                        fulltext.append(vector);
+                        monographFeatures.append(vector);
                     }
                     previousFeatures = features;
                 }
-
-//System.out.println((spacingPreviousBlock-doc.getMinBlockSpacing()) + " " + (doc.getMaxBlockSpacing()-doc.getMinBlockSpacing()) + " " + NBBINS_SPACE + " "
-//    + featureFactory.linearScaling(spacingPreviousBlock-doc.getMinBlockSpacing(), doc.getMaxBlockSpacing()-doc.getMinBlockSpacing(), NBBINS_SPACE));
 
                 // lowest position of the block
                 lowestPos = block.getY() + block.getHeight();
@@ -1060,9 +623,9 @@ public class DatacatSegmenterParser extends AbstractParser {
             }
         }
         if (previousFeatures != null)
-            fulltext.append(previousFeatures.printVector());
+            monographFeatures.append(previousFeatures.printVector());
 
-        return fulltext.toString();
+        return monographFeatures.toString();
     }
 
     /**
@@ -1163,70 +726,90 @@ public class DatacatSegmenterParser extends AbstractParser {
     }
 
     /**
-     * Process the content of the specified pdf and format the result as training data.
+     * Create a training data with the TEI labels generated by the monograph model
      *
-     * @param inputFile  input file
-     * @param outputFile path to fulltext
-     * @param id         id
+     * @param inputFile input PDF file
+     * @param pathRaw   path to raw monograph featured sequence
+     * @param pathTEI   path to TEI, the file is not labeled yet
+     * @param id        id
      */
-    public void createTrainingDatacatSegmenter(File inputFile,
-                                                  String outputFile,
-                                                  int id) {
+    public void createTrainingFromPDF(File inputFile,
+                                      String pathRaw,
+                                      String pathTEI,
+                                      int id) {
         DocumentSource documentSource = null;
-        try {
-            /*GrobidAnalysisConfig config =
-                new GrobidAnalysisConfig.GrobidAnalysisConfigBuilder().build();*/
-            /*documentSource = DocumentSource.fromPdf(file, config.getStartPage(), config.getEndPage());*/
 
+        try {
+            if (!inputFile.exists()) {
+                throw new GrobidResourceException("Cannot train the Segmenter model, because file '" +
+                    inputFile.getAbsolutePath() + "' does not exists.");
+            }
+
+            // read from the first until the last page of the document
             documentSource = DocumentSource.fromPdf(inputFile, -1, -1, true, true, true);
             Document doc = new Document(documentSource);
 
-            String PDFFileName = inputFile.getName();
+            String pdfFileName = inputFile.getName();
+            File outputTEIFile = new File(pathTEI + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.monograph.tei.xml"));
+            File outputRawFile = new File(pathRaw + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.monograph"));
+
             doc.addTokenizedDocument(GrobidAnalysisConfig.defaultInstance());
 
             if (doc.getBlocks() == null) {
                 throw new Exception("PDF parsing resulted in empty content");
             }
             doc.produceStatistics();
+            List<Block> blocks = doc.getBlocks();
 
-            String fulltext = getAllLinesFeatured(doc);
-            List<LayoutToken> tokenizations = doc.getTokenizations();
+            if (blocks == null) {
+                throw new Exception("PDF parsing resulted in empty content");
+            } else {
+                // detect the language
+                String contentSample = "";
+                int sampleLength = 0;
+                for (int i = 0; i < blocks.size(); i++) {
+                    contentSample += doc.getBlocks().get(i).getText();
+                    if (sampleLength > 500) // it's assumed we need 500 characters of sample content for detecting the language
+                        break;
+                }
 
-            // we write the full text untagged (but featurized)
-            String outPathFulltext = outputFile + File.separator +
-                PDFFileName.replace(".pdf", ".training.segmenter");
-            Writer writer = new OutputStreamWriter(new FileOutputStream(new File(outPathFulltext), false), "UTF-8");
-            writer.write(fulltext + "\n");
-            writer.close();
+                Language langID = languageUtilities.getInstance().runLanguageId(contentSample);
+                String lang;
+                if (langID != null) {
+                    lang = langID.getLang();
+                } else {
+                    lang = "fr"; // by default, id is "english"
+                }
 
-            // also write the raw text as seen before segmentation
-            StringBuffer rawtxt = new StringBuffer();
-            for (LayoutToken txtline : tokenizations) {
-                rawtxt.append(TextUtilities.HTMLEncode(txtline.getText()));
-            }
-            String outPathRawtext = outputFile + File.separator +
-                PDFFileName.replace(".pdf", ".training.segmenter.rawtxt");
-            FileUtils.writeStringToFile(new File(outPathRawtext), rawtxt.toString(), "UTF-8");
+                // if we work with blocks
+                //String monographFeatures =  getAllBlocksFeatured(doc);
 
-            if (isNotBlank(fulltext)) {
-                String rese = label(fulltext);
-                StringBuffer bufferFulltext = trainingExtraction(rese, tokenizations, doc);
+                // if we work with lines
+                String segmenterFeatures =  getAllLinesFeatured(doc);
+                List<LayoutToken> tokenizations = doc.getTokenizations(); // the tokenization for all documents
 
-                // write the TEI file to reflect the extract layout of the text as extracted from the pdf
-                writer = new OutputStreamWriter(new FileOutputStream(new File(outputFile +
-                    File.separator +
-                    PDFFileName.replace(".pdf", ".training.segmenter.tei.xml")), false), "UTF-8");
-                writer.write("<?xml version=\"1.0\" ?>\n<tei xml:space=\"preserve\">\n\t<teiHeader>\n\t\t<fileDesc xml:id=\"" + id +
-                    "\"/>\n\t</teiHeader>\n\t<text xml:lang=\"fr\">\n");
-
-                writer.write(bufferFulltext.toString());
-                writer.write("\n\t</text>\n</tei>\n");
+                // we write the data with features yet unlabeled
+                Writer writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), "UTF-8");
+                writer.write(segmenterFeatures + "\n");
                 writer.close();
-            }
 
+                if (segmenterFeatures != null) {
+                    // we call the Monograph model for giving labels on the text
+                    String rese = label(segmenterFeatures);
+                    StringBuffer bufferMonograph = trainingExtraction(rese, tokenizations, doc);
+
+                    // write the TEI file to reflect the extact layout of the text as extracted from the pdf
+                    writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), "UTF-8");
+                    writer.write("<?xml version=\"1.0\" ?>\n<tei xml:space=\"preserve\">\n\t<teiHeader>\n\t\t<fileDesc xml:id=\"" + id +
+                        "\"/>\n\t</teiHeader>\n\t<text xml:lang=\"" + lang + "\">\n");
+                    writer.write(bufferMonograph.toString());
+                    writer.write("\n\t</text>\n</tei>\n");
+                    writer.close();
+                }
+            }
         } catch (Exception e) {
-            throw new GrobidException("An exception occured while running Grobid training" +
-                " data generation for medical model.", e);
+            throw new GrobidException("An exception occurred while running Grobid training" +
+                " data generation for monograph.", e);
         } finally {
             DocumentSource.close(documentSource, true, true, true);
         }
@@ -1282,9 +865,16 @@ public class DatacatSegmenterParser extends AbstractParser {
      * @param tokenizations toks
      * @return extraction
      */
+    /**
+     * Extract results from a labelled full text in the training format without any string modification.
+     *
+     * @param result        reult
+     * @param tokenizations toks
+     * @return extraction
+     */
     public StringBuffer trainingExtraction(String result,
-                                           List<LayoutToken> tokenizations,
-                                           Document doc) {
+                                            List<LayoutToken> tokenizations,
+                                            Document doc) {
         // this is the main buffer for the whole full text
         StringBuffer buffer = new StringBuffer();
         try {
@@ -1400,61 +990,21 @@ public class DatacatSegmenterParser extends AbstractParser {
 
                 boolean output;
 
-                //TODO : mettre les bons tag TEI
-
-                output = writeField(buffer, line, s1, lastTag0, s2, "<cover>", "<cover>", addSpace, 3);
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<title>", "<title>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<publisher>", "<publisher>",
-                        addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<summary>", "<summary>",
-                        addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<biography>", "<biography>",
-                        addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<advertising>", "<advertising>", addSpace, 3);
-                }
-                if (!output) {
-                    //output = writeFieldBeginEnd(buffer, s1, lastTag0, s2, "<reference>", "<listBibl>", addSpace, 3);
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<toc>", "<toc>", addSpace, 3);
-                }
-                if (!output) {
-                    //output = writeFieldBeginEnd(buffer, s1, lastTag0, s2, "<body>", "<body>", addSpace, 3);
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<table>", "<table>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<preface>", "<preface>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<dedication>", "<dedication>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<unit>", "<unit>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<reference>", "<reference>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<annex>", "<annex>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<index>", "<index>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<glossary>", "<glossary>", addSpace, 3);
-                }
-                if (!output) {
-                    output = writeField(buffer, line, s1, lastTag0, s2, "<back>", "<back>", addSpace, 3);
-                }
+                output = writeField(buffer, line, s1, lastTag0, s2, "<front>", "<front>", addSpace, 3);
                 if (!output) {
                     output = writeField(buffer, line, s1, lastTag0, s2, "<other>", "<other>", addSpace, 3);
+                }
+                if (!output) {
+                    output = writeField(buffer, line, s1, lastTag0, s2, "<body>", "<body>",
+                        addSpace, 3);
+                }
+                if (!output) {
+                    output = writeField(buffer, line, s1, lastTag0, s2, "<back>", "<back>>",
+                        addSpace, 3);
+                }
+                if (!output) {
+                    output = writeField(buffer, line, s1, lastTag0, s2, "<annex>", "<annex>",
+                        addSpace, 3);
                 }
                 lastTag = s1;
 
@@ -1467,9 +1017,10 @@ public class DatacatSegmenterParser extends AbstractParser {
                     start = false;
                 }
             }
+
             return buffer;
         } catch (Exception e) {
-            throw new GrobidException("An exception occured while running Grobid.", e);
+            throw new GrobidException("An exception occurred while running Grobid.", e);
         }
     }
 
@@ -1524,7 +1075,6 @@ public class DatacatSegmenterParser extends AbstractParser {
     }
 
     /**
-     * TODO some documentation
      *
      * @param buffer
      * @param currentTag0
@@ -1546,56 +1096,20 @@ public class DatacatSegmenterParser extends AbstractParser {
 
             res = false;
             // we close the current tag
-            if (lastTag0.equals("<cover>")) {
-                buffer.append("</cover>\n\n");
+            if (lastTag0.equals("<front>")) {
+                buffer.append("</front>\n\n");
                 res = true;
-            } else if (lastTag0.equals("<title>")) {
-                buffer.append("</title>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<publisher>")) {
-                buffer.append("</publisher>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<summary>")) {
-                buffer.append("</summary>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<biography>")) {
-                buffer.append("</biography>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<advertising>")) {
-                buffer.append("</advertising>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<toc>")) {
-                buffer.append("</toc>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<table>")) {
-                buffer.append("</table>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<unit>")) {
-                buffer.append("</unit>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<preface>")) {
-                buffer.append("</preface>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<dedication>")) {
-                buffer.append("</dedication>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<reference>")) {
-                buffer.append("</reference>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<annex>")) {
-                buffer.append("</annex>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<index>")) {
-                buffer.append("</index>\n\n");
-                res = true;
-            } else if (lastTag0.equals("<glossary>")) {
-                buffer.append("</glossary>\n\n");
+            } else if (lastTag0.equals("<body>")) {
+                buffer.append("</body>\n\n");
                 res = true;
             } else if (lastTag0.equals("<back>")) {
                 buffer.append("</back>\n\n");
                 res = true;
+            } else if (lastTag0.equals("<annex>")) {
+                buffer.append("</annex>\n\n");
+                res = true;
             } else if (lastTag0.equals("<other>")) {
-                buffer.append("\n\n");
+                buffer.append("</other>\n\n");
             } else {
                 res = false;
             }

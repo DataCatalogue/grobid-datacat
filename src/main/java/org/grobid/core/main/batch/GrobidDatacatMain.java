@@ -69,7 +69,7 @@ public class GrobidDatacatMain {
             }
 
             gbdArgs.setPath2grobidHome(tmpFilePath);
-            gbdArgs.setPath2grobidProperty(new File("grobid.properties").getAbsolutePath());
+            //gbdArgs.setPath2grobidProperty(new File("grobid.properties").getAbsolutePath());
         }
     }
 

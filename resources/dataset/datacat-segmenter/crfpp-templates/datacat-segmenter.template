@@ -95,6 +95,13 @@ UEM:%x[1,20]
 UEN:%x[1,21]
 UEO:%x[1,22]
 
+# Punctuation (21)
+UF0:%x[0,21]
+UF1:%x[-1,21]
+UF2:%x[-2,21]
+UF3:%x[1,21]
+UF4:%x[2,21]
+
 # relative document position (23)
 UG0:%x[-1,23]
 UG1:%x[0,23]
@@ -110,7 +117,7 @@ UI0:%x[-1,25]
 UI1:%x[0,25]
 UI2:%x[1,25]
 
-# number of punctuation charcaters in the line (26)
+# number of punctuation characters in the line (26)
 UI0:%x[-1,26]
 UI1:%x[0,26]
 UI2:%x[1,26]

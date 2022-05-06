@@ -1,7 +1,11 @@
 package org.grobid.trainer;
 
 import org.grobid.core.GrobidModels;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import org.grobid.core.main.GrobidHomeFinder;
 import org.grobid.core.exceptions.GrobidException;
+import org.grobid.core.utilities.DatacatConfiguration;
 import org.grobid.core.utilities.GrobidProperties;
 import org.grobid.core.utilities.UnicodeUtil;
 import org.grobid.trainer.sax.TEIDatacatSegmenterSaxParser;
@@ -12,6 +16,7 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
 import java.util.List;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -52,7 +57,7 @@ public class DatacatSegmenterTrainer extends AbstractTrainer {
     }
 
     /**
-     * Add the selected features for the monograph model
+     * Add the selected features for the segmentation model
      *
      * @param sourceTEIPathLabel path to corpus TEI files
      * @param sourceRawPathLabel path to corpus raw files
@@ -62,10 +67,10 @@ public class DatacatSegmenterTrainer extends AbstractTrainer {
      * @return number of examples
      */
     public int addFeaturesDatacatSegmenter(String sourceTEIPathLabel,
-                                    String sourceRawPathLabel,
-                                    final File trainingOutputPath,
-                                    final File evalOutputPath,
-                                    double splitRatio) {
+                                       String sourceRawPathLabel,
+                                       final File trainingOutputPath,
+                                       final File evalOutputPath,
+                                       double splitRatio) {
         int totalExamples = 0;
         try {
             System.out.println("sourceTEIPathLabel: " + sourceTEIPathLabel);
@@ -118,76 +123,96 @@ public class DatacatSegmenterTrainer extends AbstractTrainer {
                 p.parse(tf, parser2);
 
                 List<String> labeled = parser2.getLabeledResult();
+
                 // we can now add the features
                 // we open the featured file
                 try {
-                    File rawFile = new File(sourceRawPathLabel + File.separator +
-                        name.replace(".tei.xml", ""));
-                    if (!rawFile.exists()) {
-                        LOGGER.error("The raw file does not exist: " + rawFile.getPath());
+                    File theRawFile = new File(sourceRawPathLabel + File.separator + name.replace(".tei.xml", ""));
+                    if (!theRawFile.exists()) {
+                        LOGGER.error("The raw file does not exist: " + theRawFile.getPath());
                         continue;
                     }
 
-                    // read the raw CRF file
+                    // removing the @newline
+                    /*List<String> newLabeled = new ArrayList<String>();
+                    for(String label : labeled) {
+                        if (!label.startsWith("@newline"))
+                            newLabeled.add(label);
+                    }
+                    labeled = newLabeled;*/
+
+/*StringBuilder temp = new StringBuilder();
+for(String label : labeled) {
+    temp.append(label);
+}
+FileUtils.writeStringToFile(new File("/tmp/expected-"+name+".txt"), temp.toString());*/
+
+                    int q = 0;
                     BufferedReader bis = new BufferedReader(
-                        new InputStreamReader(new FileInputStream(
-                            rawFile), "UTF8"));
-                    int q = 0; // current position in the TEI labeled list
-                    StringBuilder referenceText = new StringBuilder();
-
-                    // read by lines the raw CRF file and add the tags
-                    String line = bis.readLine();
-                    String token1 = null, token2 = null;
-                    int totFound= 0, lastPositionFound = 0, lastPosition = 0, totData = 0;
-                    boolean found = false;
+                        new InputStreamReader(new FileInputStream(theRawFile), "UTF8"));
+                    StringBuilder segmentation = new StringBuilder();
+                    String line = null;
+                    int l = 0;
+                    String previousTag = null;
+                    int nbInvalid = 0;
                     while ((line = bis.readLine()) != null) {
-                        String lines[] = line.split(" ");
-                        // every line of a CRF raw file contains 2 first tokens of each line of Pdf files
-                        token1 = UnicodeUtil.normaliseTextAndRemoveSpaces(lines[0]);
-                        token2 = UnicodeUtil.normaliseTextAndRemoveSpaces(lines[1]);
-                        String currentLocalText = null, currentTag = null;
-                        if (lastPosition >= labeled.size() - 1) {
-                            lastPosition = lastPositionFound;
+                        l++;
+                        int ii = line.indexOf(' ');
+                        String token = null;
+                        if (ii != -1) {
+                            token = line.substring(0, ii);
+                            // unicode normalisation of the token - it should not be necessary if the training data
+                            // has been gnerated by a recent version of grobid
+                            token = UnicodeUtil.normaliseTextAndRemoveSpaces(token);
                         }
-
-                        for (int i = lastPosition; i < labeled.size(); i++) {
-                            currentLocalText = labeled.get(i);
-                            currentTag = labeled.get(i);
-                            if (currentLocalText.contains(token1) || currentLocalText.contains(token2)) { // if they are found
-                                found = true;
-                                totFound++;
-                                lastPositionFound = i;
-                                if (line.contains("BLOCKSTART") && line.contains("PAGESTART")){
-                                    referenceText.append(line).append(" I-").append(currentTag);
-                                } else {
-                                    referenceText.append(line).append(" ").append(currentTag);
+                        // we get the label in the labelled data file for the same token
+                        for (int pp = q; pp < labeled.size(); pp++) {
+                            String localLine = labeled.get(pp);
+                            StringTokenizer st = new StringTokenizer(localLine, " \t");
+                            if (st.hasMoreTokens()) {
+                                String localToken = st.nextToken();
+                                // unicode normalisation of the token - it should not be necessary if the training data
+                                // has been gnerated by a recent version of grobid
+                                localToken = UnicodeUtil.normaliseTextAndRemoveSpaces(localToken);
+                                if (localToken.equals(token)) {
+                                    String tag = st.nextToken();
+                                    segmentation.append(line).append(" ").append(tag);
+                                    previousTag = tag;
+                                    q = pp + 1;
+                                    nbInvalid = 0;
+                                    //pp = q + 10;
+                                    break;
                                 }
                             }
-                            if (found || lastPosition >= labeled.size() - 1) {
-                                found = false;
+                            if (pp - q > 5) {
+                                //LOGGER.warn(name + " / Segmentation trainer: TEI and raw file unsynchronized at raw line " + l + " : " + localLine);
+                                nbInvalid++;
+                                // let's reuse the latest tag
+                                if (previousTag != null)
+                                    segmentation.append(line).append(" ").append(previousTag);
                                 break;
-                            } else {
-                                lastPosition++;
                             }
                         }
-                        totData++;
-                        line = bis.readLine();
-                    }
-                    System.out.println("Total data found between CRF and TEI files " + totFound + " from total " + totData + " examples.");
-                    bis.close();
-
-                    if ((writer2 == null) && (writer3 != null))
-                        writer3.write(referenceText.toString() + "\n");
-                    if ((writer2 != null) && (writer3 == null))
-                        writer2.write(referenceText.toString() + "\n");
-                    else {
-                        if (Math.random() <= splitRatio) {
-                            writer2.write(referenceText.toString() + "\n");
-                        } else if (writer3 != null) {
-                            writer3.write(referenceText.toString() + "\n");
+                        if (nbInvalid > 20) {
+                            // too many consecutive synchronization issues
+                            break;
                         }
                     }
-
+                    bis.close();
+                    if (nbInvalid < 10) {
+                        if ((writer2 == null) && (writer3 != null))
+                            writer3.write(segmentation.toString() + "\n");
+                        if ((writer2 != null) && (writer3 == null))
+                            writer2.write(segmentation.toString() + "\n");
+                        else {
+                            if (Math.random() <= splitRatio)
+                                writer2.write(segmentation.toString() + "\n");
+                            else
+                                writer3.write(segmentation.toString() + "\n");
+                        }
+                    } else {
+                        LOGGER.warn(name + " / too many synchronization issues, file not used in training data and to be fixed!");
+                    }
                 } catch (Exception e) {
                     LOGGER.error("Fail to open or process raw file", e);
                 }
