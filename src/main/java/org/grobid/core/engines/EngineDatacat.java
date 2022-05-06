@@ -61,12 +61,14 @@ public class EngineDatacat extends Engine {
      * the current full text model on a new PDF
      *
      * @param inputFile    : the path of the PDF file to be processed
-     * @param pathOutput   : the path where to put the CRF feature file and  the annotated TEI representation (the
-     *                      file to be corrected for gold-level training data)
+     * @param pathRaw      : the path where to put the CRF feature file
+     * @param pathTEI      : the path where to put the annotated TEI representation (the
+     *                       file to be corrected for gold-level training data)
      * @param id           : an optional ID to be used in the TEI file, -1 if not used
      */
-    public void createTrainingSegmenter(File inputFile, String pathOutput,  int id) {
-        parsers.getDatacatSegmenterParser().createTrainingDatacatSegmenter(inputFile, pathOutput, id);
+    public void createTrainingSegmenter(File inputFile, String pathRaw, String pathTEI, int id) {
+        System.out.println(inputFile.getPath());
+        parsers.getDatacatSegmenterParser().createTrainingFromPDF(inputFile, pathRaw, pathTEI, id);
     }
 
     /**
@@ -83,17 +85,17 @@ public class EngineDatacat extends Engine {
     }
 
     /**
-     * Process all the PDF in a given directory with a segmentation process and
+     * Process all the PDF in a given directory with a monograph process and
      * produce the corresponding training data format files for manual
      * correction. The goal of this method is to help to produce additional
      * traning data based on an existing model.
      *
      * @param directoryPath - the path to the directory containing PDF to be processed.
      * @param resultPath    - the path to the directory where the results as XML files
-     *                      shall be written.
+     *                        and CRF feature files shall be written.
      * @param ind           - identifier integer to be included in the resulting files to
-     *                      identify the training case. This is optional: no identifier
-     *                      will be included if ind = -1
+     *                        identify the training case. This is optional: no identifier
+     *                        will be included if ind = -1
      * @return the number of processed files.
      */
     public int batchCreateTrainingSegmenter(String directoryPath, String resultPath, int ind) {
@@ -119,9 +121,9 @@ public class EngineDatacat extends Engine {
             }
             for (final File pdfFile : refFiles) {
                 try {
-                    createTrainingSegmenter(pdfFile, resultPath, ind + n);
+                    createTrainingSegmenter(pdfFile, resultPath, resultPath, ind + n);
                 } catch (final Exception exp) {
-                    LOGGER.error("An error occurred while processing the following pdf: "
+                    LOGGER.error("An error occured while processing the following pdf: "
                         + pdfFile.getPath(), exp);
                 }
                 if (ind != -1)
@@ -130,7 +132,7 @@ public class EngineDatacat extends Engine {
 
             return refFiles.length;
         } catch (final Exception exp) {
-            throw new GrobidException("An exception occurred while running Grobid batch.", exp);
+            throw new GrobidException("An exception occured while running Grobid batch.", exp);
         }
     }
 

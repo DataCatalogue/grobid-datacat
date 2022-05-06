@@ -35,7 +35,6 @@ public class TEIDatacatSegmenterSaxParser extends DefaultHandler {
 
     public TEIDatacatSegmenterSaxParser() {
         labeled = new ArrayList<String>();
-        //currentTags = new Stack<String>();
         accumulator = new StringBuffer();
     }
 
@@ -104,18 +103,20 @@ public class TEIDatacatSegmenterSaxParser extends DefaultHandler {
                 upperTag = currentTag;
                 upperQname = "body";
             } else if (qName.equals("back")) {
-                //currentTags.push("<other>");
                 currentTag = "<back>";
-                //upperTag = currentTag;
-                //upperQname = "titlePage";
+                upperTag = currentTag;
+                upperQname = "back";
+            } else if (qName.equals("annex")) {
+                currentTag = "<annex>";
+                upperTag = currentTag;
+                upperQname = "annex";
             } else if (qName.equals("other")) {
                 //currentTags.push("<other>");
                 currentTag = "<other>";
-            } else if (qName.equals("annex")) {
-                currentTag = "<annex>";
-                //upperTag = currentTag;
-                upperQname = "annex";
-            }
+            } /*else {
+                logger.error("Invalid element name: " + qName + " - it will be mapped to the label <other>");
+                currentTag = "<other>";
+            }*/
         }
     }
 
@@ -125,16 +126,17 @@ public class TEIDatacatSegmenterSaxParser extends DefaultHandler {
             surfaceTag = "<other>";
         }
         if ((qName.equals("front")) || (qName.equals("body")) || (qName.equals("back")) ||
-            (qName.equals("annex")) || (qName.equals("other"))
-        ) {
+            (qName.equals("annex")) || (qName.equals("other"))) {
             String text = getText();
             text = text.replace("\n", " ");
             text = text.replace("\r", " ");
             text = text.replace("  ", " ");
             boolean begin = true;
-
+//System.out.println(text);
             // we segment the text line by line first
+            //StringTokenizer st = new StringTokenizer(text, "\n", true);
             String[] tokens = text.split("\\+L\\+");
+            //while (st.hasMoreTokens()) {
             boolean page = false;
             for(int p=0; p<tokens.length; p++) {
                 //String line = st.nextToken().trim();
@@ -145,20 +147,28 @@ public class TEIDatacatSegmenterSaxParser extends DefaultHandler {
                     continue;
                 if (line.indexOf("+PAGE+") != -1) {
                     // page break should be a distinct feature
+                    //labeled.add("@newpage\n");
                     line = line.replace("+PAGE+", "");
                     page = true;
                 }
 
+                //StringTokenizer st = new StringTokenizer(line, " \t");
                 StringTokenizer st = new StringTokenizer(line, " \t\f\u00A0");
                 if (!st.hasMoreTokens())
                     continue;
                 String tok = st.nextToken();
+
+                /*StringTokenizer st = new StringTokenizer(line, TextUtilities.delimiters, true);
+                if (!st.hasMoreTokens())
+                    continue;
+                String tok = st.nextToken().trim();*/
 
                 if (tok.length() == 0)
                     continue;
 
                 if (surfaceTag == null) {
                     // this token belongs to a chunk to ignored
+                    //System.out.println("\twarning: surfaceTag is null for token '"+tok+"' - it will be tagged with label <other>");
                     surfaceTag = "<other>";
                 }
 
@@ -169,8 +179,10 @@ public class TEIDatacatSegmenterSaxParser extends DefaultHandler {
                     labeled.add(tok + " " + surfaceTag + "\n");
                 }
                 if (page) {
+                    //labeled.add("@newpage\n");
                     page = false;
                 }
+                //}
             }
             accumulator.setLength(0);
         }

@@ -5,6 +5,7 @@ import org.grobid.core.engines.config.GrobidAnalysisConfig;
 import org.grobid.core.factory.GrobidDatacatFactory;
 import org.grobid.core.main.batch.GrobidMainArgs;
 import org.grobid.core.main.batch.GrobidDatacatMainArgs;
+import org.grobid.core.main.batch.GrobidDatacatMainArgs;
 import org.grobid.core.utilities.IOUtilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,11 +59,12 @@ public class ProcessEngineDatacat implements Closeable {
     }
 
     /**
-     * Generate training data for the segmentation model
+     * Generate training data for the monograph model from provided directory of PDF documents.
      *
      * @param pGbdArgs The parameters.
+     * @throws Exception
      */
-    public void createTrainingSegmenter(final GrobidDatacatMainArgs pGbdArgs) {
+    public void createTrainingSegmenter(final GrobidDatacatMainArgs pGbdArgs) throws Exception {
         inferPdfInputPath(pGbdArgs);
         inferOutputPath(pGbdArgs);
         int result = getEngine().batchCreateTrainingSegmenter(pGbdArgs.getPath2Input(), pGbdArgs.getPath2Output(), -1);

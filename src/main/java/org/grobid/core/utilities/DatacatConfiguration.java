@@ -22,17 +22,17 @@ public class DatacatConfiguration {
 
     public static DatacatConfiguration getInstance(String projectRootPath) {
 
-        DatacatConfiguration datacatConfiguration = null;
+        DatacatConfiguration DatacatConfiguration = null;
         try {
             ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
             if (projectRootPath == null)
-                datacatConfiguration = mapper.readValue(new File("resources/config/grobid-datacat.yaml"), DatacatConfiguration.class);
+                DatacatConfiguration  = mapper.readValue(new File("resources/config/grobid-datacat.yaml"), DatacatConfiguration.class);
             else
-                datacatConfiguration = mapper.readValue(new File(projectRootPath + "/resources/config/grobid-datacat-report.yaml"), DatacatConfiguration.class);
+                DatacatConfiguration  = mapper.readValue(new File(projectRootPath + "/resources/config/grobid-datacat.yaml"), DatacatConfiguration.class);
         } catch(Exception e) {
-            LOGGER.error("The config file does not appear valid, see resources/config/grobid-medical-report.yaml", e);
+            LOGGER.error("The config file does not appear valid, see resources/config/grobid-datacat.yaml", e);
         }
-        return datacatConfiguration;
+        return DatacatConfiguration ;
     }
 
     // sequence labeling models

@@ -34,7 +34,6 @@ public class FeaturesVectorDatacatSegmenter {
     public boolean month = false;
     public boolean email = false;
     public boolean http = false;
-    //public boolean acronym = false;
     public String punctType = null; // one of NOPUNCT, OPENBRACKET, ENDBRACKET, DOT, COMMA, HYPHEN, QUOTE, PUNCT (default)
     public int relativeDocumentPosition = -1;
     public int relativePagePosition = -1;
@@ -68,7 +67,7 @@ public class FeaturesVectorDatacatSegmenter {
         else
             res.append(" " + string);
 
-        // lowercase string
+        // lowercase first string
         res.append(" " + string.toLowerCase());
 
         // prefix (4)
@@ -77,19 +76,13 @@ public class FeaturesVectorDatacatSegmenter {
         res.append(" " + TextUtilities.prefix(string, 3));
         res.append(" " + TextUtilities.prefix(string, 4));
 
-        //TODO: ajouter suffix?
-
         // block information (1)
         if (blockStatus != null)
             res.append(" " + blockStatus);
-        //res.append(" 0");
 
         // line information (1)
         if (lineStatus != null)
             res.append(" " + lineStatus);
-
-        // line alignment/identation information (1)
-        //res.append(" " + alignmentStatus);
 
         // page information (1)
         res.append(" " + pageStatus);
@@ -126,7 +119,7 @@ public class FeaturesVectorDatacatSegmenter {
         else
             res.append(" 0");
 
-        // lexical information (9)
+        // lexical information (7)
         if (properName)
             res.append(" 1");
         else
@@ -170,10 +163,10 @@ public class FeaturesVectorDatacatSegmenter {
         res.append(" " + relativeDocumentPosition);
 
         // relative page position coordinate (1)
-        //res.append(" " + relativePagePosition);
+        res.append(" " + relativePagePosition);
 
         // relative page position characters (1)
-        res.append(" " + relativePagePositionChar);
+        //res.append(" " + relativePagePositionChar);
 
         // punctuation profile
         if ( (punctuationProfile == null) || (punctuationProfile.length() == 0) ) {
@@ -193,7 +186,7 @@ public class FeaturesVectorDatacatSegmenter {
         res.append(" " + lineLength);
 
         // current block length on a predefined scale and relative to the longest block of the current page
-        // res.append(" " + blockLength);
+        //res.append(" " + blockLength);
 
         if (bitmapAround) {
             res.append(" 1");
@@ -226,24 +219,8 @@ public class FeaturesVectorDatacatSegmenter {
             res.append(" 0");
         }
 
-        // space with previous block, discretised (1)
-        //res.append(" " + spacingWithPreviousBlock);
-        //res.append(" " + 0);
-
-        // character density of the previous block, discretised (1)
-        //res.append(" " + characterDensity);
-        //res.append(" " + 0);
-
-        // label - for training data (1)
-        /*if (label != null)
-              res.append(" " + label + "\n");
-          else
-              res.append(" 0\n");
-          */
-
         res.append("\n");
 
         return res.toString();
     }
-
 }

@@ -1,7 +1,11 @@
 package org.grobid.trainer;
 
 import org.grobid.core.GrobidModels;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import org.grobid.core.main.GrobidHomeFinder;
 import org.grobid.core.exceptions.GrobidException;
+import org.grobid.core.utilities.DatacatConfiguration;
 import org.grobid.core.utilities.GrobidProperties;
 import org.grobid.core.utilities.UnicodeUtil;
 import org.grobid.trainer.sax.TEIDatacatSegmenterSaxParser;
@@ -12,6 +16,7 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
 import java.util.List;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -52,7 +57,7 @@ public class DatacatSegmenterTrainer extends AbstractTrainer {
     }
 
     /**
-     * Add the selected features for the monograph model
+     * Add the selected features for the segmentation model
      *
      * @param sourceTEIPathLabel path to corpus TEI files
      * @param sourceRawPathLabel path to corpus raw files
@@ -62,10 +67,10 @@ public class DatacatSegmenterTrainer extends AbstractTrainer {
      * @return number of examples
      */
     public int addFeaturesDatacatSegmenter(String sourceTEIPathLabel,
-                                    String sourceRawPathLabel,
-                                    final File trainingOutputPath,
-                                    final File evalOutputPath,
-                                    double splitRatio) {
+                                       String sourceRawPathLabel,
+                                       final File trainingOutputPath,
+                                       final File evalOutputPath,
+                                       double splitRatio) {
         int totalExamples = 0;
         try {
             System.out.println("sourceTEIPathLabel: " + sourceTEIPathLabel);
@@ -144,7 +149,7 @@ FileUtils.writeStringToFile(new File("/tmp/expected-"+name+".txt"), temp.toStrin
 
                     int q = 0;
                     BufferedReader bis = new BufferedReader(
-                            new InputStreamReader(new FileInputStream(theRawFile), "UTF8"));
+                        new InputStreamReader(new FileInputStream(theRawFile), "UTF8"));
                     StringBuilder segmentation = new StringBuilder();
                     String line = null;
                     int l = 0;
@@ -184,7 +189,7 @@ FileUtils.writeStringToFile(new File("/tmp/expected-"+name+".txt"), temp.toStrin
                                 nbInvalid++;
                                 // let's reuse the latest tag
                                 if (previousTag != null)
-                                   segmentation.append(line).append(" ").append(previousTag);
+                                    segmentation.append(line).append(" ").append(previousTag);
                                 break;
                             }
                         }
@@ -209,7 +214,7 @@ FileUtils.writeStringToFile(new File("/tmp/expected-"+name+".txt"), temp.toStrin
                         LOGGER.warn(name + " / too many synchronization issues, file not used in training data and to be fixed!");
                     }
                 } catch (Exception e) {
-                   LOGGER.error("Fail to open or process raw file", e);
+                    LOGGER.error("Fail to open or process raw file", e);
                 }
             }
 
