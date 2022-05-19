@@ -53,6 +53,7 @@ public class EngineDatacat extends Engine {
      *                     file, -1 if not used
      */
     public void createTrainingBlank(File inputFile, String pathRaw, String pathTEI,  int id) {
+        System.out.println(inputFile.getPath());
         parsers.getDatacatSegmenterParser().createBlankTrainingFromPDF(inputFile, pathRaw, pathTEI, id);
     }
 

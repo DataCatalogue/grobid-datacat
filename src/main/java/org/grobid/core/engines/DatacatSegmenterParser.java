@@ -636,32 +636,33 @@ public class DatacatSegmenterParser extends AbstractParser {
      * @param pathTEI   path to TEI, the file is not labeled yet
      * @param id        id
      */
-    public Document createBlankTrainingFromPDF(File inputFile,
+    public void createBlankTrainingFromPDF(File inputFile,
                                                String pathRaw,
                                                String pathTEI,
                                                int id) {
         DocumentSource documentSource = null;
-        Document doc = null;
-        List<Block> blocks = null;
-        Writer writer = null;
-        StringBuilder builder = null;
-        String lang = null;
-        Language langID = null;
+
         try {
-            builder = new StringBuilder();
             if (!inputFile.exists()) {
-                throw new GrobidResourceException("Cannot train for monograph, because file '" +
+                throw new GrobidResourceException("Cannot train the Segmenter model, because file '" +
                     inputFile.getAbsolutePath() + "' does not exists.");
             }
+
+            // read from the first until the last page of the document
+            documentSource = DocumentSource.fromPdf(inputFile, -1, -1, true, true, true);
+            Document doc = new Document(documentSource);
+
             String pdfFileName = inputFile.getName();
+            File outputTEIFile = new File(pathTEI + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.monograph.tei.xml"));
+            File outputRawFile = new File(pathRaw + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.monograph"));
 
-            File outputTEIFile = new File(pathTEI + "/" + pdfFileName.replace(".pdf", ".training.monograph.tei.xml"));
-            File outputRawFile = new File(pathRaw + "/" + pdfFileName.replace(".pdf", ".training.monograph"));
-
-            documentSource = DocumentSource.fromPdf(inputFile, -1, -1, false, true, true);
-            doc = new Document(documentSource);
             doc.addTokenizedDocument(GrobidAnalysisConfig.defaultInstance());
-            blocks = doc.getBlocks();
+
+            if (doc.getBlocks() == null) {
+                throw new Exception("PDF parsing resulted in empty content");
+            }
+            doc.produceStatistics();
+            List<Block> blocks = doc.getBlocks();
 
             if (blocks == null) {
                 throw new Exception("PDF parsing resulted in empty content");
@@ -675,51 +676,29 @@ public class DatacatSegmenterParser extends AbstractParser {
                         break;
                 }
 
-                langID = languageUtilities.getInstance().runLanguageId(contentSample);
+                Language langID = languageUtilities.getInstance().runLanguageId(contentSample);
+                String lang;
                 if (langID != null) {
                     lang = langID.getLang();
                 } else {
-                    lang = "en"; // by default, id = english
+                    lang = "fr"; // by default, id is "english"
                 }
 
-                builder.append("<?xml version=\"1.0\" ?>\n<tei xml:space=\"preserve\">\n\t<teiHeader>\n\t\t<fileDesc xml:id=\"" + id +
-                    "\"/>\n\t</teiHeader>\n\t<text xml:lang=\"" + lang + "\">\n");
+                // if we work with blocks
+                //String monographFeatures =  getAllBlocksFeatured(doc);
 
-                // output an XML document based on the provided outline and the tokenization
-                List<LayoutToken> tokens = doc.getTokenizations();
-                // create blank training data
-                if (tokens != null) {
-                    for (LayoutToken token : tokens) {
-                        if (token.getText() != null) {
-                            builder.append(TextUtilities.HTMLEncode(token.getText()));
-                        }
-                    }
-                }
+                // if we work with lines
+                String segmenterFeatures = getAllLinesFeatured(doc);
+                List<LayoutToken> tokenizations = doc.getTokenizations(); // the tokenization for all documents
 
-                builder.append("</text>\n</tei>");
-                // write the TEI file
-                writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), "UTF-8");
-                writer.write(builder.toString());
-                writer.close();
-
-                // besides the tagged TEI file, we also need the raw file with some key layout featuresAsString
-                // gather the features by blocks
-                //String rawText = getAllBlocksFeatured(doc);
-
-                // gather the features by lines
-                String rawText = getAllLinesFeatured(doc);
-
-                // Let us now take care of the raw file
-                writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), "UTF-8");
-                writer.write(rawText);
+                // we write the data with features yet unlabeled
+                Writer writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), "UTF-8");
+                writer.write(segmenterFeatures + "\n");
                 writer.close();
             }
-
-            return doc;
-
         } catch (Exception e) {
             throw new GrobidException("An exception occurred while running Grobid training" +
-                " data generation for datacat.", e);
+                " data generation for monograph.", e);
         } finally {
             DocumentSource.close(documentSource, true, true, true);
         }
