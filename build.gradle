@@ -162,7 +162,7 @@ ext.getArg = { propName, defaultVal ->
 task train_datacat_segmenter_split(dependsOn: 'classes', type: JavaExec, group: 'training') {
     mainClass = 'org.grobid.trainer.DatacatTrainerRunner'
     classpath = sourceSets.main.runtimeClasspath
-    args 2, 'datacat-segmenter', '-gH', getArg('gH', '../grobid-home'), '-s', getArg('s', '0.95')
+    args 2, 'datacat-segmenter', '-gH', getArg('gH', '../grobid-home'), '-s', getArg('s', '0.90')
     jvmArgs '-Xmx3072m'
 }
 
