@@ -844,13 +844,6 @@ public class DatacatSegmenterParser extends AbstractParser {
      * @param tokenizations toks
      * @return extraction
      */
-    /**
-     * Extract results from a labelled full text in the training format without any string modification.
-     *
-     * @param result        reult
-     * @param tokenizations toks
-     * @return extraction
-     */
     public StringBuffer trainingExtraction(String result,
                                             List<LayoutToken> tokenizations,
                                             Document doc) {
