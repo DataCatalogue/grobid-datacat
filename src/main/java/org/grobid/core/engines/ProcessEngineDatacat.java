@@ -94,7 +94,7 @@ public class ProcessEngineDatacat implements Closeable {
     public void createTrainingBlankBody(final GrobidDatacatMainArgs pGbdArgs) throws Exception {
         inferPdfInputPath(pGbdArgs);
         inferOutputPath(pGbdArgs);
-        int result = getEngine().batchCreateTrainingBody(pGbdArgs.getPath2Input(), pGbdArgs.getPath2Output(), -1);
+        int result = getEngine().batchCreateTrainingBlankBody(pGbdArgs.getPath2Input(), pGbdArgs.getPath2Output(), -1);
         LOGGER.info(result + " files processed.");
     }
 

@@ -20,7 +20,7 @@ import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 
 
 /**
- * A main class of medical report batch processes.
+ * A main class of datacat report batch processes.
  */
 public class GrobidDatacatMain {
     private static Logger LOGGER = LoggerFactory.getLogger(GrobidDatacatMain.class);

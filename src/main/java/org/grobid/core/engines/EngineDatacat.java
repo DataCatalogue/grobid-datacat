@@ -59,7 +59,7 @@ public class EngineDatacat extends Engine {
 
     public void createTrainingBlankBody(File inputFile, String pathOutput,  int id) {
         System.out.println(inputFile.getPath());
-        parsers.getDatacatBodySegmentationParser().createBlankTrainingFromPDF(inputFile, pathOutput , id);
+        parsers.getDatacatBodySegmentationParser().createBlankTrainingFromPDF(inputFile, pathOutput, id);
     }
 
     /**
