@@ -57,7 +57,7 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
     private Lexicon lexicon = Lexicon.getInstance();
 
-    public DatacatBodySegmentationParser(EngineDatacatParsers parsers) {
+    public DatacatBodySegmentationParser() {
         super(GrobidModels.DATACAT_BODY_SEGMENTATION);
         this.parsers = parsers;
         tmpPath = GrobidProperties.getTempPath();
@@ -109,8 +109,6 @@ public class DatacatBodySegmentationParser extends AbstractParser {
             } else {
                 LOGGER.debug("Fulltext model: The featured body is empty");
             }
-
-            toTEI(doc, resultBody, layoutTokenization);
             return doc;
         } catch (GrobidException e) {
             throw e;
@@ -956,6 +954,10 @@ public class DatacatBodySegmentationParser extends AbstractParser {
         return res;
     }
 
-
+    @Override
+    public void close() throws IOException {
+        super.close();
+        // ...
+    }
 
 }

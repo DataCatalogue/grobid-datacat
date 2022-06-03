@@ -57,6 +57,11 @@ public class EngineDatacat extends Engine {
         parsers.getDatacatSegmenterParser().createBlankTrainingFromPDF(inputFile, pathRaw, pathTEI, id);
     }
 
+    public void createTrainingBlankBody(File inputFile, String pathOutput,  int id) {
+        System.out.println(inputFile.getPath());
+        parsers.getDatacatBodySegmentationParser().createBlankTrainingFromPDF(inputFile, pathOutput , id);
+    }
+
     /**
      * Create training data for all models based on the application of
      * the current full text model on a new PDF
@@ -70,6 +75,13 @@ public class EngineDatacat extends Engine {
     public void createTrainingSegmenter(File inputFile, String pathRaw, String pathTEI, int id) {
         System.out.println(inputFile.getPath());
         parsers.getDatacatSegmenterParser().createTrainingFromPDF(inputFile, pathRaw, pathTEI, id);
+    }
+
+    public void createTrainingBody(File inputFile,
+                                   String pathOutput,
+                                   int id) {
+        System.out.println(inputFile.getPath());
+        parsers.getDatacatBodySegmentationParser().createTraining(inputFile, pathOutput , id);
     }
 
     /**
@@ -227,6 +239,82 @@ public class EngineDatacat extends Engine {
             for (final File pdfFile : refFiles) {
                 try {
                     extractTxtFromPDF(pdfFile, resultPath, ind + n);
+                } catch (final Exception exp) {
+                    LOGGER.error("An error occurred while processing the following pdf: "
+                        + pdfFile.getPath(), exp);
+                }
+                if (ind != -1)
+                    n++;
+            }
+
+            return refFiles.length;
+        } catch (final Exception exp) {
+            throw new GrobidException("An exception occurred while running Grobid batch.", exp);
+        }
+    }
+
+    public int batchCreateTrainingBlankBody(String directoryPath, String resultPath, int ind) {
+        try {
+            File path = new File(directoryPath);
+            // we process all pdf files in the directory
+            File[] refFiles = path.listFiles(new FilenameFilter() {
+                public boolean accept(File dir, String name) {
+                    System.out.println(name);
+                    return name.endsWith(".pdf") || name.endsWith(".PDF");
+                }
+            });
+
+            if (refFiles == null)
+                return 0;
+
+            System.out.println(refFiles.length + " files to be processed.");
+
+            int n = 0;
+            if (ind == -1) {
+                // for undefined identifier (value at -1), we initialize it to 0
+                n = 1;
+            }
+            for (final File pdfFile : refFiles) {
+                try {
+                    createTrainingBlankBody(pdfFile, resultPath, ind + n);
+                } catch (final Exception exp) {
+                    LOGGER.error("An error occurred while processing the following pdf: "
+                        + pdfFile.getPath(), exp);
+                }
+                if (ind != -1)
+                    n++;
+            }
+
+            return refFiles.length;
+        } catch (final Exception exp) {
+            throw new GrobidException("An exception occurred while running Grobid batch.", exp);
+        }
+    }
+
+    public int batchCreateTrainingBody(String directoryPath, String resultPath, int ind) {
+        try {
+            File path = new File(directoryPath);
+            // we process all pdf files in the directory
+            File[] refFiles = path.listFiles(new FilenameFilter() {
+                public boolean accept(File dir, String name) {
+                    System.out.println(name);
+                    return name.endsWith(".pdf") || name.endsWith(".PDF");
+                }
+            });
+
+            if (refFiles == null)
+                return 0;
+
+            System.out.println(refFiles.length + " files to be processed.");
+
+            int n = 0;
+            if (ind == -1) {
+                // for undefined identifier (value at -1), we initialize it to 0
+                n = 1;
+            }
+            for (final File pdfFile : refFiles) {
+                try {
+                    createTrainingBody(pdfFile, resultPath, ind + n);
                 } catch (final Exception exp) {
                     LOGGER.error("An error occurred while processing the following pdf: "
                         + pdfFile.getPath(), exp);

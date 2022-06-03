@@ -6,12 +6,13 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 
 /**
- * A list of parser for the grobid-medical-report sub-project
+ * A list of parser for the grobid-datacat sub-project
  */
 public class EngineDatacatParsers extends EngineParsers {
     public static final Logger LOGGER = LoggerFactory.getLogger(EngineDatacatParsers.class);
 
     private DatacatSegmenterParser datacatSegmenterParser = null;
+    private DatacatBodySegmentationParser datacatBodySegmentationParser = null;
 
     public DatacatSegmenterParser getDatacatSegmenterParser() {
         if (datacatSegmenterParser == null) {
@@ -24,12 +25,24 @@ public class EngineDatacatParsers extends EngineParsers {
         return datacatSegmenterParser;
     }
 
+    public DatacatBodySegmentationParser getDatacatBodySegmentationParser() {
+        if (datacatBodySegmentationParser == null) {
+            synchronized (this) {
+                if (datacatBodySegmentationParser == null) {
+                    datacatBodySegmentationParser = new DatacatBodySegmentationParser();
+                }
+            }
+        }
+        return datacatBodySegmentationParser;
+    }
+
 
     /**
      * Init all model, this will also load the model into memory
      */
     public void initAll() {
         datacatSegmenterParser = getDatacatSegmenterParser();
+        datacatBodySegmentationParser = getDatacatBodySegmentationParser();
     }
 
     @Override
@@ -40,6 +53,12 @@ public class EngineDatacatParsers extends EngineParsers {
             datacatSegmenterParser.close();
             datacatSegmenterParser = null;
             LOGGER.debug("CLOSING datacatSegmenterParser");
+        }
+
+        if (datacatBodySegmentationParser != null) {
+            datacatBodySegmentationParser.close();
+            datacatBodySegmentationParser = null;
+            LOGGER.debug("CLOSING datacatBodySegmentationParser");
         }
 
         LOGGER.debug("==> All resources closed");
