@@ -79,12 +79,9 @@ public class DatacatSegmenterParser extends AbstractParser {
     private FeatureFactory featureFactory = FeatureFactory.getInstance();
 
     private File tmpPath = null;
-    private EngineParsers parsers;
 
     public DatacatSegmenterParser() {
         super(GrobidModels.DATACAT_SEGMENTER);
-        this.parsers = parsers;
-        tmpPath = GrobidProperties.getTempPath();
     }
 
     /*

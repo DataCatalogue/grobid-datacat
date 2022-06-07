@@ -29,7 +29,7 @@ public class EngineDatacatParsers extends EngineParsers {
         if (datacatBodySegmentationParser == null) {
             synchronized (this) {
                 if (datacatBodySegmentationParser == null) {
-                    datacatBodySegmentationParser = new DatacatBodySegmentationParser();
+                    datacatBodySegmentationParser = new DatacatBodySegmentationParser(this);
                 }
             }
         }

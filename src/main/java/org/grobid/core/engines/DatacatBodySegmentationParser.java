@@ -57,7 +57,7 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
     private Lexicon lexicon = Lexicon.getInstance();
 
-    public DatacatBodySegmentationParser() {
+    public DatacatBodySegmentationParser(EngineDatacatParsers parsers) {
         super(GrobidModels.DATACAT_BODY_SEGMENTATION);
         this.parsers = parsers;
         tmpPath = GrobidProperties.getTempPath();
@@ -704,12 +704,51 @@ public class DatacatBodySegmentationParser extends AbstractParser {
             String pdfFileName = inputFile.getName();
             Writer writer = null;
 
-            // segment first with medical report segmenter model (yes, it's assumed that the segmentation model exists from the previous process
-            doc = parsers.getDatacatSegmenterParser().processing(documentSource, config);
+            // path for medical report segmenter model
+            File outputTEIFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.medical.blank.tei.xml"));
+            File outputRawFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.medical"));
+
+            // 1. MEDICAL REPORT SEGMENTER MODEL
+            documentSource = DocumentSource.fromPdf(inputFile, -1, -1, false, true, true);
+            doc = new Document(documentSource);
+            doc.addTokenizedDocument(config);
+
+            if (doc.getBlocks() == null) {
+                throw new Exception("PDF parsing resulted in empty content");
+            }
+            doc.produceStatistics();
+
+            // create training data for the medical report segmenter model
+            String featuredData = parsers.getDatacatSegmenterParser().getAllLinesFeatured(doc);
+
+            List<LayoutToken> tokenizationsFull = doc.getTokenizations();
+
+            // we write first the featurized segmentation data)
+            writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), StandardCharsets.UTF_8);
+            writer.write(featuredData + "\n");
+            writer.close();
+
+            // also write the raw text as seen before segmentation
+            StringBuffer rawtxt = new StringBuffer();
+            for (LayoutToken txtline : tokenizationsFull) {
+                rawtxt.append(TextUtilities.HTMLEncode(txtline.getText()));
+            }
+
+            // lastly, write the featurized yet unlabeled data (for the annotation process)
+            if (isNotBlank(featuredData) && isNotBlank(rawtxt)) {
+                // write the TEI file to reflect the extact layout of the text as extracted from the pdf
+                writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), StandardCharsets.UTF_8);
+                writer.write("<?xml version=\"1.0\" ?>\n<tei xml:space=\"preserve\">\n\t<teiHeader>\n\t\t<fileDesc xml:id=\"" + pdfFileName.replace(".pdf", "") +
+                    "\"/>\n\t</teiHeader>\n\t<text xml:lang=\"fr\">\n");
+
+                writer.write(rawtxt.toString());
+                writer.write("\n\t</text>\n</tei>\n");
+                writer.close();
+            }
             // 8. FULL-MEDICAL-TEXT MODEL
             // path for blank full-medical-text model
-            File outputTEIFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.full.medical.text.blank.tei.xml"));
-            File outputRawFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.full.medical.text"));
+            outputTEIFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.full.medical.text.blank.tei.xml"));
+            outputRawFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.full.medical.text"));
 
             // first, call the medical-report-segmenter model to have high level segmentation
             doc = parsers.getDatacatSegmenterParser().processing(documentSource, GrobidAnalysisConfig.defaultInstance());
