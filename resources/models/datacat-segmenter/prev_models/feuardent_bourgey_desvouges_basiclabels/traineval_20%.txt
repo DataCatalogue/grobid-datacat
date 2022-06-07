@@ -1,0 +1,954 @@
+
+> Task :train_datacat_segmenter_split
+11:14:20.030 [main] WARN org.grobid.core.main.GrobidHomeFinder - No Grobid property was provided. Attempting to find Grobid home in the current directory...
+11:14:20.031 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+11:14:20.031 [main] WARN org.grobid.core.main.GrobidHomeFinder - *** USING GROBID HOME: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home
+11:14:20.031 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+path2GbdHome=../grobid-home   path2GbdProperties=../grobid-home/config/grobid.properties
+11:14:20.034 [main] DEBUG org.grobid.core.utilities.GrobidProperties - synchronized getNewInstance
+11:14:20.034 [main] WARN org.grobid.core.main.GrobidHomeFinder - No Grobid property was provided. Attempting to find Grobid home in the current directory...
+11:14:20.034 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+11:14:20.034 [main] WARN org.grobid.core.main.GrobidHomeFinder - *** USING GROBID HOME: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home
+11:14:20.034 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+11:14:20.034 [main] DEBUG org.grobid.core.utilities.GrobidProperties - loading grobid config yaml
+11:14:20.034 [main] WARN org.grobid.core.main.GrobidHomeFinder - Grobid config file location was not explicitly set via 'org.grobid.config' system variable, defaulting to: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/config/grobid.yaml
+11:14:20.157 [main] DEBUG org.grobid.core.utilities.GrobidProperties - loading pdfalto command path
+11:14:20.158 [main] DEBUG org.grobid.core.utilities.GrobidProperties - pdfalto executable home directory set to /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/pdfalto/lin-64
+11:14:20.163 [main] INFO org.grobid.core.main.LibraryLoader - Loading external native sequence labelling library
+11:14:20.163 [main] DEBUG org.grobid.core.main.LibraryLoader - /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/lib/lin-64
+11:14:20.165 [main] INFO org.grobid.core.main.LibraryLoader - Loading Wapiti native library...
+11:14:20.166 [main] INFO org.grobid.core.main.LibraryLoader - Native library for sequence labelling loaded
+11:14:20.166 [main] DEBUG org.grobid.core.lexicon.Lexicon - Get new instance of Lexicon
+11:14:20.166 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating dictionary
+11:14:20.166 [main] INFO org.grobid.core.lexicon.Lexicon - End of Initialization of dictionary
+11:14:20.166 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating names
+11:14:20.166 [main] INFO org.grobid.core.lexicon.Lexicon - End of initialization of names
+11:14:20.409 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating country codes
+11:14:20.409 [main] INFO org.grobid.core.lexicon.Lexicon - End of initialization of country codes
+sourceTEIPathLabel: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/tei
+sourceRawPathLabel: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/raw
+trainingOutputPath: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/tmp/datacat-segmenter4911478517245896684.train
+evalOutputPath: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/tmp/datacat-segmenter4447683579847390492.test
+507 tei files
+11:14:20.471 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779206d.training.datacat.tei.xml
+11:14:20.523 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778458h.training.datacat.tei.xml
+11:14:20.568 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10580_19260125.training.datacat.tei.xml
+11:14:20.572 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781821z.training.datacat.tei.xml
+11:14:20.578 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779365m.training.datacat.tei.xml
+11:14:20.579 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780625m.training.datacat.tei.xml
+11:14:20.600 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782226.training.datacat.tei.xml
+11:14:20.605 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781557.training.datacat.tei.xml
+11:14:20.610 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805770.training.datacat.tei.xml
+11:14:20.623 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-cb40908886q.training.datacat.tei.xml
+11:14:20.632 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805488.training.datacat.tei.xml
+11:14:20.655 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k12438933.training.datacat.tei.xml
+11:14:20.662 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778562r.training.datacat.tei.xml
+11:14:20.679 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05911_19210114.training.datacat.tei.xml
+11:14:20.682 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03638_19170329.training.datacat.tei.xml
+11:14:20.688 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779220p.training.datacat.tei.xml
+11:14:20.737 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778072d.training.datacat.tei.xml
+11:14:20.757 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791381.training.datacat.tei.xml
+11:14:20.818 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777550.training.datacat.tei.xml
+11:14:20.824 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778463t.training.datacat.tei.xml
+11:14:20.831 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97818580.training.datacat.tei.xml
+11:14:20.835 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778211d.training.datacat.tei.xml
+11:14:20.860 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780627f.training.datacat.tei.xml
+11:14:20.897 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773865.training.datacat.tei.xml
+11:14:20.902 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777971s.training.datacat.tei.xml
+11:14:20.910 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04683_19190708.training.datacat.tei.xml
+11:14:20.940 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773279.training.datacat.tei.xml
+11:14:20.952 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779624q.training.datacat.tei.xml
+11:14:20.963 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779405p.training.datacat.tei.xml
+11:14:20.987 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779838f.training.datacat.tei.xml
+11:14:21.007 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777565p.training.datacat.tei.xml
+11:14:21.012 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778278k.training.datacat.tei.xml
+11:14:21.030 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780585j.training.datacat.tei.xml
+11:14:21.049 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778372f.training.datacat.tei.xml
+11:14:21.053 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778078.training.datacat.tei.xml
+11:14:21.073 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782293.training.datacat.tei.xml
+11:14:21.076 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778117j.training.datacat.tei.xml
+11:14:21.077 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773331.training.datacat.tei.xml
+11:14:21.078 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778167f.training.datacat.tei.xml
+11:14:21.084 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780622c.training.datacat.tei.xml
+11:14:21.085 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06801_19220111.training.datacat.tei.xml
+11:14:21.088 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778082s.training.datacat.tei.xml
+11:14:21.106 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773383.training.datacat.tei.xml
+11:14:21.109 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778645k.training.datacat.tei.xml
+11:14:21.116 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778355x.training.datacat.tei.xml
+11:14:21.133 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05175_19200315.training.datacat.tei.xml
+11:14:21.137 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783837.training.datacat.tei.xml
+11:14:21.139 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778068h.training.datacat.tei.xml
+11:14:21.143 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780569f.training.datacat.tei.xml
+11:14:21.146 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97786267.training.datacat.tei.xml
+11:14:21.147 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778539h.training.datacat.tei.xml
+11:14:21.168 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798712.training.datacat.tei.xml
+11:14:21.175 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778024b.training.datacat.tei.xml
+11:14:21.177 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777416v.training.datacat.tei.xml
+11:14:21.208 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782456.training.datacat.tei.xml
+11:14:21.212 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806580.training.datacat.tei.xml
+11:14:21.227 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778029d.training.datacat.tei.xml
+11:14:21.229 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777569b.training.datacat.tei.xml
+11:14:21.235 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778090b.training.datacat.tei.xml
+11:14:21.238 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778182.training.datacat.tei.xml
+11:14:21.240 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780035.training.datacat.tei.xml
+11:14:21.241 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779143b.training.datacat.tei.xml
+11:14:21.257 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777995.training.datacat.tei.xml
+11:14:21.260 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777635w.training.datacat.tei.xml
+11:14:21.266 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777812k.training.datacat.tei.xml
+11:14:21.270 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780650p.training.datacat.tei.xml
+11:14:21.272 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784239.training.datacat.tei.xml
+11:14:21.277 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773687.training.datacat.tei.xml
+11:14:21.284 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778583x.training.datacat.tei.xml
+11:14:21.287 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780888.training.datacat.tei.xml
+11:14:21.290 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778339t.training.datacat.tei.xml
+11:14:21.296 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783748.training.datacat.tei.xml
+11:14:21.299 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778001b.training.datacat.tei.xml
+11:14:21.304 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777738g.training.datacat.tei.xml
+11:14:21.316 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777980r.training.datacat.tei.xml
+11:14:21.319 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782686.training.datacat.tei.xml
+11:14:21.331 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778607w.training.datacat.tei.xml
+11:14:21.333 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778377h.training.datacat.tei.xml
+11:14:21.341 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05042_19200207.training.datacat.tei.xml
+11:14:21.343 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778036j.training.datacat.tei.xml
+11:14:21.357 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798356.training.datacat.tei.xml
+11:14:21.367 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780573b.training.datacat.tei.xml
+11:14:21.408 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778232k.training.datacat.tei.xml
+11:14:21.410 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778396v.training.datacat.tei.xml
+11:14:21.416 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781112.training.datacat.tei.xml
+11:14:21.428 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10107_19250611.training.datacat.tei.xml
+11:14:21.429 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97775930.training.datacat.tei.xml
+11:14:21.431 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10452_19251209.training.datacat.tei.xml
+11:14:21.434 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780553k.training.datacat.tei.xml
+11:14:21.440 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05217_19200325.training.datacat.tei.xml
+11:14:21.445 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782901.training.datacat.tei.xml
+11:14:21.455 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778014z.training.datacat.tei.xml
+11:14:21.458 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777764z.training.datacat.tei.xml
+11:14:21.471 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03426_19160629.training.datacat.tei.xml
+11:14:21.475 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784573.training.datacat.tei.xml
+11:14:21.478 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779865b.training.datacat.tei.xml
+11:14:21.494 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05072_19200214.training.datacat.tei.xml
+11:14:21.495 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778584b.training.datacat.tei.xml
+11:14:21.498 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778183j.training.datacat.tei.xml
+11:14:21.508 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779105n.training.datacat.tei.xml
+11:14:21.515 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97775893.training.datacat.tei.xml
+11:14:21.534 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97786304.training.datacat.tei.xml
+11:14:21.535 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791470.training.datacat.tei.xml
+11:14:21.542 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778235t.training.datacat.tei.xml
+11:14:21.554 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780555d.training.datacat.tei.xml
+11:14:21.560 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10412_19251202.training.datacat.tei.xml
+11:14:21.562 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778316t.training.datacat.tei.xml
+11:14:21.566 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778055w.training.datacat.tei.xml
+11:14:21.570 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778460k.training.datacat.tei.xml
+11:14:21.572 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777795h.training.datacat.tei.xml
+11:14:21.579 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781468.training.datacat.tei.xml
+11:14:21.581 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779670z.training.datacat.tei.xml
+11:14:21.628 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778555m.training.datacat.tei.xml
+11:14:21.645 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07830_19230207.training.datacat.tei.xml
+11:14:21.651 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777648h.training.datacat.tei.xml
+11:14:21.655 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 2148-bpt6k97784009.training.datacat.tei.xml
+11:14:21.655 [main] ERROR org.grobid.trainer.AbstractTrainer - The raw file does not exist: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/raw/2148-bpt6k97784009.training.datacat
+11:14:21.655 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03907_19171218.training.datacat.tei.xml
+11:14:21.660 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777351z.training.datacat.tei.xml
+11:14:21.668 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778269m.training.datacat.tei.xml
+11:14:21.670 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777366d.training.datacat.tei.xml
+11:14:21.686 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778151k.training.datacat.tei.xml
+11:14:21.693 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806298.training.datacat.tei.xml
+11:14:21.696 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783889.training.datacat.tei.xml
+11:14:21.698 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780495.training.datacat.tei.xml
+11:14:21.703 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778291f.training.datacat.tei.xml
+11:14:21.708 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779407h.training.datacat.tei.xml
+11:14:21.740 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778244s.training.datacat.tei.xml
+11:14:21.742 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781327.training.datacat.tei.xml
+11:14:21.754 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97794011.training.datacat.tei.xml
+11:14:21.784 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781876.training.datacat.tei.xml
+11:14:21.788 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10432_19251207.training.datacat.tei.xml
+11:14:21.791 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777446.training.datacat.tei.xml
+11:14:21.800 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777969q.training.datacat.tei.xml
+11:14:21.801 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9797045r.training.datacat.tei.xml
+11:14:21.805 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776243.training.datacat.tei.xml
+11:14:21.814 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777791v.training.datacat.tei.xml
+11:14:21.820 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777784q.training.datacat.tei.xml
+11:14:21.823 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784610.training.datacat.tei.xml
+11:14:21.825 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03200_19171025.training.datacat.tei.xml
+11:14:21.834 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798267.training.datacat.tei.xml
+11:14:21.874 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778296h.training.datacat.tei.xml
+11:14:21.878 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791937.training.datacat.tei.xml
+11:14:21.885 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778422w.training.datacat.tei.xml
+11:14:21.891 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777394q.training.datacat.tei.xml
+11:14:21.899 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791010.training.datacat.tei.xml
+11:14:21.912 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806491.training.datacat.tei.xml
+11:14:21.931 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04754_19191027.training.datacat.tei.xml
+11:14:21.932 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777641m.training.datacat.tei.xml
+11:14:21.933 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774037.training.datacat.tei.xml
+11:14:21.940 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779868k.training.datacat.tei.xml
+11:14:21.981 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778560x.training.datacat.tei.xml
+11:14:21.997 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777781g.training.datacat.tei.xml
+11:14:22.004 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777798r.training.datacat.tei.xml
+11:14:22.009 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780676x.training.datacat.tei.xml
+11:14:22.018 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778414b.training.datacat.tei.xml
+11:14:22.022 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778061m.training.datacat.tei.xml
+11:14:22.026 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779863h.training.datacat.tei.xml
+11:14:22.035 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778398p.training.datacat.tei.xml
+11:14:22.036 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1242112x.training.datacat.tei.xml
+11:14:22.054 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779344f.training.datacat.tei.xml
+11:14:22.055 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03202_19171215.training.datacat.tei.xml
+11:14:22.058 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06770_19211222.training.datacat.tei.xml
+11:14:22.061 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785776.training.datacat.tei.xml
+11:14:22.064 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97786371.training.datacat.tei.xml
+11:14:22.068 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779633p.training.datacat.tei.xml
+11:14:22.072 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778273h.training.datacat.tei.xml
+11:14:22.075 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792584.training.datacat.tei.xml
+11:14:22.076 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777630t.training.datacat.tei.xml
+11:14:22.080 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05380_19200510.training.datacat.tei.xml
+11:14:22.081 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792517.training.datacat.tei.xml
+11:14:22.091 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06756_19211219.training.datacat.tei.xml
+11:14:22.094 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778023x.training.datacat.tei.xml
+11:14:22.096 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778176d.training.datacat.tei.xml
+11:14:22.098 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777646p.training.datacat.tei.xml
+11:14:22.112 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778468w.training.datacat.tei.xml
+11:14:22.125 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798675.training.datacat.tei.xml
+11:14:22.132 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07685_19221216.training.datacat.tei.xml
+11:14:22.135 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777779d.training.datacat.tei.xml
+11:14:22.137 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03902_19171215.training.datacat.tei.xml
+11:14:22.140 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779867.training.datacat.tei.xml
+11:14:22.143 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05988_19210209.training.datacat.tei.xml
+11:14:22.145 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781090.training.datacat.tei.xml
+11:14:22.147 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778462d.training.datacat.tei.xml
+11:14:22.151 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV02982_19140606.training.datacat.tei.xml
+11:14:22.153 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03916_19171222.training.datacat.tei.xml
+11:14:22.153 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778070k.training.datacat.tei.xml
+11:14:22.163 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779400m.training.datacat.tei.xml
+11:14:22.219 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777775r.training.datacat.tei.xml
+11:14:22.220 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777793p.training.datacat.tei.xml
+11:14:22.240 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778192h.training.datacat.tei.xml
+11:14:22.242 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05800_19201204.training.datacat.tei.xml
+11:14:22.243 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777782w.training.datacat.tei.xml
+11:14:22.249 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1248327x.training.datacat.tei.xml
+11:14:22.260 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778553s.training.datacat.tei.xml
+11:14:22.272 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03052_19140625.training.datacat.tei.xml
+11:14:22.276 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780678r.training.datacat.tei.xml
+11:14:22.281 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10030_19250518.training.datacat.tei.xml
+11:14:22.287 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97793750.training.datacat.tei.xml
+11:14:22.303 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97793980.training.datacat.tei.xml
+11:14:22.304 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9796972f.training.datacat.tei.xml
+11:14:22.307 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777743s.training.datacat.tei.xml
+11:14:22.324 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08892_19240312.training.datacat.tei.xml
+11:14:22.326 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776510.training.datacat.tei.xml
+11:14:22.339 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780643j.training.datacat.tei.xml
+11:14:22.353 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774193.training.datacat.tei.xml
+11:14:22.357 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778421g.training.datacat.tei.xml
+11:14:22.366 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777371q.training.datacat.tei.xml
+11:14:22.376 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07850_19230212.training.datacat.tei.xml
+11:14:22.380 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777975f.training.datacat.tei.xml
+11:14:22.384 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778156n.training.datacat.tei.xml
+11:14:22.397 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06812_19220116.training.datacat.tei.xml
+11:14:22.398 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777750x.training.datacat.tei.xml
+11:14:22.402 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792762.training.datacat.tei.xml
+11:14:22.413 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777334f.training.datacat.tei.xml
+11:14:22.426 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777594d.training.datacat.tei.xml
+11:14:22.432 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779224b.training.datacat.tei.xml
+11:14:22.469 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777822z.training.datacat.tei.xml
+11:14:22.480 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778276r.training.datacat.tei.xml
+11:14:22.484 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777806v.training.datacat.tei.xml
+11:14:22.493 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773598.training.datacat.tei.xml
+11:14:22.504 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09509_19241208.training.datacat.tei.xml
+11:14:22.508 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777815t.training.datacat.tei.xml
+11:14:22.514 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03038_19140622.training.datacat.tei.xml
+11:14:22.524 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777357.training.datacat.tei.xml
+11:14:22.539 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784647.training.datacat.tei.xml
+11:14:22.543 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779402f.training.datacat.tei.xml
+11:14:22.601 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777614q.training.datacat.tei.xml
+11:14:22.609 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774141.training.datacat.tei.xml
+11:14:22.614 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777819g.training.datacat.tei.xml
+11:14:22.621 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10420_19251203.training.datacat.tei.xml
+11:14:22.626 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777617z.training.datacat.tei.xml
+11:14:22.632 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05248_19200401.training.datacat.tei.xml
+11:14:22.633 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778597z.training.datacat.tei.xml
+11:14:22.645 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783607.training.datacat.tei.xml
+11:14:22.646 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780836.training.datacat.tei.xml
+11:14:22.649 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780428.training.datacat.tei.xml
+11:14:22.655 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97969711.training.datacat.tei.xml
+11:14:22.670 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777993c.training.datacat.tei.xml
+11:14:22.672 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776317.training.datacat.tei.xml
+11:14:22.683 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780883r.training.datacat.tei.xml
+11:14:22.705 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777751b.training.datacat.tei.xml
+11:14:22.708 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779111c.training.datacat.tei.xml
+11:14:22.714 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1240127r.training.datacat.tei.xml
+11:14:22.721 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1249350g.training.datacat.tei.xml
+11:14:22.727 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777621v.training.datacat.tei.xml
+11:14:22.735 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777987n.training.datacat.tei.xml
+11:14:22.739 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779630f.training.datacat.tei.xml
+11:14:22.746 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779834s.training.datacat.tei.xml
+11:14:22.747 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778026.training.datacat.tei.xml
+11:14:22.763 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781762j.training.datacat.tei.xml
+11:14:22.772 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1244133q.training.datacat.tei.xml
+11:14:22.777 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97796343.training.datacat.tei.xml
+11:14:22.812 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03680_19170503.training.datacat.tei.xml
+11:14:22.816 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774089.training.datacat.tei.xml
+11:14:22.824 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07823_19230205.training.datacat.tei.xml
+11:14:22.837 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783036.training.datacat.tei.xml
+11:14:22.842 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780682n.training.datacat.tei.xml
+11:14:22.863 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777364k.training.datacat.tei.xml
+11:14:22.870 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778000x.training.datacat.tei.xml
+11:14:22.876 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06808_19220113.training.datacat.tei.xml
+11:14:22.878 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776406.training.datacat.tei.xml
+11:14:22.880 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778093k.training.datacat.tei.xml
+11:14:22.886 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777619s.training.datacat.tei.xml
+11:14:22.889 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773709.training.datacat.tei.xml
+11:14:22.905 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778585r.training.datacat.tei.xml
+11:14:22.911 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778582h.training.datacat.tei.xml
+11:14:22.912 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777823c.training.datacat.tei.xml
+11:14:22.922 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780655r.training.datacat.tei.xml
+11:14:22.946 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777314p.training.datacat.tei.xml
+11:14:22.969 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777966g.training.datacat.tei.xml
+11:14:22.971 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778171b.training.datacat.tei.xml
+11:14:22.980 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777373j.training.datacat.tei.xml
+11:14:22.988 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777355m.training.datacat.tei.xml
+11:14:22.992 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780657k.training.datacat.tei.xml
+11:14:22.999 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05966_19210131.training.datacat.tei.xml
+11:14:23.000 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781824.training.datacat.tei.xml
+11:14:23.014 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773791.training.datacat.tei.xml
+11:14:23.029 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773153.training.datacat.tei.xml
+11:14:23.032 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782382.training.datacat.tei.xml
+11:14:23.037 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779238c.training.datacat.tei.xml
+11:14:23.048 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07799_19230131.training.datacat.tei.xml
+11:14:23.052 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780677b.training.datacat.tei.xml
+11:14:23.059 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780687q.training.datacat.tei.xml
+11:14:23.064 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9797044b.training.datacat.tei.xml
+11:14:23.066 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778483k.training.datacat.tei.xml
+11:14:23.078 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785791.training.datacat.tei.xml
+11:14:23.080 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97794063.training.datacat.tei.xml
+11:14:23.084 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778369z.training.datacat.tei.xml
+11:14:23.086 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785635.training.datacat.tei.xml
+11:14:23.092 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778636m.training.datacat.tei.xml
+11:14:23.101 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06796_19220109.training.datacat.tei.xml
+11:14:23.102 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778167.training.datacat.tei.xml
+11:14:23.106 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778086f.training.datacat.tei.xml
+11:14:23.109 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781124s.training.datacat.tei.xml
+11:14:23.112 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778221s.training.datacat.tei.xml
+11:14:23.124 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776332.training.datacat.tei.xml
+11:14:23.137 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778564k.training.datacat.tei.xml
+11:14:23.144 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777332m.training.datacat.tei.xml
+11:14:23.153 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778048r.training.datacat.tei.xml
+11:14:23.156 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03000_19140612.training.datacat.tei.xml
+11:14:23.163 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805525.training.datacat.tei.xml
+11:14:23.180 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779627z.training.datacat.tei.xml
+11:14:23.189 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778481r.training.datacat.tei.xml
+11:14:23.194 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774230.training.datacat.tei.xml
+11:14:23.199 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779363s.training.datacat.tei.xml
+11:14:23.212 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778285q.training.datacat.tei.xml
+11:14:23.244 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV08847_19240227.training.datacat.tei.xml
+11:14:23.247 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10078_19250603.training.datacat.tei.xml
+11:14:23.249 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777992z.training.datacat.tei.xml
+11:14:23.256 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777634g.training.datacat.tei.xml
+11:14:23.268 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779689.training.datacat.tei.xml
+11:14:23.275 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03909_19171219.training.datacat.tei.xml
+11:14:23.279 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1240055q.training.datacat.tei.xml
+11:14:23.297 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778144f.training.datacat.tei.xml
+11:14:23.299 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777736n.training.datacat.tei.xml
+11:14:23.306 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07797_19230129.training.datacat.tei.xml
+11:14:23.348 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798534.training.datacat.tei.xml
+11:14:23.354 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781827f.training.datacat.tei.xml
+11:14:23.358 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07697_19221218.training.datacat.tei.xml
+11:14:23.368 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784736.training.datacat.tei.xml
+11:14:23.375 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778627n.training.datacat.tei.xml
+11:14:23.378 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781814t.training.datacat.tei.xml
+11:14:23.384 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776154.training.datacat.tei.xml
+11:14:23.398 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97775915.training.datacat.tei.xml
+11:14:23.402 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780661g.training.datacat.tei.xml
+11:14:23.406 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777824s.training.datacat.tei.xml
+11:14:23.407 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777352c.training.datacat.tei.xml
+11:14:23.438 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777362r.training.datacat.tei.xml
+11:14:23.440 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779250t.training.datacat.tei.xml
+11:14:23.447 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07272_19220527.training.datacat.tei.xml
+11:14:23.449 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777999v.training.datacat.tei.xml
+11:14:23.449 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778046x.training.datacat.tei.xml
+11:14:23.452 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779245h.training.datacat.tei.xml
+11:14:23.459 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779815.training.datacat.tei.xml
+11:14:23.462 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782471.training.datacat.tei.xml
+11:14:23.464 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780675h.training.datacat.tei.xml
+11:14:23.469 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05300_19200419.training.datacat.tei.xml
+11:14:23.478 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778145v.training.datacat.tei.xml
+11:14:23.485 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777765.training.datacat.tei.xml
+11:14:23.499 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792658.training.datacat.tei.xml
+11:14:23.523 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784751.training.datacat.tei.xml
+11:14:23.528 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03675_19170430.training.datacat.tei.xml
+11:14:23.543 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97801143.training.datacat.tei.xml
+11:14:23.547 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792532.training.datacat.tei.xml
+11:14:23.552 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777413m.training.datacat.tei.xml
+11:14:23.561 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04623_19190623.training.datacat.tei.xml
+11:14:23.562 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778599s.training.datacat.tei.xml
+11:14:23.571 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781820j.training.datacat.tei.xml
+11:14:23.576 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778470z.training.datacat.tei.xml
+11:14:23.578 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778640h.training.datacat.tei.xml
+11:14:23.633 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781698.training.datacat.tei.xml
+11:14:23.646 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778112g.training.datacat.tei.xml
+11:14:23.649 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778087v.training.datacat.tei.xml
+11:14:23.652 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778041.training.datacat.tei.xml
+11:14:23.655 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777597n.training.datacat.tei.xml
+11:14:23.659 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778465n.training.datacat.tei.xml
+11:14:23.663 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97775611.training.datacat.tei.xml
+11:14:23.674 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778181q.training.datacat.tei.xml
+11:14:23.685 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780652h.training.datacat.tei.xml
+11:14:23.693 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10009_19250513.training.datacat.tei.xml
+11:14:23.696 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781379.training.datacat.tei.xml
+11:14:23.700 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778168v.training.datacat.tei.xml
+11:14:23.706 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CVP03195_19160629.training.datacat.tei.xml
+11:14:23.711 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778405c.training.datacat.tei.xml
+11:14:23.713 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782278.training.datacat.tei.xml
+11:14:23.717 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV04838_19191127.training.datacat.tei.xml
+11:14:23.719 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779222h.training.datacat.tei.xml
+11:14:23.728 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779822k.training.datacat.tei.xml
+11:14:23.745 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805666.training.datacat.tei.xml
+11:14:23.746 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777349w.training.datacat.tei.xml
+11:14:23.823 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778063f.training.datacat.tei.xml
+11:14:23.826 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778384n.training.datacat.tei.xml
+11:14:23.832 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05830_19201211.training.datacat.tei.xml
+11:14:23.833 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781023.training.datacat.tei.xml
+11:14:23.836 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778165m.training.datacat.tei.xml
+11:14:23.838 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05011_19200126.training.datacat.tei.xml
+11:14:23.845 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k12402755.training.datacat.tei.xml
+11:14:23.853 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97817681.training.datacat.tei.xml
+11:14:23.867 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779904.training.datacat.tei.xml
+11:14:23.867 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777420r.training.datacat.tei.xml
+11:14:23.926 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779277g.training.datacat.tei.xml
+11:14:23.940 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778341w.training.datacat.tei.xml
+11:14:23.948 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792213.training.datacat.tei.xml
+11:14:23.971 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778130d.training.datacat.tei.xml
+11:14:23.974 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777649x.training.datacat.tei.xml
+11:14:23.976 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9634425j.training.datacat.tei.xml
+11:14:23.983 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778472s.training.datacat.tei.xml
+11:14:23.989 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779259j.training.datacat.tei.xml
+11:14:24.017 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778543d.training.datacat.tei.xml
+11:14:24.026 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778467g.training.datacat.tei.xml
+11:14:24.028 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05338_19200428.training.datacat.tei.xml
+11:14:24.042 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785598.training.datacat.tei.xml
+11:14:24.045 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778552c.training.datacat.tei.xml
+11:14:24.068 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777407w.training.datacat.tei.xml
+11:14:24.081 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792443.training.datacat.tei.xml
+11:14:24.085 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778274x.training.datacat.tei.xml
+11:14:24.089 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792710.training.datacat.tei.xml
+11:14:24.091 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07881_19230221.training.datacat.tei.xml
+11:14:24.092 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779956.training.datacat.tei.xml
+11:14:24.094 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777375c.training.datacat.tei.xml
+11:14:24.108 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779142x.training.datacat.tei.xml
+11:14:24.116 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779149t.training.datacat.tei.xml
+11:14:24.140 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805703.training.datacat.tei.xml
+11:14:24.144 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781483.training.datacat.tei.xml
+11:14:24.149 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780653x.training.datacat.tei.xml
+11:14:24.154 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778282g.training.datacat.tei.xml
+11:14:24.160 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778050t.training.datacat.tei.xml
+11:14:24.163 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806513.training.datacat.tei.xml
+11:14:24.165 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783622.training.datacat.tei.xml
+11:14:24.167 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9796973v.training.datacat.tei.xml
+11:14:24.186 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10114_19250612.training.datacat.tei.xml
+11:14:24.188 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778052n.training.datacat.tei.xml
+11:14:24.192 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780532.training.datacat.tei.xml
+11:14:24.194 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777605r.training.datacat.tei.xml
+11:14:24.197 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781661.training.datacat.tei.xml
+11:14:24.199 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV05309_19200422.training.datacat.tei.xml
+11:14:24.201 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779836m.training.datacat.tei.xml
+11:14:24.205 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778471c.training.datacat.tei.xml
+11:14:24.212 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782849.training.datacat.tei.xml
+11:14:24.217 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773724.training.datacat.tei.xml
+11:14:24.229 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778105b.training.datacat.tei.xml
+11:14:24.230 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773880.training.datacat.tei.xml
+11:14:24.232 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777810r.training.datacat.tei.xml
+11:14:24.237 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779246x.training.datacat.tei.xml
+11:14:24.254 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779209n.training.datacat.tei.xml
+11:14:24.288 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV09664_19250206.training.datacat.tei.xml
+11:14:24.289 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777632n.training.datacat.tei.xml
+11:14:24.292 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1243246c.training.datacat.tei.xml
+11:14:24.305 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97796254.training.datacat.tei.xml
+11:14:24.316 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778329f.training.datacat.tei.xml
+11:14:24.319 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06057_19210228.training.datacat.tei.xml
+11:14:24.320 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785561.training.datacat.tei.xml
+11:14:24.322 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783800.training.datacat.tei.xml
+11:14:24.324 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780213.training.datacat.tei.xml
+11:14:24.326 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780176.training.datacat.tei.xml
+11:14:24.328 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779356n.training.datacat.tei.xml
+11:14:24.329 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782864.training.datacat.tei.xml
+11:14:24.330 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777803m.training.datacat.tei.xml
+11:14:24.341 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778103h.training.datacat.tei.xml
+11:14:24.342 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779240f.training.datacat.tei.xml
+11:14:24.343 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97794048.training.datacat.tei.xml
+11:14:24.347 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779231g.training.datacat.tei.xml
+11:14:24.353 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778639v.training.datacat.tei.xml
+11:14:24.354 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783088.training.datacat.tei.xml
+11:14:24.356 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776295.training.datacat.tei.xml
+11:14:24.358 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07646_19221208.training.datacat.tei.xml
+11:14:24.393 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779635h.training.datacat.tei.xml
+11:14:24.396 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778031g.training.datacat.tei.xml
+11:14:24.407 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781822c.training.datacat.tei.xml
+11:14:24.419 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780747.training.datacat.tei.xml
+11:14:24.434 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778294p.training.datacat.tei.xml
+11:14:24.441 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778480b.training.datacat.tei.xml
+11:14:24.443 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780654b.training.datacat.tei.xml
+11:14:24.453 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780631b.training.datacat.tei.xml
+11:14:24.460 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778129r.training.datacat.tei.xml
+11:14:24.463 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778064v.training.datacat.tei.xml
+11:14:24.466 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779629s.training.datacat.tei.xml
+11:14:24.470 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781750.training.datacat.tei.xml
+11:14:24.474 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777581s.training.datacat.tei.xml
+11:14:24.477 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779191d.training.datacat.tei.xml
+11:14:24.478 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780940.training.datacat.tei.xml
+11:14:24.479 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806832.training.datacat.tei.xml
+11:14:24.479 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06822_19220120.training.datacat.tei.xml
+11:14:24.480 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777337p.training.datacat.tei.xml
+11:14:24.488 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777976v.training.datacat.tei.xml
+11:14:24.489 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778158g.training.datacat.tei.xml
+11:14:24.494 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782723.training.datacat.tei.xml
+11:14:24.514 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782634.training.datacat.tei.xml
+11:14:24.521 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780050.training.datacat.tei.xml
+11:14:24.530 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781823s.training.datacat.tei.xml
+11:14:24.540 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773650.training.datacat.tei.xml
+11:14:24.546 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781520.training.datacat.tei.xml
+11:14:24.552 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776013.training.datacat.tei.xml
+11:14:24.559 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778336k.training.datacat.tei.xml
+11:14:24.559 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778027k.training.datacat.tei.xml
+11:14:24.562 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778375p.training.datacat.tei.xml
+11:14:24.566 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779119p.training.datacat.tei.xml
+11:14:24.574 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV07041_19220327.training.datacat.tei.xml
+11:14:24.586 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791062.training.datacat.tei.xml
+11:14:24.606 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778237n.training.datacat.tei.xml
+11:14:24.608 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778138q.training.datacat.tei.xml
+11:14:24.622 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777777k.training.datacat.tei.xml
+11:14:24.630 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777387k.training.datacat.tei.xml
+11:14:24.636 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780551r.training.datacat.tei.xml
+11:14:24.638 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778179n.training.datacat.tei.xml
+11:14:24.641 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778040f.training.datacat.tei.xml
+11:14:24.644 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806261.training.datacat.tei.xml
+11:14:24.662 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777761q.training.datacat.tei.xml
+11:14:24.664 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97796699.training.datacat.tei.xml
+11:14:24.672 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778283w.training.datacat.tei.xml
+11:14:24.674 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10104_19250610.training.datacat.tei.xml
+11:14:24.677 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777796x.training.datacat.tei.xml
+11:14:24.689 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777928.training.datacat.tei.xml
+11:14:24.695 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV06043_19210223.training.datacat.tei.xml
+11:14:24.697 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780680t.training.datacat.tei.xml
+11:14:24.698 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777643f.training.datacat.tei.xml
+11:14:24.709 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV10477_19251214.training.datacat.tei.xml
+11:14:24.711 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778530s.training.datacat.tei.xml
+11:14:24.716 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778075n.training.datacat.tei.xml
+11:14:24.723 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: CV03561_19170123.training.datacat.tei.xml
+11:14:24.725 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779882.training.datacat.tei.xml
+11:14:24.728 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777385r.training.datacat.tei.xml
+11:14:24.736 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779668w.training.datacat.tei.xml
+11:14:24.751 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97786000.training.datacat.tei.xml
+11:14:24.762 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778382t.training.datacat.tei.xml
+11:14:24.766 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778172r.training.datacat.tei.xml
+11:14:24.775 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780628v.training.datacat.tei.xml
+        epsilon: 1.0E-5
+        window: 20
+        nb max iterations: 2000
+        nb threads: 16
+* Load patterns
+* Load training data
+* Initialize the model
+* Summary
+    nb train:    401
+    nb labels:   9
+    nb blocks:   2563660
+    nb features: 23073012
+* Train the model with l-bfgs
+  [   1] obj=1350011.60 act=5517522  err=20.78%/100.00% time=11.45s/11.45s
+  [   2] obj=931633.32  act=4822082  err=20.78%/100.00% time=6.72s/18.17s
+  [   3] obj=626872.87  act=2792989  err=20.55%/100.00% time=27.72s/45.89s
+  [   4] obj=616684.56  act=3013878  err=20.78%/100.00% time=29.63s/75.52s
+  [   5] obj=569413.78  act=3012510  err=20.78%/100.00% time=29.78s/105.30s
+  [   6] obj=557953.89  act=3033764  err=20.78%/100.00% time=29.99s/135.28s
+  [   7] obj=543119.98  act=3025174  err=20.78%/100.00% time=50.43s/185.72s
+  [   8] obj=520359.14  act=3026100  err=20.78%/100.00% time=8.99s/194.71s
+  [   9] obj=466764.39  act=2808850  err=19.79%/100.00% time=9.13s/203.84s
+  [  10] obj=464513.82  act=2439718  err=20.78%/100.00% time=9.03s/212.87s
+  [  11] obj=421375.10  act=2479807  err=20.78%/100.00% time=9.05s/221.92s
+  [  12] obj=405136.76  act=2050701  err=20.78%/100.00% time=9.00s/230.92s
+  [  13] obj=375167.73  act=2045343  err=19.94%/100.00% time=9.07s/239.98s
+  [  14] obj=282085.89  act=1944113  err=10.25%/100.00% time=8.99s/248.98s
+  [  15] obj=222774.54  act=2006115  err=10.18%/100.00% time=9.04s/258.02s
+  [  16] obj=200240.14  act=1978956  err= 9.79%/100.00% time=15.85s/273.87s
+  [  17] obj=184999.68  act=1974976  err= 9.22%/100.00% time=8.92s/282.79s
+  [  18] obj=170041.24  act=1899468  err= 9.01%/100.00% time=8.98s/291.77s
+  [  19] obj=131793.08  act=1718852  err= 8.15%/100.00% time=8.95s/300.72s
+  [  20] obj=110183.51  act=1554230  err= 8.52%/100.00% time=8.91s/309.63s
+  [  21] obj=94327.12   act=1313626  err= 7.55%/100.00% time=15.89s/325.52s
+  [  22] obj=82878.23   act=1578326  err= 7.42%/100.00% time=15.98s/341.51s
+  [  23] obj=82634.39   act=1287424  err= 6.68%/100.00% time=15.91s/357.41s
+  [  24] obj=74500.74   act=1576645  err= 6.95%/100.00% time=15.92s/373.33s
+  [  25] obj=64034.66   act=1349535  err= 5.76%/100.00% time=8.95s/382.28s
+  [  26] obj=60619.52   act=1324519  err= 4.79%/100.00% time=9.03s/391.31s
+  [  27] obj=56642.49   act=1340773  err= 4.77%/100.00% time=8.94s/400.25s
+  [  28] obj=56270.94   act=1297452  err= 6.41%/100.00% time=8.97s/409.22s
+  [  29] obj=50419.24   act=1513800  err= 4.56%/100.00% time=9.05s/418.28s
+  [  30] obj=47384.09   act=1368704  err= 3.82%/100.00% time=15.83s/434.11s
+  [  31] obj=45934.29   act=1339983  err= 4.19%/100.00% time=8.93s/443.04s
+  [  32] obj=42727.75   act=1279173  err= 3.60%/100.00% time=9.06s/452.10s
+  [  33] obj=40768.79   act=1282372  err= 4.21%/100.00% time=8.98s/461.08s
+  [  34] obj=36331.02   act=1235316  err= 3.48%/100.00% time=8.99s/470.06s
+  [  35] obj=33268.96   act=1281729  err= 3.67%/100.00% time=9.00s/479.06s
+  [  36] obj=30138.20   act=1219246  err= 4.15%/100.00% time=8.99s/488.05s
+  [  37] obj=25371.83   act=1338782  err= 2.71%/100.00% time=9.01s/497.07s
+  [  38] obj=23612.55   act=1256302  err= 3.14%/97.76% time=8.93s/506.00s
+  [  39] obj=19701.01   act=1256981  err= 2.45%/93.27% time=9.02s/515.02s
+  [  40] obj=17330.33   act=1182214  err= 2.74%/87.28% time=9.00s/524.02s
+  [  41] obj=14220.43   act=1170847  err= 2.07%/84.29% time=8.99s/533.01s
+  [  42] obj=12771.70   act=1108512  err= 1.98%/82.29% time=8.92s/541.93s
+  [  43] obj=12137.46   act=1040756  err= 2.02%/82.04% time=8.93s/550.86s
+  [  44] obj=11211.27   act=1024823  err= 1.77%/80.30% time=15.89s/566.75s
+  [  45] obj=10341.20   act=997375   err= 1.68%/81.05% time=15.97s/582.71s
+  [  46] obj=9919.54    act=940876   err= 1.52%/77.81% time=8.96s/591.68s
+  [  47] obj=9061.59    act=859558   err= 1.60%/79.05% time=9.01s/600.69s
+  [  48] obj=8087.14    act=823438   err= 1.22%/75.81% time=8.95s/609.64s
+  [  49] obj=7341.36    act=761895   err= 1.21%/73.82% time=8.89s/618.53s
+  [  50] obj=6902.75    act=724515   err= 1.18%/70.07% time=8.99s/627.52s
+  [  51] obj=6592.42    act=679976   err= 1.44%/69.83% time=9.03s/636.55s
+  [  52] obj=6335.90    act=709548   err= 1.00%/66.08% time=8.91s/645.46s
+  [  53] obj=5354.80    act=659871   err= 0.98%/64.84% time=8.95s/654.41s
+  [  54] obj=5093.88    act=635272   err= 0.82%/61.85% time=8.99s/663.40s
+  [  55] obj=4811.70    act=615238   err= 0.86%/62.59% time=15.85s/679.25s
+  [  56] obj=4530.48    act=604826   err= 0.82%/59.35% time=15.94s/695.19s
+  [  57] obj=4427.60    act=581318   err= 0.86%/61.35% time=9.01s/704.20s
+  [  58] obj=4158.19    act=595767   err= 0.72%/56.86% time=9.00s/713.20s
+  [  59] obj=3946.14    act=552646   err= 0.65%/56.86% time=8.98s/722.17s
+  [  60] obj=3825.84    act=545819   err= 0.70%/56.86% time=8.98s/731.15s
+  [  61] obj=3640.49    act=528081   err= 0.56%/53.62% time=8.92s/740.07s
+  [  62] obj=3498.11    act=501424   err= 0.71%/53.62% time=8.97s/749.04s
+  [  63] obj=3308.67    act=453729   err= 0.45%/49.38% time=8.97s/758.01s
+  [  64] obj=3224.60    act=444410   err= 0.39%/49.13% time=9.02s/767.03s
+  [  65] obj=3103.97    act=419959   err= 0.30%/48.38% time=9.03s/776.06s
+  [  66] obj=2928.81    act=360316   err= 0.42%/47.13% time=9.04s/785.10s
+  [  67] obj=2839.81    act=347371   err= 0.23%/44.39% time=9.03s/794.13s
+  [  68] obj=2748.99    act=318899   err= 0.25%/43.89% time=9.00s/803.13s
+  [  69] obj=2589.10    act=266455   err= 0.25%/41.40% time=8.96s/812.09s
+  [  70] obj=2477.01    act=257838   err= 0.18%/38.90% time=8.99s/821.08s
+  [  71] obj=2412.87    act=252237   err= 0.13%/36.41% time=9.02s/830.10s
+  [  72] obj=2296.34    act=227388   err= 0.18%/33.42% time=8.95s/839.05s
+  [  73] obj=2220.73    act=219353   err= 0.10%/31.17% time=8.94s/848.00s
+  [  74] obj=2127.10    act=202790   err= 0.08%/28.43% time=8.97s/856.96s
+  [  75] obj=2036.96    act=182399   err= 0.11%/27.93% time=8.92s/865.88s
+  [  76] obj=1972.00    act=173978   err= 0.05%/24.19% time=8.94s/874.82s
+  [  77] obj=1909.56    act=160594   err= 0.05%/21.70% time=9.01s/883.84s
+  [  78] obj=1868.56    act=150128   err= 0.14%/20.70% time=8.90s/892.74s
+  [  79] obj=1826.36    act=154220   err= 0.07%/18.20% time=8.96s/901.70s
+  [  80] obj=1791.22    act=145016   err= 0.04%/16.46% time=8.92s/910.62s
+  [  81] obj=1737.21    act=130647   err= 0.07%/14.96% time=8.97s/919.59s
+  [  82] obj=1705.20    act=126608   err= 0.02%/13.72% time=9.03s/928.62s
+  [  83] obj=1674.25    act=117185   err= 0.01%/11.47% time=8.97s/937.59s
+  [  84] obj=1626.73    act=98498    err= 0.07%/10.47% time=8.94s/946.53s
+  [  85] obj=1601.08    act=97837    err= 0.04%/ 8.98% time=9.02s/955.55s
+  [  86] obj=1572.52    act=92590    err= 0.03%/ 8.73% time=9.02s/964.57s
+  [  87] obj=1553.87    act=76445    err= 0.09%/ 9.73% time=9.01s/973.57s
+  [  88] obj=1522.14    act=84900    err= 0.01%/ 7.98% time=9.01s/982.58s
+  [  89] obj=1512.33    act=77807    err= 0.03%/ 8.73% time=8.97s/991.55s
+  [  90] obj=1487.65    act=68691    err= 0.01%/ 7.23% time=9.02s/1000.57s
+  [  91] obj=1470.56    act=65424    err= 0.03%/ 6.73% time=8.98s/1009.55s
+  [  92] obj=1463.32    act=68541    err= 0.01%/ 6.73% time=8.99s/1018.55s
+  [  93] obj=1449.97    act=63473    err= 0.03%/ 5.49% time=8.98s/1027.52s
+  [  94] obj=1449.63    act=67256    err= 0.08%/ 6.98% time=8.95s/1036.47s
+  [  95] obj=1435.59    act=75369    err= 0.03%/ 5.49% time=8.88s/1045.36s
+  [  96] obj=1429.21    act=72101    err= 0.00%/ 4.74% time=9.00s/1054.35s
+  [  97] obj=1419.06    act=63678    err= 0.01%/ 5.49% time=9.01s/1063.36s
+  [  98] obj=1399.76    act=54947    err= 0.02%/ 6.98% time=8.97s/1072.34s
+  [  99] obj=1395.59    act=53767    err= 0.17%/ 6.48% time=9.03s/1081.36s
+  [ 100] obj=1385.33    act=61747    err= 0.02%/ 6.48% time=8.99s/1090.35s
+  [ 101] obj=1377.93    act=52609    err= 0.01%/ 6.23% time=8.96s/1099.31s
+  [ 102] obj=1366.80    act=48968    err= 0.02%/ 5.49% time=8.94s/1108.26s
+  [ 103] obj=1354.30    act=44797    err= 0.08%/ 5.74% time=15.80s/1124.05s
+  [ 104] obj=1345.02    act=54334    err= 0.02%/ 4.74% time=8.91s/1132.96s
+  [ 105] obj=1340.46    act=54475    err= 0.00%/ 4.49% time=29.72s/1162.68s
+  [ 106] obj=1335.10    act=47052    err= 0.00%/ 4.24% time=22.67s/1185.36s
+  [ 107] obj=1326.60    act=40061    err= 0.07%/ 3.99% time=15.82s/1201.18s
+  [ 108] obj=1316.74    act=45608    err= 0.00%/ 3.24% time=8.96s/1210.14s
+  [ 109] obj=1312.89    act=41077    err= 0.12%/ 4.24% time=8.98s/1219.12s
+  [ 110] obj=1307.81    act=55858    err= 0.00%/ 3.99% time=15.80s/1234.92s
+  [ 111] obj=1299.64    act=43527    err= 0.00%/ 3.99% time=15.83s/1250.75s
+  [ 112] obj=1295.04    act=39560    err= 0.00%/ 4.24% time=8.93s/1259.68s
+  [ 113] obj=1288.62    act=35910    err= 0.07%/ 3.99% time=8.99s/1268.67s
+  [ 114] obj=1282.09    act=42142    err= 0.00%/ 3.24% time=8.94s/1277.61s
+  [ 115] obj=1275.18    act=38907    err= 0.00%/ 3.49% time=8.90s/1286.51s
+  [ 116] obj=1266.59    act=31438    err= 0.00%/ 3.49% time=15.87s/1302.38s
+  [ 117] obj=1258.31    act=31370    err= 0.00%/ 3.74% time=8.95s/1311.33s
+  [ 118] obj=1251.38    act=29569    err= 0.01%/ 3.74% time=8.96s/1320.29s
+  [ 119] obj=1244.03    act=31401    err= 0.02%/ 3.74% time=8.88s/1329.18s
+  [ 120] obj=1237.45    act=31660    err= 0.00%/ 3.99% time=8.92s/1338.10s
+  [ 121] obj=1233.60    act=31107    err= 0.02%/ 3.99% time=8.98s/1347.08s
+  [ 122] obj=1226.95    act=35599    err= 0.00%/ 3.74% time=8.95s/1356.02s
+  [ 123] obj=1223.18    act=29475    err= 0.00%/ 3.74% time=8.88s/1364.90s
+  [ 124] obj=1217.09    act=28583    err= 0.00%/ 3.49% time=8.91s/1373.81s
+  [ 125] obj=1214.83    act=26871    err= 0.02%/ 3.49% time=9.07s/1382.88s
+  [ 126] obj=1208.73    act=28730    err= 0.00%/ 2.99% time=8.96s/1391.84s
+  [ 127] obj=1204.88    act=26276    err= 0.00%/ 2.99% time=8.90s/1400.75s
+  [ 128] obj=1201.62    act=27586    err= 0.00%/ 2.99% time=15.84s/1416.59s
+  [ 129] obj=1198.78    act=26024    err= 0.00%/ 2.99% time=15.80s/1432.39s
+  [ 130] obj=1195.66    act=27845    err= 0.00%/ 2.74% time=15.80s/1448.18s
+  [ 131] obj=1192.75    act=25807    err= 0.00%/ 2.49% time=15.93s/1464.12s
+  [ 132] obj=1192.46    act=24306    err= 0.00%/ 2.49% time=9.00s/1473.12s
+  [ 133] obj=1191.40    act=31494    err= 0.07%/ 2.99% time=15.82s/1488.93s
+  [ 134] obj=1190.95    act=31230    err= 0.00%/ 2.49% time=8.97s/1497.91s
+  [ 135] obj=1190.78    act=32609    err= 0.10%/ 3.49% time=8.97s/1506.88s
+  [ 136] obj=1185.83    act=39169    err= 0.00%/ 2.99% time=15.87s/1522.75s
+  [ 137] obj=1183.66    act=29318    err= 0.00%/ 2.99% time=8.93s/1531.68s
+  [ 138] obj=1180.24    act=24224    err= 0.00%/ 2.74% time=8.96s/1540.64s
+  [ 139] obj=1176.20    act=22305    err= 0.00%/ 2.74% time=8.90s/1549.54s
+  [ 140] obj=1174.19    act=24633    err= 0.00%/ 2.74% time=9.02s/1558.56s
+  [ 141] obj=1171.39    act=23510    err= 0.00%/ 3.24% time=9.00s/1567.56s
+  [ 142] obj=1166.62    act=21099    err= 0.00%/ 3.24% time=8.93s/1576.49s
+  [ 143] obj=1162.25    act=21333    err= 0.00%/ 3.24% time=8.97s/1585.46s
+  [ 144] obj=1160.07    act=22027    err= 0.00%/ 2.74% time=9.04s/1594.50s
+  [ 145] obj=1157.37    act=21301    err= 0.00%/ 2.99% time=8.96s/1603.46s
+  [ 146] obj=1155.09    act=20357    err= 0.00%/ 2.74% time=8.95s/1612.40s
+  [ 147] obj=1152.47    act=20156    err= 0.00%/ 2.99% time=15.95s/1628.35s
+  [ 148] obj=1151.94    act=20841    err= 0.00%/ 2.74% time=8.96s/1637.32s
+  [ 149] obj=1149.65    act=21159    err= 0.04%/ 2.99% time=8.87s/1646.19s
+  [ 150] obj=1147.29    act=29010    err= 0.00%/ 2.49% time=8.97s/1655.15s
+  [ 151] obj=1145.07    act=22093    err= 0.00%/ 2.99% time=9.02s/1664.18s
+  [ 152] obj=1143.75    act=20994    err= 0.00%/ 2.74% time=8.89s/1673.06s
+  [ 153] obj=1141.27    act=20235    err= 0.00%/ 2.74% time=9.02s/1682.08s
+  [ 154] obj=1138.83    act=19592    err= 0.00%/ 2.99% time=8.92s/1691.00s
+  [ 155] obj=1135.82    act=20014    err= 0.00%/ 2.99% time=15.98s/1706.98s
+  [ 156] obj=1135.49    act=19344    err= 0.00%/ 2.74% time=8.99s/1715.98s
+  [ 157] obj=1131.29    act=22081    err= 0.00%/ 2.74% time=9.09s/1725.06s
+  [ 158] obj=1130.48    act=19702    err= 0.00%/ 2.99% time=8.95s/1734.01s
+  [ 159] obj=1127.22    act=19893    err= 0.00%/ 3.24% time=9.00s/1743.01s
+  [ 160] obj=1126.38    act=18811    err= 0.00%/ 2.99% time=8.98s/1751.99s
+  [ 161] obj=1123.09    act=18858    err= 0.00%/ 3.24% time=8.96s/1760.95s
+  [ 162] obj=1121.39    act=17572    err= 0.00%/ 3.24% time=9.02s/1769.97s
+  [ 163] obj=1119.35    act=18526    err= 0.00%/ 3.24% time=15.82s/1785.79s
+  [ 164] obj=1118.99    act=17095    err= 0.00%/ 3.24% time=8.96s/1794.75s
+  [ 165] obj=1115.74    act=23411    err= 0.00%/ 3.24% time=15.86s/1810.61s
+  [ 166] obj=1114.37    act=17498    err= 0.00%/ 3.49% time=9.01s/1819.62s
+  [ 167] obj=1112.81    act=17579    err= 0.00%/ 3.24% time=9.00s/1828.62s
+  [ 168] obj=1111.80    act=16951    err= 0.00%/ 3.49% time=8.90s/1837.52s
+  [ 169] obj=1110.38    act=18543    err= 0.00%/ 2.99% time=8.96s/1846.48s
+  [ 170] obj=1108.64    act=17096    err= 0.00%/ 3.24% time=8.99s/1855.47s
+  [ 171] obj=1107.65    act=18232    err= 0.00%/ 2.74% time=9.01s/1864.48s
+  [ 172] obj=1105.29    act=17275    err= 0.00%/ 2.74% time=9.02s/1873.49s
+  [ 173] obj=1104.23    act=16815    err= 0.00%/ 2.49% time=8.97s/1882.46s
+  [ 174] obj=1102.00    act=16728    err= 0.00%/ 2.49% time=8.95s/1891.41s
+  [ 175] obj=1101.15    act=16489    err= 0.00%/ 2.24% time=8.97s/1900.38s
+  [ 176] obj=1098.58    act=16365    err= 0.00%/ 2.49% time=9.03s/1909.41s
+  [ 177] obj=1097.96    act=15834    err= 0.00%/ 2.49% time=8.98s/1918.39s
+  [ 178] obj=1095.44    act=15862    err= 0.00%/ 2.74% time=9.05s/1927.44s
+  [ 179] obj=1094.70    act=15836    err= 0.00%/ 2.74% time=9.00s/1936.44s
+  [ 180] obj=1092.39    act=15280    err= 0.00%/ 2.74% time=8.98s/1945.42s
+  [ 181] obj=1091.54    act=14894    err= 0.00%/ 2.74% time=8.97s/1954.39s
+  [ 182] obj=1089.21    act=14809    err= 0.00%/ 2.49% time=8.96s/1963.36s
+  [ 183] obj=1088.67    act=14789    err= 0.00%/ 2.24% time=8.98s/1972.34s
+  [ 184] obj=1086.42    act=14651    err= 0.00%/ 2.00% time=8.89s/1981.23s
+  [ 185] obj=1085.85    act=14189    err= 0.00%/ 2.24% time=8.91s/1990.14s
+  [ 186] obj=1083.87    act=14159    err= 0.00%/ 2.24% time=8.90s/1999.05s
+  [ 187] obj=1083.10    act=13717    err= 0.00%/ 2.24% time=8.96s/2008.01s
+  [ 188] obj=1081.40    act=13757    err= 0.00%/ 2.49% time=8.95s/2016.96s
+  [ 189] obj=1080.74    act=15288    err= 0.00%/ 2.24% time=8.99s/2025.95s
+  [ 190] obj=1078.96    act=13991    err= 0.00%/ 2.24% time=8.94s/2034.89s
+  [ 191] obj=1078.58    act=13584    err= 0.00%/ 2.24% time=8.96s/2043.85s
+  [ 192] obj=1076.95    act=13298    err= 0.00%/ 2.24% time=9.05s/2052.90s
+  [ 193] obj=1076.21    act=12932    err= 0.00%/ 2.24% time=9.04s/2061.94s
+  [ 194] obj=1074.77    act=12929    err= 0.00%/ 2.24% time=8.94s/2070.88s
+  [ 195] obj=1074.12    act=13106    err= 0.00%/ 2.49% time=8.90s/2079.78s
+  [ 196] obj=1072.15    act=12713    err= 0.00%/ 2.49% time=8.90s/2088.68s
+  [ 197] obj=1071.77    act=12343    err= 0.00%/ 2.24% time=9.00s/2097.68s
+  [ 198] obj=1070.99    act=13404    err= 0.00%/ 2.49% time=8.95s/2106.62s
+  [ 199] obj=1070.30    act=12656    err= 0.00%/ 2.24% time=8.98s/2115.60s
+  [ 200] obj=1068.89    act=12323    err= 0.00%/ 2.00% time=9.04s/2124.64s
+  [ 201] obj=1068.24    act=12149    err= 0.00%/ 2.24% time=8.99s/2133.62s
+  [ 202] obj=1065.94    act=13126    err= 0.00%/ 2.24% time=8.98s/2142.61s
+  [ 203] obj=1064.92    act=11893    err= 0.00%/ 2.24% time=9.04s/2151.65s
+  [ 204] obj=1064.39    act=12777    err= 0.00%/ 1.75% time=8.97s/2160.61s
+  [ 205] obj=1064.27    act=15780    err= 0.00%/ 2.49% time=8.95s/2169.57s
+  [ 206] obj=1064.26    act=18601    err= 0.00%/ 2.00% time=8.84s/2178.41s
+  [ 207] obj=1061.24    act=22114    err= 0.00%/ 2.24% time=15.79s/2194.20s
+  [ 208] obj=1060.38    act=15341    err= 0.00%/ 1.75% time=8.95s/2203.15s
+  [ 209] obj=1059.82    act=12706    err= 0.00%/ 2.24% time=15.94s/2219.09s
+  [ 210] obj=1058.80    act=12562    err= 0.00%/ 1.75% time=8.93s/2228.02s
+  [ 211] obj=1058.25    act=12129    err= 0.00%/ 1.75% time=15.98s/2244.01s
+  [ 212] obj=1057.47    act=12137    err= 0.00%/ 2.00% time=15.84s/2259.85s
+  [ 213] obj=1056.74    act=11730    err= 0.00%/ 2.24% time=15.94s/2275.79s
+  [ 214] obj=1055.99    act=11786    err= 0.00%/ 2.00% time=15.92s/2291.71s
+  [ 215] obj=1054.98    act=11619    err= 0.00%/ 2.24% time=15.82s/2307.54s
+  [ 216] obj=1054.17    act=11481    err= 0.00%/ 2.00% time=15.98s/2323.52s
+  [ 217] obj=1053.07    act=11254    err= 0.00%/ 2.00% time=15.74s/2339.26s
+  [ 218] obj=1052.26    act=11075    err= 0.00%/ 1.75% time=15.92s/2355.19s
+  [ 219] obj=1051.26    act=10863    err= 0.00%/ 1.75% time=15.90s/2371.09s
+  [ 220] obj=1050.50    act=10721    err= 0.00%/ 1.50% time=15.89s/2386.98s
+  [ 221] obj=1050.33    act=10351    err= 0.00%/ 1.75% time=8.95s/2395.94s
+  [ 222] obj=1048.66    act=13151    err= 0.00%/ 1.25% time=9.00s/2404.93s
+  [ 223] obj=1047.65    act=11760    err= 0.00%/ 1.25% time=8.94s/2413.87s
+  [ 224] obj=1046.85    act=11759    err= 0.00%/ 1.25% time=8.99s/2422.86s
+  [ 225] obj=1045.95    act=11199    err= 0.00%/ 1.25% time=8.99s/2431.84s
+  [ 226] obj=1045.30    act=10908    err= 0.00%/ 1.00% time=8.99s/2440.83s
+  [ 227] obj=1044.52    act=10708    err= 0.00%/ 1.00% time=8.93s/2449.76s
+  [ 228] obj=1043.53    act=11429    err= 0.00%/ 0.75% time=8.93s/2458.69s
+  [ 229] obj=1042.66    act=10865    err= 0.00%/ 1.00% time=8.88s/2467.57s
+  [ 230] obj=1042.13    act=10899    err= 0.00%/ 0.75% time=8.92s/2476.49s
+  [ 231] obj=1041.08    act=10711    err= 0.00%/ 1.00% time=8.98s/2485.47s
+  [ 232] obj=1040.77    act=10606    err= 0.00%/ 0.75% time=8.95s/2494.42s
+  [ 233] obj=1039.60    act=10658    err= 0.00%/ 1.50% time=8.98s/2503.40s
+  [ 234] obj=1039.46    act=10398    err= 0.00%/ 1.25% time=8.92s/2512.33s
+  [ 235] obj=1038.23    act=10538    err= 0.00%/ 1.75% time=8.95s/2521.28s
+  [ 236] obj=1038.12    act=10225    err= 0.00%/ 1.75% time=8.97s/2530.25s
+  [ 237] obj=1037.17    act=10881    err= 0.00%/ 1.75% time=8.93s/2539.18s
+  [ 238] obj=1037.12    act=10447    err= 0.00%/ 1.75% time=8.88s/2548.06s
+  [ 239] obj=1036.26    act=12048    err= 0.00%/ 1.75% time=15.78s/2563.84s
+  [ 240] obj=1035.84    act=11012    err= 0.00%/ 1.75% time=8.99s/2572.83s
+  [ 241] obj=1035.73    act=10626    err= 0.00%/ 1.75% time=8.93s/2581.76s
+  [ 242] obj=1035.14    act=10363    err= 0.00%/ 2.00% time=8.89s/2590.65s
+  [ 243] obj=1034.18    act=10684    err= 0.00%/ 1.75% time=8.91s/2599.56s
+  [ 244] obj=1033.82    act=10261    err= 0.00%/ 1.75% time=8.95s/2608.51s
+  [ 245] obj=1033.40    act=10100    err= 0.00%/ 1.75% time=8.93s/2617.44s
+  [ 246] obj=1032.58    act=10017    err= 0.00%/ 1.75% time=16.18s/2633.62s
+  [ 247] obj=1032.27    act=9879     err= 0.00%/ 1.75% time=9.03s/2642.65s
+  [ 248] obj=1031.31    act=9887     err= 0.00%/ 2.00% time=15.77s/2658.42s
+  [ 249] obj=1030.94    act=9763     err= 0.00%/ 2.00% time=15.89s/2674.32s
+  [ 250] obj=1030.73    act=9483     err= 0.00%/ 1.75% time=8.95s/2683.26s
+  [ 251] obj=1030.12    act=10655    err= 0.00%/ 1.75% time=8.97s/2692.23s
+  [ 252] obj=1029.00    act=9838     err= 0.00%/ 1.75% time=9.04s/2701.28s
+  [ 253] obj=1028.65    act=9482     err= 0.00%/ 2.00% time=8.91s/2710.19s
+  [ 254] obj=1028.24    act=9387     err= 0.00%/ 2.00% time=8.95s/2719.14s
+  [ 255] obj=1027.65    act=9790     err= 0.00%/ 1.75% time=8.95s/2728.09s
+  [ 256] obj=1026.96    act=9329     err= 0.00%/ 1.75% time=8.89s/2736.98s
+  [ 257] obj=1026.62    act=9567     err= 0.00%/ 1.50% time=8.94s/2745.92s
+  [ 258] obj=1025.93    act=9243     err= 0.00%/ 1.50% time=8.97s/2754.89s
+  [ 259] obj=1025.71    act=9146     err= 0.00%/ 1.50% time=8.93s/2763.82s
+  [ 260] obj=1025.20    act=9033     err= 0.00%/ 1.50% time=8.97s/2772.79s
+  [ 261] obj=1024.89    act=9112     err= 0.00%/ 1.50% time=8.92s/2781.71s
+  [ 262] obj=1024.33    act=8968     err= 0.00%/ 1.50% time=8.88s/2790.59s
+  [ 263] obj=1024.08    act=9074     err= 0.00%/ 1.50% time=8.90s/2799.49s
+  [ 264] obj=1023.40    act=8986     err= 0.00%/ 1.50% time=9.01s/2808.50s
+  [ 265] obj=1023.23    act=8915     err= 0.00%/ 1.75% time=9.01s/2817.51s
+  [ 266] obj=1022.56    act=8856     err= 0.00%/ 1.75% time=8.94s/2826.45s
+  [ 267] obj=1022.32    act=8814     err= 0.00%/ 1.75% time=8.95s/2835.40s
+  [ 268] obj=1021.73    act=8718     err= 0.00%/ 2.00% time=8.94s/2844.34s
+  [ 269] obj=1021.46    act=8739     err= 0.00%/ 1.75% time=9.00s/2853.34s
+  [ 270] obj=1020.86    act=8626     err= 0.00%/ 1.75% time=8.85s/2862.19s
+  [ 271] obj=1020.67    act=8671     err= 0.00%/ 1.75% time=9.00s/2871.20s
+  [ 272] obj=1019.98    act=8617     err= 0.00%/ 1.75% time=9.01s/2880.20s
+  [ 273] obj=1019.87    act=8592     err= 0.00%/ 1.50% time=9.03s/2889.24s
+  [ 274] obj=1019.10    act=8543     err= 0.00%/ 2.00% time=8.99s/2898.23s
+  [ 275] obj=1018.89    act=8517     err= 0.00%/ 1.50% time=8.95s/2907.18s
+  [ 276] obj=1018.35    act=8429     err= 0.00%/ 2.00% time=9.04s/2916.22s
+  [ 277] obj=1018.20    act=8717     err= 0.00%/ 1.25% time=8.98s/2925.20s
+  [ 278] obj=1017.59    act=8406     err= 0.00%/ 1.25% time=8.95s/2934.15s
+  [ 279] obj=1017.56    act=8422     err= 0.00%/ 1.25% time=8.98s/2943.13s
+  [ 280] obj=1016.92    act=8307     err= 0.00%/ 1.25% time=9.01s/2952.14s
+  [ 281] obj=1016.75    act=8232     err= 0.00%/ 1.25% time=9.05s/2961.20s
+  [ 282] obj=1016.28    act=8180     err= 0.00%/ 1.25% time=9.02s/2970.22s
+  [ 283] obj=1016.23    act=8314     err= 0.00%/ 1.25% time=8.97s/2979.18s
+  [ 284] obj=1015.53    act=8149     err= 0.00%/ 1.50% time=8.92s/2988.10s
+  [ 285] obj=1015.45    act=8119     err= 0.00%/ 1.50% time=8.95s/2997.05s
+  [ 286] obj=1014.91    act=8082     err= 0.00%/ 1.50% time=8.98s/3006.03s
+  [ 287] obj=1014.75    act=8057     err= 0.00%/ 1.50% time=8.96s/3015.00s
+  [ 288] obj=1014.34    act=8002     err= 0.00%/ 1.75% time=8.98s/3023.98s
+  [ 289] obj=1014.25    act=8062     err= 0.00%/ 1.25% time=8.90s/3032.88s
+  [ 290] obj=1013.69    act=7933     err= 0.00%/ 1.75% time=8.98s/3041.86s
+  [ 291] obj=1013.56    act=7903     err= 0.00%/ 1.50% time=8.99s/3050.84s
+  [ 292] obj=1013.11    act=7822     err= 0.00%/ 1.50% time=9.00s/3059.84s
+  [ 293] obj=1013.05    act=7860     err= 0.00%/ 1.00% time=8.94s/3068.78s
+  [ 294] obj=1012.47    act=7778     err= 0.00%/ 1.00% time=8.94s/3077.72s
+  [ 295] obj=1012.39    act=7842     err= 0.00%/ 1.00% time=9.00s/3086.72s
+  [ 296] obj=1011.80    act=7710     err= 0.00%/ 1.00% time=8.96s/3095.68s
+  [ 297] obj=1011.62    act=7731     err= 0.00%/ 1.00% time=8.98s/3104.66s
+  [ 298] obj=1011.20    act=7606     err= 0.00%/ 1.00% time=9.02s/3113.67s
+  [ 299] obj=1011.03    act=7712     err= 0.00%/ 1.00% time=8.93s/3122.60s
+  [ 300] obj=1010.53    act=7568     err= 0.00%/ 1.25% time=8.95s/3131.55s
+  [ 301] obj=1010.41    act=7637     err= 0.00%/ 1.25% time=8.96s/3140.51s
+  [ 302] obj=1009.90    act=7532     err= 0.00%/ 1.25% time=8.94s/3149.44s
+  [ 303] obj=1009.76    act=7445     err= 0.00%/ 1.25% time=8.93s/3158.37s
+  [ 304] obj=1009.38    act=7427     err= 0.00%/ 1.25% time=8.96s/3167.33s
+  [ 305] obj=1009.27    act=7719     err= 0.00%/ 1.25% time=8.99s/3176.32s
+  [ 306] obj=1008.84    act=7487     err= 0.00%/ 1.25% time=8.94s/3185.26s
+  [ 307] obj=1008.75    act=7593     err= 0.00%/ 1.25% time=8.98s/3194.24s
+  [ 308] obj=1008.30    act=7458     err= 0.00%/ 1.25% time=9.09s/3203.33s
+  [ 309] obj=1008.25    act=7433     err= 0.00%/ 1.25% time=9.02s/3212.35s
+  [ 310] obj=1007.80    act=7353     err= 0.00%/ 1.25% time=8.95s/3221.29s
+  [ 311] obj=1007.71    act=7403     err= 0.00%/ 1.25% time=8.96s/3230.25s
+  [ 312] obj=1007.28    act=7270     err= 0.00%/ 1.25% time=9.03s/3239.28s
+  [ 313] obj=1007.15    act=7371     err= 0.00%/ 1.25% time=9.02s/3248.30s
+  [ 314] obj=1006.78    act=7197     err= 0.00%/ 1.25% time=9.01s/3257.30s
+  [ 315] obj=1006.68    act=7245     err= 0.00%/ 1.25% time=9.02s/3266.33s
+  [ 316] obj=1006.29    act=7141     err= 0.00%/ 1.25% time=9.06s/3275.39s
+  [ 317] obj=1006.18    act=7194     err= 0.00%/ 1.50% time=8.96s/3284.35s
+  [ 318] obj=1005.78    act=7101     err= 0.00%/ 1.25% time=9.00s/3293.36s
+  [ 319] obj=1005.69    act=7207     err= 0.00%/ 1.25% time=9.00s/3302.36s
+  [ 320] obj=1005.28    act=7115     err= 0.00%/ 1.25% time=9.08s/3311.44s
+  [ 321] obj=1005.17    act=7118     err= 0.00%/ 1.25% time=8.96s/3320.40s
+  [ 322] obj=1004.87    act=7098     err= 0.00%/ 1.25% time=8.98s/3329.38s
+  [ 323] obj=1004.84    act=7147     err= 0.00%/ 1.25% time=8.98s/3338.36s
+  [ 324] obj=1004.48    act=7053     err= 0.00%/ 1.25% time=8.98s/3347.34s
+  [ 325] obj=1004.40    act=7070     err= 0.00%/ 1.25% time=9.01s/3356.34s
+  [ 326] obj=1004.08    act=7010     err= 0.00%/ 1.25% time=8.95s/3365.29s
+  [ 327] obj=1003.93    act=7018     err= 0.00%/ 1.25% time=9.02s/3374.31s
+  [ 328] obj=1003.69    act=6946     err= 0.00%/ 1.25% time=8.97s/3383.28s
+  [ 329] obj=1003.58    act=7185     err= 0.00%/ 1.25% time=8.89s/3392.16s
+  [ 330] obj=1003.26    act=7002     err= 0.00%/ 1.25% time=8.91s/3401.07s
+  [ 331] obj=1003.19    act=7063     err= 0.00%/ 1.25% time=8.90s/3409.97s
+  [ 332] obj=1002.86    act=6957     err= 0.00%/ 1.25% time=8.99s/3418.96s
+  [ 333] obj=1002.76    act=6937     err= 0.00%/ 1.25% time=8.97s/3427.93s
+  [ 334] obj=1002.50    act=6886     err= 0.00%/ 1.25% time=9.00s/3436.93s
+  [ 335] obj=1002.43    act=6903     err= 0.00%/ 1.00% time=8.99s/3445.92s
+  [ 336] obj=1002.10    act=6876     err= 0.00%/ 1.25% time=8.97s/3454.89s
+  [ 337] obj=1002.01    act=6877     err= 0.00%/ 1.00% time=8.93s/3463.82s
+  [ 338] obj=1001.68    act=6856     err= 0.00%/ 1.00% time=8.95s/3472.77s
+  [ 339] obj=1001.56    act=6847     err= 0.00%/ 1.00% time=9.02s/3481.78s
+  [ 340] obj=1001.29    act=6747     err= 0.00%/ 1.00% time=8.92s/3490.70s
+  [ 341] obj=1001.19    act=6924     err= 0.00%/ 1.00% time=8.96s/3499.66s
+  [ 342] obj=1000.87    act=6782     err= 0.00%/ 1.00% time=8.96s/3508.63s
+  [ 343] obj=1000.82    act=6740     err= 0.00%/ 1.00% time=9.04s/3517.67s
+  [ 344] obj=1000.52    act=6709     err= 0.00%/ 1.00% time=8.96s/3526.62s
+  [ 345] obj=1000.44    act=6719     err= 0.00%/ 1.00% time=8.93s/3535.55s
+  [ 346] obj=1000.14    act=6871     err= 0.00%/ 1.00% time=8.94s/3544.49s
+  [ 347] obj=1000.12    act=6779     err= 0.00%/ 1.00% time=8.96s/3553.45s
+  [ 348] obj=999.80     act=6695     err= 0.00%/ 1.00% time=8.89s/3562.34s
+  [ 349] obj=999.76     act=6662     err= 0.00%/ 1.00% time=8.99s/3571.34s
+  [ 350] obj=999.43     act=6629     err= 0.00%/ 1.00% time=8.93s/3580.27s
+  [ 351] obj=999.35     act=6615     err= 0.00%/ 1.00% time=8.95s/3589.22s
+  [ 352] obj=999.09     act=6602     err= 0.00%/ 1.00% time=8.97s/3598.19s
+  [ 353] obj=999.08     act=6676     err= 0.00%/ 1.00% time=8.99s/3607.18s
+  [ 354] obj=998.73     act=6645     err= 0.00%/ 1.25% time=8.94s/3616.12s
+  [ 355] obj=998.69     act=6692     err= 0.00%/ 1.25% time=8.97s/3625.09s
+  [ 356] obj=998.38     act=6585     err= 0.00%/ 1.25% time=8.84s/3633.93s
+  [ 357] obj=998.28     act=6556     err= 0.00%/ 1.25% time=8.95s/3642.89s
+  [ 358] obj=998.14     act=6538     err= 0.00%/ 1.25% time=8.93s/3651.82s
+  [ 359] obj=997.99     act=6902     err= 0.00%/ 1.25% time=9.01s/3660.83s
+  [ 360] obj=997.81     act=6584     err= 0.00%/ 1.25% time=8.98s/3669.81s
+  [ 361] obj=997.68     act=6733     err= 0.00%/ 1.25% time=8.93s/3678.74s
+  [ 362] obj=997.50     act=6567     err= 0.00%/ 1.25% time=9.00s/3687.74s
+  [ 363] obj=997.44     act=6544     err= 0.00%/ 1.25% time=8.94s/3696.67s
+  [ 364] obj=997.22     act=6496     err= 0.00%/ 1.25% time=8.97s/3705.65s
+  [ 365] obj=997.17     act=6511     err= 0.00%/ 1.25% time=8.97s/3714.62s
+  [ 366] obj=996.90     act=6489     err= 0.00%/ 1.25% time=8.98s/3723.60s
+  [ 367] obj=996.81     act=6512     err= 0.00%/ 1.25% time=8.95s/3732.55s
+  [ 368] obj=996.55     act=6460     err= 0.00%/ 1.25% time=8.96s/3741.51s
+  [ 369] obj=996.49     act=6487     err= 0.00%/ 1.25% time=8.95s/3750.46s
+  [ 370] obj=996.27     act=6399     err= 0.00%/ 1.25% time=9.00s/3759.46s
+  [ 371] obj=996.18     act=6537     err= 0.00%/ 1.25% time=9.01s/3768.47s
+  [ 372] obj=995.96     act=6391     err= 0.00%/ 1.25% time=8.93s/3777.41s
+  [ 373] obj=995.88     act=6401     err= 0.00%/ 1.25% time=8.90s/3786.31s
+* Save the model
+* Done
+12:17:55.446 [main] DEBUG org.grobid.core.utilities.GrobidProperties - No configuration parameter defined for DeLFT engine for model datacat-segmenter
+12:17:55.446 [main] INFO org.grobid.core.jni.WapitiModel - Loading model: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti (size: 42337267)
+[Wapiti] Loading model: "/home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti"
+Model path: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti
+Labeling took: 5915 ms
+
+===== Field-level results =====
+
+label                accuracy     precision    recall       f1           support
+
+<annex>              98.64        77.27        85           80.95        20     
+<back>               95.23        64.29        50           56.25        36     
+<body>               89.1         69.16        70.48        69.81        105    
+<front>              71.89        56.08        45.36        50.15        183    
+
+all (micro avg.)     88.71        62.95        55.81        59.17        344    
+all (macro avg.)     88.71        66.7         62.71        64.29        344    
+
+===== Instance-level results =====
+
+Total expected instances:   105
+Correct instances:          48
+Instance-level recall:      45.71
+
+
+Split, training and evaluation for datacat-segmenter model is realized in 3824213 ms

@@ -1,0 +1,45 @@
+436 tei files
+13:54:43.836 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779206d.training.datacat.tei.xml
+[...]
+13:54:47.547 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780628v.training.datacat.tei.xml
+        epsilon: 1.0E-7
+        window: 50
+        nb max iterations: 1000
+        nb threads: 16
+* Load patterns
+* Load training data
+* Initialize the model
+* Summary
+    nb train:    405
+    nb labels:   9
+    nb blocks:   2501866
+    nb features: 22516866
+* Train the model with l-bfgs
+  [   1] obj=1456315.19 act=5464835  err=22.25%/100.00% time=11.04s/11.04s
+  [...]
+  [ 715] obj=804.87     act=4649     err= 0.00%/ 0.99% time=8.62s/6631.52s
+* Save the model
+* Done
+15:45:43.330 [main] DEBUG org.grobid.core.utilities.GrobidProperties - No configuration parameter defined for DeLFT engine for model datacat-segmenter
+15:45:43.330 [main] INFO org.grobid.core.jni.WapitiModel - Loading model: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti (size: 41682587)
+[Wapiti] Loading model: "/home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti"
+Model path: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti
+Labeling took: 2058 ms
+
+===== Field-level results =====
+
+label                accuracy     precision    recall       f1           support
+
+<annex>              98.33        87.5         87.5         87.5         8      
+<back>               97.5         88.89        80           84.21        10     
+<body>               85.83        67.86        70.37        69.09        27     
+<front>              76.67        60.53        63.89        62.16        36     
+
+all (micro avg.)     89.58        68.67        70.37        69.51        81     
+all (macro avg.)     89.58        76.19        75.44        75.74        81     
+
+===== Instance-level results =====
+
+Total expected instances:   27
+Correct instances:          15
+Instance-level recall:      55.56

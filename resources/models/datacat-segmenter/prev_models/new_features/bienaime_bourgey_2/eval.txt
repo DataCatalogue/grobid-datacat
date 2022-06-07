@@ -1,0 +1,1402 @@
+hscheith@PL1030-PRO:~/dev/grobid/grobid-datacat$ ./gradlew train_datacat_segmenter_split
+
+> Task :train_datacat_segmenter_split
+15:47:10.863 [main] WARN org.grobid.core.main.GrobidHomeFinder - No Grobid property was provided. Attempting to find Grobid home in the current directory...
+15:47:10.865 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+15:47:10.865 [main] WARN org.grobid.core.main.GrobidHomeFinder - *** USING GROBID HOME: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home
+15:47:10.865 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+path2GbdHome=../grobid-home   path2GbdProperties=../grobid-home/config/grobid.properties
+15:47:10.867 [main] DEBUG org.grobid.core.utilities.GrobidProperties - synchronized getNewInstance
+15:47:10.867 [main] WARN org.grobid.core.main.GrobidHomeFinder - No Grobid property was provided. Attempting to find Grobid home in the current directory...
+15:47:10.867 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+15:47:10.867 [main] WARN org.grobid.core.main.GrobidHomeFinder - *** USING GROBID HOME: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home
+15:47:10.867 [main] WARN org.grobid.core.main.GrobidHomeFinder - ***************************************************************
+15:47:10.867 [main] DEBUG org.grobid.core.utilities.GrobidProperties - loading grobid config yaml
+15:47:10.867 [main] WARN org.grobid.core.main.GrobidHomeFinder - Grobid config file location was not explicitly set via 'org.grobid.config' system variable, defaulting to: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/config/grobid.yaml
+15:47:10.979 [main] DEBUG org.grobid.core.utilities.GrobidProperties - loading pdfalto command path
+15:47:10.980 [main] DEBUG org.grobid.core.utilities.GrobidProperties - pdfalto executable home directory set to /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/pdfalto/lin-64
+15:47:10.983 [main] INFO org.grobid.core.main.LibraryLoader - Loading external native sequence labelling library
+15:47:10.984 [main] DEBUG org.grobid.core.main.LibraryLoader - /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/lib/lin-64
+15:47:10.986 [main] INFO org.grobid.core.main.LibraryLoader - Loading Wapiti native library...
+15:47:10.986 [main] INFO org.grobid.core.main.LibraryLoader - Native library for sequence labelling loaded
+15:47:10.987 [main] DEBUG org.grobid.core.lexicon.Lexicon - Get new instance of Lexicon
+15:47:10.987 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating dictionary
+15:47:10.987 [main] INFO org.grobid.core.lexicon.Lexicon - End of Initialization of dictionary
+15:47:10.987 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating names
+15:47:10.987 [main] INFO org.grobid.core.lexicon.Lexicon - End of initialization of names
+15:47:11.218 [main] INFO org.grobid.core.lexicon.Lexicon - Initiating country codes
+15:47:11.218 [main] INFO org.grobid.core.lexicon.Lexicon - End of initialization of country codes
+sourceTEIPathLabel: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/tei
+sourceRawPathLabel: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/raw
+trainingOutputPath: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/tmp/datacat-segmenter17110990118807561070.train
+evalOutputPath: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/tmp/datacat-segmenter16233927425973090777.test
+326 tei files
+15:47:11.289 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778192h.training.datacat.tei.xml
+15:47:11.299 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778075n.training.datacat.tei.xml
+15:47:11.319 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778232k.training.datacat.tei.xml
+15:47:11.324 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1240055q.training.datacat.tei.xml
+15:47:11.349 [main] ERROR org.grobid.trainer.AbstractTrainer - The raw file does not exist: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/raw/12148-bpt6k1240055q.training.datacat
+15:47:11.349 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777980r.training.datacat.tei.xml
+15:47:11.365 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778237n.training.datacat.tei.xml
+15:47:11.373 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778607w.training.datacat.tei.xml
+15:47:11.375 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781483.training.datacat.tei.xml
+15:47:11.392 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-cb40908886q.training.datacat.tei.xml
+15:47:11.411 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777407w.training.datacat.tei.xml
+15:47:11.448 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780573b.training.datacat.tei.xml
+15:47:11.518 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97774230.training.datacat.tei.xml
+15:47:11.527 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778000x.training.datacat.tei.xml
+15:47:11.532 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777387k.training.datacat.tei.xml
+15:47:11.541 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778283w.training.datacat.tei.xml
+15:47:11.546 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777332m.training.datacat.tei.xml
+15:47:11.557 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773153.training.datacat.tei.xml
+15:47:11.561 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778405c.training.datacat.tei.xml
+15:47:11.564 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779865b.training.datacat.tei.xml
+15:47:11.583 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777621v.training.datacat.tei.xml
+15:47:11.592 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777761q.training.datacat.tei.xml
+15:47:11.596 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779119p.training.datacat.tei.xml
+15:47:11.607 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779402f.training.datacat.tei.xml
+15:47:11.680 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778467g.training.datacat.tei.xml
+15:47:11.683 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779224b.training.datacat.tei.xml
+15:47:11.727 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779105n.training.datacat.tei.xml
+15:47:11.736 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778130d.training.datacat.tei.xml
+15:47:11.738 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778560x.training.datacat.tei.xml
+15:47:11.756 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778553s.training.datacat.tei.xml
+15:47:11.772 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777364k.training.datacat.tei.xml
+15:47:11.776 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777976v.training.datacat.tei.xml
+15:47:11.778 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97791937.training.datacat.tei.xml
+15:47:11.788 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97794063.training.datacat.tei.xml
+15:47:11.793 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777569b.training.datacat.tei.xml
+15:47:11.801 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798675.training.datacat.tei.xml
+15:47:11.807 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777619s.training.datacat.tei.xml
+15:47:11.808 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778235t.training.datacat.tei.xml
+15:47:11.820 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778086f.training.datacat.tei.xml
+15:47:11.823 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778112g.training.datacat.tei.xml
+15:47:11.827 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777394q.training.datacat.tei.xml
+15:47:11.835 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776295.training.datacat.tei.xml
+15:47:11.837 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778627n.training.datacat.tei.xml
+15:47:11.840 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777413m.training.datacat.tei.xml
+15:47:11.849 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778024b.training.datacat.tei.xml
+15:47:11.851 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777775r.training.datacat.tei.xml
+15:47:11.852 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798267.training.datacat.tei.xml
+15:47:11.892 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779407h.training.datacat.tei.xml
+15:47:11.926 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779149t.training.datacat.tei.xml
+15:47:11.955 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778369z.training.datacat.tei.xml
+15:47:11.958 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778061m.training.datacat.tei.xml
+15:47:11.965 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779363s.training.datacat.tei.xml
+15:47:11.981 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781822c.training.datacat.tei.xml
+15:47:11.997 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778285q.training.datacat.tei.xml
+15:47:12.036 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779142x.training.datacat.tei.xml
+15:47:12.045 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777796x.training.datacat.tei.xml
+15:47:12.058 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9796973v.training.datacat.tei.xml
+15:47:12.078 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778274x.training.datacat.tei.xml
+15:47:12.083 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777993c.training.datacat.tei.xml
+15:47:12.085 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777351z.training.datacat.tei.xml
+15:47:12.092 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778599s.training.datacat.tei.xml
+15:47:12.102 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778064v.training.datacat.tei.xml
+15:47:12.106 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777373j.training.datacat.tei.xml
+15:47:12.114 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806261.training.datacat.tei.xml
+15:47:12.133 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778036j.training.datacat.tei.xml
+15:47:12.150 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778372f.training.datacat.tei.xml
+15:47:12.153 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778294p.training.datacat.tei.xml
+15:47:12.160 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778636m.training.datacat.tei.xml
+15:47:12.170 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778244s.training.datacat.tei.xml
+15:47:12.171 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778269m.training.datacat.tei.xml
+15:47:12.173 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778176d.training.datacat.tei.xml
+15:47:12.175 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782456.training.datacat.tei.xml
+15:47:12.177 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779668w.training.datacat.tei.xml
+15:47:12.193 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780675h.training.datacat.tei.xml
+15:47:12.197 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778584b.training.datacat.tei.xml
+15:47:12.201 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777349w.training.datacat.tei.xml
+15:47:12.274 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97806298.training.datacat.tei.xml
+15:47:12.276 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97796254.training.datacat.tei.xml
+15:47:12.288 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780428.training.datacat.tei.xml
+15:47:12.294 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779231g.training.datacat.tei.xml
+15:47:12.301 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778582h.training.datacat.tei.xml
+15:47:12.302 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778087v.training.datacat.tei.xml
+15:47:12.305 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778471c.training.datacat.tei.xml
+15:47:12.313 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778329f.training.datacat.tei.xml
+15:47:12.316 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778103h.training.datacat.tei.xml
+15:47:12.318 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777649x.training.datacat.tei.xml
+15:47:12.319 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778023x.training.datacat.tei.xml
+15:47:12.321 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777764z.training.datacat.tei.xml
+15:47:12.334 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780625m.training.datacat.tei.xml
+15:47:12.342 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778463t.training.datacat.tei.xml
+15:47:12.346 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780555d.training.datacat.tei.xml
+15:47:12.351 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779822k.training.datacat.tei.xml
+15:47:12.369 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778585r.training.datacat.tei.xml
+15:47:12.375 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778282g.training.datacat.tei.xml
+15:47:12.381 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781823s.training.datacat.tei.xml
+15:47:12.393 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778183j.training.datacat.tei.xml
+15:47:12.403 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779240f.training.datacat.tei.xml
+15:47:12.404 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780585j.training.datacat.tei.xml
+15:47:12.420 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777738g.training.datacat.tei.xml
+15:47:12.432 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778151k.training.datacat.tei.xml
+15:47:12.440 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777791v.training.datacat.tei.xml
+15:47:12.446 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780622c.training.datacat.tei.xml
+15:47:12.448 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777420r.training.datacat.tei.xml
+15:47:12.502 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783889.training.datacat.tei.xml
+15:47:12.505 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9634425j.training.datacat.tei.xml
+15:47:12.512 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778001b.training.datacat.tei.xml
+15:47:12.517 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778158g.training.datacat.tei.xml
+15:47:12.522 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778472s.training.datacat.tei.xml
+15:47:12.529 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778291f.training.datacat.tei.xml
+15:47:12.535 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777337p.training.datacat.tei.xml
+15:47:12.542 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777614q.training.datacat.tei.xml
+15:47:12.549 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778384n.training.datacat.tei.xml
+15:47:12.554 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780176.training.datacat.tei.xml
+15:47:12.556 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792532.training.datacat.tei.xml
+15:47:12.560 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778129r.training.datacat.tei.xml
+15:47:12.564 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778221s.training.datacat.tei.xml
+15:47:12.575 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97805666.training.datacat.tei.xml
+15:47:12.576 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k12438933.training.datacat.tei.xml
+15:47:12.580 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779245h.training.datacat.tei.xml
+15:47:12.587 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778465n.training.datacat.tei.xml
+15:47:12.590 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780643j.training.datacat.tei.xml
+15:47:12.605 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777632n.training.datacat.tei.xml
+15:47:12.607 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778640h.training.datacat.tei.xml
+15:47:12.659 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777823c.training.datacat.tei.xml
+15:47:12.669 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779635h.training.datacat.tei.xml
+15:47:12.671 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778014z.training.datacat.tei.xml
+15:47:12.674 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777765.training.datacat.tei.xml
+15:47:12.687 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773383.training.datacat.tei.xml
+15:47:12.690 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97780213.training.datacat.tei.xml
+15:47:12.693 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777966g.training.datacat.tei.xml
+15:47:12.695 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97773331.training.datacat.tei.xml
+15:47:12.695 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778181q.training.datacat.tei.xml
+15:47:12.706 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777750x.training.datacat.tei.xml
+15:47:12.709 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778341w.training.datacat.tei.xml
+15:47:12.713 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777355m.training.datacat.tei.xml
+15:47:12.717 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778597z.training.datacat.tei.xml
+15:47:12.728 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778068h.training.datacat.tei.xml
+15:47:12.732 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777314p.training.datacat.tei.xml
+15:47:12.756 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780627f.training.datacat.tei.xml
+15:47:12.781 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778072d.training.datacat.tei.xml
+15:47:12.796 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1244133q.training.datacat.tei.xml
+15:47:12.802 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781820j.training.datacat.tei.xml
+15:47:12.806 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k12402755.training.datacat.tei.xml
+15:47:12.814 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778355x.training.datacat.tei.xml
+15:47:12.831 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779191d.training.datacat.tei.xml
+15:47:12.832 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1248327x.training.datacat.tei.xml
+15:47:12.835 [main] ERROR org.grobid.trainer.AbstractTrainer - The raw file does not exist: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/raw/12148-bpt6k1248327x.training.datacat
+15:47:12.835 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779143b.training.datacat.tei.xml
+15:47:12.851 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784573.training.datacat.tei.xml
+15:47:12.853 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778138q.training.datacat.tei.xml
+15:47:12.868 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778273h.training.datacat.tei.xml
+15:47:12.871 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97786371.training.datacat.tei.xml
+15:47:12.875 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778316t.training.datacat.tei.xml
+15:47:12.879 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778336k.training.datacat.tei.xml
+15:47:12.879 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777815t.training.datacat.tei.xml
+15:47:12.885 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778564k.training.datacat.tei.xml
+15:47:12.892 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778172r.training.datacat.tei.xml
+15:47:12.901 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778552c.training.datacat.tei.xml
+15:47:12.926 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779356n.training.datacat.tei.xml
+15:47:12.928 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781557.training.datacat.tei.xml
+15:47:12.930 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779220p.training.datacat.tei.xml
+15:47:12.959 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97796699.training.datacat.tei.xml
+15:47:12.968 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780569f.training.datacat.tei.xml
+15:47:12.971 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778639v.training.datacat.tei.xml
+15:47:12.973 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777362r.training.datacat.tei.xml
+15:47:12.975 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97969711.training.datacat.tei.xml
+15:47:12.990 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778082s.training.datacat.tei.xml
+15:47:13.008 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778278k.training.datacat.tei.xml
+15:47:13.023 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777824s.training.datacat.tei.xml
+15:47:13.025 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9796972f.training.datacat.tei.xml
+15:47:13.027 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778462d.training.datacat.tei.xml
+15:47:13.031 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778422w.training.datacat.tei.xml
+15:47:13.036 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97779689.training.datacat.tei.xml
+15:47:13.043 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97776510.training.datacat.tei.xml
+15:47:13.054 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777736n.training.datacat.tei.xml
+15:47:13.061 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779277g.training.datacat.tei.xml
+15:47:13.068 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778105b.training.datacat.tei.xml
+15:47:13.069 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97777995.training.datacat.tei.xml
+15:47:13.071 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778645k.training.datacat.tei.xml
+15:47:13.078 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779405p.training.datacat.tei.xml
+15:47:13.096 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778339t.training.datacat.tei.xml
+15:47:13.102 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778375p.training.datacat.tei.xml
+15:47:13.106 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778583x.training.datacat.tei.xml
+15:47:13.109 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778048r.training.datacat.tei.xml
+15:47:13.112 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777781g.training.datacat.tei.xml
+15:47:13.117 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779670z.training.datacat.tei.xml
+15:47:13.163 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778276r.training.datacat.tei.xml
+15:47:13.166 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777782w.training.datacat.tei.xml
+15:47:13.172 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778530s.training.datacat.tei.xml
+15:47:13.177 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778055w.training.datacat.tei.xml
+15:47:13.181 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779222h.training.datacat.tei.xml
+15:47:13.189 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778165m.training.datacat.tei.xml
+15:47:13.192 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778562r.training.datacat.tei.xml
+15:47:13.201 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777634g.training.datacat.tei.xml
+15:47:13.213 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1243246c.training.datacat.tei.xml
+15:47:13.225 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777366d.training.datacat.tei.xml
+15:47:13.242 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97786267.training.datacat.tei.xml
+15:47:13.243 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778182.training.datacat.tei.xml
+15:47:13.245 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 2148-bpt6k97784009.training.datacat.tei.xml
+15:47:13.245 [main] ERROR org.grobid.trainer.AbstractTrainer - The raw file does not exist: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/raw/2148-bpt6k97784009.training.datacat
+15:47:13.245 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779868k.training.datacat.tei.xml
+15:47:13.278 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777375c.training.datacat.tei.xml
+15:47:13.294 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778377h.training.datacat.tei.xml
+15:47:13.302 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778171b.training.datacat.tei.xml
+15:47:13.310 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779209n.training.datacat.tei.xml
+15:47:13.350 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777971s.training.datacat.tei.xml
+15:47:13.356 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778046x.training.datacat.tei.xml
+15:47:13.359 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779400m.training.datacat.tei.xml
+15:47:13.414 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778480b.training.datacat.tei.xml
+15:47:13.417 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778029d.training.datacat.tei.xml
+15:47:13.420 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779863h.training.datacat.tei.xml
+15:47:13.427 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97775915.training.datacat.tei.xml
+15:47:13.431 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778460k.training.datacat.tei.xml
+15:47:13.432 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779629s.training.datacat.tei.xml
+15:47:13.436 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779633p.training.datacat.tei.xml
+15:47:13.440 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779365m.training.datacat.tei.xml
+15:47:13.440 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778414b.training.datacat.tei.xml
+15:47:13.445 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777987n.training.datacat.tei.xml
+15:47:13.449 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777594d.training.datacat.tei.xml
+15:47:13.454 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97778041.training.datacat.tei.xml
+15:47:13.457 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778063f.training.datacat.tei.xml
+15:47:13.460 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780676x.training.datacat.tei.xml
+15:47:13.468 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778398p.training.datacat.tei.xml
+15:47:13.469 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778179n.training.datacat.tei.xml
+15:47:13.473 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778543d.training.datacat.tei.xml
+15:47:13.481 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777812k.training.datacat.tei.xml
+15:47:13.484 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778027k.training.datacat.tei.xml
+15:47:13.487 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778458h.training.datacat.tei.xml
+15:47:13.489 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777352c.training.datacat.tei.xml
+15:47:13.518 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778145v.training.datacat.tei.xml
+15:47:13.525 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777803m.training.datacat.tei.xml
+15:47:13.537 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779238c.training.datacat.tei.xml
+15:47:13.548 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777751b.training.datacat.tei.xml
+15:47:13.550 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777565p.training.datacat.tei.xml
+15:47:13.553 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792213.training.datacat.tei.xml
+15:47:13.576 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1242112x.training.datacat.tei.xml
+15:47:13.580 [main] ERROR org.grobid.trainer.AbstractTrainer - The raw file does not exist: /home/hscheith/dev/grobid/grobid-datacat/resources/dataset/datacat-segmenter/corpus/raw/12148-bpt6k1242112x.training.datacat
+15:47:13.580 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777806v.training.datacat.tei.xml
+15:47:13.588 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780650p.training.datacat.tei.xml
+15:47:13.590 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778483k.training.datacat.tei.xml
+15:47:13.602 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777334f.training.datacat.tei.xml
+15:47:13.614 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779250t.training.datacat.tei.xml
+15:47:13.620 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792710.training.datacat.tei.xml
+15:47:13.622 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777646p.training.datacat.tei.xml
+15:47:13.635 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783837.training.datacat.tei.xml
+15:47:13.636 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785561.training.datacat.tei.xml
+15:47:13.638 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780652h.training.datacat.tei.xml
+15:47:13.646 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778211d.training.datacat.tei.xml
+15:47:13.661 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778539h.training.datacat.tei.xml
+15:47:13.682 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777784q.training.datacat.tei.xml
+15:47:13.685 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785791.training.datacat.tei.xml
+15:47:13.687 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780883r.training.datacat.tei.xml
+15:47:13.704 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778070k.training.datacat.tei.xml
+15:47:13.714 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777635w.training.datacat.tei.xml
+15:47:13.720 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778093k.training.datacat.tei.xml
+15:47:13.723 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777798r.training.datacat.tei.xml
+15:47:13.728 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778470z.training.datacat.tei.xml
+15:47:13.729 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798712.training.datacat.tei.xml
+15:47:13.735 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779111c.training.datacat.tei.xml
+15:47:13.740 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1240127r.training.datacat.tei.xml
+15:47:13.747 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778296h.training.datacat.tei.xml
+15:47:13.751 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777605r.training.datacat.tei.xml
+15:47:13.753 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778382t.training.datacat.tei.xml
+15:47:13.758 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781824.training.datacat.tei.xml
+15:47:13.771 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778156n.training.datacat.tei.xml
+15:47:13.783 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97794011.training.datacat.tei.xml
+15:47:13.811 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778144f.training.datacat.tei.xml
+15:47:13.813 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97781876.training.datacat.tei.xml
+15:47:13.816 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779344f.training.datacat.tei.xml
+15:47:13.817 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780551r.training.datacat.tei.xml
+15:47:13.818 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777992z.training.datacat.tei.xml
+15:47:13.824 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780631b.training.datacat.tei.xml
+15:47:13.830 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778421g.training.datacat.tei.xml
+15:47:13.838 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780677b.training.datacat.tei.xml
+15:47:13.845 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777975f.training.datacat.tei.xml
+15:47:13.848 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97785776.training.datacat.tei.xml
+15:47:13.851 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778396v.training.datacat.tei.xml
+15:47:13.855 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777969q.training.datacat.tei.xml
+15:47:13.856 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777641m.training.datacat.tei.xml
+15:47:13.857 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778481r.training.datacat.tei.xml
+15:47:13.861 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778117j.training.datacat.tei.xml
+15:47:13.862 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778090b.training.datacat.tei.xml
+15:47:13.864 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97796343.training.datacat.tei.xml
+15:47:13.893 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779206d.training.datacat.tei.xml
+15:47:13.904 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97784751.training.datacat.tei.xml
+15:47:13.907 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777416v.training.datacat.tei.xml
+15:47:13.938 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781814t.training.datacat.tei.xml
+15:47:13.943 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777810r.training.datacat.tei.xml
+15:47:13.951 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779624q.training.datacat.tei.xml
+15:47:13.958 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97783622.training.datacat.tei.xml
+15:47:13.960 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777648h.training.datacat.tei.xml
+15:47:13.963 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777630t.training.datacat.tei.xml
+15:47:13.966 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777779d.training.datacat.tei.xml
+15:47:13.968 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777999v.training.datacat.tei.xml
+15:47:13.969 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777793p.training.datacat.tei.xml
+15:47:13.989 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779836m.training.datacat.tei.xml
+15:47:13.993 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780628v.training.datacat.tei.xml
+15:47:14.012 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9781762j.training.datacat.tei.xml
+15:47:14.020 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777743s.training.datacat.tei.xml
+15:47:14.037 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778040f.training.datacat.tei.xml
+15:47:14.039 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778050t.training.datacat.tei.xml
+15:47:14.042 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97798356.training.datacat.tei.xml
+15:47:14.051 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780553k.training.datacat.tei.xml
+15:47:14.058 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779627z.training.datacat.tei.xml
+15:47:14.066 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9780678r.training.datacat.tei.xml
+15:47:14.071 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779259j.training.datacat.tei.xml
+15:47:14.100 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777643f.training.datacat.tei.xml
+15:47:14.111 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777819g.training.datacat.tei.xml
+15:47:14.117 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777581s.training.datacat.tei.xml
+15:47:14.120 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778167f.training.datacat.tei.xml
+15:47:14.125 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778468w.training.datacat.tei.xml
+15:47:14.137 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777385r.training.datacat.tei.xml
+15:47:14.146 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778168v.training.datacat.tei.xml
+15:47:14.152 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778052n.training.datacat.tei.xml
+15:47:14.156 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777597n.training.datacat.tei.xml
+15:47:14.161 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777822z.training.datacat.tei.xml
+15:47:14.171 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779834s.training.datacat.tei.xml
+15:47:14.172 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777371q.training.datacat.tei.xml
+15:47:14.181 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778031g.training.datacat.tei.xml
+15:47:14.192 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779246x.training.datacat.tei.xml
+15:47:14.209 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9778555m.training.datacat.tei.xml
+15:47:14.225 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97792658.training.datacat.tei.xml
+15:47:14.249 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777795h.training.datacat.tei.xml
+15:47:14.256 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777617z.training.datacat.tei.xml
+15:47:14.262 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9777777k.training.datacat.tei.xml
+15:47:14.271 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97793750.training.datacat.tei.xml
+15:47:14.285 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k1249350g.training.datacat.tei.xml
+15:47:14.291 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779630f.training.datacat.tei.xml
+15:47:14.298 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k97782382.training.datacat.tei.xml
+15:47:14.303 [main] INFO org.grobid.trainer.AbstractTrainer - Processing: 12148-bpt6k9779838f.training.datacat.tei.xml
+        epsilon: 1.0E-7
+        window: 50
+        nb max iterations: 1000
+        nb threads: 16
+* Load patterns
+* Load training data
+* Initialize the model
+* Summary
+    nb train:    290
+    nb labels:   9
+    nb blocks:   2058534
+    nb features: 18526878
+* Train the model with l-bfgs
+  [   1] obj=904842,78  act=4542351  err=17,37%/100,00% time=8,75s/8,75s
+  [   2] obj=701444,40  act=3946059  err=17,37%/100,00% time=5,17s/13,91s
+  [   3] obj=588318,54  act=1837522  err=42,19%/100,00% time=17,53s/31,44s
+  [   4] obj=442014,30  act=2847167  err=17,37%/100,00% time=17,74s/49,18s
+  [   5] obj=400202,97  act=2822913  err=15,49%/100,00% time=13,80s/62,98s
+  [   6] obj=381223,20  act=2941933  err=17,37%/100,00% time=14,02s/77,00s
+  [   7] obj=356202,82  act=2242780  err=17,34%/100,00% time=30,28s/107,28s
+  [   8] obj=329448,94  act=2191427  err=17,37%/100,00% time=5,84s/113,12s
+  [   9] obj=292262,30  act=1846731  err=17,37%/100,00% time=5,88s/118,99s
+  [  10] obj=290344,52  act=1939899  err=17,37%/100,00% time=5,86s/124,86s
+  [  11] obj=283494,92  act=1701498  err=17,35%/100,00% time=5,88s/130,73s
+  [  12] obj=274033,08  act=1765813  err=17,37%/100,00% time=9,79s/140,53s
+  [  13] obj=258979,57  act=1548170  err=17,35%/100,00% time=5,68s/146,21s
+  [  14] obj=210359,77  act=1539920  err=15,34%/100,00% time=5,71s/151,91s
+  [  15] obj=167091,21  act=1455578  err=12,84%/100,00% time=5,70s/157,61s
+  [  16] obj=128614,85  act=1656746  err= 8,82%/100,00% time=5,76s/163,37s
+  [  17] obj=116427,45  act=1572425  err= 8,34%/100,00% time=5,80s/169,17s
+  [  18] obj=105429,14  act=1466741  err= 7,09%/100,00% time=5,75s/174,92s
+  [  19] obj=105119,87  act=1522855  err= 8,22%/100,00% time=5,75s/180,67s
+  [  20] obj=94191,08   act=1470379  err= 6,78%/100,00% time=5,79s/186,46s
+  [  21] obj=85635,57   act=1481587  err= 6,98%/100,00% time=5,70s/192,16s
+  [  22] obj=79580,15   act=1430543  err= 6,08%/100,00% time=5,79s/197,95s
+  [  23] obj=72804,30   act=1465074  err= 6,35%/100,00% time=5,80s/203,75s
+  [  24] obj=72599,36   act=1407770  err= 6,86%/100,00% time=5,79s/209,54s
+  [  25] obj=65075,80   act=1479529  err= 5,77%/100,00% time=5,69s/215,23s
+  [  26] obj=63507,32   act=1390549  err= 5,94%/100,00% time=5,70s/220,93s
+  [  27] obj=58097,44   act=1406665  err= 5,11%/100,00% time=5,75s/226,68s
+  [  28] obj=54907,90   act=1350875  err= 5,21%/100,00% time=5,71s/232,39s
+  [  29] obj=48495,24   act=1297708  err= 4,74%/100,00% time=5,76s/238,15s
+  [  30] obj=42541,78   act=1186088  err= 5,41%/100,00% time=5,81s/243,96s
+  [  31] obj=37784,39   act=1258443  err= 4,36%/100,00% time=5,71s/249,68s
+  [  32] obj=35644,03   act=1169043  err= 4,07%/100,00% time=5,69s/255,37s
+  [  33] obj=33278,46   act=1092298  err= 4,01%/100,00% time=5,69s/261,06s
+  [  34] obj=30373,38   act=1035828  err= 3,90%/100,00% time=9,76s/270,81s
+  [  35] obj=27098,45   act=986223   err= 3,59%/100,00% time=5,78s/276,60s
+  [  36] obj=23842,07   act=917285   err= 3,76%/100,00% time=5,73s/282,33s
+  [  37] obj=20852,57   act=930658   err= 2,81%/100,00% time=5,79s/288,12s
+  [  38] obj=19566,50   act=855491   err= 3,52%/100,00% time=5,72s/293,84s
+  [  39] obj=17494,18   act=880173   err= 2,56%/100,00% time=5,70s/299,55s
+  [  40] obj=16777,46   act=823208   err= 3,11%/100,00% time=5,71s/305,26s
+  [  41] obj=14804,74   act=822819   err= 2,36%/100,00% time=5,68s/310,94s
+  [  42] obj=13805,78   act=772318   err= 2,82%/100,00% time=5,74s/316,68s
+  [  43] obj=12001,82   act=785596   err= 1,93%/100,00% time=5,81s/322,49s
+  [  44] obj=10689,19   act=744033   err= 2,09%/100,00% time=5,73s/328,23s
+  [  45] obj=9122,02    act=701758   err= 1,60%/97,93% time=5,76s/333,98s
+  [  46] obj=8046,86    act=649851   err= 2,11%/83,45% time=5,73s/339,71s
+  [  47] obj=7125,08    act=667386   err= 1,38%/78,62% time=5,70s/345,41s
+  [  48] obj=6523,99    act=627594   err= 1,41%/77,93% time=5,75s/351,16s
+  [  49] obj=5609,04    act=579118   err= 1,05%/72,07% time=5,67s/356,84s
+  [  50] obj=4976,64    act=542245   err= 1,26%/72,41% time=5,82s/362,66s
+  [  51] obj=4186,73    act=522688   err= 0,81%/69,66% time=5,91s/368,57s
+  [  52] obj=3881,64    act=500161   err= 0,72%/65,86% time=5,71s/374,28s
+  [  53] obj=3609,03    act=461439   err= 0,68%/62,76% time=5,78s/380,06s
+  [  54] obj=3293,52    act=433921   err= 0,62%/59,66% time=5,88s/385,94s
+  [  55] obj=2915,92    act=394097   err= 0,61%/59,31% time=5,68s/391,61s
+  [  56] obj=2669,41    act=359741   err= 0,50%/54,48% time=5,74s/397,36s
+  [  57] obj=2438,30    act=337861   err= 0,52%/52,41% time=5,79s/403,14s
+  [  58] obj=2282,56    act=323993   err= 0,37%/49,66% time=5,70s/408,85s
+  [  59] obj=2094,20    act=295088   err= 0,41%/46,90% time=5,74s/414,59s
+  [  60] obj=1954,23    act=273165   err= 0,30%/44,14% time=5,72s/420,31s
+  [  61] obj=1844,56    act=250810   err= 0,24%/43,10% time=5,71s/426,02s
+  [  62] obj=1760,62    act=232936   err= 0,21%/42,41% time=5,67s/431,70s
+  [  63] obj=1667,72    act=209413   err= 0,17%/40,00% time=5,77s/437,46s
+  [  64] obj=1600,84    act=198427   err= 0,10%/38,28% time=5,71s/443,17s
+  [  65] obj=1542,45    act=186934   err= 0,12%/36,90% time=5,74s/448,91s
+  [  66] obj=1480,64    act=179154   err= 0,08%/34,48% time=5,78s/454,70s
+  [  67] obj=1418,66    act=168462   err= 0,08%/31,72% time=5,78s/460,48s
+  [  68] obj=1359,30    act=159332   err= 0,08%/29,66% time=5,78s/466,26s
+  [  69] obj=1305,74    act=148230   err= 0,09%/27,24% time=5,73s/471,99s
+  [  70] obj=1249,78    act=137004   err= 0,07%/25,17% time=5,73s/477,72s
+  [  71] obj=1201,97    act=123957   err= 0,07%/20,69% time=5,82s/483,55s
+  [  72] obj=1161,17    act=113745   err= 0,06%/20,34% time=5,80s/489,35s
+  [  73] obj=1123,40    act=100862   err= 0,07%/18,28% time=5,70s/495,05s
+  [  74] obj=1090,16    act=94393    err= 0,02%/14,83% time=5,72s/500,78s
+  [  75] obj=1062,25    act=87675    err= 0,04%/10,34% time=5,67s/506,45s
+  [  76] obj=1038,09    act=83577    err= 0,01%/ 9,66% time=5,75s/512,20s
+  [  77] obj=1014,47    act=77544    err= 0,01%/ 8,28% time=5,73s/517,93s
+  [  78] obj=996,99     act=73062    err= 0,01%/ 7,93% time=5,72s/523,66s
+  [  79] obj=974,34     act=64621    err= 0,01%/ 7,24% time=5,74s/529,40s
+  [  80] obj=962,35     act=63302    err= 0,01%/ 8,28% time=5,74s/535,14s
+  [  81] obj=945,91     act=56630    err= 0,01%/ 7,24% time=5,77s/540,91s
+  [  82] obj=934,24     act=52831    err= 0,05%/ 8,28% time=5,70s/546,60s
+  [  83] obj=923,37     act=58894    err= 0,04%/ 7,24% time=5,65s/552,26s
+  [  84] obj=910,12     act=59455    err= 0,05%/ 9,66% time=5,70s/557,96s
+  [  85] obj=897,77     act=55867    err= 0,04%/ 5,86% time=5,66s/563,62s
+  [  86] obj=888,90     act=52493    err= 0,04%/ 5,86% time=5,71s/569,33s
+  [  87] obj=873,41     act=56501    err= 0,04%/ 4,83% time=5,65s/574,98s
+  [  88] obj=867,67     act=50384    err= 0,04%/ 4,83% time=5,66s/580,64s
+  [  89] obj=857,52     act=48040    err= 0,04%/ 3,45% time=5,83s/586,47s
+  [  90] obj=852,95     act=44006    err= 0,03%/ 3,79% time=5,72s/592,19s
+  [  91] obj=843,68     act=45033    err= 0,00%/ 3,45% time=5,77s/597,96s
+  [  92] obj=840,06     act=42156    err= 0,03%/ 4,14% time=5,72s/603,68s
+  [  93] obj=832,48     act=42673    err= 0,00%/ 3,45% time=5,75s/609,43s
+  [  94] obj=829,94     act=39141    err= 0,03%/ 3,45% time=5,72s/615,15s
+  [  95] obj=822,13     act=38561    err= 0,00%/ 2,76% time=5,77s/620,92s
+  [  96] obj=820,05     act=35021    err= 0,03%/ 3,45% time=5,66s/626,58s
+  [  97] obj=811,90     act=35107    err= 0,00%/ 3,10% time=5,67s/632,25s
+  [  98] obj=808,51     act=32004    err= 0,03%/ 3,79% time=5,61s/637,86s
+  [  99] obj=802,45     act=31841    err= 0,00%/ 3,10% time=5,65s/643,51s
+  [ 100] obj=800,12     act=30146    err= 0,00%/ 2,76% time=5,73s/649,23s
+  [ 101] obj=793,80     act=30555    err= 0,00%/ 3,79% time=5,78s/655,02s
+  [ 102] obj=791,50     act=29122    err= 0,00%/ 3,45% time=5,65s/660,67s
+  [ 103] obj=786,20     act=29341    err= 0,01%/ 3,79% time=5,72s/666,39s
+  [ 104] obj=784,22     act=28349    err= 0,00%/ 4,14% time=5,70s/672,09s
+  [ 105] obj=779,44     act=27930    err= 0,01%/ 4,14% time=5,63s/677,72s
+  [ 106] obj=776,94     act=27242    err= 0,00%/ 3,45% time=5,70s/683,42s
+  [ 107] obj=772,28     act=27129    err= 0,00%/ 3,10% time=5,68s/689,10s
+  [ 108] obj=770,25     act=26101    err= 0,00%/ 3,79% time=5,69s/694,79s
+  [ 109] obj=765,80     act=25825    err= 0,00%/ 3,10% time=5,66s/700,45s
+  [ 110] obj=763,65     act=24826    err= 0,00%/ 3,79% time=5,74s/706,19s
+  [ 111] obj=759,99     act=24031    err= 0,01%/ 2,76% time=5,75s/711,94s
+  [ 112] obj=757,45     act=23500    err= 0,00%/ 3,10% time=5,75s/717,69s
+  [ 113] obj=754,93     act=22431    err= 0,05%/ 3,10% time=5,80s/723,48s
+  [ 114] obj=752,53     act=22496    err= 0,00%/ 2,76% time=5,72s/729,20s
+  [ 115] obj=750,99     act=21555    err= 0,05%/ 3,10% time=5,69s/734,89s
+  [ 116] obj=748,18     act=22006    err= 0,00%/ 2,41% time=5,73s/740,62s
+  [ 117] obj=747,51     act=21083    err= 0,05%/ 2,76% time=5,65s/746,27s
+  [ 118] obj=744,37     act=21497    err= 0,00%/ 2,41% time=5,69s/751,95s
+  [ 119] obj=743,57     act=20963    err= 0,00%/ 2,07% time=9,73s/761,68s
+  [ 120] obj=742,10     act=20476    err= 0,00%/ 2,07% time=5,71s/767,40s
+  [ 121] obj=739,50     act=21878    err= 0,00%/ 1,72% time=9,65s/777,05s
+  [ 122] obj=738,87     act=19592    err= 0,00%/ 1,72% time=5,74s/782,79s
+  [ 123] obj=737,40     act=21672    err= 0,00%/ 1,03% time=5,78s/788,56s
+  [ 124] obj=734,31     act=20944    err= 0,00%/ 0,69% time=5,69s/794,25s
+  [ 125] obj=733,37     act=18603    err= 0,00%/ 1,03% time=5,65s/799,91s
+  [ 126] obj=731,48     act=17842    err= 0,00%/ 0,69% time=5,60s/805,51s
+  [ 127] obj=730,17     act=17231    err= 0,00%/ 0,34% time=5,76s/811,27s
+  [ 128] obj=728,41     act=16904    err= 0,00%/ 0,69% time=5,66s/816,93s
+  [ 129] obj=726,66     act=16578    err= 0,00%/ 0,34% time=5,68s/822,61s
+  [ 130] obj=725,52     act=15832    err= 0,00%/ 1,03% time=5,69s/828,30s
+  [ 131] obj=723,99     act=15709    err= 0,00%/ 0,69% time=5,61s/833,91s
+  [ 132] obj=722,87     act=15248    err= 0,00%/ 1,38% time=5,70s/839,60s
+  [ 133] obj=721,71     act=14880    err= 0,00%/ 1,03% time=5,84s/845,45s
+  [ 134] obj=720,54     act=14867    err= 0,00%/ 1,38% time=5,77s/851,22s
+  [ 135] obj=718,79     act=14826    err= 0,00%/ 0,69% time=5,68s/856,90s
+  [ 136] obj=717,89     act=14349    err= 0,00%/ 1,03% time=5,68s/862,58s
+  [ 137] obj=716,51     act=14288    err= 0,00%/ 0,69% time=5,72s/868,30s
+  [ 138] obj=715,60     act=13941    err= 0,00%/ 1,72% time=5,70s/873,99s
+  [ 139] obj=714,56     act=13693    err= 0,00%/ 1,38% time=5,67s/879,67s
+  [ 140] obj=713,34     act=13673    err= 0,00%/ 1,03% time=5,81s/885,48s
+  [ 141] obj=712,30     act=13410    err= 0,00%/ 1,03% time=5,72s/891,20s
+  [ 142] obj=711,38     act=13178    err= 0,00%/ 1,03% time=5,69s/896,89s
+  [ 143] obj=710,46     act=12974    err= 0,00%/ 1,03% time=5,70s/902,60s
+  [ 144] obj=709,38     act=12823    err= 0,00%/ 1,03% time=5,72s/908,31s
+  [ 145] obj=708,65     act=12598    err= 0,00%/ 1,03% time=5,74s/914,06s
+  [ 146] obj=707,46     act=12668    err= 0,00%/ 1,03% time=5,68s/919,73s
+  [ 147] obj=706,72     act=12365    err= 0,00%/ 0,69% time=5,66s/925,39s
+  [ 148] obj=705,65     act=12305    err= 0,00%/ 1,38% time=5,71s/931,10s
+  [ 149] obj=704,85     act=12066    err= 0,00%/ 1,38% time=5,73s/936,83s
+  [ 150] obj=703,86     act=11932    err= 0,00%/ 1,72% time=5,73s/942,56s
+  [ 151] obj=703,23     act=11725    err= 0,00%/ 1,38% time=5,69s/948,25s
+  [ 152] obj=701,82     act=11964    err= 0,00%/ 1,72% time=5,73s/953,98s
+  [ 153] obj=701,22     act=11423    err= 0,00%/ 1,38% time=5,82s/959,79s
+  [ 154] obj=700,08     act=11610    err= 0,00%/ 2,07% time=5,82s/965,61s
+  [ 155] obj=699,52     act=11247    err= 0,00%/ 2,07% time=5,81s/971,42s
+  [ 156] obj=698,55     act=11179    err= 0,00%/ 2,41% time=5,74s/977,16s
+  [ 157] obj=698,00     act=11017    err= 0,00%/ 2,07% time=5,76s/982,91s
+  [ 158] obj=697,11     act=10887    err= 0,00%/ 2,07% time=5,83s/988,75s
+  [ 159] obj=696,47     act=10782    err= 0,00%/ 2,07% time=5,93s/994,68s
+  [ 160] obj=695,41     act=10710    err= 0,00%/ 1,72% time=5,70s/1000,38s
+  [ 161] obj=694,81     act=10616    err= 0,00%/ 1,72% time=5,71s/1006,09s
+  [ 162] obj=694,02     act=10477    err= 0,00%/ 1,38% time=5,67s/1011,76s
+  [ 163] obj=693,48     act=10407    err= 0,00%/ 1,72% time=5,67s/1017,43s
+  [ 164] obj=692,73     act=10340    err= 0,00%/ 1,72% time=5,79s/1023,22s
+  [ 165] obj=692,26     act=10288    err= 0,00%/ 0,69% time=5,69s/1028,91s
+  [ 166] obj=691,40     act=10331    err= 0,00%/ 1,03% time=5,72s/1034,63s
+  [ 167] obj=690,76     act=10244    err= 0,00%/ 0,69% time=5,75s/1040,38s
+  [ 168] obj=690,16     act=10105    err= 0,00%/ 1,38% time=5,73s/1046,12s
+  [ 169] obj=689,45     act=10045    err= 0,00%/ 1,38% time=5,75s/1051,87s
+  [ 170] obj=689,06     act=9946     err= 0,00%/ 1,72% time=5,68s/1057,55s
+  [ 171] obj=688,28     act=9962     err= 0,00%/ 1,38% time=5,66s/1063,21s
+  [ 172] obj=687,94     act=9814     err= 0,00%/ 1,72% time=5,70s/1068,91s
+  [ 173] obj=687,06     act=9850     err= 0,00%/ 1,38% time=5,74s/1074,66s
+  [ 174] obj=686,49     act=9787     err= 0,00%/ 1,72% time=5,71s/1080,36s
+  [ 175] obj=685,78     act=9678     err= 0,00%/ 1,03% time=5,69s/1086,05s
+  [ 176] obj=685,39     act=9551     err= 0,00%/ 1,72% time=5,71s/1091,77s
+  [ 177] obj=684,68     act=9542     err= 0,00%/ 1,38% time=5,78s/1097,55s
+  [ 178] obj=684,07     act=9598     err= 0,00%/ 1,03% time=5,82s/1103,36s
+  [ 179] obj=683,52     act=9468     err= 0,00%/ 1,03% time=5,85s/1109,22s
+  [ 180] obj=682,77     act=9501     err= 0,00%/ 1,03% time=5,91s/1115,12s
+  [ 181] obj=682,24     act=9356     err= 0,00%/ 1,03% time=5,80s/1120,92s
+  [ 182] obj=681,67     act=9273     err= 0,00%/ 1,03% time=5,84s/1126,76s
+  [ 183] obj=680,98     act=9257     err= 0,00%/ 1,03% time=5,88s/1132,64s
+  [ 184] obj=680,69     act=9178     err= 0,00%/ 1,03% time=5,74s/1138,39s
+  [ 185] obj=679,97     act=9150     err= 0,00%/ 0,69% time=5,66s/1144,05s
+  [ 186] obj=679,60     act=9040     err= 0,00%/ 1,38% time=5,81s/1149,86s
+  [ 187] obj=678,93     act=9054     err= 0,00%/ 1,03% time=5,72s/1155,59s
+  [ 188] obj=678,52     act=9002     err= 0,00%/ 1,72% time=5,66s/1161,25s
+  [ 189] obj=677,96     act=9045     err= 0,00%/ 1,38% time=5,71s/1166,96s
+  [ 190] obj=677,63     act=8948     err= 0,00%/ 1,72% time=5,71s/1172,67s
+  [ 191] obj=677,17     act=8902     err= 0,00%/ 1,38% time=5,70s/1178,37s
+  [ 192] obj=676,68     act=8931     err= 0,00%/ 1,72% time=5,72s/1184,09s
+  [ 193] obj=676,24     act=8788     err= 0,00%/ 1,03% time=5,66s/1189,75s
+  [ 194] obj=675,79     act=8862     err= 0,00%/ 1,03% time=5,68s/1195,44s
+  [ 195] obj=675,27     act=8690     err= 0,00%/ 0,69% time=5,77s/1201,21s
+  [ 196] obj=674,92     act=8550     err= 0,00%/ 1,03% time=5,71s/1206,92s
+  [ 197] obj=674,49     act=8483     err= 0,00%/ 0,69% time=5,65s/1212,56s
+  [ 198] obj=674,02     act=8432     err= 0,00%/ 1,38% time=5,68s/1218,24s
+  [ 199] obj=673,50     act=8394     err= 0,00%/ 0,69% time=5,69s/1223,93s
+  [ 200] obj=673,08     act=8349     err= 0,00%/ 1,72% time=5,70s/1229,64s
+  [ 201] obj=672,43     act=8286     err= 0,00%/ 1,03% time=5,73s/1235,37s
+  [ 202] obj=672,09     act=8191     err= 0,00%/ 1,38% time=5,72s/1241,08s
+  [ 203] obj=671,56     act=8110     err= 0,00%/ 1,03% time=5,65s/1246,73s
+  [ 204] obj=671,16     act=8023     err= 0,00%/ 1,72% time=5,72s/1252,46s
+  [ 205] obj=670,66     act=8030     err= 0,00%/ 1,03% time=5,72s/1258,18s
+  [ 206] obj=670,33     act=7963     err= 0,00%/ 1,72% time=5,67s/1263,85s
+  [ 207] obj=669,72     act=7956     err= 0,00%/ 1,38% time=5,73s/1269,58s
+  [ 208] obj=669,39     act=7884     err= 0,00%/ 1,72% time=5,67s/1275,24s
+  [ 209] obj=668,96     act=7812     err= 0,00%/ 1,38% time=5,68s/1280,92s
+  [ 210] obj=668,63     act=7753     err= 0,00%/ 1,38% time=5,71s/1286,63s
+  [ 211] obj=668,23     act=7714     err= 0,00%/ 1,72% time=5,74s/1292,37s
+  [ 212] obj=667,90     act=7666     err= 0,00%/ 2,07% time=5,77s/1298,14s
+  [ 213] obj=667,44     act=7700     err= 0,00%/ 1,72% time=5,70s/1303,84s
+  [ 214] obj=667,14     act=7615     err= 0,00%/ 1,72% time=5,74s/1309,58s
+  [ 215] obj=666,67     act=7691     err= 0,00%/ 2,07% time=5,66s/1315,24s
+  [ 216] obj=666,45     act=7580     err= 0,00%/ 1,72% time=5,74s/1320,98s
+  [ 217] obj=665,93     act=7660     err= 0,00%/ 1,72% time=5,69s/1326,67s
+  [ 218] obj=665,77     act=7522     err= 0,00%/ 2,07% time=5,81s/1332,48s
+  [ 219] obj=665,20     act=7640     err= 0,00%/ 1,72% time=5,68s/1338,16s
+  [ 220] obj=665,04     act=7509     err= 0,00%/ 2,07% time=5,70s/1343,86s
+  [ 221] obj=664,56     act=7554     err= 0,00%/ 2,07% time=5,69s/1349,55s
+  [ 222] obj=664,42     act=7577     err= 0,00%/ 1,72% time=5,70s/1355,24s
+  [ 223] obj=663,80     act=7550     err= 0,00%/ 2,07% time=5,67s/1360,92s
+  [ 224] obj=663,62     act=7457     err= 0,00%/ 1,72% time=5,72s/1366,64s
+  [ 225] obj=663,27     act=7452     err= 0,00%/ 1,72% time=5,74s/1372,38s
+  [ 226] obj=663,03     act=7547     err= 0,00%/ 1,38% time=5,78s/1378,16s
+  [ 227] obj=662,65     act=7436     err= 0,00%/ 1,72% time=5,71s/1383,87s
+  [ 228] obj=662,50     act=7414     err= 0,00%/ 1,38% time=5,77s/1389,64s
+  [ 229] obj=662,10     act=7399     err= 0,00%/ 1,72% time=5,72s/1395,36s
+  [ 230] obj=661,96     act=7372     err= 0,00%/ 1,72% time=5,73s/1401,09s
+  [ 231] obj=661,58     act=7381     err= 0,00%/ 1,72% time=5,73s/1406,81s
+  [ 232] obj=661,36     act=7416     err= 0,00%/ 1,72% time=5,63s/1412,44s
+  [ 233] obj=660,98     act=7350     err= 0,00%/ 1,38% time=5,81s/1418,25s
+  [ 234] obj=660,79     act=7342     err= 0,00%/ 1,38% time=5,73s/1423,98s
+  [ 235] obj=660,41     act=7334     err= 0,00%/ 1,38% time=5,71s/1429,69s
+  [ 236] obj=660,24     act=7255     err= 0,00%/ 1,38% time=5,74s/1435,42s
+  [ 237] obj=659,89     act=7270     err= 0,00%/ 1,38% time=5,72s/1441,14s
+  [ 238] obj=659,70     act=7183     err= 0,00%/ 1,38% time=5,79s/1446,93s
+  [ 239] obj=659,34     act=7175     err= 0,00%/ 1,38% time=5,72s/1452,64s
+  [ 240] obj=659,20     act=7119     err= 0,00%/ 1,72% time=5,75s/1458,39s
+  [ 241] obj=658,71     act=7155     err= 0,00%/ 1,72% time=5,69s/1464,08s
+  [ 242] obj=658,52     act=7041     err= 0,00%/ 1,72% time=5,65s/1469,73s
+  [ 243] obj=658,24     act=7021     err= 0,00%/ 1,72% time=5,75s/1475,48s
+  [ 244] obj=658,01     act=7230     err= 0,00%/ 1,72% time=5,69s/1481,17s
+  [ 245] obj=657,60     act=6976     err= 0,00%/ 1,38% time=5,77s/1486,94s
+  [ 246] obj=657,43     act=7060     err= 0,00%/ 1,72% time=5,74s/1492,67s
+  [ 247] obj=657,02     act=6915     err= 0,00%/ 1,38% time=5,68s/1498,35s
+  [ 248] obj=656,91     act=6814     err= 0,00%/ 1,72% time=5,71s/1504,06s
+  [ 249] obj=656,57     act=6780     err= 0,00%/ 1,72% time=5,74s/1509,80s
+  [ 250] obj=656,44     act=6747     err= 0,00%/ 2,07% time=5,68s/1515,48s
+  [ 251] obj=656,08     act=6730     err= 0,00%/ 1,72% time=5,66s/1521,14s
+  [ 252] obj=655,94     act=6803     err= 0,00%/ 1,72% time=5,69s/1526,83s
+  [ 253] obj=655,54     act=6673     err= 0,00%/ 1,38% time=5,70s/1532,53s
+  [ 254] obj=655,39     act=6707     err= 0,00%/ 1,72% time=5,72s/1538,25s
+  [ 255] obj=655,01     act=6596     err= 0,00%/ 1,72% time=5,67s/1543,92s
+  [ 256] obj=654,86     act=6591     err= 0,00%/ 1,38% time=5,68s/1549,60s
+  [ 257] obj=654,56     act=6512     err= 0,00%/ 1,72% time=5,75s/1555,36s
+  [ 258] obj=654,37     act=6553     err= 0,00%/ 1,03% time=5,73s/1561,08s
+  [ 259] obj=654,04     act=6437     err= 0,00%/ 1,38% time=5,76s/1566,85s
+  [ 260] obj=653,85     act=6418     err= 0,00%/ 1,03% time=5,72s/1572,57s
+  [ 261] obj=653,54     act=6348     err= 0,00%/ 1,38% time=5,71s/1578,28s
+  [ 262] obj=653,35     act=6319     err= 0,00%/ 1,03% time=5,70s/1583,97s
+  [ 263] obj=653,33     act=6271     err= 0,00%/ 1,03% time=5,74s/1589,71s
+  [ 264] obj=652,82     act=7189     err= 0,00%/ 1,03% time=5,73s/1595,44s
+  [ 265] obj=652,76     act=6737     err= 0,00%/ 1,03% time=5,77s/1601,21s
+  [ 266] obj=652,38     act=7226     err= 0,00%/ 1,03% time=5,73s/1606,94s
+  [ 267] obj=652,22     act=6717     err= 0,00%/ 1,03% time=5,67s/1612,61s
+  [ 268] obj=651,94     act=6652     err= 0,00%/ 1,03% time=5,66s/1618,27s
+  [ 269] obj=651,90     act=6686     err= 0,00%/ 1,03% time=5,71s/1623,97s
+  [ 270] obj=651,38     act=6652     err= 0,00%/ 1,03% time=5,71s/1629,68s
+  [ 271] obj=651,15     act=6510     err= 0,00%/ 1,03% time=5,72s/1635,41s
+  [ 272] obj=650,82     act=6570     err= 0,00%/ 1,03% time=9,74s/1645,15s
+  [ 273] obj=650,81     act=6411     err= 0,00%/ 1,03% time=5,68s/1650,83s
+  [ 274] obj=650,22     act=6685     err= 0,00%/ 1,03% time=5,72s/1656,55s
+  [ 275] obj=650,21     act=6687     err= 0,00%/ 1,03% time=5,80s/1662,34s
+  [ 276] obj=649,66     act=6633     err= 0,00%/ 1,03% time=5,74s/1668,08s
+  [ 277] obj=649,53     act=6486     err= 0,00%/ 1,03% time=5,75s/1673,82s
+  [ 278] obj=649,29     act=6496     err= 0,00%/ 1,03% time=5,74s/1679,56s
+  [ 279] obj=649,25     act=6467     err= 0,00%/ 1,03% time=5,70s/1685,26s
+  [ 280] obj=648,73     act=6545     err= 0,00%/ 1,03% time=5,78s/1691,03s
+  [ 281] obj=648,67     act=6335     err= 0,00%/ 1,03% time=5,73s/1696,76s
+  [ 282] obj=648,34     act=6512     err= 0,00%/ 1,03% time=5,76s/1702,52s
+  [ 283] obj=648,21     act=6249     err= 0,00%/ 0,69% time=5,68s/1708,20s
+  [ 284] obj=647,93     act=6313     err= 0,00%/ 0,69% time=5,70s/1713,90s
+  [ 285] obj=647,77     act=6304     err= 0,00%/ 0,69% time=5,66s/1719,56s
+  [ 286] obj=647,42     act=6298     err= 0,00%/ 1,03% time=5,70s/1725,26s
+  [ 287] obj=647,33     act=6185     err= 0,00%/ 1,03% time=5,69s/1730,95s
+  [ 288] obj=647,00     act=6243     err= 0,00%/ 1,03% time=5,71s/1736,66s
+  [ 289] obj=646,86     act=6117     err= 0,00%/ 1,38% time=5,69s/1742,35s
+  [ 290] obj=646,56     act=6122     err= 0,00%/ 1,38% time=5,83s/1748,17s
+  [ 291] obj=646,44     act=6058     err= 0,00%/ 1,38% time=5,78s/1753,95s
+  [ 292] obj=646,10     act=6058     err= 0,00%/ 1,72% time=5,71s/1759,66s
+  [ 293] obj=645,94     act=5997     err= 0,00%/ 1,38% time=5,74s/1765,40s
+  [ 294] obj=645,74     act=5974     err= 0,00%/ 1,38% time=5,68s/1771,08s
+  [ 295] obj=645,62     act=5947     err= 0,00%/ 1,38% time=5,72s/1776,80s
+  [ 296] obj=645,34     act=5992     err= 0,00%/ 1,38% time=5,80s/1782,60s
+  [ 297] obj=645,25     act=5904     err= 0,00%/ 1,03% time=5,75s/1788,35s
+  [ 298] obj=644,99     act=5986     err= 0,00%/ 1,03% time=5,79s/1794,14s
+  [ 299] obj=644,86     act=5878     err= 0,00%/ 1,03% time=5,65s/1799,78s
+  [ 300] obj=644,65     act=5884     err= 0,00%/ 1,03% time=5,76s/1805,54s
+  [ 301] obj=644,55     act=5921     err= 0,00%/ 1,38% time=5,69s/1811,23s
+  [ 302] obj=644,22     act=5875     err= 0,00%/ 1,38% time=5,76s/1816,99s
+  [ 303] obj=644,11     act=5840     err= 0,00%/ 1,38% time=5,70s/1822,68s
+  [ 304] obj=643,88     act=5794     err= 0,00%/ 1,38% time=5,82s/1828,50s
+  [ 305] obj=643,78     act=5786     err= 0,00%/ 1,38% time=5,74s/1834,24s
+  [ 306] obj=643,55     act=5737     err= 0,00%/ 1,38% time=5,68s/1839,92s
+  [ 307] obj=643,49     act=5757     err= 0,00%/ 1,38% time=5,70s/1845,62s
+  [ 308] obj=643,21     act=5732     err= 0,00%/ 1,38% time=5,85s/1851,47s
+  [ 309] obj=643,08     act=5670     err= 0,00%/ 1,38% time=5,66s/1857,13s
+  [ 310] obj=642,92     act=5609     err= 0,00%/ 1,72% time=5,76s/1862,88s
+  [ 311] obj=642,77     act=5637     err= 0,00%/ 1,72% time=5,67s/1868,56s
+  [ 312] obj=642,54     act=5613     err= 0,00%/ 1,72% time=5,71s/1874,27s
+  [ 313] obj=642,43     act=5596     err= 0,00%/ 1,72% time=5,66s/1879,93s
+  [ 314] obj=642,16     act=5576     err= 0,00%/ 1,72% time=5,71s/1885,64s
+  [ 315] obj=642,00     act=5559     err= 0,00%/ 1,38% time=5,63s/1891,27s
+  [ 316] obj=641,86     act=5547     err= 0,00%/ 1,38% time=5,66s/1896,93s
+  [ 317] obj=641,72     act=5549     err= 0,00%/ 1,38% time=5,73s/1902,66s
+  [ 318] obj=641,55     act=5506     err= 0,00%/ 1,03% time=5,72s/1908,38s
+  [ 319] obj=641,41     act=5501     err= 0,00%/ 1,03% time=5,73s/1914,11s
+  [ 320] obj=641,22     act=5518     err= 0,00%/ 1,03% time=5,73s/1919,84s
+  [ 321] obj=641,09     act=5451     err= 0,00%/ 1,03% time=5,73s/1925,57s
+  [ 322] obj=640,97     act=5435     err= 0,00%/ 1,03% time=5,76s/1931,33s
+  [ 323] obj=640,87     act=5418     err= 0,00%/ 1,38% time=5,77s/1937,10s
+  [ 324] obj=640,70     act=5445     err= 0,00%/ 1,38% time=5,68s/1942,78s
+  [ 325] obj=640,63     act=5443     err= 0,00%/ 1,38% time=5,73s/1948,51s
+  [ 326] obj=640,39     act=5457     err= 0,00%/ 1,38% time=5,75s/1954,26s
+  [ 327] obj=640,29     act=5397     err= 0,00%/ 1,38% time=5,69s/1959,95s
+  [ 328] obj=640,13     act=5354     err= 0,00%/ 1,03% time=5,72s/1965,67s
+  [ 329] obj=640,07     act=5327     err= 0,00%/ 1,03% time=5,84s/1971,51s
+  [ 330] obj=639,88     act=5309     err= 0,00%/ 1,38% time=5,76s/1977,26s
+  [ 331] obj=639,82     act=5300     err= 0,00%/ 1,03% time=5,66s/1982,92s
+  [ 332] obj=639,60     act=5301     err= 0,00%/ 1,38% time=5,74s/1988,66s
+  [ 333] obj=639,49     act=5251     err= 0,00%/ 1,38% time=5,72s/1994,38s
+  [ 334] obj=639,38     act=5230     err= 0,00%/ 1,38% time=5,75s/2000,13s
+  [ 335] obj=639,27     act=5248     err= 0,00%/ 1,03% time=5,73s/2005,87s
+  [ 336] obj=639,09     act=5221     err= 0,00%/ 1,38% time=5,69s/2011,55s
+  [ 337] obj=638,97     act=5249     err= 0,00%/ 1,03% time=5,78s/2017,33s
+  [ 338] obj=638,81     act=5174     err= 0,00%/ 1,38% time=5,75s/2023,08s
+  [ 339] obj=638,70     act=5167     err= 0,00%/ 1,03% time=5,71s/2028,79s
+  [ 340] obj=638,57     act=5138     err= 0,00%/ 1,38% time=5,69s/2034,48s
+  [ 341] obj=638,50     act=5132     err= 0,00%/ 1,03% time=5,72s/2040,20s
+  [ 342] obj=638,33     act=5135     err= 0,00%/ 1,38% time=5,78s/2045,98s
+  [ 343] obj=638,26     act=5150     err= 0,00%/ 1,03% time=5,70s/2051,68s
+  [ 344] obj=638,11     act=5118     err= 0,00%/ 1,38% time=5,74s/2057,41s
+  [ 345] obj=638,01     act=5115     err= 0,00%/ 1,03% time=5,71s/2063,12s
+  [ 346] obj=637,90     act=5076     err= 0,00%/ 1,03% time=5,72s/2068,83s
+  [ 347] obj=637,81     act=5086     err= 0,00%/ 1,03% time=5,67s/2074,51s
+  [ 348] obj=637,72     act=5051     err= 0,00%/ 1,03% time=5,73s/2080,23s
+  [ 349] obj=637,63     act=5035     err= 0,00%/ 1,03% time=5,82s/2086,05s
+  [ 350] obj=637,53     act=5011     err= 0,00%/ 1,03% time=5,75s/2091,80s
+  [ 351] obj=637,42     act=5018     err= 0,00%/ 1,03% time=5,77s/2097,56s
+  [ 352] obj=637,30     act=4977     err= 0,00%/ 1,03% time=5,71s/2103,28s
+  [ 353] obj=637,20     act=4973     err= 0,00%/ 1,03% time=5,69s/2108,97s
+  [ 354] obj=637,08     act=4942     err= 0,00%/ 1,03% time=5,74s/2114,70s
+  [ 355] obj=636,98     act=4931     err= 0,00%/ 0,69% time=5,77s/2120,48s
+  [ 356] obj=636,88     act=4920     err= 0,00%/ 1,03% time=5,75s/2126,23s
+  [ 357] obj=636,76     act=4916     err= 0,00%/ 1,03% time=5,79s/2132,01s
+  [ 358] obj=636,66     act=4905     err= 0,00%/ 1,03% time=5,69s/2137,70s
+  [ 359] obj=636,55     act=4889     err= 0,00%/ 1,03% time=5,72s/2143,42s
+  [ 360] obj=636,44     act=4874     err= 0,00%/ 1,03% time=5,74s/2149,16s
+  [ 361] obj=636,35     act=4861     err= 0,00%/ 1,03% time=5,71s/2154,87s
+  [ 362] obj=636,27     act=4840     err= 0,00%/ 1,03% time=5,67s/2160,54s
+  [ 363] obj=636,19     act=4832     err= 0,00%/ 1,03% time=5,72s/2166,26s
+  [ 364] obj=636,10     act=4812     err= 0,00%/ 1,03% time=5,71s/2171,97s
+  [ 365] obj=636,00     act=4836     err= 0,00%/ 1,03% time=5,71s/2177,68s
+  [ 366] obj=635,89     act=4795     err= 0,00%/ 1,03% time=5,70s/2183,37s
+  [ 367] obj=635,79     act=4768     err= 0,00%/ 1,03% time=5,68s/2189,05s
+  [ 368] obj=635,70     act=4739     err= 0,00%/ 1,03% time=5,71s/2194,76s
+  [ 369] obj=635,67     act=4742     err= 0,00%/ 1,03% time=5,80s/2200,56s
+  [ 370] obj=635,54     act=4771     err= 0,00%/ 1,03% time=5,81s/2206,37s
+  [ 371] obj=635,42     act=4804     err= 0,00%/ 1,03% time=5,74s/2212,11s
+  [ 372] obj=635,32     act=4766     err= 0,00%/ 1,03% time=5,65s/2217,76s
+  [ 373] obj=635,19     act=4772     err= 0,00%/ 1,03% time=5,70s/2223,46s
+  [ 374] obj=635,12     act=4733     err= 0,00%/ 1,03% time=5,68s/2229,14s
+  [ 375] obj=635,04     act=4729     err= 0,00%/ 1,03% time=5,77s/2234,91s
+  [ 376] obj=634,99     act=4735     err= 0,00%/ 1,03% time=5,68s/2240,59s
+  [ 377] obj=634,83     act=4743     err= 0,00%/ 1,03% time=5,72s/2246,31s
+  [ 378] obj=634,79     act=4713     err= 0,00%/ 1,03% time=5,71s/2252,02s
+  [ 379] obj=634,63     act=4730     err= 0,00%/ 1,03% time=5,69s/2257,70s
+  [ 380] obj=634,57     act=4684     err= 0,00%/ 1,03% time=5,73s/2263,43s
+  [ 381] obj=634,48     act=4669     err= 0,00%/ 1,03% time=5,67s/2269,10s
+  [ 382] obj=634,40     act=4662     err= 0,00%/ 1,03% time=5,64s/2274,74s
+  [ 383] obj=634,30     act=4659     err= 0,00%/ 1,03% time=5,77s/2280,51s
+  [ 384] obj=634,21     act=4654     err= 0,00%/ 1,38% time=5,61s/2286,12s
+  [ 385] obj=634,11     act=4654     err= 0,00%/ 1,38% time=5,87s/2291,99s
+  [ 386] obj=634,02     act=4641     err= 0,00%/ 1,38% time=5,80s/2297,79s
+  [ 387] obj=633,94     act=4632     err= 0,00%/ 1,38% time=5,67s/2303,46s
+  [ 388] obj=633,86     act=4629     err= 0,00%/ 1,38% time=5,67s/2309,13s
+  [ 389] obj=633,75     act=4606     err= 0,00%/ 1,38% time=5,71s/2314,83s
+  [ 390] obj=633,67     act=4608     err= 0,00%/ 1,38% time=5,70s/2320,53s
+  [ 391] obj=633,59     act=4595     err= 0,00%/ 1,03% time=5,69s/2326,22s
+  [ 392] obj=633,52     act=4624     err= 0,00%/ 1,03% time=5,71s/2331,93s
+  [ 393] obj=633,44     act=4594     err= 0,00%/ 1,03% time=5,66s/2337,59s
+  [ 394] obj=633,34     act=4618     err= 0,00%/ 1,03% time=5,65s/2343,24s
+  [ 395] obj=633,25     act=4586     err= 0,00%/ 1,03% time=5,72s/2348,96s
+  [ 396] obj=633,18     act=4572     err= 0,00%/ 1,03% time=5,83s/2354,79s
+  [ 397] obj=633,10     act=4562     err= 0,00%/ 1,03% time=5,72s/2360,50s
+  [ 398] obj=633,03     act=4548     err= 0,00%/ 1,03% time=5,70s/2366,21s
+  [ 399] obj=632,95     act=4525     err= 0,00%/ 1,03% time=5,74s/2371,95s
+  [ 400] obj=632,89     act=4529     err= 0,00%/ 1,03% time=5,67s/2377,62s
+  [ 401] obj=632,80     act=4512     err= 0,00%/ 1,03% time=5,76s/2383,38s
+  [ 402] obj=632,75     act=4502     err= 0,00%/ 1,03% time=5,71s/2389,10s
+  [ 403] obj=632,64     act=4518     err= 0,00%/ 1,03% time=5,69s/2394,79s
+  [ 404] obj=632,59     act=4494     err= 0,00%/ 1,03% time=5,79s/2400,58s
+  [ 405] obj=632,51     act=4485     err= 0,00%/ 1,03% time=5,73s/2406,31s
+  [ 406] obj=632,46     act=4482     err= 0,00%/ 0,69% time=5,73s/2412,04s
+  [ 407] obj=632,37     act=4484     err= 0,00%/ 0,69% time=5,65s/2417,70s
+  [ 408] obj=632,33     act=4482     err= 0,00%/ 0,69% time=5,79s/2423,49s
+  [ 409] obj=632,23     act=4507     err= 0,00%/ 0,69% time=5,81s/2429,30s
+  [ 410] obj=632,19     act=4472     err= 0,00%/ 0,69% time=5,80s/2435,10s
+  [ 411] obj=632,12     act=4472     err= 0,00%/ 0,69% time=5,80s/2440,91s
+  [ 412] obj=632,07     act=4487     err= 0,00%/ 1,03% time=5,70s/2446,60s
+  [ 413] obj=631,97     act=4469     err= 0,00%/ 1,03% time=5,69s/2452,29s
+  [ 414] obj=631,92     act=4444     err= 0,00%/ 1,03% time=5,67s/2457,96s
+  [ 415] obj=631,83     act=4448     err= 0,00%/ 1,03% time=5,63s/2463,59s
+  [ 416] obj=631,78     act=4427     err= 0,00%/ 1,03% time=5,62s/2469,21s
+  [ 417] obj=631,68     act=4427     err= 0,00%/ 1,03% time=5,67s/2474,88s
+  [ 418] obj=631,66     act=4414     err= 0,00%/ 0,69% time=5,88s/2480,76s
+  [ 419] obj=631,53     act=4451     err= 0,00%/ 0,69% time=5,85s/2486,61s
+  [ 420] obj=631,52     act=4428     err= 0,00%/ 0,69% time=5,70s/2492,31s
+  [ 421] obj=631,37     act=4498     err= 0,00%/ 0,34% time=5,72s/2498,03s
+  [ 422] obj=631,33     act=4452     err= 0,00%/ 0,34% time=5,69s/2503,72s
+  [ 423] obj=631,23     act=4425     err= 0,00%/ 0,34% time=5,76s/2509,48s
+  [ 424] obj=631,15     act=4456     err= 0,00%/ 0,34% time=9,74s/2519,22s
+  [ 425] obj=631,10     act=4412     err= 0,00%/ 0,34% time=9,76s/2528,98s
+  [ 426] obj=631,01     act=4467     err= 0,00%/ 0,34% time=9,78s/2538,76s
+  [ 427] obj=630,92     act=4421     err= 0,00%/ 0,34% time=9,75s/2548,50s
+  [ 428] obj=630,84     act=4429     err= 0,00%/ 0,34% time=9,81s/2558,32s
+  [ 429] obj=630,73     act=4428     err= 0,00%/ 0,34% time=9,76s/2568,08s
+  [ 430] obj=630,63     act=4386     err= 0,00%/ 0,34% time=9,74s/2577,82s
+  [ 431] obj=630,54     act=4410     err= 0,00%/ 0,69% time=9,76s/2587,58s
+  [ 432] obj=630,43     act=4365     err= 0,00%/ 0,34% time=9,76s/2597,34s
+  [ 433] obj=630,32     act=4354     err= 0,00%/ 0,69% time=9,73s/2607,07s
+  [ 434] obj=630,26     act=4396     err= 0,00%/ 1,03% time=9,75s/2616,82s
+  [ 435] obj=630,14     act=4374     err= 0,00%/ 1,03% time=9,82s/2626,64s
+  [ 436] obj=630,05     act=4399     err= 0,00%/ 1,03% time=9,69s/2636,33s
+  [ 437] obj=629,91     act=4378     err= 0,00%/ 1,03% time=9,71s/2646,04s
+  [ 438] obj=629,77     act=4320     err= 0,00%/ 1,38% time=5,71s/2651,76s
+  [ 439] obj=629,55     act=4500     err= 0,00%/ 1,38% time=9,83s/2661,59s
+  [ 440] obj=629,51     act=4465     err= 0,00%/ 1,03% time=9,76s/2671,35s
+  [ 441] obj=629,33     act=4390     err= 0,00%/ 1,03% time=9,80s/2681,15s
+  [ 442] obj=629,23     act=4430     err= 0,00%/ 1,03% time=9,84s/2690,99s
+  [ 443] obj=629,09     act=4332     err= 0,00%/ 1,03% time=9,81s/2700,80s
+  [ 444] obj=629,06     act=4288     err= 0,00%/ 1,03% time=5,76s/2706,56s
+  [ 445] obj=628,97     act=4333     err= 0,00%/ 1,03% time=5,74s/2712,30s
+  [ 446] obj=628,83     act=4769     err= 0,00%/ 1,03% time=5,75s/2718,06s
+  [ 447] obj=628,70     act=4528     err= 0,00%/ 1,03% time=5,80s/2723,86s
+  [ 448] obj=628,61     act=4689     err= 0,00%/ 1,03% time=5,70s/2729,55s
+  [ 449] obj=628,47     act=4486     err= 0,00%/ 1,03% time=5,69s/2735,25s
+  [ 450] obj=628,40     act=4473     err= 0,00%/ 1,03% time=5,74s/2740,98s
+  [ 451] obj=628,32     act=4397     err= 0,00%/ 1,03% time=5,71s/2746,69s
+  [ 452] obj=628,24     act=4402     err= 0,00%/ 0,69% time=5,71s/2752,40s
+  [ 453] obj=628,17     act=4348     err= 0,00%/ 1,03% time=5,76s/2758,16s
+  [ 454] obj=628,00     act=4392     err= 0,00%/ 0,69% time=5,66s/2763,82s
+  [ 455] obj=627,93     act=4331     err= 0,00%/ 0,69% time=5,85s/2769,67s
+  [ 456] obj=627,82     act=4338     err= 0,00%/ 0,69% time=5,68s/2775,34s
+  [ 457] obj=627,74     act=4315     err= 0,00%/ 1,03% time=5,68s/2781,02s
+  [ 458] obj=627,70     act=4305     err= 0,00%/ 1,38% time=5,68s/2786,71s
+  [ 459] obj=627,59     act=4304     err= 0,00%/ 1,03% time=5,64s/2792,35s
+  [ 460] obj=627,54     act=4290     err= 0,00%/ 1,38% time=5,76s/2798,10s
+  [ 461] obj=627,44     act=4279     err= 0,00%/ 1,03% time=5,67s/2803,77s
+  [ 462] obj=627,37     act=4273     err= 0,00%/ 1,38% time=5,69s/2809,46s
+  [ 463] obj=627,29     act=4240     err= 0,00%/ 1,38% time=5,71s/2815,18s
+  [ 464] obj=627,22     act=4236     err= 0,00%/ 1,72% time=5,71s/2820,89s
+  [ 465] obj=627,14     act=4208     err= 0,00%/ 1,38% time=5,66s/2826,55s
+  [ 466] obj=627,08     act=4201     err= 0,00%/ 1,72% time=5,76s/2832,30s
+  [ 467] obj=627,00     act=4168     err= 0,00%/ 1,38% time=5,71s/2838,01s
+  [ 468] obj=626,93     act=4179     err= 0,00%/ 1,72% time=5,73s/2843,75s
+  [ 469] obj=626,87     act=4147     err= 0,00%/ 1,38% time=5,73s/2849,48s
+  [ 470] obj=626,80     act=4157     err= 0,00%/ 1,72% time=5,75s/2855,23s
+  [ 471] obj=626,72     act=4148     err= 0,00%/ 1,38% time=5,78s/2861,01s
+  [ 472] obj=626,68     act=4141     err= 0,00%/ 1,72% time=5,72s/2866,73s
+  [ 473] obj=626,59     act=4154     err= 0,00%/ 1,38% time=5,76s/2872,49s
+  [ 474] obj=626,54     act=4138     err= 0,00%/ 1,38% time=5,77s/2878,26s
+  [ 475] obj=626,47     act=4139     err= 0,00%/ 1,38% time=5,74s/2884,00s
+  [ 476] obj=626,41     act=4120     err= 0,00%/ 1,38% time=5,80s/2889,80s
+  [ 477] obj=626,33     act=4116     err= 0,00%/ 1,38% time=5,70s/2895,49s
+  [ 478] obj=626,27     act=4101     err= 0,00%/ 1,72% time=5,66s/2901,16s
+  [ 479] obj=626,19     act=4108     err= 0,00%/ 1,38% time=5,69s/2906,84s
+  [ 480] obj=626,13     act=4088     err= 0,00%/ 1,72% time=5,74s/2912,58s
+  [ 481] obj=626,05     act=4108     err= 0,00%/ 1,72% time=5,76s/2918,34s
+  [ 482] obj=626,00     act=4086     err= 0,00%/ 1,72% time=5,68s/2924,02s
+  [ 483] obj=625,92     act=4100     err= 0,00%/ 1,38% time=5,68s/2929,70s
+  [ 484] obj=625,87     act=4090     err= 0,00%/ 1,72% time=5,71s/2935,41s
+  [ 485] obj=625,79     act=4084     err= 0,00%/ 1,38% time=5,79s/2941,20s
+  [ 486] obj=625,72     act=4094     err= 0,00%/ 1,38% time=5,77s/2946,96s
+  [ 487] obj=625,66     act=4085     err= 0,00%/ 1,03% time=5,83s/2952,79s
+  [ 488] obj=625,62     act=4073     err= 0,00%/ 1,03% time=5,76s/2958,55s
+  [ 489] obj=625,55     act=4079     err= 0,00%/ 1,03% time=5,75s/2964,30s
+  [ 490] obj=625,51     act=4071     err= 0,00%/ 1,03% time=5,84s/2970,13s
+  [ 491] obj=625,42     act=4087     err= 0,00%/ 1,03% time=5,80s/2975,94s
+  [ 492] obj=625,38     act=4077     err= 0,00%/ 1,03% time=5,67s/2981,61s
+  [ 493] obj=625,31     act=4073     err= 0,00%/ 1,03% time=5,70s/2987,31s
+  [ 494] obj=625,27     act=4069     err= 0,00%/ 1,03% time=5,69s/2993,00s
+  [ 495] obj=625,20     act=4063     err= 0,00%/ 1,03% time=5,67s/2998,67s
+  [ 496] obj=625,14     act=4067     err= 0,00%/ 1,03% time=5,69s/3004,37s
+  [ 497] obj=625,07     act=4070     err= 0,00%/ 1,03% time=5,63s/3010,00s
+  [ 498] obj=625,01     act=4070     err= 0,00%/ 1,03% time=5,72s/3015,72s
+  [ 499] obj=624,94     act=4055     err= 0,00%/ 1,03% time=5,74s/3021,46s
+  [ 500] obj=624,90     act=4067     err= 0,00%/ 1,03% time=5,82s/3027,28s
+  [ 501] obj=624,83     act=4049     err= 0,00%/ 1,03% time=5,84s/3033,12s
+  [ 502] obj=624,80     act=4047     err= 0,00%/ 1,03% time=5,73s/3038,85s
+  [ 503] obj=624,71     act=4050     err= 0,00%/ 1,03% time=5,75s/3044,60s
+  [ 504] obj=624,68     act=4044     err= 0,00%/ 1,03% time=5,70s/3050,30s
+  [ 505] obj=624,60     act=4049     err= 0,00%/ 0,69% time=5,78s/3056,07s
+  [ 506] obj=624,57     act=4059     err= 0,00%/ 0,69% time=5,79s/3061,86s
+  [ 507] obj=624,50     act=4037     err= 0,00%/ 1,03% time=5,67s/3067,53s
+  [ 508] obj=624,46     act=4030     err= 0,00%/ 0,69% time=5,73s/3073,26s
+  [ 509] obj=624,39     act=4033     err= 0,00%/ 0,69% time=5,74s/3079,00s
+  [ 510] obj=624,36     act=4013     err= 0,00%/ 1,03% time=5,76s/3084,76s
+  [ 511] obj=624,29     act=4015     err= 0,00%/ 1,03% time=5,67s/3090,43s
+  [ 512] obj=624,26     act=3999     err= 0,00%/ 1,03% time=5,87s/3096,30s
+  [ 513] obj=624,19     act=3995     err= 0,00%/ 0,69% time=5,70s/3102,00s
+  [ 514] obj=624,17     act=3992     err= 0,00%/ 1,03% time=5,73s/3107,73s
+  [ 515] obj=624,10     act=3989     err= 0,00%/ 0,69% time=5,71s/3113,44s
+  [ 516] obj=624,08     act=3982     err= 0,00%/ 1,03% time=5,74s/3119,17s
+  [ 517] obj=624,00     act=4037     err= 0,00%/ 0,69% time=5,75s/3124,92s
+  [ 518] obj=623,97     act=3972     err= 0,00%/ 1,03% time=5,71s/3130,63s
+  [ 519] obj=623,91     act=3960     err= 0,00%/ 1,03% time=5,71s/3136,34s
+  [ 520] obj=623,90     act=3965     err= 0,00%/ 1,38% time=5,69s/3142,02s
+  [ 521] obj=623,81     act=3968     err= 0,00%/ 1,03% time=5,79s/3147,81s
+  [ 522] obj=623,80     act=3942     err= 0,00%/ 1,38% time=5,70s/3153,51s
+  [ 523] obj=623,69     act=3999     err= 0,00%/ 1,03% time=5,72s/3159,23s
+  [ 524] obj=623,65     act=3953     err= 0,00%/ 1,38% time=5,69s/3164,92s
+  [ 525] obj=623,61     act=3948     err= 0,00%/ 1,03% time=5,65s/3170,57s
+  [ 526] obj=623,60     act=3989     err= 0,00%/ 1,03% time=5,65s/3176,22s
+  [ 527] obj=623,48     act=3951     err= 0,00%/ 1,03% time=5,76s/3181,97s
+  [ 528] obj=623,46     act=3970     err= 0,00%/ 1,03% time=5,73s/3187,70s
+  [ 529] obj=623,33     act=3982     err= 0,00%/ 1,03% time=5,71s/3193,41s
+  [ 530] obj=623,29     act=3934     err= 0,00%/ 1,03% time=5,75s/3199,16s
+  [ 531] obj=623,25     act=3934     err= 0,00%/ 1,03% time=5,69s/3204,85s
+  [ 532] obj=623,22     act=4032     err= 0,00%/ 1,03% time=5,68s/3210,53s
+  [ 533] obj=623,11     act=3953     err= 0,00%/ 1,03% time=5,70s/3216,22s
+  [ 534] obj=623,08     act=3990     err= 0,00%/ 1,03% time=5,71s/3221,94s
+  [ 535] obj=622,97     act=3946     err= 0,00%/ 1,03% time=5,70s/3227,63s
+  [ 536] obj=622,95     act=3949     err= 0,00%/ 1,03% time=5,75s/3233,39s
+  [ 537] obj=622,87     act=3914     err= 0,00%/ 1,03% time=5,65s/3239,03s
+  [ 538] obj=622,85     act=3912     err= 0,00%/ 1,03% time=5,70s/3244,73s
+  [ 539] obj=622,79     act=3900     err= 0,00%/ 1,03% time=5,68s/3250,41s
+  [ 540] obj=622,75     act=3906     err= 0,00%/ 1,03% time=5,73s/3256,13s
+  [ 541] obj=622,67     act=3903     err= 0,00%/ 1,03% time=5,71s/3261,84s
+  [ 542] obj=622,64     act=3891     err= 0,00%/ 1,03% time=5,66s/3267,50s
+  [ 543] obj=622,56     act=3874     err= 0,00%/ 1,03% time=5,72s/3273,22s
+  [ 544] obj=622,54     act=3875     err= 0,00%/ 1,03% time=5,70s/3278,92s
+  [ 545] obj=622,46     act=3859     err= 0,00%/ 1,03% time=5,75s/3284,67s
+  [ 546] obj=622,44     act=3863     err= 0,00%/ 1,03% time=5,86s/3290,53s
+  [ 547] obj=622,37     act=3858     err= 0,00%/ 1,03% time=5,75s/3296,29s
+  [ 548] obj=622,34     act=3864     err= 0,00%/ 1,03% time=5,72s/3302,00s
+  [ 549] obj=622,26     act=3842     err= 0,00%/ 1,03% time=5,75s/3307,75s
+  [ 550] obj=622,24     act=3841     err= 0,00%/ 1,03% time=5,77s/3313,52s
+  [ 551] obj=622,15     act=3842     err= 0,00%/ 1,03% time=5,79s/3319,31s
+  [ 552] obj=622,13     act=3833     err= 0,00%/ 1,03% time=5,75s/3325,06s
+  [ 553] obj=622,07     act=3831     err= 0,00%/ 1,03% time=5,69s/3330,74s
+  [ 554] obj=622,02     act=3837     err= 0,00%/ 1,03% time=5,78s/3336,52s
+  [ 555] obj=621,98     act=3824     err= 0,00%/ 1,03% time=5,72s/3342,24s
+  [ 556] obj=621,92     act=3848     err= 0,00%/ 1,03% time=5,77s/3348,01s
+  [ 557] obj=621,87     act=3817     err= 0,00%/ 1,03% time=5,82s/3353,83s
+  [ 558] obj=621,83     act=3826     err= 0,00%/ 1,03% time=5,72s/3359,55s
+  [ 559] obj=621,79     act=3816     err= 0,00%/ 1,03% time=5,76s/3365,31s
+  [ 560] obj=621,75     act=3806     err= 0,00%/ 1,03% time=5,74s/3371,05s
+  [ 561] obj=621,70     act=3806     err= 0,00%/ 1,03% time=5,72s/3376,77s
+  [ 562] obj=621,67     act=3802     err= 0,00%/ 1,03% time=5,71s/3382,48s
+  [ 563] obj=621,60     act=3806     err= 0,00%/ 1,03% time=5,70s/3388,18s
+  [ 564] obj=621,59     act=3792     err= 0,00%/ 1,03% time=5,76s/3393,94s
+  [ 565] obj=621,52     act=3795     err= 0,00%/ 1,03% time=5,82s/3399,76s
+  [ 566] obj=621,51     act=3786     err= 0,00%/ 1,03% time=5,84s/3405,60s
+  [ 567] obj=621,44     act=3781     err= 0,00%/ 1,03% time=5,75s/3411,35s
+  [ 568] obj=621,43     act=3777     err= 0,00%/ 1,03% time=5,70s/3417,06s
+  [ 569] obj=621,36     act=3795     err= 0,00%/ 1,03% time=5,77s/3422,83s
+  [ 570] obj=621,34     act=3774     err= 0,00%/ 1,03% time=5,73s/3428,56s
+  [ 571] obj=621,28     act=3791     err= 0,00%/ 1,03% time=5,72s/3434,28s
+  [ 572] obj=621,25     act=3772     err= 0,00%/ 1,03% time=5,67s/3439,95s
+  [ 573] obj=621,20     act=3759     err= 0,00%/ 1,03% time=5,68s/3445,62s
+  [ 574] obj=621,18     act=3763     err= 0,00%/ 1,03% time=5,69s/3451,31s
+  [ 575] obj=621,11     act=3755     err= 0,00%/ 1,03% time=5,70s/3457,01s
+  [ 576] obj=621,08     act=3776     err= 0,00%/ 1,03% time=5,77s/3462,78s
+  [ 577] obj=621,01     act=3759     err= 0,00%/ 1,03% time=5,73s/3468,51s
+  [ 578] obj=621,01     act=3766     err= 0,00%/ 1,03% time=5,76s/3474,27s
+  [ 579] obj=620,92     act=3827     err= 0,00%/ 1,03% time=5,73s/3480,00s
+  [ 580] obj=620,88     act=3801     err= 0,00%/ 1,03% time=9,76s/3489,75s
+  [ 581] obj=620,85     act=3790     err= 0,00%/ 1,03% time=9,73s/3499,48s
+  [ 582] obj=620,81     act=3766     err= 0,00%/ 1,03% time=9,71s/3509,18s
+  [ 583] obj=620,76     act=3759     err= 0,00%/ 1,03% time=9,73s/3518,91s
+  [ 584] obj=620,72     act=3986     err= 0,00%/ 1,03% time=9,79s/3528,70s
+  [ 585] obj=620,63     act=3871     err= 0,00%/ 1,03% time=9,71s/3538,40s
+  [ 586] obj=620,59     act=3868     err= 0,00%/ 0,69% time=9,73s/3548,13s
+  [ 587] obj=620,49     act=3843     err= 0,00%/ 0,69% time=9,77s/3557,90s
+  [ 588] obj=620,46     act=3766     err= 0,00%/ 0,69% time=5,68s/3563,58s
+  [ 589] obj=620,31     act=3888     err= 0,00%/ 0,69% time=9,74s/3573,32s
+  [ 590] obj=620,26     act=3834     err= 0,00%/ 1,03% time=9,70s/3583,02s
+  [ 591] obj=620,18     act=3778     err= 0,00%/ 0,69% time=9,77s/3592,79s
+  [ 592] obj=620,12     act=3843     err= 0,00%/ 0,69% time=13,84s/3606,63s
+  [ 593] obj=620,04     act=3740     err= 0,00%/ 0,69% time=9,76s/3616,39s
+  [ 594] obj=620,00     act=3849     err= 0,00%/ 0,69% time=9,69s/3626,07s
+  [ 595] obj=619,91     act=3919     err= 0,00%/ 0,69% time=9,88s/3635,95s
+  [ 596] obj=619,83     act=3864     err= 0,00%/ 0,69% time=9,85s/3645,80s
+  [ 597] obj=619,75     act=3892     err= 0,00%/ 0,69% time=9,66s/3655,45s
+  [ 598] obj=619,68     act=3835     err= 0,00%/ 0,69% time=9,77s/3665,23s
+  [ 599] obj=619,61     act=3813     err= 0,00%/ 0,69% time=9,77s/3674,99s
+  [ 600] obj=619,55     act=3799     err= 0,00%/ 0,69% time=9,81s/3684,80s
+  [ 601] obj=619,48     act=3793     err= 0,00%/ 0,69% time=9,74s/3694,54s
+  [ 602] obj=619,42     act=3782     err= 0,00%/ 0,69% time=9,86s/3704,40s
+  [ 603] obj=619,35     act=3747     err= 0,00%/ 0,69% time=9,75s/3714,15s
+  [ 604] obj=619,28     act=3745     err= 0,00%/ 0,69% time=9,83s/3723,98s
+  [ 605] obj=619,22     act=3720     err= 0,00%/ 0,69% time=9,75s/3733,73s
+  [ 606] obj=619,16     act=3707     err= 0,00%/ 1,03% time=9,80s/3743,53s
+  [ 607] obj=619,09     act=3706     err= 0,00%/ 1,03% time=9,77s/3753,30s
+  [ 608] obj=619,04     act=3704     err= 0,00%/ 1,03% time=9,76s/3763,06s
+  [ 609] obj=618,97     act=3701     err= 0,00%/ 1,03% time=9,76s/3772,83s
+  [ 610] obj=618,90     act=3686     err= 0,00%/ 1,03% time=9,78s/3782,61s
+  [ 611] obj=618,82     act=3713     err= 0,00%/ 1,03% time=9,75s/3792,36s
+  [ 612] obj=618,78     act=3701     err= 0,00%/ 1,03% time=9,84s/3802,20s
+  [ 613] obj=618,69     act=3706     err= 0,00%/ 1,03% time=9,80s/3812,00s
+  [ 614] obj=618,63     act=3708     err= 0,00%/ 1,03% time=9,78s/3821,78s
+  [ 615] obj=618,53     act=3728     err= 0,00%/ 1,03% time=9,69s/3831,46s
+  [ 616] obj=618,46     act=3699     err= 0,00%/ 1,03% time=9,73s/3841,19s
+  [ 617] obj=618,38     act=3710     err= 0,00%/ 1,03% time=9,79s/3850,99s
+  [ 618] obj=618,33     act=3717     err= 0,00%/ 1,03% time=9,72s/3860,71s
+  [ 619] obj=618,24     act=3739     err= 0,00%/ 1,03% time=9,78s/3870,49s
+  [ 620] obj=618,19     act=3721     err= 0,00%/ 1,03% time=9,73s/3880,21s
+  [ 621] obj=618,05     act=3759     err= 0,00%/ 1,03% time=9,84s/3890,06s
+  [ 622] obj=617,99     act=3662     err= 0,00%/ 1,03% time=5,73s/3895,79s
+  [ 623] obj=617,81     act=3815     err= 0,00%/ 1,03% time=9,72s/3905,51s
+  [ 624] obj=617,68     act=3754     err= 0,00%/ 1,03% time=5,72s/3911,24s
+  [ 625] obj=617,63     act=3679     err= 0,00%/ 1,03% time=5,70s/3916,94s
+  [ 626] obj=617,60     act=4713     err= 0,00%/ 1,03% time=9,75s/3926,70s
+  [ 627] obj=617,35     act=4048     err= 0,00%/ 1,03% time=5,76s/3932,46s
+  [ 628] obj=617,21     act=4454     err= 0,00%/ 1,03% time=5,73s/3938,18s
+  [ 629] obj=617,14     act=4188     err= 0,00%/ 1,03% time=9,77s/3947,95s
+  [ 630] obj=617,12     act=3992     err= 0,00%/ 1,03% time=5,73s/3953,68s
+  [ 631] obj=616,99     act=3892     err= 0,00%/ 1,38% time=5,69s/3959,37s
+  [ 632] obj=616,99     act=3797     err= 0,00%/ 1,03% time=5,71s/3965,09s
+  [ 633] obj=616,80     act=3970     err= 0,00%/ 1,03% time=9,72s/3974,81s
+  [ 634] obj=616,65     act=3759     err= 0,00%/ 1,03% time=5,69s/3980,50s
+  [ 635] obj=616,60     act=3713     err= 0,00%/ 1,38% time=9,92s/3990,42s
+  [ 636] obj=616,47     act=4225     err= 0,00%/ 1,38% time=9,75s/4000,17s
+  [ 637] obj=616,36     act=3999     err= 0,00%/ 1,38% time=13,83s/4014,00s
+  [ 638] obj=616,30     act=3806     err= 0,00%/ 1,38% time=9,77s/4023,76s
+  [ 639] obj=616,22     act=3842     err= 0,00%/ 1,38% time=13,78s/4037,54s
+  [ 640] obj=616,18     act=3838     err= 0,00%/ 1,38% time=9,74s/4047,28s
+  [ 641] obj=616,09     act=3817     err= 0,00%/ 1,03% time=9,67s/4056,95s
+  [ 642] obj=616,05     act=3819     err= 0,00%/ 1,03% time=9,69s/4066,64s
+  [ 643] obj=615,96     act=3788     err= 0,00%/ 1,03% time=9,77s/4076,41s
+  [ 644] obj=615,91     act=3762     err= 0,00%/ 1,03% time=9,66s/4086,07s
+  [ 645] obj=615,85     act=3798     err= 0,00%/ 1,03% time=9,91s/4095,98s
+  [ 646] obj=615,81     act=3933     err= 0,00%/ 1,03% time=9,80s/4105,78s
+  [ 647] obj=615,73     act=3902     err= 0,00%/ 1,03% time=9,75s/4115,53s
+  [ 648] obj=615,70     act=3954     err= 0,00%/ 1,03% time=9,73s/4125,26s
+  [ 649] obj=615,63     act=3933     err= 0,00%/ 1,03% time=9,73s/4134,99s
+  [ 650] obj=615,58     act=3868     err= 0,00%/ 1,03% time=9,73s/4144,72s
+  [ 651] obj=615,52     act=3934     err= 0,00%/ 1,03% time=9,83s/4154,54s
+  [ 652] obj=615,48     act=3990     err= 0,00%/ 1,03% time=9,68s/4164,23s
+  [ 653] obj=615,41     act=3963     err= 0,00%/ 1,03% time=9,82s/4174,04s
+  [ 654] obj=615,36     act=3992     err= 0,00%/ 1,03% time=9,75s/4183,79s
+  [ 655] obj=615,29     act=3925     err= 0,00%/ 1,03% time=9,82s/4193,61s
+  [ 656] obj=615,22     act=3906     err= 0,00%/ 1,03% time=9,77s/4203,38s
+  [ 657] obj=615,14     act=3893     err= 0,00%/ 1,03% time=9,68s/4213,06s
+  [ 658] obj=615,09     act=3990     err= 0,00%/ 1,03% time=9,71s/4222,77s
+  [ 659] obj=615,02     act=3945     err= 0,00%/ 1,03% time=9,83s/4232,60s
+  [ 660] obj=614,96     act=3848     err= 0,00%/ 1,03% time=9,77s/4242,37s
+  [ 661] obj=614,94     act=3868     err= 0,00%/ 1,03% time=5,78s/4248,15s
+  [ 662] obj=614,84     act=3906     err= 0,00%/ 1,03% time=5,75s/4253,89s
+  [ 663] obj=614,73     act=3866     err= 0,00%/ 1,03% time=5,77s/4259,67s
+  [ 664] obj=614,71     act=3795     err= 0,00%/ 1,03% time=5,76s/4265,43s
+  [ 665] obj=614,61     act=3806     err= 0,00%/ 1,03% time=5,87s/4271,29s
+  [ 666] obj=614,58     act=3779     err= 0,00%/ 1,03% time=5,65s/4276,95s
+  [ 667] obj=614,50     act=3804     err= 0,00%/ 1,03% time=5,77s/4282,72s
+  [ 668] obj=614,43     act=3815     err= 0,00%/ 1,03% time=9,67s/4292,39s
+  [ 669] obj=614,35     act=3745     err= 0,00%/ 1,03% time=5,67s/4298,06s
+  [ 670] obj=614,28     act=3891     err= 0,00%/ 1,03% time=9,70s/4307,76s
+  [ 671] obj=614,23     act=3750     err= 0,00%/ 1,03% time=9,62s/4317,39s
+  [ 672] obj=614,15     act=3796     err= 0,00%/ 1,03% time=9,76s/4327,15s
+  [ 673] obj=614,11     act=3764     err= 0,00%/ 1,03% time=9,82s/4336,97s
+  [ 674] obj=614,10     act=3755     err= 0,00%/ 1,03% time=5,74s/4342,71s
+  [ 675] obj=613,96     act=3806     err= 0,00%/ 1,03% time=5,72s/4348,43s
+  [ 676] obj=613,88     act=3856     err= 0,00%/ 1,03% time=5,79s/4354,23s
+  [ 677] obj=613,80     act=3808     err= 0,00%/ 1,03% time=5,77s/4360,00s
+  [ 678] obj=613,76     act=3808     err= 0,00%/ 1,03% time=9,72s/4369,72s
+  [ 679] obj=613,71     act=3733     err= 0,00%/ 1,03% time=5,64s/4375,36s
+  [ 680] obj=613,61     act=3776     err= 0,00%/ 1,03% time=9,73s/4385,09s
+  [ 681] obj=613,49     act=3704     err= 0,00%/ 1,03% time=5,76s/4390,85s
+  [ 682] obj=613,43     act=3798     err= 0,00%/ 1,03% time=9,77s/4400,62s
+  [ 683] obj=613,38     act=3745     err= 0,00%/ 1,03% time=9,67s/4410,29s
+  [ 684] obj=613,28     act=3772     err= 0,00%/ 1,03% time=9,70s/4419,99s
+  [ 685] obj=613,23     act=3723     err= 0,00%/ 1,03% time=9,73s/4429,72s
+  [ 686] obj=613,16     act=3732     err= 0,00%/ 1,38% time=9,75s/4439,46s
+  [ 687] obj=613,10     act=3727     err= 0,00%/ 1,38% time=9,71s/4449,18s
+  [ 688] obj=613,04     act=3681     err= 0,00%/ 1,38% time=9,82s/4459,00s
+  [ 689] obj=612,99     act=3701     err= 0,00%/ 1,38% time=9,81s/4468,80s
+  [ 690] obj=612,95     act=3650     err= 0,00%/ 1,38% time=9,78s/4478,59s
+  [ 691] obj=612,90     act=3627     err= 0,00%/ 1,38% time=9,72s/4488,31s
+  [ 692] obj=612,90     act=3597     err= 0,00%/ 1,38% time=5,78s/4494,09s
+  [ 693] obj=612,82     act=3679     err= 0,00%/ 1,38% time=5,69s/4499,78s
+  [ 694] obj=612,70     act=3658     err= 0,00%/ 1,38% time=5,72s/4505,50s
+  [ 695] obj=612,65     act=3591     err= 0,00%/ 1,38% time=5,68s/4511,18s
+  [ 696] obj=612,63     act=3557     err= 0,00%/ 1,38% time=5,66s/4516,84s
+  [ 697] obj=612,61     act=3640     err= 0,00%/ 1,38% time=9,70s/4526,54s
+  [ 698] obj=612,54     act=4002     err= 0,00%/ 1,38% time=5,78s/4532,31s
+  [ 699] obj=612,40     act=3784     err= 0,00%/ 1,38% time=5,74s/4538,06s
+  [ 700] obj=612,32     act=3819     err= 0,00%/ 1,38% time=9,71s/4547,77s
+  [ 701] obj=612,28     act=3645     err= 0,00%/ 1,38% time=5,68s/4553,45s
+  [ 702] obj=612,22     act=3679     err= 0,00%/ 1,38% time=5,67s/4559,12s
+  [ 703] obj=612,20     act=3655     err= 0,00%/ 1,38% time=5,67s/4564,79s
+  [ 704] obj=612,11     act=3706     err= 0,00%/ 1,38% time=5,75s/4570,54s
+  [ 705] obj=612,11     act=3631     err= 0,00%/ 1,38% time=5,70s/4576,24s
+  [ 706] obj=612,06     act=3726     err= 0,00%/ 1,38% time=5,65s/4581,88s
+  [ 707] obj=611,92     act=3683     err= 0,00%/ 1,38% time=5,66s/4587,54s
+  [ 708] obj=611,87     act=3654     err= 0,00%/ 1,38% time=9,70s/4597,24s
+  [ 709] obj=611,85     act=3622     err= 0,00%/ 1,38% time=9,92s/4607,16s
+  [ 710] obj=611,81     act=3590     err= 0,00%/ 1,38% time=9,66s/4616,82s
+  [ 711] obj=611,78     act=3562     err= 0,00%/ 1,38% time=9,68s/4626,50s
+  [ 712] obj=611,74     act=3561     err= 0,00%/ 1,38% time=9,70s/4636,20s
+  [ 713] obj=611,72     act=3517     err= 0,00%/ 1,38% time=5,76s/4641,96s
+  [ 714] obj=611,69     act=3911     err= 0,00%/ 1,38% time=5,74s/4647,70s
+  [ 715] obj=611,56     act=3766     err= 0,00%/ 1,38% time=5,65s/4653,35s
+  [ 716] obj=611,56     act=3687     err= 0,00%/ 1,38% time=5,69s/4659,04s
+  [ 717] obj=611,48     act=3646     err= 0,00%/ 1,38% time=5,66s/4664,70s
+  [ 718] obj=611,43     act=3587     err= 0,00%/ 1,38% time=5,76s/4670,45s
+  [ 719] obj=611,41     act=3508     err= 0,00%/ 1,38% time=5,87s/4676,32s
+  [ 720] obj=611,36     act=3506     err= 0,00%/ 1,38% time=5,79s/4682,11s
+  [ 721] obj=611,32     act=3518     err= 0,00%/ 1,38% time=5,79s/4687,90s
+  [ 722] obj=611,31     act=3560     err= 0,00%/ 1,03% time=5,65s/4693,55s
+  [ 723] obj=611,27     act=3545     err= 0,00%/ 1,03% time=5,66s/4699,21s
+  [ 724] obj=611,23     act=3518     err= 0,00%/ 1,03% time=5,71s/4704,92s
+  [ 725] obj=611,15     act=3543     err= 0,00%/ 1,03% time=5,74s/4710,65s
+  [ 726] obj=611,14     act=3470     err= 0,00%/ 1,03% time=5,68s/4716,33s
+  [ 727] obj=611,06     act=3474     err= 0,00%/ 1,03% time=5,70s/4722,03s
+  [ 728] obj=611,03     act=3455     err= 0,00%/ 1,03% time=5,65s/4727,68s
+  [ 729] obj=611,00     act=3467     err= 0,00%/ 1,03% time=9,72s/4737,39s
+  [ 730] obj=610,94     act=3433     err= 0,00%/ 1,03% time=5,63s/4743,02s
+  [ 731] obj=610,92     act=3409     err= 0,00%/ 1,03% time=13,73s/4756,75s
+  [ 732] obj=610,89     act=3501     err= 0,00%/ 1,03% time=13,84s/4770,59s
+  [ 733] obj=610,87     act=3424     err= 0,00%/ 1,03% time=9,67s/4780,26s
+  [ 734] obj=610,81     act=3537     err= 0,00%/ 1,03% time=9,72s/4789,98s
+  [ 735] obj=610,78     act=3463     err= 0,00%/ 1,03% time=9,71s/4799,69s
+  [ 736] obj=610,77     act=3444     err= 0,00%/ 1,03% time=5,78s/4805,47s
+  [ 737] obj=610,67     act=3456     err= 0,00%/ 1,03% time=5,72s/4811,20s
+  [ 738] obj=610,61     act=3431     err= 0,00%/ 1,03% time=5,67s/4816,86s
+  [ 739] obj=610,58     act=3403     err= 0,00%/ 1,38% time=5,79s/4822,65s
+  [ 740] obj=610,54     act=3420     err= 0,00%/ 1,38% time=5,80s/4828,45s
+  [ 741] obj=610,49     act=3391     err= 0,00%/ 1,38% time=5,77s/4834,21s
+  [ 742] obj=610,46     act=3413     err= 0,00%/ 1,38% time=5,77s/4839,99s
+  [ 743] obj=610,41     act=3387     err= 0,00%/ 1,03% time=5,72s/4845,70s
+  [ 744] obj=610,38     act=3410     err= 0,00%/ 1,03% time=5,75s/4851,45s
+  [ 745] obj=610,32     act=3389     err= 0,00%/ 1,03% time=5,74s/4857,20s
+  [ 746] obj=610,30     act=3398     err= 0,00%/ 1,03% time=5,81s/4863,01s
+  [ 747] obj=610,25     act=3403     err= 0,00%/ 1,03% time=5,75s/4868,76s
+  [ 748] obj=610,23     act=3406     err= 0,00%/ 1,03% time=5,73s/4874,49s
+  [ 749] obj=610,17     act=3390     err= 0,00%/ 1,03% time=5,66s/4880,15s
+  [ 750] obj=610,16     act=3387     err= 0,00%/ 1,03% time=5,68s/4885,83s
+  [ 751] obj=610,10     act=3380     err= 0,00%/ 1,03% time=5,80s/4891,63s
+  [ 752] obj=610,09     act=3376     err= 0,00%/ 1,03% time=5,72s/4897,34s
+  [ 753] obj=610,04     act=3359     err= 0,00%/ 1,03% time=5,74s/4903,08s
+  [ 754] obj=610,02     act=3359     err= 0,00%/ 1,03% time=5,69s/4908,77s
+  [ 755] obj=609,98     act=3353     err= 0,00%/ 1,03% time=5,74s/4914,51s
+  [ 756] obj=609,96     act=3357     err= 0,00%/ 1,03% time=5,72s/4920,22s
+  [ 757] obj=609,91     act=3356     err= 0,00%/ 1,03% time=5,72s/4925,95s
+  [ 758] obj=609,90     act=3348     err= 0,00%/ 1,03% time=5,81s/4931,75s
+  [ 759] obj=609,85     act=3344     err= 0,00%/ 1,03% time=5,72s/4937,47s
+  [ 760] obj=609,83     act=3328     err= 0,00%/ 1,03% time=5,72s/4943,19s
+  [ 761] obj=609,79     act=3336     err= 0,00%/ 1,03% time=5,84s/4949,03s
+  [ 762] obj=609,78     act=3343     err= 0,00%/ 1,03% time=5,65s/4954,67s
+  [ 763] obj=609,72     act=3346     err= 0,00%/ 1,03% time=5,76s/4960,43s
+  [ 764] obj=609,72     act=3352     err= 0,00%/ 1,03% time=5,77s/4966,19s
+  [ 765] obj=609,66     act=3355     err= 0,00%/ 1,03% time=5,66s/4971,85s
+  [ 766] obj=609,65     act=3329     err= 0,00%/ 1,03% time=5,73s/4977,58s
+  [ 767] obj=609,61     act=3315     err= 0,00%/ 1,03% time=5,76s/4983,34s
+  [ 768] obj=609,60     act=3313     err= 0,00%/ 1,03% time=5,73s/4989,07s
+  [ 769] obj=609,55     act=3308     err= 0,00%/ 1,03% time=5,74s/4994,81s
+  [ 770] obj=609,54     act=3307     err= 0,00%/ 1,03% time=5,81s/5000,62s
+  [ 771] obj=609,50     act=3305     err= 0,00%/ 1,03% time=5,74s/5006,36s
+  [ 772] obj=609,49     act=3292     err= 0,00%/ 1,03% time=5,72s/5012,08s
+  [ 773] obj=609,45     act=3274     err= 0,00%/ 1,03% time=5,75s/5017,83s
+  [ 774] obj=609,45     act=3273     err= 0,00%/ 1,03% time=5,70s/5023,52s
+  [ 775] obj=609,39     act=3259     err= 0,00%/ 1,03% time=5,75s/5029,28s
+  [ 776] obj=609,39     act=3264     err= 0,00%/ 1,03% time=5,72s/5035,00s
+  [ 777] obj=609,34     act=3275     err= 0,00%/ 1,03% time=5,75s/5040,75s
+  [ 778] obj=609,34     act=3256     err= 0,00%/ 1,03% time=5,74s/5046,49s
+  [ 779] obj=609,30     act=3255     err= 0,00%/ 1,03% time=5,75s/5052,23s
+  [ 780] obj=609,27     act=3256     err= 0,00%/ 1,03% time=9,87s/5062,10s
+  [ 781] obj=609,27     act=3229     err= 0,00%/ 1,03% time=5,73s/5067,83s
+  [ 782] obj=609,23     act=3378     err= 0,00%/ 1,03% time=5,67s/5073,50s
+  [ 783] obj=609,20     act=3310     err= 0,00%/ 1,03% time=5,74s/5079,25s
+  [ 784] obj=609,19     act=3308     err= 0,00%/ 1,03% time=5,72s/5084,97s
+  [ 785] obj=609,15     act=3328     err= 0,00%/ 1,03% time=5,76s/5090,72s
+  [ 786] obj=609,13     act=3291     err= 0,00%/ 1,03% time=5,76s/5096,48s
+  [ 787] obj=609,10     act=3279     err= 0,00%/ 1,03% time=5,68s/5102,17s
+  [ 788] obj=609,09     act=3272     err= 0,00%/ 1,03% time=5,79s/5107,95s
+  [ 789] obj=609,05     act=3258     err= 0,00%/ 1,03% time=5,72s/5113,67s
+  [ 790] obj=609,03     act=3262     err= 0,00%/ 1,38% time=9,70s/5123,37s
+  [ 791] obj=609,01     act=3224     err= 0,00%/ 1,38% time=5,69s/5129,06s
+  [ 792] obj=608,97     act=3401     err= 0,00%/ 1,38% time=5,73s/5134,79s
+  [ 793] obj=608,95     act=3333     err= 0,00%/ 1,38% time=5,70s/5140,49s
+  [ 794] obj=608,88     act=3343     err= 0,00%/ 1,38% time=9,72s/5150,20s
+  [ 795] obj=608,86     act=3343     err= 0,00%/ 1,38% time=9,64s/5159,85s
+  [ 796] obj=608,84     act=3290     err= 0,00%/ 1,38% time=9,84s/5169,69s
+  [ 797] obj=608,81     act=3313     err= 0,00%/ 1,38% time=9,77s/5179,46s
+  [ 798] obj=608,78     act=3263     err= 0,00%/ 1,38% time=9,73s/5189,19s
+  [ 799] obj=608,76     act=3254     err= 0,00%/ 1,38% time=9,70s/5198,88s
+  [ 800] obj=608,73     act=3253     err= 0,00%/ 1,38% time=9,69s/5208,57s
+  [ 801] obj=608,73     act=3232     err= 0,00%/ 1,03% time=5,69s/5214,27s
+  [ 802] obj=608,67     act=3305     err= 0,00%/ 1,03% time=5,76s/5220,03s
+  [ 803] obj=608,62     act=3333     err= 0,00%/ 1,03% time=5,71s/5225,74s
+  [ 804] obj=608,60     act=3309     err= 0,00%/ 1,03% time=5,67s/5231,40s
+  [ 805] obj=608,54     act=3303     err= 0,00%/ 1,03% time=5,74s/5237,14s
+  [ 806] obj=608,53     act=3289     err= 0,00%/ 1,03% time=5,85s/5242,99s
+  [ 807] obj=608,49     act=3265     err= 0,00%/ 1,03% time=5,68s/5248,67s
+  [ 808] obj=608,48     act=3251     err= 0,00%/ 1,03% time=5,70s/5254,37s
+  [ 809] obj=608,44     act=3240     err= 0,00%/ 1,03% time=5,76s/5260,13s
+  [ 810] obj=608,43     act=3225     err= 0,00%/ 1,38% time=5,74s/5265,87s
+  [ 811] obj=608,39     act=3203     err= 0,00%/ 1,03% time=5,79s/5271,66s
+  [ 812] obj=608,37     act=3199     err= 0,00%/ 1,03% time=5,71s/5277,38s
+  [ 813] obj=608,34     act=3199     err= 0,00%/ 1,03% time=5,81s/5283,19s
+  [ 814] obj=608,33     act=3198     err= 0,00%/ 1,03% time=5,72s/5288,91s
+  [ 815] obj=608,29     act=3186     err= 0,00%/ 1,03% time=5,79s/5294,70s
+  [ 816] obj=608,28     act=3191     err= 0,00%/ 1,03% time=5,67s/5300,37s
+  [ 817] obj=608,24     act=3177     err= 0,00%/ 1,03% time=5,70s/5306,07s
+  [ 818] obj=608,23     act=3185     err= 0,00%/ 1,03% time=5,77s/5311,84s
+  [ 819] obj=608,20     act=3180     err= 0,00%/ 1,03% time=5,69s/5317,53s
+  [ 820] obj=608,19     act=3177     err= 0,00%/ 1,03% time=5,66s/5323,19s
+  [ 821] obj=608,15     act=3165     err= 0,00%/ 1,03% time=5,75s/5328,94s
+  [ 822] obj=608,14     act=3170     err= 0,00%/ 1,03% time=5,71s/5334,65s
+  [ 823] obj=608,10     act=3163     err= 0,00%/ 1,03% time=5,67s/5340,32s
+  [ 824] obj=608,10     act=3151     err= 0,00%/ 1,03% time=5,69s/5346,00s
+  [ 825] obj=608,06     act=3137     err= 0,00%/ 1,03% time=5,68s/5351,68s
+  [ 826] obj=608,06     act=3143     err= 0,00%/ 1,03% time=5,72s/5357,40s
+  [ 827] obj=608,02     act=3148     err= 0,00%/ 1,03% time=5,89s/5363,30s
+  [ 828] obj=608,00     act=3150     err= 0,00%/ 1,03% time=9,77s/5373,06s
+  [ 829] obj=607,99     act=3126     err= 0,00%/ 1,03% time=5,69s/5378,75s
+  [ 830] obj=607,96     act=3225     err= 0,00%/ 1,03% time=5,68s/5384,43s
+  [ 831] obj=607,94     act=3165     err= 0,00%/ 1,03% time=5,80s/5390,23s
+  [ 832] obj=607,93     act=3176     err= 0,00%/ 0,69% time=5,77s/5396,00s
+  [ 833] obj=607,86     act=3205     err= 0,00%/ 0,69% time=5,69s/5401,70s
+  [ 834] obj=607,86     act=3163     err= 0,00%/ 0,69% time=5,71s/5407,41s
+  [ 835] obj=607,81     act=3173     err= 0,00%/ 0,69% time=5,66s/5413,07s
+  [ 836] obj=607,80     act=3160     err= 0,00%/ 0,69% time=5,70s/5418,77s
+  [ 837] obj=607,78     act=3139     err= 0,00%/ 0,69% time=5,72s/5424,48s
+  [ 838] obj=607,74     act=3164     err= 0,00%/ 0,69% time=5,70s/5430,18s
+  [ 839] obj=607,71     act=3135     err= 0,00%/ 1,03% time=5,74s/5435,93s
+  [ 840] obj=607,70     act=3146     err= 0,00%/ 1,03% time=5,70s/5441,63s
+  [ 841] obj=607,66     act=3150     err= 0,00%/ 1,03% time=5,80s/5447,43s
+  [ 842] obj=607,66     act=3121     err= 0,00%/ 1,03% time=5,74s/5453,16s
+  [ 843] obj=607,60     act=3155     err= 0,00%/ 1,03% time=5,70s/5458,86s
+  [ 844] obj=607,60     act=3111     err= 0,00%/ 1,03% time=5,81s/5464,68s
+  [ 845] obj=607,55     act=3132     err= 0,00%/ 1,03% time=5,71s/5470,39s
+  [ 846] obj=607,55     act=3128     err= 0,00%/ 1,03% time=5,67s/5476,06s
+  [ 847] obj=607,50     act=3110     err= 0,00%/ 1,03% time=5,66s/5481,72s
+  [ 848] obj=607,48     act=3160     err= 0,00%/ 1,03% time=9,80s/5491,51s
+  [ 849] obj=607,46     act=3118     err= 0,00%/ 1,03% time=9,82s/5501,33s
+  [ 850] obj=607,44     act=3171     err= 0,00%/ 1,03% time=9,65s/5510,98s
+  [ 851] obj=607,42     act=3110     err= 0,00%/ 1,03% time=9,81s/5520,79s
+  [ 852] obj=607,40     act=3162     err= 0,00%/ 1,38% time=9,66s/5530,45s
+  [ 853] obj=607,37     act=3114     err= 0,00%/ 1,03% time=9,66s/5540,11s
+  [ 854] obj=607,32     act=3137     err= 0,00%/ 1,38% time=9,85s/5549,96s
+  [ 855] obj=607,30     act=3101     err= 0,00%/ 1,03% time=9,65s/5559,61s
+  [ 856] obj=607,27     act=3128     err= 0,00%/ 1,03% time=9,67s/5569,28s
+  [ 857] obj=607,24     act=3113     err= 0,00%/ 1,03% time=9,66s/5578,94s
+  [ 858] obj=607,21     act=3114     err= 0,00%/ 1,03% time=9,77s/5588,71s
+  [ 859] obj=607,20     act=3115     err= 0,00%/ 1,03% time=9,76s/5598,48s
+  [ 860] obj=607,15     act=3126     err= 0,00%/ 1,03% time=9,64s/5608,12s
+  [ 861] obj=607,13     act=3127     err= 0,00%/ 1,03% time=9,78s/5617,89s
+  [ 862] obj=607,09     act=3155     err= 0,00%/ 1,03% time=9,71s/5627,61s
+  [ 863] obj=607,07     act=3116     err= 0,00%/ 1,03% time=9,89s/5637,50s
+  [ 864] obj=607,06     act=3122     err= 0,00%/ 1,03% time=5,84s/5643,34s
+  [ 865] obj=607,05     act=3158     err= 0,00%/ 1,03% time=5,84s/5649,18s
+  [ 866] obj=606,97     act=3196     err= 0,00%/ 1,03% time=5,69s/5654,87s
+  [ 867] obj=606,94     act=3166     err= 0,00%/ 1,03% time=5,70s/5660,57s
+  [ 868] obj=606,90     act=3167     err= 0,00%/ 1,03% time=5,68s/5666,25s
+  [ 869] obj=606,85     act=3140     err= 0,00%/ 1,03% time=5,79s/5672,04s
+  [ 870] obj=606,85     act=3120     err= 0,00%/ 1,03% time=5,67s/5677,71s
+  [ 871] obj=606,81     act=3121     err= 0,00%/ 1,03% time=5,71s/5683,42s
+  [ 872] obj=606,80     act=3124     err= 0,00%/ 1,03% time=5,66s/5689,09s
+  [ 873] obj=606,76     act=3142     err= 0,00%/ 1,03% time=5,67s/5694,76s
+  [ 874] obj=606,75     act=3138     err= 0,00%/ 1,03% time=5,70s/5700,46s
+  [ 875] obj=606,71     act=3154     err= 0,00%/ 1,03% time=5,68s/5706,14s
+  [ 876] obj=606,70     act=3120     err= 0,00%/ 1,03% time=5,67s/5711,82s
+  [ 877] obj=606,67     act=3155     err= 0,00%/ 1,03% time=5,61s/5717,43s
+  [ 878] obj=606,66     act=3130     err= 0,00%/ 1,03% time=5,71s/5723,14s
+  [ 879] obj=606,62     act=3146     err= 0,00%/ 1,03% time=5,82s/5728,96s
+  [ 880] obj=606,62     act=3120     err= 0,00%/ 1,03% time=5,67s/5734,63s
+  [ 881] obj=606,58     act=3154     err= 0,00%/ 1,03% time=5,73s/5740,36s
+  [ 882] obj=606,58     act=3118     err= 0,00%/ 1,03% time=5,76s/5746,12s
+  [ 883] obj=606,54     act=3168     err= 0,00%/ 1,03% time=5,68s/5751,80s
+  [ 884] obj=606,54     act=3135     err= 0,00%/ 1,03% time=5,76s/5757,56s
+  [ 885] obj=606,50     act=3161     err= 0,00%/ 1,03% time=5,66s/5763,22s
+  [ 886] obj=606,49     act=3146     err= 0,00%/ 1,03% time=5,75s/5768,97s
+  [ 887] obj=606,47     act=3154     err= 0,00%/ 1,03% time=5,68s/5774,65s
+  [ 888] obj=606,46     act=3172     err= 0,00%/ 1,03% time=5,78s/5780,43s
+  [ 889] obj=606,43     act=3140     err= 0,00%/ 1,03% time=5,82s/5786,25s
+  [ 890] obj=606,43     act=3173     err= 0,00%/ 1,03% time=5,78s/5792,03s
+  [ 891] obj=606,39     act=3136     err= 0,00%/ 1,03% time=5,71s/5797,74s
+  [ 892] obj=606,37     act=3135     err= 0,00%/ 1,03% time=9,79s/5807,52s
+  [ 893] obj=606,36     act=3108     err= 0,00%/ 1,03% time=5,76s/5813,28s
+  [ 894] obj=606,34     act=3263     err= 0,00%/ 1,03% time=5,74s/5819,02s
+  [ 895] obj=606,28     act=3223     err= 0,00%/ 1,03% time=9,79s/5828,81s
+  [ 896] obj=606,26     act=3179     err= 0,00%/ 1,03% time=9,73s/5838,54s
+  [ 897] obj=606,25     act=3213     err= 0,00%/ 1,03% time=9,71s/5848,24s
+  [ 898] obj=606,23     act=3205     err= 0,00%/ 1,03% time=9,62s/5857,86s
+  [ 899] obj=606,18     act=3227     err= 0,00%/ 1,03% time=9,77s/5867,63s
+  [ 900] obj=606,16     act=3204     err= 0,00%/ 1,03% time=9,70s/5877,33s
+  [ 901] obj=606,15     act=3184     err= 0,00%/ 1,38% time=9,70s/5887,03s
+  [ 902] obj=606,11     act=3165     err= 0,00%/ 1,38% time=9,76s/5896,79s
+  [ 903] obj=606,09     act=3150     err= 0,00%/ 1,38% time=9,73s/5906,52s
+  [ 904] obj=606,06     act=3139     err= 0,00%/ 1,38% time=9,88s/5916,40s
+  [ 905] obj=606,03     act=3125     err= 0,00%/ 1,38% time=9,85s/5926,25s
+  [ 906] obj=606,01     act=3129     err= 0,00%/ 1,38% time=9,87s/5936,12s
+  [ 907] obj=605,99     act=3085     err= 0,00%/ 1,38% time=9,77s/5945,89s
+  [ 908] obj=605,97     act=3081     err= 0,00%/ 1,38% time=9,78s/5955,67s
+  [ 909] obj=605,94     act=3093     err= 0,00%/ 1,38% time=9,69s/5965,36s
+  [ 910] obj=605,92     act=3059     err= 0,00%/ 1,38% time=9,74s/5975,09s
+  [ 911] obj=605,89     act=3084     err= 0,00%/ 1,38% time=9,70s/5984,80s
+  [ 912] obj=605,87     act=3099     err= 0,00%/ 1,38% time=9,67s/5994,47s
+  [ 913] obj=605,82     act=3057     err= 0,00%/ 1,38% time=9,66s/6004,13s
+  [ 914] obj=605,80     act=3198     err= 0,00%/ 1,38% time=9,79s/6013,91s
+  [ 915] obj=605,74     act=3132     err= 0,00%/ 1,38% time=9,84s/6023,75s
+  [ 916] obj=605,71     act=3165     err= 0,00%/ 1,38% time=13,65s/6037,41s
+  [ 917] obj=605,68     act=3138     err= 0,00%/ 1,38% time=13,75s/6051,16s
+  [ 918] obj=605,66     act=3061     err= 0,00%/ 1,38% time=13,79s/6064,95s
+  [ 919] obj=605,64     act=3067     err= 0,00%/ 1,38% time=13,89s/6078,83s
+  [ 920] obj=605,62     act=3057     err= 0,00%/ 1,38% time=9,74s/6088,57s
+  [ 921] obj=605,58     act=3059     err= 0,00%/ 1,38% time=9,76s/6098,33s
+  [ 922] obj=605,56     act=3232     err= 0,00%/ 1,38% time=9,71s/6108,03s
+  [ 923] obj=605,50     act=3189     err= 0,00%/ 1,38% time=9,77s/6117,80s
+  [ 924] obj=605,47     act=3098     err= 0,00%/ 1,38% time=9,70s/6127,50s
+  [ 925] obj=605,44     act=3088     err= 0,00%/ 1,38% time=9,79s/6137,29s
+  [ 926] obj=605,42     act=3268     err= 0,00%/ 1,38% time=9,77s/6147,06s
+  [ 927] obj=605,39     act=3148     err= 0,00%/ 1,38% time=9,85s/6156,90s
+  [ 928] obj=605,35     act=3137     err= 0,00%/ 1,38% time=9,83s/6166,73s
+  [ 929] obj=605,34     act=3096     err= 0,00%/ 1,38% time=9,74s/6176,48s
+  [ 930] obj=605,30     act=3181     err= 0,00%/ 1,38% time=9,79s/6186,26s
+  [ 931] obj=605,29     act=3093     err= 0,00%/ 1,38% time=5,75s/6192,02s
+  [ 932] obj=605,23     act=3272     err= 0,00%/ 1,38% time=9,75s/6201,76s
+  [ 933] obj=605,21     act=3120     err= 0,00%/ 1,38% time=5,74s/6207,51s
+  [ 934] obj=605,15     act=3289     err= 0,00%/ 1,38% time=9,78s/6217,29s
+  [ 935] obj=605,15     act=3157     err= 0,00%/ 1,38% time=9,77s/6227,06s
+  [ 936] obj=605,09     act=3149     err= 0,00%/ 1,38% time=9,72s/6236,77s
+  [ 937] obj=605,06     act=3106     err= 0,00%/ 1,38% time=9,71s/6246,48s
+  [ 938] obj=605,04     act=3185     err= 0,00%/ 1,38% time=9,75s/6256,23s
+  [ 939] obj=605,02     act=3112     err= 0,00%/ 1,38% time=9,74s/6265,97s
+  [ 940] obj=604,99     act=3091     err= 0,00%/ 1,38% time=9,78s/6275,75s
+  [ 941] obj=604,95     act=3112     err= 0,00%/ 1,38% time=9,75s/6285,50s
+  [ 942] obj=604,92     act=3112     err= 0,00%/ 1,38% time=9,82s/6295,32s
+  [ 943] obj=604,88     act=3089     err= 0,00%/ 1,38% time=9,76s/6305,08s
+  [ 944] obj=604,87     act=3052     err= 0,00%/ 1,38% time=9,71s/6314,78s
+  [ 945] obj=604,84     act=3054     err= 0,00%/ 1,38% time=9,64s/6324,43s
+  [ 946] obj=604,82     act=3036     err= 0,00%/ 1,38% time=9,68s/6334,11s
+  [ 947] obj=604,78     act=3058     err= 0,00%/ 1,38% time=9,65s/6343,75s
+  [ 948] obj=604,77     act=3057     err= 0,00%/ 1,38% time=9,77s/6353,52s
+  [ 949] obj=604,77     act=3033     err= 0,00%/ 1,38% time=5,78s/6359,31s
+  [ 950] obj=604,73     act=3215     err= 0,00%/ 1,03% time=5,72s/6365,02s
+  [ 951] obj=604,65     act=3202     err= 0,00%/ 1,38% time=5,73s/6370,75s
+  [ 952] obj=604,63     act=3116     err= 0,00%/ 1,03% time=5,76s/6376,51s
+  [ 953] obj=604,62     act=3144     err= 0,00%/ 1,03% time=5,78s/6382,29s
+  [ 954] obj=604,56     act=3119     err= 0,00%/ 1,03% time=5,79s/6388,08s
+  [ 955] obj=604,54     act=3144     err= 0,00%/ 1,03% time=5,66s/6393,74s
+  [ 956] obj=604,51     act=3222     err= 0,00%/ 1,03% time=9,80s/6403,54s
+  [ 957] obj=604,49     act=3120     err= 0,00%/ 1,03% time=9,72s/6413,26s
+  [ 958] obj=604,48     act=3123     err= 0,00%/ 1,03% time=9,83s/6423,09s
+  [ 959] obj=604,45     act=3119     err= 0,00%/ 1,03% time=9,66s/6432,75s
+  [ 960] obj=604,44     act=3088     err= 0,00%/ 1,03% time=9,69s/6442,44s
+  [ 961] obj=604,41     act=3100     err= 0,00%/ 1,03% time=9,81s/6452,25s
+  [ 962] obj=604,39     act=3073     err= 0,00%/ 1,03% time=9,77s/6462,02s
+  [ 963] obj=604,36     act=3100     err= 0,00%/ 1,03% time=9,67s/6471,68s
+  [ 964] obj=604,35     act=3047     err= 0,00%/ 1,03% time=9,68s/6481,37s
+  [ 965] obj=604,32     act=3088     err= 0,00%/ 1,03% time=9,78s/6491,15s
+  [ 966] obj=604,30     act=3066     err= 0,00%/ 1,03% time=9,71s/6500,86s
+  [ 967] obj=604,29     act=3058     err= 0,00%/ 1,38% time=5,69s/6506,55s
+  [ 968] obj=604,27     act=3176     err= 0,00%/ 1,38% time=5,75s/6512,30s
+  [ 969] obj=604,22     act=3142     err= 0,00%/ 1,38% time=5,80s/6518,10s
+  [ 970] obj=604,19     act=3139     err= 0,00%/ 1,38% time=5,70s/6523,80s
+  [ 971] obj=604,17     act=3091     err= 0,00%/ 1,38% time=5,67s/6529,47s
+  [ 972] obj=604,13     act=3089     err= 0,00%/ 1,38% time=5,76s/6535,23s
+  [ 973] obj=604,11     act=3063     err= 0,00%/ 1,38% time=5,72s/6540,95s
+  [ 974] obj=604,08     act=3084     err= 0,00%/ 1,38% time=9,68s/6550,63s
+  [ 975] obj=604,06     act=3059     err= 0,00%/ 1,38% time=5,68s/6556,30s
+  [ 976] obj=604,03     act=3169     err= 0,00%/ 1,38% time=9,79s/6566,09s
+  [ 977] obj=604,00     act=3076     err= 0,00%/ 1,38% time=9,78s/6575,87s
+  [ 978] obj=603,98     act=3034     err= 0,00%/ 1,38% time=9,82s/6585,69s
+  [ 979] obj=603,95     act=3046     err= 0,00%/ 1,38% time=9,85s/6595,54s
+  [ 980] obj=603,94     act=3021     err= 0,00%/ 1,38% time=9,69s/6605,23s
+  [ 981] obj=603,91     act=3019     err= 0,00%/ 1,38% time=9,73s/6614,96s
+  [ 982] obj=603,89     act=2994     err= 0,00%/ 1,38% time=9,66s/6624,62s
+  [ 983] obj=603,87     act=3008     err= 0,00%/ 1,38% time=9,80s/6634,42s
+  [ 984] obj=603,85     act=3030     err= 0,00%/ 1,38% time=9,67s/6644,09s
+  [ 985] obj=603,83     act=3035     err= 0,00%/ 1,38% time=9,71s/6653,81s
+  [ 986] obj=603,80     act=3026     err= 0,00%/ 1,38% time=9,79s/6663,60s
+  [ 987] obj=603,77     act=3034     err= 0,00%/ 1,38% time=9,88s/6673,48s
+  [ 988] obj=603,75     act=3058     err= 0,00%/ 1,38% time=9,68s/6683,16s
+  [ 989] obj=603,73     act=3014     err= 0,00%/ 1,38% time=9,73s/6692,89s
+  [ 990] obj=603,70     act=3023     err= 0,00%/ 1,38% time=9,77s/6702,65s
+  [ 991] obj=603,68     act=2976     err= 0,00%/ 1,38% time=27,11s/6729,76s
+  [ 992] obj=603,67     act=2993     err= 0,00%/ 1,03% time=5,71s/6735,47s
+  [ 993] obj=603,62     act=3002     err= 0,00%/ 1,03% time=5,85s/6741,32s
+  [ 994] obj=603,60     act=3004     err= 0,00%/ 1,03% time=5,79s/6747,11s
+  [ 995] obj=603,57     act=2993     err= 0,00%/ 1,03% time=5,83s/6752,94s
+  [ 996] obj=603,56     act=3009     err= 0,00%/ 1,03% time=5,76s/6758,70s
+  [ 997] obj=603,53     act=2995     err= 0,00%/ 1,03% time=5,73s/6764,43s
+  [ 998] obj=603,52     act=2983     err= 0,00%/ 1,03% time=5,67s/6770,10s
+  [ 999] obj=603,49     act=2982     err= 0,00%/ 1,38% time=5,79s/6775,89s
+  [1000] obj=603,48     act=2973     err= 0,00%/ 1,38% time=5,74s/6781,64s
+* Save the model
+* Done
+17:40:35.214 [main] DEBUG org.grobid.core.utilities.GrobidProperties - No configuration parameter defined for DeLFT engine for model datacat-segmenter
+17:40:35.214 [main] INFO org.grobid.core.jni.WapitiModel - Loading model: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti (size: 33751893)
+[Wapiti] Loading model: "/home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti"
+Model path: /home/hscheith/dev/grobid/grobid-datacat/../grobid-home/models/datacat-segmenter/model.wapiti
+Labeling took: 2685 ms
+
+===== Field-level results =====
+
+label                accuracy     precision    recall       f1           support
+
+<annex>              96.47        62.5         62.5         62.5         8      
+<back>               92.35        64.29        52.94        58.06        17     
+<body>               87.06        66.67        66.67        66.67        33     
+<front>              80.59        73.33        61.11        66.67        54     
+
+all (micro avg.)     89.12        69           61.61        65.09        112    
+all (macro avg.)     89.12        66.7         60.8         63.47        112    
+
+===== Instance-level results =====
+
+Total expected instances:   32
+Correct instances:          16
+Instance-level recall:      50
+
