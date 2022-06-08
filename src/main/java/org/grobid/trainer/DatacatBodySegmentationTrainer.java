@@ -117,7 +117,7 @@ public class DatacatBodySegmentationTrainer extends AbstractTrainer {
 
                 //get a new instance of parser
                 SAXParser p = spf.newSAXParser();
-                //p.parse(tf, parser2);
+                p.parse(tf, parser2);
 
                 List<String> labeled = parser2.getLabeledResult();
 
@@ -233,7 +233,7 @@ FileUtils.writeStringToFile(new File("/tmp/expected-"+name+".txt"), temp.toStrin
     public static void main(String[] args) throws Exception {
         GrobidProperties.getInstance();
         AbstractTrainer.runTraining(new DatacatBodySegmentationTrainer());
-        System.out.println(AbstractTrainer.runEvaluation(new DatacatSegmenterTrainer()));
+        System.out.println(AbstractTrainer.runEvaluation(new DatacatBodySegmentationTrainer()));
         System.exit(0);
     }
 }

@@ -7,12 +7,120 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-import java.util.StringTokenizer;
-public class TEIDatacatBodySegmentationSaxParser {
-    private static final Logger logger = LoggerFactory.getLogger(TEIDatacatSegmenterSaxParser.class);
+import java.util.*;
+
+public class TEIDatacatBodySegmentationSaxParser extends DefaultHandler {
+
+    private static final Logger logger = LoggerFactory.getLogger(TEIFulltextSaxParser.class);
+
+    private StringBuffer accumulator = null; // current accumulated text
+
+    private String output = null;
+    private Stack<String> currentTags = null;
+    private String currentTag = null;
+
+    private ArrayList<String> labeled = null; // store line by line the labeled data
+
+    private List<String> endTags = Arrays.asList("catEntry");
+
+    public TEIDatacatBodySegmentationSaxParser() {
+        labeled = new ArrayList<String>();
+        currentTags = new Stack<String>();
+        accumulator = new StringBuffer();
+    }
+
+    public void characters(char[] buffer, int start, int length) {
+        accumulator.append(buffer, start, length);
+    }
+
+    public String getText() {
+        if (accumulator != null) {
+            //System.out.println(accumulator.toString().trim());
+            return accumulator.toString().trim();
+        } else {
+            return null;
+        }
+    }
+
+    public List<String> getLabeledResult() {
+        return labeled;
+    }
+
+    public void endElement(java.lang.String uri,
+                           java.lang.String localName,
+                           java.lang.String qName) throws SAXException {
+        if (endTags.contains(qName)) {
+            writeData();
+            accumulator.setLength(0);
+        } else if (qName.equals("catentry")) {
+            // write remaining test as <other>
+            String text = getText();
+            if (text != null) {
+                if (text.length() > 0) {
+                    currentTag = "<catentry>";
+                    writeData();
+                }
+            }
+            accumulator.setLength(0);
+        } else {
+            System.out.println(" **** Warning **** Unexpected closing tag " + qName);
+        }
+    }
+
+    public void startElement(String namespaceURI,
+                             String localName,
+                             String qName,
+                             Attributes atts)
+        throws SAXException {
+        if (qName.equals("lb")) {
+            accumulator.append(" ");
+        } else {
+            // add acumulated text as <other>
+            String text = getText();
+            if (text != null) {
+                if (text.length() > 0) {
+                    currentTag = "<other>";
+                    writeData();
+                }
+            }
+            accumulator.setLength(0);
+        }
+
+        if (qName.equals("catentry")) {
+            currentTag = "<catentry>";
+        }
+    }
+
+    private void writeData() {
+        if (currentTag == null) {
+            return;
+        }
+
+        String text = getText();
+        // we segment the text
+        StringTokenizer st = new StringTokenizer(text, TextUtilities.delimiters, true);
+        boolean begin = true;
+        while (st.hasMoreTokens()) {
+            String tok = st.nextToken().trim();
+            if (tok.length() == 0)
+                continue;
+
+            String content = tok;
+            int i = 0;
+            if (content.length() > 0) {
+                if (begin) {
+                    labeled.add(content + " I-" + currentTag + "\n");
+                    begin = false;
+                } else {
+                    labeled.add(content + " " + currentTag + "\n");
+                }
+            }
+            begin = false;
+        }
+        accumulator.setLength(0);
+    }
+
+    /*private static final Logger logger = LoggerFactory.getLogger(TEIDatacatSegmenterSaxParser.class);
 
     private StringBuffer accumulator = null; // current accumulated text
 
@@ -51,7 +159,8 @@ public class TEIDatacatBodySegmentationSaxParser {
         if ((!qName.equals("lb")) && (!qName.equals("pb") )) {
             writeData(qName, currentTag);
         }
-        if (qName.equals("catentry")) {
+        if (qName.equals("catentry") ||
+            qName.equals("other")) {
             currentTag = null;
             upperTag = null;
         }
@@ -86,10 +195,10 @@ public class TEIDatacatBodySegmentationSaxParser {
             } else if (qName.equals("other")) {
                 //currentTags.push("<other>");
                 currentTag = "<other>";
-            } /*else {
+            } *//*else {
                 logger.error("Invalid element name: " + qName + " - it will be mapped to the label <other>");
                 currentTag = "<other>";
-            }*/
+            }*//*
         }
     }
 
@@ -130,10 +239,10 @@ public class TEIDatacatBodySegmentationSaxParser {
                     continue;
                 String tok = st.nextToken();
 
-                /*StringTokenizer st = new StringTokenizer(line, TextUtilities.delimiters, true);
+                *//*StringTokenizer st = new StringTokenizer(line, TextUtilities.delimiters, true);
                 if (!st.hasMoreTokens())
                     continue;
-                String tok = st.nextToken().trim();*/
+                String tok = st.nextToken().trim();*//*
 
                 if (tok.length() == 0)
                     continue;
@@ -158,5 +267,6 @@ public class TEIDatacatBodySegmentationSaxParser {
             }
             accumulator.setLength(0);
         }
-    }
+    }*/
+
 }
