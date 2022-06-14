@@ -306,7 +306,7 @@ public class DatacatSegmenterParser extends AbstractParser {
 
     private String getFeatureVectorsLinesAsString(Document doc, Map<String, Integer> patterns,
                                                   Map<String, Boolean> firstTimePattern) {
-        StringBuilder monographFeatures = new StringBuilder();
+        StringBuilder segmentationFeatures = new StringBuilder();
         int documentLength = doc.getDocumentLenghtChar();
 
         String currentFont = null;
@@ -604,7 +604,7 @@ public class DatacatSegmenterParser extends AbstractParser {
 
                     if (previousFeatures != null) {
                         String vector = previousFeatures.printVector();
-                        monographFeatures.append(vector);
+                        segmentationFeatures.append(vector);
                     }
                     previousFeatures = features;
                 }
@@ -620,9 +620,9 @@ public class DatacatSegmenterParser extends AbstractParser {
             }
         }
         if (previousFeatures != null)
-            monographFeatures.append(previousFeatures.printVector());
+            segmentationFeatures.append(previousFeatures.printVector());
 
-        return monographFeatures.toString();
+        return segmentationFeatures.toString();
     }
 
     /**
@@ -650,8 +650,8 @@ public class DatacatSegmenterParser extends AbstractParser {
             Document doc = new Document(documentSource);
 
             String pdfFileName = inputFile.getName();
-            File outputTEIFile = new File(pathTEI + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.monograph.tei.xml"));
-            File outputRawFile = new File(pathRaw + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.monograph"));
+            File outputTEIFile = new File(pathTEI + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.segmentation.tei.xml"));
+            File outputRawFile = new File(pathRaw + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.segmentation"));
 
             doc.addTokenizedDocument(GrobidAnalysisConfig.defaultInstance());
 
@@ -726,8 +726,8 @@ public class DatacatSegmenterParser extends AbstractParser {
             Document doc = new Document(documentSource);
 
             String pdfFileName = inputFile.getName();
-            File outputTEIFile = new File(pathTEI + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.monograph.tei.xml"));
-            File outputRawFile = new File(pathRaw + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.monograph"));
+            File outputTEIFile = new File(pathTEI + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.segmentation.tei.xml"));
+            File outputRawFile = new File(pathRaw + File.separator + pdfFileName.replace(" ", "_").replace(".pdf", ".training.segmentation"));
 
             doc.addTokenizedDocument(GrobidAnalysisConfig.defaultInstance());
 

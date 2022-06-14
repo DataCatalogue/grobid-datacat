@@ -52,12 +52,12 @@ public class TEIDatacatBodySegmentationSaxParser extends DefaultHandler {
         if (endTags.contains(qName)) {
             writeData();
             accumulator.setLength(0);
-        } else if (qName.equals("catentry")) {
+        } else if (qName.equals("entry")) {
             // write remaining test as <other>
             String text = getText();
             if (text != null) {
                 if (text.length() > 0) {
-                    currentTag = "<catentry>";
+                    currentTag = "<entry>";
                     writeData();
                 }
             }
@@ -86,8 +86,8 @@ public class TEIDatacatBodySegmentationSaxParser extends DefaultHandler {
             accumulator.setLength(0);
         }
 
-        if (qName.equals("catentry")) {
-            currentTag = "<catentry>";
+        if (qName.equals("entry")) {
+            currentTag = "<entry>";
         }
     }
 
