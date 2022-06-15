@@ -433,6 +433,18 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                         }
                     }
 
+                    if (newPage) {
+                        features.pageStatus = "PAGESTART";
+                        newPage = false;
+                        //endPage = false;
+                        if (previousFeatures != null)
+                            previousFeatures.pageStatus = "PAGEEND";
+                    } else {
+                        features.pageStatus = "PAGEIN";
+                        newPage = false;
+                        //endPage = false;
+                    }
+
                     if (text.length() == 1) {
                         features.singleChar = true;
                     }
@@ -967,6 +979,14 @@ public class DatacatBodySegmentationParser extends AbstractParser {
             // we close the current tag
             if (lastTag0.equals("<entry>")) {
                 buffer.append("</entry>\n\n");
+                res = true;
+            }
+            else if (lastTag0.equals("<title>")) {
+                buffer.append("</title>\n\n");
+                res = true;
+            }
+            else if (lastTag0.equals("<titledesc>")) {
+                buffer.append("</titledesc>\n\n");
                 res = true;
             }
         }

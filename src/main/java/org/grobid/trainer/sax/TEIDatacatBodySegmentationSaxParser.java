@@ -21,7 +21,7 @@ public class TEIDatacatBodySegmentationSaxParser extends DefaultHandler {
 
     private ArrayList<String> labeled = null; // store line by line the labeled data
 
-    private List<String> endTags = Arrays.asList("catEntry");
+    private List<String> endTags = Arrays.asList("entry", "title", "titledesc");
 
     public TEIDatacatBodySegmentationSaxParser() {
         labeled = new ArrayList<String>();
@@ -62,6 +62,28 @@ public class TEIDatacatBodySegmentationSaxParser extends DefaultHandler {
                 }
             }
             accumulator.setLength(0);
+        }
+        else if (qName.equals("title")) {
+            // write remaining test as <other>
+            String text = getText();
+            if (text != null) {
+                if (text.length() > 0) {
+                    currentTag = "<title>";
+                    writeData();
+                }
+            }
+            accumulator.setLength(0);
+        }
+        else if (qName.equals("titledesc")) {
+            // write remaining test as <other>
+            String text = getText();
+            if (text != null) {
+                if (text.length() > 0) {
+                    currentTag = "<titledesc>";
+                    writeData();
+                }
+            }
+            accumulator.setLength(0);
         } else {
             System.out.println(" **** Warning **** Unexpected closing tag " + qName);
         }
@@ -88,6 +110,11 @@ public class TEIDatacatBodySegmentationSaxParser extends DefaultHandler {
 
         if (qName.equals("entry")) {
             currentTag = "<entry>";
+        } else if (qName.equals("title")) {
+            //currentTags.push("<other>");
+            currentTag = "<title>";
+        } else if (qName.equals("titledesc")) {
+            currentTag = "<titledesc>";
         }
     }
 
