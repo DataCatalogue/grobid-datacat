@@ -672,7 +672,7 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
                     // we write the full text untagged
                     File outputRawFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.bodySegmentation.datacat.text"));
-                    writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), StandardCharsets.UTF_8);
+                    writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), "UTF-8");
                     writer.write(bodytext + "\n");
                     writer.close();
 
@@ -681,7 +681,7 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
                     // write the TEI file to reflect the extract layout of the text as extracted from the pdf
                     File outputTEIFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.bodySegmentation.datacat.text.tei.xml"));
-                    writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), StandardCharsets.UTF_8);
+                    writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), "UTF-8");
                     if (id == -1) {
                         writer.write("<?xml version=\"1.0\" ?>\n<tei xml:space=\"preserve\">\n\t<teiHeader/>\n\t<text xml:lang=\"fr\">\n");
                     } else {
@@ -737,15 +737,15 @@ public class DatacatBodySegmentationParser extends AbstractParser {
             }
             doc.produceStatistics();
 
-            // 8. FULL-MEDICAL-TEXT MODEL
-            // path for blank full-medical-text model
+            // Segmenter
+            // path for blank body model
             File outputTEIFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.bodySegmentation.datacat.text.blank.tei.xml"));
             File outputRawFile = new File(pathOutput + File.separator + pdfFileName.replace(".pdf", ".training.bodySegmentation.datacat.text"));
 
-            // first, call the medical-report-segmenter model to have high level segmentation
+            // first, call the datacat-segmenter model to have high level segmentation
             doc = parsers.getDatacatSegmenterParser().processing(documentSource, GrobidAnalysisConfig.defaultInstance());
 
-            // FULL-MEDICAL-TEXT MODEL (body part)
+            // Body
             SortedSet<DocumentPiece> documentBodyParts = doc.getDocumentPart(DatacatLabels.BODY);
             if (documentBodyParts != null) {
                 Pair<String, LayoutTokenization> featSeg = getBodyTextFeatured(doc, documentBodyParts);
@@ -754,7 +754,7 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                     List<LayoutToken> tokenizationsBody = featSeg.getRight().getTokenization();
 
                     // we write the full text untagged
-                    writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), StandardCharsets.UTF_8);
+                    writer = new OutputStreamWriter(new FileOutputStream(outputRawFile, false), "UTF-8");
                     writer.write(bodytext + "\n");
                     writer.close();
 
@@ -762,11 +762,11 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
                     // just write the text without any label
                     for (LayoutToken token : tokenizationsBody) {
-                        bufferBody.append(token.getText());
+                        bufferBody.append(TextUtilities.HTMLEncode(token.getText()));
                     }
 
                     // write the TEI file to reflect the extract layout of the text as extracted from the pdf
-                    writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), StandardCharsets.UTF_8);
+                    writer = new OutputStreamWriter(new FileOutputStream(outputTEIFile, false), "UTF-8");
                     if (id == -1) {
                         writer.write("<?xml version=\"1.0\" ?>\n<tei xml:space=\"preserve\">\n\t<teiHeader/>\n\t<text xml:lang=\"fr\">\n");
                     } else {
