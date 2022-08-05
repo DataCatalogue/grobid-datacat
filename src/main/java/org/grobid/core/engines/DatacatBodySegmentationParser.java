@@ -281,6 +281,7 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                     double coordinateLineY = token.getY();
 
                     String text = token.getText();
+
                     if ((text == null) || (text.length() == 0)) {
                         n++;
                         //mm++;

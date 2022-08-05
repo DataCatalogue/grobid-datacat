@@ -9,7 +9,6 @@ public class FeaturesVectorDatacatEntries {
     public String line = null; // not a feature, the complete processed line
 
     public String string = null; // first lexical feature
-    public String secondString = null; // second lexical feature
     public String blockStatus = null; // one of BLOCKSTART, BLOCKIN, BLOCKEND
     public String lineStatus = null; // one of LINESTART, LINEIN, LINEEND
     public String fontStatus = null; // one of NEWFONT, SAMEFONT
@@ -39,68 +38,63 @@ public class FeaturesVectorDatacatEntries {
         if (string.length() == 0) return null;
         StringBuffer res = new StringBuffer();
 
-        // token string (1)
+        // token string (0)
         res.append(string);
 
-        // second token string
-        if (secondString != null)
-            res.append(" " + secondString);
-        else
-            res.append(" " + string);
-
-        // lowercase first string
+        // lowercase first string (2)
         res.append(" " + string.toLowerCase());
 
-        // prefix (4)
+        // prefix (3-6)
         res.append(" " + TextUtilities.prefix(string, 1));
         res.append(" " + TextUtilities.prefix(string, 2));
         res.append(" " + TextUtilities.prefix(string, 3));
         res.append(" " + TextUtilities.prefix(string, 4));
 
-        // block information (1)
+        // block information (7)
         if (blockStatus != null)
             res.append(" " + blockStatus);
 
-        // line information (1)
+        // line information (8)
         if (lineStatus != null)
             res.append(" " + lineStatus);
 
-        // page information (1)
+        // page information (9)
         res.append(" " + pageStatus);
 
-        // font information (1)
+        // font information (10)
         res.append(" " + fontStatus);
 
-        // font size information (1)
+        // font size information (11)
         res.append(" " + fontSize);
 
-        // string type information (3)
+        // string type information (12)
         if (bold)
             res.append(" 1");
         else
             res.append(" 0");
 
+        // Italic (13)
         if (italic)
             res.append(" 1");
         else
             res.append(" 0");
 
-        // capitalisation (1)
+        // capitalisation (14)
         if (digit.equals("ALLDIGIT"))
             res.append(" NOCAPS");
         else
             res.append(" " + capitalisation);
 
-        // digit information (1)
+        // digit information (15)
         res.append(" " + digit);
 
-        // character information (1)
+        // character information (16)
         if (singleChar)
             res.append(" 1");
         else
             res.append(" 0");
 
-        // lexical information (7)
+        // lexical information (17-19)
         if (properName)
             res.append(" 1");
         else
@@ -116,20 +110,17 @@ public class FeaturesVectorDatacatEntries {
         else
             res.append(" 0");
 
-        // punctuation information (1)
+        // punctuation information (20)
         if (punctType != null)
             res.append(" " + punctType); // in case the token is a punctuation (NO otherwise)
 
-        // relative document position (1)
+        // relative document position (21)
         res.append(" " + relativeDocumentPosition);
 
-        // relative page position coordinate (1)
+        // relative page position coordinate (22)
         res.append(" " + relativePagePosition);
 
-        // relative page position characters (1)
-        //res.append(" " + relativePagePositionChar);
-
-        // punctuation profile
+        // punctuation profile (23-24)
         if ( (punctuationProfile == null) || (punctuationProfile.length() == 0) ) {
             // string profile
             res.append(" no");
@@ -143,25 +134,27 @@ public class FeaturesVectorDatacatEntries {
             res.append(" "+punctuationProfile.length());
         }
 
-        // current line length on a predefined scale and relative to the longest line of the current block
+        // current line length on a predefined scale and relative to the longest line of the current block (25)
         res.append(" " + lineLength);
 
         // current block length on a predefined scale and relative to the longest block of the current page
         //res.append(" " + blockLength);
 
+        // (26)
         if (repetitivePattern) {
             res.append(" 1");
         } else {
             res.append(" 0");
         }
 
+        // (24)
         if (firstRepetitivePattern) {
             res.append(" 1");
         } else {
             res.append(" 0");
         }
 
-        // if the block is in the page main area (1)
+        // if the block is in the page main area (28)
         if (inMainArea) {
             res.append(" 1");
         } else {
