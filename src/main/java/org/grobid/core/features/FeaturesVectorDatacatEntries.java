@@ -3,163 +3,153 @@ package org.grobid.core.features;
 import org.grobid.core.layout.LayoutToken;
 import org.grobid.core.utilities.TextUtilities;
 
+/**
+ * Class for features used for full-medical-text parsing.
+ * This class is taken and adapted from the FeaturesVectorFulltext class (@author Patrice Lopez)
+ *
+ * Tanti, 2021
+ */
 public class FeaturesVectorDatacatEntries {
-
     public LayoutToken token = null; // not a feature, reference value
-    public String line = null; // not a feature, the complete processed line
-
-    public String string = null; // first lexical feature
+    public String string = null; // lexical feature
+    public String label = null; // label if known
     public String blockStatus = null; // one of BLOCKSTART, BLOCKIN, BLOCKEND
     public String lineStatus = null; // one of LINESTART, LINEIN, LINEEND
     public String fontStatus = null; // one of NEWFONT, SAMEFONT
     public String fontSize = null; // one of HIGHERFONT, SAMEFONTSIZE, LOWERFONT
-    public String pageStatus = null; // one of PAGESTART, PAGEIN, PAGEEND
+    public String alignmentStatus = null; // one of ALIGNEDLEFT, INDENTED, CENTERED - applied to the whole line
     public boolean bold = false;
     public boolean italic = false;
     public String capitalisation = null; // one of INITCAP, ALLCAPS, NOCAPS
     public String digit;  // one of ALLDIGIT, CONTAINDIGIT, NODIGIT
     public boolean singleChar = false;
-    public boolean properName = false;
-    public boolean commonName = false;
-    public boolean firstName = false;
-    public String punctType = null; // one of NOPUNCT, OPENBRACKET, ENDBRACKET, DOT, COMMA, HYPHEN, QUOTE, PUNCT (default)
+
+    public String punctType = null;
+    // one of NOPUNCT, OPENBRACKET, ENDBRACKET, DOT, COMMA, HYPHEN, QUOTE, PUNCT (default)
+
     public int relativeDocumentPosition = -1;
+    public int relativePagePositionChar = -1;
     public int relativePagePosition = -1;
-    public String punctuationProfile = null; // the punctuations of the current line of the token
-    public int lineLength = 0;
-    public boolean inMainArea = true;
-    public boolean repetitivePattern = false; // if true, the textual pattern is repeated at the same position on other pages
-    public boolean firstRepetitivePattern = false; // if true, this is a repetitive textual pattern and this is its first occurrence in the doc
+
+    // graphic in closed proximity of the current block
+    public boolean bitmapAround = false;
+    public boolean vectorAround = false;
+
+    // if a graphic is in close proximity of the current block, characteristics of this graphic
+    public int closestGraphicHeight = -1;
+    public int closestGraphicWidth = -1;
+    public int closestGraphicSurface = -1;
+
     public int spacingWithPreviousBlock = 0; // discretized
     public int characterDensity = 0; // discretized
+
+    // how the reference callouts are expressed, if known
+    public String calloutType = null; // one of UNKNOWN, NUMBER, AUTHOR
+    public boolean calloutKnown = false; // true if the token match a known reference label
+    public boolean superscript = false;
 
     public String printVector() {
         if (string == null) return null;
         if (string.length() == 0) return null;
         StringBuffer res = new StringBuffer();
 
-        // token string (0)
+        // token string (1)
         res.append(string);
 
-        // lowercase first string (2)
+        // lowercase string
         res.append(" " + string.toLowerCase());
 
-        // prefix (3-6)
+        // prefix (4)
         res.append(" " + TextUtilities.prefix(string, 1));
         res.append(" " + TextUtilities.prefix(string, 2));
         res.append(" " + TextUtilities.prefix(string, 3));
         res.append(" " + TextUtilities.prefix(string, 4));
 
-        // block information (7)
-        if (blockStatus != null)
-            res.append(" " + blockStatus);
+        // suffix (4)
+        res.append(" " + TextUtilities.suffix(string, 1));
+        res.append(" " + TextUtilities.suffix(string, 2));
+        res.append(" " + TextUtilities.suffix(string, 3));
+        res.append(" " + TextUtilities.suffix(string, 4));
 
-        // line information (8)
-        if (lineStatus != null)
-            res.append(" " + lineStatus);
+        // at this stage, we have written 10 features
 
-        // page information (9)
-        res.append(" " + pageStatus);
+        // block information (1)
+        res.append(" " + blockStatus);
 
-        // font information (10)
+        // line information (1)
+        res.append(" " + lineStatus);
+
+        // line position/identation (1)
+        res.append(" " + alignmentStatus);
+
+        // font information (1)
         res.append(" " + fontStatus);
 
-        // font size information (11)
+        // font size information (1)
         res.append(" " + fontSize);
 
-        // string type information (12)
+        // string type information (3)
         if (bold)
             res.append(" 1");
         else
             res.append(" 0");
 
-        // Italic (13)
         if (italic)
             res.append(" 1");
         else
             res.append(" 0");
 
-        // capitalisation (14)
+        // capitalisation (1)
         if (digit.equals("ALLDIGIT"))
             res.append(" NOCAPS");
         else
             res.append(" " + capitalisation);
 
-        // digit information (15)
+        // digit information (1)
         res.append(" " + digit);
 
-        // character information (16)
+        // character information (1)
         if (singleChar)
             res.append(" 1");
         else
             res.append(" 0");
 
-        // lexical information (17-19)
-        if (properName)
-            res.append(" 1");
-        else
-            res.append(" 0");
+        // at this stage, we have written 20 features
 
-        if (commonName)
-            res.append(" 1");
-        else
-            res.append(" 0");
+        // punctuation information (1)
+        res.append(" " + punctType); // in case the token is a punctuation (NO otherwise)
 
-        if (firstName)
-            res.append(" 1");
-        else
-            res.append(" 0");
-
-        // punctuation information (20)
-        if (punctType != null)
-            res.append(" " + punctType); // in case the token is a punctuation (NO otherwise)
-
-        // relative document position (21)
+        // relative document position (1)
         res.append(" " + relativeDocumentPosition);
 
-        // relative page position coordinate (22)
+        // relative page position (1)
         res.append(" " + relativePagePosition);
 
-        // punctuation profile (23-24)
-        if ( (punctuationProfile == null) || (punctuationProfile.length() == 0) ) {
-            // string profile
-            res.append(" no");
-            // number of punctuation symbols in the line
-            res.append(" 0");
-        }
-        else {
-            // string profile
-            res.append(" " + punctuationProfile);
-            // number of punctuation symbols in the line
-            res.append(" "+punctuationProfile.length());
-        }
-
-        // current line length on a predefined scale and relative to the longest line of the current block (25)
-        res.append(" " + lineLength);
-
-        // current block length on a predefined scale and relative to the longest block of the current page
-        //res.append(" " + blockLength);
-
-        // (26)
-        if (repetitivePattern) {
+        // proximity of a graphic to the current block (2)
+        if (bitmapAround)
             res.append(" 1");
-        } else {
+        else
             res.append(" 0");
-        }
 
-        // (24)
-        if (firstRepetitivePattern) {
+        /*if (vectorAround)
             res.append(" 1");
-        } else {
-            res.append(" 0");
-        }
+        else
+            res.append(" 0");*/
 
-        // if the block is in the page main area (28)
-        if (inMainArea) {
-            res.append(" 1");
-        } else {
-            res.append(" 0");
-        }
+        // space with previous block, discretised (1)
+        //res.append(" " + spacingWithPreviousBlock);
+        //res.append(" " + 0);
+
+        // character density of the previous block, discretised (1)
+        //res.append(" " + characterDensity);
+        //res.append(" " + 0);
+
+        // label - for training data (1)
+        /*if (label != null)
+              res.append(" " + label + "\n");
+          else
+              res.append(" 0\n");
+          */
 
         res.append("\n");
 

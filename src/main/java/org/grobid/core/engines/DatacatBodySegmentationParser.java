@@ -135,13 +135,6 @@ public class DatacatBodySegmentationParser extends AbstractParser {
             return null;
         }
 
-        if (blocks.size() > GrobidProperties.getPdfBlocksMax()) {
-            throw new GrobidException("Post processed document is too big, contains: " + blocks.size(), GrobidExceptionStatus.TOO_MANY_BLOCKS);
-        }
-
-        Map<String, Integer> patterns = new TreeMap<String, Integer>();
-        Map<String, Boolean> firstTimePattern = new TreeMap<String, Boolean>();
-
         // vector for features
         FeaturesVectorDatacatEntries features;
         FeaturesVectorDatacatEntries previousFeatures = null;
@@ -164,15 +157,12 @@ public class DatacatBodySegmentationParser extends AbstractParser {
         List<LayoutToken> layoutTokens = new ArrayList<LayoutToken>();
         fulltextLength = getFullTextLength(doc, documentBodyParts, fulltextLength);
 
-//System.out.println("fulltextLength: " + fulltextLength);
-
         for (DocumentPiece docPiece : documentBodyParts) {
             DocumentPointer dp1 = docPiece.getLeft();
             DocumentPointer dp2 = docPiece.getRight();
 
             //int blockPos = dp1.getBlockPtr();
             for (int blockIndex = dp1.getBlockPtr(); blockIndex <= dp2.getBlockPtr(); blockIndex++) {
-//System.out.println("blockIndex: " + blockIndex);
                 boolean graphicVector = false;
                 boolean graphicBitmap = false;
                 Block block = blocks.get(blockIndex);
@@ -187,20 +177,9 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                     spacingPreviousBlock = 0.0;
                 }
 
-	            /*if (start) {
-	                newPage = true;
-	                start = false;
-	            }*/
-
                 boolean newline;
                 boolean previousNewline = false;
                 endblock = false;
-
-	            /*if (endPage) {
-	                newPage = true;
-	                mm = 0;
-					lowestPos = 0.0;
-	            }*/
 
                 if (lowestPos > block.getY()) {
                     // we have a vertical shift, which can be due to a change of column or other particular layout formatting
@@ -212,16 +191,6 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                 if (TextUtilities.filterLine(localText)) {
                     continue;
                 }
-	            /*if (localText != null) {
-	                if (localText.contains("@PAGE")) {
-	                    mm = 0;
-	                    // pageLength = 0;
-	                    endPage = true;
-	                    newPage = false;
-	                } else {
-	                    endPage = false;
-	                }
-	            }*/
 
                 // character density of the block
                 double density = 0.0;
@@ -248,7 +217,6 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
                 int n = 0;// token position in current block
                 if (blockIndex == dp1.getBlockPtr()) {
-//					n = dp1.getTokenDocPos() - block.getStartToken();
                     n = dp1.getTokenBlockPos();
                 }
                 int lastPos = tokens.size();
@@ -265,12 +233,10 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
                 while (n < lastPos) {
                     if (blockIndex == dp2.getBlockPtr()) {
-                        //if (n > block.getEndToken()) {
                         if (n > dp2.getTokenDocPos() - block.getStartToken()) {
                             break;
                         }
                     }
-
 
                     LayoutToken token = tokens.get(n);
                     layoutTokens.add(token);
@@ -281,14 +247,10 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                     double coordinateLineY = token.getY();
 
                     String text = token.getText();
-
                     if ((text == null) || (text.length() == 0)) {
                         n++;
-                        //mm++;
-                        //nn++;
                         continue;
                     }
-                    //text = text.replaceAll("\\s+", "");
                     text = text.replace(" ", "");
                     if (text.length() == 0) {
                         n++;
@@ -335,6 +297,13 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
                     features.string = text;
 
+                    if (graphicBitmap) {
+                        features.bitmapAround = true;
+                    }
+                    if (graphicVector) {
+                        features.vectorAround = true;
+                    }
+
                     if (newline) {
                         features.lineStatus = "LINESTART";
                         if (token != null)
@@ -366,6 +335,12 @@ public class DatacatBodySegmentationParser extends AbstractParser {
 
                     } else if (text.equals("\"") || text.equals("\'") || text.equals("`")) {
                         features.punctType = "QUOTE";
+                    }
+
+                    if (indented) {
+                        features.alignmentStatus = "LINEINDENT";
+                    } else {
+                        features.alignmentStatus = "ALIGNEDLEFT";
                     }
 
                     if (n == 0) {
@@ -434,18 +409,6 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                         }
                     }
 
-                    if (newPage) {
-                        features.pageStatus = "PAGESTART";
-                        newPage = false;
-                        //endPage = false;
-                        if (previousFeatures != null)
-                            previousFeatures.pageStatus = "PAGEEND";
-                    } else {
-                        features.pageStatus = "PAGEIN";
-                        newPage = false;
-                        //endPage = false;
-                    }
-
                     if (text.length() == 1) {
                         features.singleChar = true;
                     }
@@ -508,13 +471,14 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                     features.relativeDocumentPosition = featureFactory
                         .linearScaling(nn, fulltextLength, NBBINS_POSITION);
                     // System.out.println(mm + " / " + pageLength);
+                    features.relativePagePositionChar = featureFactory
+                        .linearScaling(mm, pageLength, NBBINS_POSITION);
 
                     int pagePos = featureFactory
                         .linearScaling(coordinateLineY, pageHeight, NBBINS_POSITION);
                     if (pagePos > NBBINS_POSITION)
                         pagePos = NBBINS_POSITION;
                     features.relativePagePosition = pagePos;
-//System.out.println((coordinateLineY) + " " + (pageHeight) + " " + NBBINS_POSITION + " " + pagePos);
 
                     if (spacingPreviousBlock != 0.0) {
                         features.spacingWithPreviousBlock = featureFactory
@@ -525,7 +489,10 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                     if (density != -1.0) {
                         features.characterDensity = featureFactory
                             .linearScaling(density - doc.getMinCharacterDensity(), doc.getMaxCharacterDensity() - doc.getMinCharacterDensity(), NBBINS_DENSITY);
-//System.out.println((density-doc.getMinCharacterDensity()) + " " + (doc.getMaxCharacterDensity()-doc.getMinCharacterDensity()) + " " + NBBINS_DENSITY + " " + features.characterDensity);
+                    }
+
+                    if (token.isSuperscript()) {
+                        features.superscript = true;
                     }
 
                     // fulltext.append(features.printVector());
@@ -547,8 +514,6 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                 }
                 // lowest position of the block
                 lowestPos = block.getY() + block.getHeight();
-
-                //blockPos++;
             }
         }
         if (previousFeatures != null) {
@@ -807,11 +772,14 @@ public class DatacatBodySegmentationParser extends AbstractParser {
             String s1 = null;
             String s2 = null;
             String lastTag = null;
-            //System.out.println(tokenizations.toString());
-            //System.out.println(result);
+
             // current token position
             int p = 0;
             boolean start = true;
+            boolean openFigure = false;
+            boolean headFigure = false;
+            boolean descFigure = false;
+            boolean tableBlock = false;
 
             while (st.hasMoreTokens()) {
                 boolean addSpace = false;
@@ -889,9 +857,22 @@ public class DatacatBodySegmentationParser extends AbstractParser {
                 }
 
                 boolean output;
-
+                //TODO: write begin end field
                 output = writeField(buffer, s1, lastTag0, s2, "<other>",
                     "<note type=\"other\">", addSpace, 3, false);
+
+                if (!output) {
+                    output = writeField(buffer, s1, lastTag0, s2, "<titledesc>",
+                        "<titledesc>", addSpace, 3, false);
+                }
+                if (!output) {
+                    output = writeField(buffer, s1, lastTag0, s2, "<entry>", "<entry>",
+                        addSpace, 3, false);
+                }
+                if (!output) {
+                    output = writeField(buffer, s1, lastTag0, s2, "<title>",
+                        "<title>", addSpace, 3, false);
+                }
 
                 lastTag = s1;
 
@@ -908,7 +889,7 @@ public class DatacatBodySegmentationParser extends AbstractParser {
             return buffer;
         } catch (Exception e) {
             e.printStackTrace();
-            throw new GrobidException("An exception occurred while running Grobid.", e);
+            throw new GrobidException("An exception occurred while running grobid-medical-report.", e);
         }
     }
 

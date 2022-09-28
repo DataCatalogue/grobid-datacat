@@ -110,6 +110,9 @@ public class DatacatTrainerRunner {
 
         if (model.equals("datacat-segmenter")) {
             trainer = new DatacatSegmenterTrainer();
+        }
+        else if (model.equals("datacat-body-segmentation")) {
+            trainer = new DatacatBodySegmentationTrainer();
         } else {
             throw new IllegalStateException("The model " + model + " is unknown.");
         }

@@ -1,4 +1,4 @@
-# Token (0)
+# Token 0
 U00:%x[-4,0]
 U01:%x[-3,0]
 U02:%x[-2,0]
@@ -8,147 +8,113 @@ U05:%x[1,0]
 U06:%x[2,0]
 U07:%x[3,0]
 U08:%x[4,0]
-U08:%x[5,0]
+U09:%x[5,0]
+U0A:%x[-1,0]/%x[0,0]
+U0B:%x[0,0]/%x[1,0]
+U0C:%x[1,0]/%x[2,0]
+U0D:%x[-2,0]/%x[-1,0]
+#U0E:%x[0,0]/%x[-1,22]
 
-# Lowercase first token (1)
-U10:%x[-2,2]
-U11:%x[-1,2]
-U12:%x[0,2]
-U13:%x[1,2]
-U14:%x[2,2]
+# Lowercase token 1
+U10:%x[-2,1]
+U11:%x[-1,1]
+U12:%x[0,1]
+U13:%x[1,1]
+U14:%x[2,1]
 
 # Prefix 1-4 characters (2-5)
-U20:%x[0,3]
-U21:%x[0,4]
-U22:%x[0,5]
-U23:%x[0,6]
+U20:%x[0,2]
+U21:%x[0,3]
+U22:%x[0,4]
+U23:%x[0,5]
 
-# Block info (6)
-U40:%x[-1,7]
-U41:%x[0,7]
-U42:%x[1,7]
+# Suffix 1-4 characters (6-9)
+U30:%x[0,6]
+U31:%x[0,7]
+U32:%x[0,8]
+U33:%x[0,9]
 
-# line info (7)
-U50:%x[-1,8]
-U51:%x[0,8]
-U52:%x[1,8]
+# Block info (10)
+U40:%x[-1,10]
+U41:%x[0,10]
+U42:%x[1,10]
 
-# page info (8)
-U60:%x[-1,8]
-U61:%x[0,8]
-U62:%x[1,8]
+# Line info (11)
+U50:%x[-2,11]
+U51:%x[-1,11]
+U52:%x[0,11]
+U53:%x[1,11]
+U54:%x[2,11]
 
-# Font info (9)
-U70:%x[-1,9]
-U71:%x[0,9]
-U72:%x[1,9]
+# Alignment status (1)
+U60:%x[-1,12]
+U61:%x[0,12]
+U62:%x[1,12]
 
-# Font size (10)
-U80:%x[-1,10]
-U81:%x[0,10]
-U82:%x[1,10]
+# Font info (13-14)
+U70:%x[-1,13]
+U71:%x[0,13]
+U72:%x[1,13]
 
-# Bold info (11)
-U90:%x[-1,11]
-U91:%x[0,11]
-U92:%x[1,11]
+U80:%x[-1,14]
+U81:%x[0,14]
+U82:%x[1,14]
 
-# Italic info (12)
-UA0:%x[-1,12]
-UA1:%x[0,12]
-UA2:%x[1,12]
+# Bold info (15)
+U90:%x[-1,15]
+U91:%x[0,15]
+U92:%x[1,15]
 
-# Capitalization (13)
-UB0:%x[0,13]
-UB1:%x[1,13]
-UB2:%x[-1,13]
+# Italic info (16)
+UA0:%x[-1,16]
+UA1:%x[0,16]
+UA2:%x[1,16]
 
-# Digits (14)
-UC0:%x[0,14]
-UC1:%x[-1,14]
-UC2:%x[1,14]
+# Capitalization (17)
+UB0:%x[0,17]
+UB1:%x[1,17]
+UB2:%x[-1,17]
+UB3:%x[0,17]/%x[1,17]
+UB4:%x[-1,17]/%x[0,17]
 
-# Char (15)
-UD0:%x[0,15]
-UD1:%x[-1,15]
-UD2:%x[1,15]
+# Digits (18)
+UC0:%x[0,18]
+UC1:%x[-1,18]
+UC2:%x[1,18]
+#UC3:%x[0,18]/%x[1,18]
+#UC4:%x[-1,18]/%x[0,18]
 
-# Dict info (16-18)
-UE0:%x[0,16]
-UE1:%x[0,17]
-UE2:%x[0,18]
-UE3:%x[0,19]
-UE4:%x[0,20]
-UE5:%x[0,21]
-UE6:%x[0,22]
+# Single char (19)
+UD0:%x[0,19]
+UD1:%x[-1,19]
+UD2:%x[1,19]
 
-UEI:%x[1,16]
-UEJ:%x[1,17]
-UEK:%x[1,18]
-UEL:%x[1,19]
-UEM:%x[1,20]
-UEN:%x[1,21]
-UEO:%x[1,22]
+# Punctuation (20)
+UF0:%x[0,20]
+UF1:%x[-1,20]
+UF2:%x[-2,20]
+UF3:%x[1,20]
+UF4:%x[2,20]
+#UF5:%x[-1,20]/%x[0,20]
+#UF6:%x[0,20]/%x[1,20]
 
-UEI:%x[1,16]
-UEJ:%x[1,17]
-UEK:%x[1,18]
-UEL:%x[1,19]
-UEM:%x[1,20]
-UEN:%x[1,21]
-UEO:%x[1,22]
+# relative document position (21)
+UG0:%x[-1,21]
+UG1:%x[0,21]
+UG2:%x[1,21]
 
-# Punctuation (19)
-UF0:%x[0,21]
-UF1:%x[-1,21]
-UF2:%x[-2,21]
-UF3:%x[1,21]
-UF4:%x[2,21]
+# relative page position (22)
+UH0:%x[-1,22]
+UH1:%x[0,22]
+UH2:%x[1,22]
 
-# relative document position (20)
-UG0:%x[-1,23]
-UG1:%x[0,23]
-UG2:%x[1,23]
-
-# relative page position coordinate (21)
-UH0:%x[-1,24]
-UH1:%x[0,24]
-UH2:%x[1,24]
-
-# punctuation profile (22)
-UI0:%x[-1,25]
-UI1:%x[0,25]
-UI2:%x[1,25]
-
-# number of punctuation characters in the line (23)
-UI0:%x[-1,26]
-UI1:%x[0,26]
-UI2:%x[1,26]
-
-# (scaled) line length (24)
-UI0:%x[-1,27]
-UI1:%x[0,27]
-UI2:%x[1,27]
-
-# pattern repeated on several pages (25)
-UH0:%x[-2,30]
-UH1:%x[-1,30]
-UH2:%x[0,30]
-UH3:%x[1,30]
-UH4:%x[2,30]
-UH5:%x[3,30]
-
-# if we have a repeated pattern, indicate the first (26)
-UI1:%x[-1,31]
-UI2:%x[0,31]
-UI3:%x[1,31]
-
-# if the block is in the page main area (27)
-UJ1:%x[-2,32]
-UJ1:%x[-1,32]
-UJ2:%x[0,32]
-UJ3:%x[1,32]
-UJ3:%x[1,32]
+# bitmap connected to the current block (23)
+UI0:%x[-2,23]
+UI1:%x[-1,23]
+UI2:%x[0,23]
+UI3:%x[1,23]
+UI4:%x[2,23]
+UI5:%x[3,23]
 
 # Output
 B
