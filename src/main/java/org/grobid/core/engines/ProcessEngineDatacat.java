@@ -5,7 +5,6 @@ import org.grobid.core.engines.config.GrobidAnalysisConfig;
 import org.grobid.core.factory.GrobidDatacatFactory;
 import org.grobid.core.main.batch.GrobidMainArgs;
 import org.grobid.core.main.batch.GrobidDatacatMainArgs;
-import org.grobid.core.main.batch.GrobidDatacatMainArgs;
 import org.grobid.core.utilities.IOUtilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,6 +70,13 @@ public class ProcessEngineDatacat implements Closeable {
         LOGGER.info(result + " files processed.");
     }
 
+    public void createTrainingBody(final GrobidDatacatMainArgs pGbdArgs) throws Exception {
+        inferPdfInputPath(pGbdArgs);
+        inferOutputPath(pGbdArgs);
+        int result = getEngine().batchCreateTrainingBody(pGbdArgs.getPath2Input(), pGbdArgs.getPath2Output(), -1);
+        LOGGER.info(result + " files processed.");
+    }
+
     /**
      * Generate blank training data from provided directory of PDF documents, i.e. where TEI files are text only
      * without tags. This can be used to start from scratch any new model.
@@ -82,6 +88,13 @@ public class ProcessEngineDatacat implements Closeable {
         inferPdfInputPath(pGbdArgs);
         inferOutputPath(pGbdArgs);
         int result = getEngine().batchCreateTrainingBlank(pGbdArgs.getPath2Input(), pGbdArgs.getPath2Output(), -1);
+        LOGGER.info(result + " files processed.");
+    }
+
+    public void createTrainingBlankBody(final GrobidDatacatMainArgs pGbdArgs) throws Exception {
+        inferPdfInputPath(pGbdArgs);
+        inferOutputPath(pGbdArgs);
+        int result = getEngine().batchCreateTrainingBlankBody(pGbdArgs.getPath2Input(), pGbdArgs.getPath2Output(), -1);
         LOGGER.info(result + " files processed.");
     }
 

@@ -1,0 +1,11 @@
+===== Field-level results =====
+
+label                accuracy     precision    recall       f1           support
+
+<annex>              97.83        57.14        80           66.67        5      
+<back>               96.2         77.78        58.33        66.67        12     
+<body>               87.5         65.85        75           70.13        36     
+<front>              75           60           53.57        56.6         56     
+
+all (micro avg.)     89.13        63.55        62.39        62.96        109    
+all (macro avg.)     89.13        65.19        66.73        65.02        109    

@@ -63,12 +63,14 @@ dependencies {
 
 
     //GROBID (.m2/repository/org/grobid/)
-    implementation 'org.grobid:grobid-core:0.7.1-SNAPSHOT'
-    implementation 'org.grobid:grobid-trainer:0.7.1-SNAPSHOT'
-    implementation ('org.grobid:grobid-service:0.7.1-SNAPSHOT')
+    implementation ('org.grobid:grobid-core:0.7.2-SNAPSHOT') {
+        exclude(module: 'slf4j-jdk14')
+    }
+    implementation ('org.grobid:grobid-trainer:0.7.2-SNAPSHOT')
+    implementation ('org.grobid:grobid-service:0.7.2-SNAPSHOT')
 
-    implementation 'org.slf4j:slf4j-api:1.7.25'
-    implementation 'com.googlecode.clearnlp:clearnlp:1.3.1'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'com.googlecode.clearnlp:clearnlp:1.4.2'
 
     //Apache commons
     implementation 'org.apache.commons:commons-collections4:4.1'
@@ -141,7 +143,8 @@ task copyModels(type: Copy) {
 /** Training configuration **/
 def trainerTasks = [
     //Training models
-    "train_datacat-segmenter"             : "org.grobid.trainer.DatacatSegmenterTrainer"
+    "train_datacat-segmenter"             : "org.grobid.trainer.DatacatSegmenterTrainer",
+    "train_datacat-body-segmentation"     : "org.grobid.trainer.DatacatBodySegmentationTrainer"
 ]
 
 trainerTasks.each { taskName, mainClassName ->
@@ -156,12 +159,11 @@ ext.getArg = { propName, defaultVal ->
     return project.hasProperty(propName) ? project.getProperty(propName) : defaultVal;
 }
 
-// Evaluation
-// as running this command: $ ./gradlew eval_medical_report_segmenter -gH /path/to/grobid-home
-task eval_datacat_segmenter(dependsOn: 'classes', type: JavaExec, group: 'modelEvaluation') {
+// as running this command: $ ./gradlew train_medical_report_segmenter_split -gH /path/to/grobid-home -s [training:test]
+task train_datacat_segmenter_split(dependsOn: 'classes', type: JavaExec, group: 'training') {
     mainClass = 'org.grobid.trainer.DatacatTrainerRunner'
     classpath = sourceSets.main.runtimeClasspath
-    args 1, 'datacat-segmenter', '-gH', getArg('gH', '../grobid-home')
+    args 2, 'datacat-segmenter', '-gH', getArg('gH', '../grobid-home'), '-s', getArg('s', '0.90')
     jvmArgs '-Xmx3072m'
 }
 
