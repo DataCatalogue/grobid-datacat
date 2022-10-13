@@ -1,0 +1,17 @@
+===== Field-level results =====
+
+label                accuracy     precision    recall       f1           support
+
+<entry>              12.38        7.02         1.01         1.76         397    
+<title>              91.36        31.82        19.44        24.14        36     
+<titledesc>          98.82        0            0            0            1      
+
+all (micro avg.)     67.52        13.1         2.53         4.25         434    
+all (macro avg.)     67.52        12.95        6.82         8.63         434    
+
+===== Instance-level results =====
+
+Total expected instances:   2
+Correct instances:          0
+Instance-level recall:      0
+

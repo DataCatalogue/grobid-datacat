@@ -1,0 +1,30 @@
+===== Field-level results =====
+
+label                accuracy     precision    recall       f1           support
+
+<entry>              75.42        83.67        86.01        84.83        143    
+<title>              98.88        88.89        88.89        88.89        9      
+<titledesc>          99.44        0            0            0            1      
+
+all (micro avg.)     91.25        83.97        85.62        84.79        153    
+all (macro avg.)     91.25        57.52        58.3         57.91        153    
+
+===== Instance-level results =====
+
+Total expected instances:   2
+Correct instances:          0
+Instance-level recall:      0
+
+        epsilon: 1.0E-7
+        window: 50
+        nb max iterations: 1000
+        nb threads: 16
+* Load patterns
+* Load training data
+* Initialize the model
+* Summary
+    nb train:    10
+    nb labels:   8
+    nb blocks:   116201
+    nb features: 929664
+
